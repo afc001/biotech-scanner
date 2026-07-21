@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Biotech Deal-Flow Scanner</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #1a1a1a; background: #ffffff;
+    margin: 0; padding: 64px 20px; line-height: 1.6; font-size: 18px;
+  }
+  .page { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 30px; font-weight: bold; margin: 0 0 4px; }
+  .tagline { color: #555; font-size: 16px; margin: 0 0 28px; }
+  p { margin: 0 0 16px; }
+  ul.links { list-style: none; padding: 0; margin: 26px 0 0; }
+  ul.links li { margin: 0 0 12px; font-size: 19px; }
+  a { color: #1a3e6e; }
+  .note { font-style: italic; color: #666; font-size: 15px; margin-top: 34px; border-top: 1px solid #ddd; padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>UK Biotech Deal-Flow Scanner</h1>
+  <p class="tagline">Automated screening briefs on newly incorporated UK biotech companies, generated from public filings.</p>
+
+  <p>This project generates one-page investment screening briefs on early-stage UK biotech companies, drawn from Companies House new-incorporation data (SIC 72110) and, in later versions, Innovate UK / UKRI grant records. Each brief is produced from the raw record alone: where the filing contains no supporting data, the field reads &ldquo;Not observable at this stage&rdquo; rather than inventing facts.</p>
+
+  <p>Generation (structured JSON) is kept separate from presentation (this rendered digest), so the archive can be re-rendered at any time without re-running the model. The pipeline is designed to run unattended on a daily schedule.</p>
+
+  <ul class="links">
+    <li><a href="demo_briefs.html">View the demo digest &rarr;</a> <span style="font-size:15px;color:#666;">(3 companies)</span></li>
+    <li><a href="biotech_brief_prompt.md">View the generation prompt &amp; brief schema &rarr;</a></li>
+    <li><a href="demo_briefs.json">View the raw JSON briefs &rarr;</a></li>
+  </ul>
+
+  <p class="note">Screening aids from public filings, not investment advice.</p>
+</div>
+</body>
+</html>
