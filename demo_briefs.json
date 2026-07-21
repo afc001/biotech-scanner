@@ -76,6 +76,18 @@
       "Who is Alice Dayana Condrat and what is her background?",
       "Where is the real operating/lab location, given the virtual registered office?",
       "Any funding, partners or IP?"
-    ]
+    ],
+    "analyst_followup": {
+      "added": "2026-07-21",
+      "by": "A. Chidlow",
+      "basis": "Manual analyst enrichment from public sources beyond the Companies House filing. The machine-generated brief above is unchanged.",
+      "findings": [
+        "Product (verified on vectisbiosciences.com, 21 Jul 2026): a live tool for mechanistic drug-safety prediction from molecular structure, aimed at novel drug classes (PROTAC, CELMoD, IMiD) that lack clinical safety history. Pipeline: molecular docking (AutoDock Vina, 143 protein structures) -> signalling-cascade modelling (OmniPath, 1,516 genes) -> GNN refinement (LINCS-trained) -> adverse-event classification (21 FDA-label-trained classifiers). Claims external validation of Spearman R=0.77 (p=0.005) against independent RNA-seq on held-out drugs (e.g. lenalidomide, imatinib), across 22 drugs and 8 mechanism classes.",
+        "Founder (per director LinkedIn, to confirm on a call): Alice Condrat is an Oxford biochemistry graduate with a drug-discovery background and stated ties to the University pharmacology department and an established lab -- directly relevant domain expertise.",
+        "Spinout status (speculative, not established): references to Oxford-based advisors and possible Oxford Science Enterprises involvement would make this a bona-fide university spinout. Unconfirmed -- a key question for a first call."
+      ],
+      "revised_interest_score": "4 (up from machine score 2) -- credible, directly-qualified founder plus a live product with a specific approach and a stated validation metric, in genuine whitespace (safety for modalities with no clinical precedent). Held below 5 pending confirmation of spinout/OSE backing, funding, independent validation, and a team beyond the sole director.",
+      "sources": ["Companies House record", "vectisbiosciences.com (accessed 2026-07-21)", "linkedin.com/in/alicecondrat"]
+    }
   }
 ]
