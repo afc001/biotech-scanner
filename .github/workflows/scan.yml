@@ -1,0 +1,49 @@
+name: Daily biotech scan
+
+on:
+  schedule:
+    # 06:00 UTC = 07:00 UK in summer (BST). Cron has no DST awareness; adjust
+    # to '0 7 * * *' in winter if you want it pinned to 07:00 local year-round.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write          # allow the job to commit digests back to the repo
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scanner
+        env:
+          CH_API_KEY: ${{ secrets.CH_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python run.py
+
+      - name: Commit digests
+        run: |
+          git config user.name "biotech-scanner-bot"
+          git config user.email "actions@github.com"
+          git add data digests
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Daily scan: $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+# GitHub automatically emails the repository owner when a *scheduled* workflow
+# fails, so run.py exiting non-zero already gives you failure alerts for free.
+# For a custom email (e.g. the daily hot-list), add an SMTP step such as
+# dawidd6/action-send-mail@v3 with mail server secrets.
