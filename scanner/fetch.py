@@ -30,13 +30,16 @@ def _auth() -> tuple[str, str]:
     return (config.CH_API_KEY, "")
 
 
+RETRYABLE_STATUS = {429, 404, 500, 502, 503, 504}
+
+
 def _get(url: str, params: dict | None = None) -> dict:
-    """GET with basic auth, simple retry, and rate-limit backoff."""
+    """GET with basic auth, retry on rate-limits and transient errors."""
     for attempt in range(4):
         resp = requests.get(url, params=params, auth=_auth(), timeout=30)
-        if resp.status_code == 429:  # rate limited: 600 requests / 5 min
+        if resp.status_code in RETRYABLE_STATUS:
             wait = 2 ** attempt * 5
-            print(f"  rate limited, backing off {wait}s")
+            print(f"  got {resp.status_code}, retrying in {wait}s (attempt {attempt + 1}/4)")
             time.sleep(wait)
             continue
         resp.raise_for_status()
@@ -138,7 +141,12 @@ def get_new_companies() -> list[dict]:
     for sic in config.SIC_CODES:
         sic = sic.strip()
         print(f"searching SIC {sic} ({incorporated_from} -> {incorporated_to})")
-        for item in search_sic(sic, incorporated_from, incorporated_to):
+        try:
+            sic_results = search_sic(sic, incorporated_from, incorporated_to)
+        except requests.HTTPError as exc:
+            print(f"  SIC {sic} failed after retries, skipping this run: {exc}")
+            continue
+        for item in sic_results:
             number = item.get("company_number")
             if not number or number in seen or number in by_number:
                 continue
