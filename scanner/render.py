@@ -28,6 +28,11 @@ HTML_HEAD = """<!DOCTYPE html>
   h2 {{ font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
         display:flex; justify-content:space-between; align-items:baseline; gap:12px; }}
   .badge {{ font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }}
+  .pill {{ font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }}
+  .pill-confirmed {{ background:#d7f0d9; color:#1a5c22; }}
+  .pill-ambiguous {{ background:#fff2cc; color:#7a5c00; }}
+  .legend {{ color:#777; font-size:13px; margin:0 0 22px; }}
   .oneliner {{ font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }}
   .field {{ margin:9px 0; }} .field .label {{ font-weight:bold; }}
   .flags-title {{ font-weight:bold; margin:16px 0 4px; }}
@@ -49,10 +54,49 @@ def _esc(s: str) -> str:
     return html.escape(str(s))
 
 
+def _badge_html(source_label: str, result: dict | None) -> str:
+    """Render one visible pill badge for an ORCID/GtR result, or '' if there's
+    nothing worth showing. Mirrors generate._format_orcid()/_format_gtr()'s
+    severity tiering: confirmed gets a green tick, a few-candidates ambiguous
+    match gets an amber '?', everything weaker is silent (no badge) rather
+    than cluttering the page with low-confidence noise."""
+    if not result:
+        return ""
+    status = result.get("status")
+    if status == "confirmed":
+        detail = result.get("institutions") if source_label == "ORCID" else None
+        detail_text = ", ".join(detail) if detail else result.get("organisation", "")
+        title = f"{source_label} confirmed" + (f" — {detail_text}" if detail_text else "")
+        return f'<span class="pill pill-confirmed" title="{_esc(title)}">{source_label} &#10003;</span>'
+    if status == "ambiguous":
+        count = result.get("candidate_count")
+        if not (isinstance(count, int) and count <= 10):
+            return ""  # too common to be worth a badge -- same cutoff as _format_orcid/_format_gtr
+        title = f"{source_label}: {count} possible matches, unverified"
+        return f'<span class="pill pill-ambiguous" title="{_esc(title)}">{source_label}?</span>'
+    return ""
+
+
+def _badge_md(source_label: str, result: dict | None) -> str:
+    """Plain-text equivalent of _badge_html() for the markdown digest."""
+    if not result:
+        return ""
+    status = result.get("status")
+    if status == "confirmed":
+        return f" [{source_label} ✓]"
+    if status == "ambiguous":
+        count = result.get("candidate_count")
+        if not (isinstance(count, int) and count <= 10):
+            return ""
+        return f" [{source_label}?]"
+    return ""
+
+
 def _company_html(b: dict) -> str:
     s = score_int(b.get("interest_score", ""))
+    badges_html = _badge_html("ORCID", b.get("orcid_badge")) + _badge_html("GtR", b.get("gtr_badge"))
     parts = [f'<div class="company">',
-             f'<h2>{_esc(b["company_name"])} <span class="badge">Interest {s} / 5</span></h2>',
+             f'<h2>{_esc(b["company_name"])} <span class="badge">Interest {s} / 5</span>{badges_html}</h2>',
              f'<p class="oneliner">{_esc(b.get("one_liner", ""))}</p>',
              f'<p class="field"><span class="label">Incorporated:</span> {_esc(b.get("incorporated",""))} '
              f'&middot; <span class="label">SIC:</span> {_esc(", ".join(b.get("sic_codes", [])) or "—")}</p>']
@@ -75,7 +119,8 @@ def _company_html(b: dict) -> str:
 
 def _company_md(b: dict) -> str:
     s = score_int(b.get("interest_score", ""))
-    lines = [f'## {b["company_name"]} — Interest {s} / 5', "",
+    badges_md = _badge_md("ORCID", b.get("orcid_badge")) + _badge_md("GtR", b.get("gtr_badge"))
+    lines = [f'## {b["company_name"]} — Interest {s} / 5{badges_md}', "",
              f'> {b.get("one_liner", "")}', "",
              f'**Incorporated:** {b.get("incorporated","")} · **SIC:** {", ".join(b.get("sic_codes", [])) or "—"}', ""]
     for label, key in [("Science", "science"), ("Stage", "stage_signal"),
@@ -104,7 +149,10 @@ def render_digest(briefs: list[dict], run_date: date | None = None) -> dict:
 
     # HTML
     html_body = HTML_HEAD.format(title=_esc(title))
-    html_body += f'<h1>{_esc(title)}</h1><p class="meta">{_esc(meta)}</p><hr>'
+    legend = ('ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · '
+              'ORCID? / GtR? = possible match, unverified — common name, worth a manual check')
+    html_body += (f'<h1>{_esc(title)}</h1><p class="meta">{_esc(meta)}</p>'
+                  f'<p class="legend">{_esc(legend)}</p><hr>')
     html_body += "<hr>".join(_company_html(b) for b in briefs) if briefs else "<p>No new companies today.</p>"
     html_body += HTML_FOOT
     html_path = config.DIGESTS_DIR / f"{stamp}.html"

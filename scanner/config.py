@@ -9,8 +9,8 @@ import os
 from pathlib import Path
 
 # --- SIC codes to sweep -----------------------------------------------------
-# 72110 = biotech R&D, 72190 = other natural-sciences R&D, 21100 = pharma manufacture.
-SIC_CODES = os.getenv("SCANNER_SIC_CODES", "72110,72190,21100").split(",")
+# 72110 = biotech R&D, 72190 = other natural-sciences R&D, 21100, 21200 = pharma manufacture.
+SIC_CODES = os.getenv("SCANNER_SIC_CODES", "72110,72190").split(",")
 
 # --- How far back to look ---------------------------------------------------
 # The cron runs daily; we look back a couple of days so a missed run or a
@@ -35,6 +35,23 @@ FETCH_OFFICERS = os.getenv("SCANNER_FETCH_OFFICERS", "1") == "1"
 # --- Anthropic API ----------------------------------------------------------
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 
+# --- ORCID API (optional director-credibility enrichment) -------------------
+# Requires a free Public API client -- ORCID's search API needs OAuth client
+# credentials even on the free tier, there's no fully open endpoint. Register
+# at https://orcid.org (sign in -> Developer Tools) or see
+# https://info.orcid.org/documentation/integration-guide/registering-a-public-api-client/
+# Worth checking ORCID's Public API Terms of Service for commercial-use
+# considerations before relying on this: https://info.orcid.org/public-client-terms-of-service/
+# Leave blank to skip enrichment entirely -- it degrades gracefully.
+ORCID_CLIENT_ID = os.getenv("ORCID_CLIENT_ID", "")
+ORCID_CLIENT_SECRET = os.getenv("ORCID_CLIENT_SECRET", "")
+FETCH_ORCID = os.getenv("SCANNER_FETCH_ORCID", "1") == "1"
+
+# --- UKRI Gateway to Research (optional director funding-history enrichment)-
+# No API key needed -- GtR's API is fully open. Toggle off if you'd rather
+# not make the extra calls.
+FETCH_GTR = os.getenv("SCANNER_FETCH_GTR", "1") == "1"
+
 # --- Paths ------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
 PROMPT_FILE = ROOT / "biotech_brief_prompt.md"
@@ -55,4 +72,34 @@ INCUBATOR_SIGNALS = [
     "granta park",
     "harwell",
     "norwich research park",
+    "wellcome genome campus",
+    "chesterford research park",
+    "cambridge science park",
+    "melbourn science park",
+    "oxford north",
+    "fallaize street",
+    "the red hall",
+    "thomas white street",
+    "oxford science park",
+    "magdalen centre",
+    "milton park",
+    "begbroke",
+    "victoria house",
+    "royal college street",
+    "one portal way",
+    "here east",
+    "plexal",
+    "canada water",
+    "tribeca",
+    "gridiron",
+    "king's cross",
+    "london cancer hub",
+    "sutton",
+    "edinburgh bioquarter",
+    "roslin innovation centre",
+    "science creates",
+    "discovery park",
+    "biocity",
+    "medicity",
+
 ]

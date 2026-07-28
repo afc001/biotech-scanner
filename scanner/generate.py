@@ -36,14 +36,122 @@ def _fenced_blocks(text: str) -> list[str]:
 
 
 def load_prompt() -> tuple[str, str]:
-    """Extract (system_prompt, user_template) from the prompt markdown file."""
+    """Extract (system_prompt, user_template) from the prompt markdown file.
+
+    The markdown file has three fenced blocks: the system prompt, the JSON
+    schema, and the user-message template. The system prompt tells the model
+    to "respond with valid JSON matching the schema below" — but that schema
+    lives in its own separate fenced block, so it must be folded into the
+    system prompt here or the model never actually sees the required shape
+    (it'll happily invent its own JSON structure instead).
+    """
     text = config.PROMPT_FILE.read_text()
     blocks = _fenced_blocks(text)
     system = next((b for b in blocks if b.strip().startswith("You are an analyst")), None)
+    schema = next((b for b in blocks if b.strip().startswith("{") and '"company_name"' in b), None)
     template = next((b for b in blocks if "COMPANIES HOUSE RECORD" in b), None)
-    if not system or not template:
-        raise RuntimeError("Could not parse system prompt / user template from prompt file.")
-    return system.strip(), template.strip()
+    if not system or not schema or not template:
+        raise RuntimeError("Could not parse system prompt / schema / user template from prompt file.")
+    full_system = (
+        f"{system.strip()}\n\n"
+        f"Respond with a single JSON object matching EXACTLY this schema "
+        f"(same keys, no additions, no omissions, no nesting):\n{schema.strip()}\n\n"
+        f"Cost-control rule: if interest_score is below {config.INTEREST_ALERT_THRESHOLD}, "
+        f'set "unknowns" to an empty list [] — do not spend words speculating open questions '
+        f"for low-signal, low-interest companies. Only populate \"unknowns\" with genuine, "
+        f"specific open questions once interest_score reaches {config.INTEREST_ALERT_THRESHOLD} or higher.\n\n"
+        f"ORCID / GtR scoring rule: a director note reading \"ORCID CONFIRMED\" or \"GtR CONFIRMED\" "
+        f"means we independently verified a genuine, unique match to a real academic publication "
+        f"record (ORCID) or UKRI/Innovate UK grant history (GtR) — treat this as a real, meaningful "
+        f"positive credibility signal. It MUST be named in flags_positive and MUST raise "
+        f"interest_score versus an otherwise-identical company with no such confirmation. Conversely: "
+        f"do NOT lower interest_score or add a flags_negative entry just because a director has NO "
+        f"ORCID/GtR record — most legitimate founders have neither, so absence is not evidence of "
+        f"anything. And a note reading \"possible matches, unverified\" is inconclusive by "
+        f"construction (the name was too common to confirm) — do not treat it as either a positive "
+        f"or a negative signal; do not mention it in flags_positive or flags_negative at all."
+    )
+    return full_system, template.strip()
+
+
+def _format_orcid(orcid_result: dict | None) -> str | None:
+    """Render an orcid.lookup_director() result as a short factual note, or
+    None if there's nothing worth saying (unparseable name / lookup failed /
+    ORCID not configured -- silence is better than clutter for those)."""
+    if not orcid_result:
+        return None
+    status = orcid_result.get("status")
+    if status == "confirmed":
+        insts = ", ".join(orcid_result.get("institutions", [])) or "no institution listed"
+        return f"ORCID CONFIRMED ({orcid_result.get('orcid_id', '')}) — affiliations: {insts}"
+    if status == "ambiguous":
+        count = orcid_result.get("candidate_count")
+        if isinstance(count, int) and count <= 10:
+            return (f"ORCID: {count} possible matches — common name but few enough that a human "
+                     f"could plausibly resolve it (e.g. via LinkedIn); do not treat as confirmed")
+        return f"ORCID: {count} possible matches — name too common to verify via ORCID search, do not pursue"
+    if status == "no_match":
+        return "ORCID: no matching record found"
+    return None  # unparseable_name / lookup_failed — not worth surfacing
+
+
+def _format_gtr(gtr_result: dict | None) -> str | None:
+    """Render a gtr.lookup_director() result as a short factual note, or
+    None if there's nothing worth saying. Mirrors _format_orcid()'s
+    severity tiering for ambiguous (common-name) matches."""
+    if not gtr_result:
+        return None
+    status = gtr_result.get("status")
+    if status == "confirmed":
+        org = gtr_result.get("organisation") or "no organisation listed"
+        return f"GtR CONFIRMED (UKRI-funded investigator) — organisation: {org}"
+    if status == "ambiguous":
+        count = gtr_result.get("candidate_count")
+        if isinstance(count, int) and count <= 10:
+            return (f"GtR: {count} possible matches — common name but few enough that a human "
+                     f"could plausibly resolve it (e.g. via LinkedIn); do not treat as confirmed")
+        return f"GtR: {count} possible matches — name too common to verify via GtR search, do not pursue"
+    if status == "no_match":
+        return "GtR: no UKRI grant investigator record found"
+    return None  # unparseable_name / lookup_failed — not worth surfacing
+
+
+def _badge_summary(officers: list[dict]) -> dict:
+    """Compute one best-case ORCID/GtR badge status across all of a company's
+    officers, for the visible badge on the rendered digest page.
+
+    Derived directly from the enrichment results attached to each officer
+    (not the model's prose) so the badge can never hallucinate or drift out
+    of sync with what orcid.py/gtr.py actually found -- same reasoning as
+    _format_orcid()/_format_gtr() being the single source of truth for the
+    prompt text.
+
+    Priority per source: confirmed > ambiguous with <=10 candidates (still
+    "a human could resolve it") > everything else (no_match / a too-common
+    ambiguous match / unparseable / lookup failed / no result at all), which
+    all collapse to "no badge" -- matches the existing philosophy of silence
+    over clutter for weak signals.
+    """
+
+    def best(source: str) -> dict | None:
+        best_result, best_rank = None, -1
+        for o in officers or []:
+            result = o.get(source)
+            if not result:
+                continue
+            status = result.get("status")
+            if status == "confirmed":
+                rank = 2
+            elif status == "ambiguous" and isinstance(result.get("candidate_count"), int) \
+                    and result["candidate_count"] <= 10:
+                rank = 1
+            else:
+                rank = 0
+            if rank > best_rank:
+                best_rank, best_result = rank, result
+        return best_result if best_rank > 0 else None
+
+    return {"orcid": best("orcid"), "gtr": best("gtr")}
 
 
 def _format_officers(officers: list[dict]) -> str:
@@ -58,8 +166,22 @@ def _format_officers(officers: list[dict]) -> str:
             bits.append(f"occupation: {o['occupation']}")
         if o.get("nationality"):
             bits.append(o["nationality"])
+        orcid_note = _format_orcid(o.get("orcid"))
+        if orcid_note:
+            bits.append(orcid_note)
+        gtr_note = _format_gtr(o.get("gtr"))
+        if gtr_note:
+            bits.append(gtr_note)
         parts.append(" — ".join(b for b in bits if b))
     return "; ".join(parts)
+
+
+def _format_address(record: dict) -> str:
+    address = record.get("registered_address", "")
+    match = record.get("incubator_match")
+    if match:
+        address += f" — CONFIRMED MATCH against known incubator/cluster list: '{match}'"
+    return address
 
 
 def build_user_message(record: dict, template: str) -> str:
@@ -67,7 +189,7 @@ def build_user_message(record: dict, template: str) -> str:
         template.replace("{name}", record.get("company_name", ""))
         .replace("{date}", record.get("date_of_creation", ""))
         .replace("{sic_codes}", ", ".join(record.get("sic_codes", [])))
-        .replace("{address}", record.get("registered_address", ""))
+        .replace("{address}", _format_address(record))
         .replace("{officers with occupations and other appointments if fetched}",
                  _format_officers(record.get("officers", [])))
     )
@@ -115,10 +237,18 @@ def generate_brief(record: dict, client: Anthropic, system: str, template: str) 
                 raise ValueError(f"missing keys: {REQUIRED_KEYS - brief.keys()}")
             # Carry the company number through for traceability / dedupe.
             brief["company_number"] = record.get("company_number", "")
+            # Attach a visible-badge summary computed from the raw enrichment
+            # data (not the model's output) -- see _badge_summary() docstring.
+            badges = _badge_summary(record.get("officers", []))
+            brief["orcid_badge"] = badges["orcid"]
+            brief["gtr_badge"] = badges["gtr"]
             return brief
         except (ValueError, json.JSONDecodeError) as e:
             last_error = e
             print(f"  brief parse failed (attempt {attempt + 1}): {e}")
+            print(f"    stop_reason={getattr(message, 'stop_reason', '?')} "
+                  f"usage={getattr(message, 'usage', '?')}")
+            print(f"    raw response ({len(raw)} chars): {raw!r}")
     raise RuntimeError(f"Failed to generate a valid brief for {record.get('company_name')}: {last_error}")
 
 

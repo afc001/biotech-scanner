@@ -5,7 +5,12 @@ on:
     # 06:00 UTC = 07:00 UK in summer (BST). Cron has no DST awareness; adjust
     # to '0 7 * * *' in winter if you want it pinned to 07:00 local year-round.
     - cron: "0 6 * * *"
-  workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+  workflow_dispatch:      # lets you trigger a run manually from the Actions tab
+    inputs:
+      lookback_days:
+        description: "Lookback window in days (leave blank for the normal daily default of 2 -- only widen this for a one-off backfill, and check dry_run_count.py's cost estimate first)"
+        required: false
+        default: ""
 
 permissions:
   contents: write          # allow the job to commit digests back to the repo
@@ -29,6 +34,17 @@ jobs:
         env:
           CH_API_KEY: ${{ secrets.CH_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # ORCID enrichment needs these to authenticate -- without them it
+          # degrades gracefully (skips ORCID, logs why) rather than failing,
+          # but that means it silently does nothing unless these secrets are
+          # added in the repo's Settings -> Secrets and variables -> Actions.
+          # GtR needs no secret at all, so it always runs regardless.
+          ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+          ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
+          # Falls back to '2' (the normal daily window) whenever no input is
+          # given -- covers both the scheduled cron trigger (which has no
+          # inputs at all) and a manual trigger left at its blank default.
+          SCANNER_LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '2' }}
         run: python run.py
 
       - name: Commit digests

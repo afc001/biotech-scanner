@@ -32,6 +32,11 @@ def main() -> int:
     print(f"raw briefs: {raw_path}")
     print(f"digest:     {paths['html']}")
 
+    # Only now that briefs are generated and safely written to disk do we
+    # mark these companies as seen — if anything above raised, they stay
+    # eligible for retry on the next run instead of being silently dropped.
+    fetch.mark_seen(records)
+
     # Alert summary — the loud bit worth a human's attention.
     hot = [b for b in briefs
            if render.score_int(b.get("interest_score", "")) >= config.INTEREST_ALERT_THRESHOLD]

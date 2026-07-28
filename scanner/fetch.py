@@ -18,7 +18,7 @@ from datetime import date, timedelta
 
 import requests
 
-from . import config
+from . import config, gtr, orcid
 
 SEARCH_URL = f"{config.CH_API_BASE}/advanced-search/companies"
 PAGE_SIZE = 100  # advanced search allows up to 5000; 100 keeps responses small
@@ -104,6 +104,20 @@ def _save_seen(seen: dict) -> None:
     config.SEEN_STORE.write_text(json.dumps(seen, indent=2, sort_keys=True))
 
 
+def _match_incubator(address: str) -> str | None:
+    """Check a registered address against config.INCUBATOR_SIGNALS.
+
+    Returns the matching signal string, or None. Matching is a
+    case-insensitive substring check, same as the list's own doc comment
+    always promised (the list existed but was never actually consulted by
+    the pipeline until now)."""
+    addr_lower = address.lower()
+    for signal in config.INCUBATOR_SIGNALS:
+        if signal in addr_lower:
+            return signal
+    return None
+
+
 def _normalise(item: dict) -> dict:
     """Flatten a Companies House search item into the record our prompt expects."""
     addr = item.get("registered_office_address", {}) or {}
@@ -125,12 +139,20 @@ def _normalise(item: dict) -> dict:
         "date_of_creation": item.get("date_of_creation", ""),
         "sic_codes": item.get("sic_codes", []),
         "registered_address": address,
+        "incubator_match": _match_incubator(address),
         "officers": [],
     }
 
 
 def get_new_companies() -> list[dict]:
-    """Sweep all SIC codes, drop anything already seen, enrich with officers."""
+    """Sweep all SIC codes, drop anything already seen, enrich with officers.
+
+    NOTE: this does NOT mark companies as seen — that only happens once a
+    brief has actually been generated and rendered (see mark_seen()). If we
+    marked them seen here, a crash in generate.py or render.py would
+    permanently drop companies that were fetched but never actually
+    processed into a digest.
+    """
     today = date.today()
     incorporated_from = (today - timedelta(days=config.LOOKBACK_DAYS)).isoformat()
     incorporated_to = today.isoformat()
@@ -156,12 +178,37 @@ def get_new_companies() -> list[dict]:
     print(f"{len(new_companies)} new companies after dedupe")
 
     if config.FETCH_OFFICERS:
+        if config.FETCH_ORCID:
+            print(f"  ORCID enrichment: {'enabled' if orcid.enabled() else 'skipped (ORCID_CLIENT_ID/SECRET not set)'}")
+        if config.FETCH_GTR:
+            print("  GtR enrichment: enabled")
         for record in new_companies:
             record["officers"] = fetch_officers(record["company_number"])
-
-    # Mark everything seen so the next run skips it.
-    for record in new_companies:
-        seen[record["company_number"]] = today.isoformat()
-    _save_seen(seen)
+            if config.FETCH_ORCID:
+                record["officers"] = orcid.enrich_officers(record["officers"])
+                for o in record["officers"]:
+                    if "orcid" in o:
+                        print(f"    ORCID lookup: {o.get('name', '')} -> {o['orcid'].get('status')}")
+            if config.FETCH_GTR:
+                record["officers"] = gtr.enrich_officers(record["officers"])
+                for o in record["officers"]:
+                    if "gtr" in o:
+                        print(f"    GtR lookup: {o.get('name', '')} -> {o['gtr'].get('status')}")
 
     return new_companies
+
+
+def mark_seen(records: list[dict], run_date: date | None = None) -> None:
+    """Persist company numbers as seen. Call ONLY after their briefs have
+    been successfully generated and rendered, so a mid-pipeline failure
+    leaves them eligible for retry on the next run instead of being
+    silently dropped."""
+    if not records:
+        return
+    run_date = run_date or date.today()
+    seen = _load_seen()
+    for record in records:
+        number = record.get("company_number")
+        if number:
+            seen[number] = run_date.isoformat()
+    _save_seen(seen)
