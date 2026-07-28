@@ -69,7 +69,14 @@ def load_prompt() -> tuple[str, str]:
         f"ORCID/GtR record — most legitimate founders have neither, so absence is not evidence of "
         f"anything. And a note reading \"possible matches, unverified\" is inconclusive by "
         f"construction (the name was too common to confirm) — do not treat it as either a positive "
-        f"or a negative signal; do not mention it in flags_positive or flags_negative at all."
+        f"or a negative signal; do not mention it in flags_positive or flags_negative at all.\n\n"
+        f"Website rule: if a COMPANY WEBSITE section is present, treat it as genuine first-party "
+        f"company communication (not hearsay, not to be second-guessed) and USE it substantively in "
+        f"one_liner/science/stage_signal/funding wherever it actually answers that field -- do NOT "
+        f"default to \"Not observable at this stage\" for something the excerpt already states. "
+        f"Conversely, do not extrapolate beyond what the excerpt actually says; summarize only what's "
+        f"there, and if the excerpt is itself vague or marketing fluff, say so plainly rather than "
+        f"inventing specifics it doesn't contain."
     )
     return full_system, template.strip()
 
@@ -208,6 +215,22 @@ def _format_innovate_uk_section(record: dict) -> str:
     )
 
 
+def _format_website(record: dict) -> str:
+    """Return the 'COMPANY WEBSITE' block for the user message, or '' if no
+    live site was found (or website checking is disabled/failed). See
+    website.py's docstring for why this is the cheapest, most deterministic
+    form of "search the internet for more info" -- helps some briefs a lot,
+    does nothing for brand-new shells with no site yet, which is expected."""
+    site = record.get("website")
+    if not site or site.get("status") != "found":
+        return ""
+    return (
+        f"\n\nCOMPANY WEBSITE (found live, {site.get('url', '')}):\n"
+        f"Title: {site.get('title', '')}\n"
+        f"Page text excerpt: {site.get('excerpt', '')}"
+    )
+
+
 def build_user_message(record: dict, template: str) -> str:
     # The static template includes a trailing "INNOVATE UK / UKRI DATA"
     # block with placeholders no code populates yet -- strip that static
@@ -223,7 +246,7 @@ def build_user_message(record: dict, template: str) -> str:
         .replace("{officers with occupations and other appointments if fetched}",
                  _format_officers(record.get("officers", [])))
     )
-    return msg + _format_innovate_uk_section(record)
+    return msg + _format_innovate_uk_section(record) + _format_website(record)
 
 
 def _extract_text(message) -> str:
@@ -268,6 +291,12 @@ def generate_brief(record: dict, client: Anthropic, system: str, template: str) 
                 raise ValueError(f"missing keys: {REQUIRED_KEYS - brief.keys()}")
             # Carry the company number through for traceability / dedupe.
             brief["company_number"] = record.get("company_number", "")
+            # Carry SIC codes through too -- "sic_codes" was never part of the
+            # model's JSON schema (see REQUIRED_KEYS), so render.py's
+            # b.get("sic_codes", []) was silently always falling back to []
+            # -> the digest's "SIC: —" field was permanently empty, no matter
+            # what Companies House actually returned.
+            brief["sic_codes"] = record.get("sic_codes", [])
             # Attach a visible-badge summary computed from the raw enrichment
             # data (not the model's output) -- see _badge_summary() docstring.
             badges = _badge_summary(record.get("officers", []))

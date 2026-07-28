@@ -46,6 +46,14 @@ manual run will silently behave differently from the pipeline:
   unverified" note (common name, too many candidates to confirm) must
   be treated as inconclusive — neither a positive nor a negative
   signal, and not mentioned in either flags list at all.
+- **Website rule:** if a COMPANY WEBSITE section is present (a real
+  live site was found — see `scanner/website.py`), treat it as
+  genuine first-party company communication and use it substantively
+  in `one_liner`/`science`/`stage_signal`/`funding` — do NOT default
+  to "Not observable at this stage" for something the excerpt already
+  states. Do not extrapolate beyond what the excerpt actually says,
+  and call out vague marketing fluff as such rather than inventing
+  specifics.
 
 See `generate.py::load_prompt()` for the exact wording actually sent —
 treat that function as the source of truth if this doc and the code
@@ -117,8 +125,23 @@ already-saved briefs.
   rendered digest page (`render.py`) AND explicitly move
   `interest_score` per the scoring rule above — not just descriptive
   text a model might or might not act on.
+- Company website check (`scanner/website.py`) — guesses likely
+  domains from the company name, does a plain HTTP GET, and feeds a
+  real excerpt into the prompt if a live (non-parked) site is found.
+  Addresses the "Non-Oxide Ceramics Limited" problem: for a genuinely
+  day-1 incorporation there's often nothing beyond the name to work
+  with, and this is the cheapest, most deterministic way to check for
+  more without a search API. Helps some briefs a lot, does nothing for
+  brand-new shells with no site yet — that's expected, not a gap.
 
 **Not yet built (future ideas):**
+- Broader web search (general search API, or Claude's web-search tool)
+  for company/founder mentions beyond a guessed-domain website check —
+  considered and deliberately deferred: real cost impact (per-brief or
+  gated-by-score), and LinkedIn specifically is a dead end for
+  automation (no public search API, scraping violates ToS). The
+  website check above is the cheap first step; this would be the next
+  one if it's worth the added spend.
 - Director cross-references beyond ORCID/GtR: e.g. same person also
   appearing at a university tech-transfer office (Oxford University
   Innovation, Cambridge Enterprise) = likely spinout signal.

@@ -19,15 +19,18 @@ Companies House  ->  fetch.py     new incorporations (SIC 72110/72190),
                                    officers + incubator-address matching
                      |
                      v
-ORCID / GtR      ->  orcid.py,    director academic-credibility + UKRI funding-
-                     gtr.py       history lookup, common-name-safe (never guesses)
+ORCID / GtR /    ->  orcid.py,    director academic-credibility + UKRI funding-
+website.py           gtr.py,      history lookup (common-name-safe, never
+                     website.py   guesses), plus a live-website check for
+                                  companies that already have real content
                      |
                      v
 Claude API       ->  generate.py  each record -> structured JSON brief,
                                   driven by biotech_brief_prompt.md (the same
                                   prompt used interactively); ORCID/GtR
                                   confirmations explicitly move interest_score,
-                                  not just descriptive text
+                                  and a found website is used substantively
+                                  rather than defaulting to generic filler
                      |
                      v
                      render.py     JSON -> dated markdown + HTML digest in
@@ -56,6 +59,7 @@ The raw briefs live in `data/briefs/`; the archive can be re-rendered any time
 | `scanner/fetch.py` | Companies House pull + seen-store dedupe + officer/incubator enrichment |
 | `scanner/orcid.py` | Director academic-credibility lookup (ORCID Public API, OAuth client-credentials) |
 | `scanner/gtr.py` | Director funding-history lookup (UKRI Gateway to Research, no auth needed) |
+| `scanner/website.py` | Guessed-domain live-website check, no auth needed |
 | `scanner/generate.py` | Claude API call, JSON parsing + validation, ORCID/GtR badge computation |
 | `scanner/render.py` | JSON -> dated md/html digest + archive index + score/week toolbar |
 | `run.py` | Orchestrator / entry point |
@@ -70,7 +74,7 @@ The raw briefs live in `data/briefs/`; the archive can be re-rendered any time
 |---|---|
 | `dry_run_count.py --days N` | Count how many companies a longer lookback window would sweep up, and estimate cost, before spending anything on a backfill |
 | `rerender_digest.py --date YYYY-MM-DD` (or `--all`) | Re-render an existing digest from its saved JSON, for free — use after any `render.py` change |
-| `test_orcid_live.py` / `test_gtr_live.py` | Diagnostic: run real ORCID/GtR lookups against today's already-fetched officers, without touching `data/seen.json` |
+| `test_orcid_live.py` / `test_gtr_live.py` / `test_website_live.py` | Diagnostic: run real ORCID/GtR/website lookups against today's already-fetched companies, without touching `data/seen.json` |
 
 ## Running it
 
@@ -92,6 +96,8 @@ python run.py
   ORCID enrichment is just skipped, everything else runs as normal.
 - **UKRI Gateway to Research**: no key needed at all — it's a fully open API.
   Set `SCANNER_FETCH_GTR=0` if you'd rather not make the extra calls.
+- **Website check**: no key needed — plain HTTP GETs to guessed domains.
+  Set `SCANNER_FETCH_WEBSITE=0` if you'd rather not make the extra calls.
 
 ### In GitHub Actions
 Add repo secrets (Settings -> Secrets and variables -> Actions): `CH_API_KEY`,
@@ -136,10 +142,21 @@ cost before you do.
   treated as inconclusive, not evidence either way
 - Score-filter + group-by-incorporation-week toolbar on every digest page
   (client-side, no rebuild needed)
+- Company website check (`scanner/website.py`) — guesses likely domains, does
+  a plain HTTP GET, and feeds a real excerpt into the prompt when a live
+  (non-parked) site is found; a system-prompt rule requires the model to use
+  it substantively rather than defaulting to "Not observable at this stage."
+  No search API, near-zero added cost. Helps some briefs a lot, does nothing
+  for brand-new shells with no site yet — expected, not a gap.
 - `rerender_digest.py` / `dry_run_count.py` — free utilities for re-rendering
   the archive and estimating backfill cost before spending anything
 
 **Not yet built (future ideas):**
+- Broader web search (general search API, or Claude's web-search tool) for
+  company/founder mentions beyond a guessed-domain check — considered and
+  deliberately deferred pending real cost/coverage tradeoffs; LinkedIn
+  specifically is a dead end for automation (no public search API, scraping
+  violates ToS)
 - Director cross-references beyond ORCID/GtR: e.g. same person also appearing
   at a university tech-transfer office (Oxford University Innovation, Cambridge
   Enterprise) = likely spinout signal

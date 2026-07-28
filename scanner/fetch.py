@@ -18,7 +18,7 @@ from datetime import date, timedelta
 
 import requests
 
-from . import config, gtr, orcid
+from . import config, gtr, orcid, website
 
 SEARCH_URL = f"{config.CH_API_BASE}/advanced-search/companies"
 PAGE_SIZE = 100  # advanced search allows up to 5000; 100 keeps responses small
@@ -194,6 +194,15 @@ def get_new_companies() -> list[dict]:
                 for o in record["officers"]:
                     if "gtr" in o:
                         print(f"    GtR lookup: {o.get('name', '')} -> {o['gtr'].get('status')}")
+
+    if config.FETCH_WEBSITE:
+        # Independent of FETCH_OFFICERS -- this is a company-level check
+        # (guessed domain + plain HTTP GET), not an officer-level lookup.
+        print("  Website check: enabled")
+        for record in new_companies:
+            record["website"] = website.check_company_website(record.get("company_name", ""))
+            if record["website"].get("status") == "found":
+                print(f"    Website found: {record['company_name']} -> {record['website'].get('url')}")
 
     return new_companies
 

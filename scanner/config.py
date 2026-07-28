@@ -55,6 +55,13 @@ FETCH_ORCID = os.getenv("SCANNER_FETCH_ORCID", "1") == "1"
 # not make the extra calls.
 FETCH_GTR = os.getenv("SCANNER_FETCH_GTR", "1") == "1"
 
+# --- Company website check (optional, cheapest form of "more context") -----
+# No API key needed -- just guesses likely domains and does a plain HTTP GET.
+# Helps some briefs a lot (a real product description) and does nothing for
+# others (brand-new shells with no site yet) -- that's expected. Toggle off
+# if you'd rather not make the extra HTTP calls.
+FETCH_WEBSITE = os.getenv("SCANNER_FETCH_WEBSITE", "1") == "1"
+
 # --- Paths ------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
 PROMPT_FILE = ROOT / "biotech_brief_prompt.md"
