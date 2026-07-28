@@ -22,8 +22,102 @@
   .flags-title { font-weight:bold; margin:16px 0 4px; }
   ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
   a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
 </style></head><body><div class="page">
-<h1>Biotech Scanner Digest — 2026-07-28</h1><p class="meta">Generated 2026-07-28 · 128 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><p class="legend">ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check</p><hr><div class="company">
+<h1>Biotech Scanner Digest — 2026-07-28</h1><p class="meta">Generated 2026-07-28 · 128 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><p class="legend">ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check</p><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" data-score="4" data-incorporated="2026-07-14">
 <h2>KYTFOX LIMITED <span class="badge">Interest 4 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — ETH Zurich, Technical University of Darmstadt">ORCID &#10003;</span><span class="pill pill-confirmed" title="GtR confirmed — University of Leeds">GtR &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no product or business description provided beyond SIC classification.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -35,7 +129,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director Dr Heiko Wurdak has GtR CONFIRMED UKRI grant history — genuine verified funding track record</li><li>Director Dr Heiko Wurdak has ORCID CONFIRMED academic publication record</li><li>Registered at University of Leeds incubator (Nexus), indicating a likely academic spinout</li><li>Specialist R&amp;D SIC code consistent with early-stage science venture</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No product, science, or market description available</li><li>No funding data provided — cannot assess capitalisation or grant support</li><li>Company incorporated very recently with no operating history</li><li>Second director (Orsi) has no verifiable academic or professional record supplied</li></ul>
 <p class="field"><span class="label">Interest score: 4</span> — credible, verifiably grant-funded academic co-founder plus incubator address, but total absence of scientific or financial detail caps enthusiasm</p>
-<p class="flags-title">Open questions for a first call</p><ul><li>What is the actual technology/product KYTFOX is developing?</li><li>What is Dr Wurdak&#x27;s specific research area and how does it translate to a commercial thesis?</li><li>Has any Innovate UK or other grant actually been awarded to this entity?</li><li>What is Dr Orsi&#x27;s background and role in the company?</li><li>Is there IP being licensed from University of Leeds, ETH Zurich, or TU Darmstadt?</li></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul><li>What is the actual technology/product KYTFOX is developing?</li><li>What is Dr Wurdak&#x27;s specific research area and how does it translate to a commercial thesis?</li><li>Has any Innovate UK or other grant actually been awarded to this entity?</li><li>What is Dr Orsi&#x27;s background and role in the company?</li><li>Is there IP being licensed from University of Leeds, ETH Zurich, or TU Darmstadt?</li></ul></div><div class="company" data-score="4" data-incorporated="2026-07-17">
 <h2>NON-OXIDE CERAMIC SYSTEMS LIMITED <span class="badge">Interest 4 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Queen Mary University of London">ORCID &#10003;</span></h2>
 <p class="oneliner">Early-stage venture focused on non-oxide ceramics manufacturing/materials, per SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -47,7 +141,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic affiliation (Queen Mary University of London) for one director</li><li>Specialist SIC code (23440) indicating technical ceramics focus</li><li>Registered address at Lucideon, a recognised materials science/ceramics consultancy — plausible industry linkage</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No operating history, funding, or product data — pre-revenue, day-one shell</li><li>Second director has no verifiable academic or professional track record disclosed</li><li>No grant or investment data to corroborate technical claims</li></ul>
 <p class="field"><span class="label">Interest score: 4</span> — academic ORCID confirmation plus specialist ceramics SIC code and credible industry-linked address warrant a closer look despite zero operating history</p>
-<p class="flags-title">Open questions for a first call</p><ul><li>What is the specific non-oxide ceramic technology or IP being developed?</li><li>What is the relationship between the company and Lucideon (tenancy only, or collaboration/spinout)?</li><li>What is Elizabeth Mart&#x27;s professional background and role?</li><li>Is there any patent filing, licensing deal, or grant application in progress?</li></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul><li>What is the specific non-oxide ceramic technology or IP being developed?</li><li>What is the relationship between the company and Lucideon (tenancy only, or collaboration/spinout)?</li><li>What is Elizabeth Mart&#x27;s professional background and role?</li><li>Is there any patent filing, licensing deal, or grant application in progress?</li></ul></div><div class="company" data-score="3" data-incorporated="2026-07-20">
 <h2>LDLT Collaborative Ltd <span class="badge">Interest 3 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Comenius University, King Faisal Specialist Hospital &amp; Research Centre, Queen Mary University of London Barts and The London School of Medicine and Dentistry, Royal Free London NHS Foundation Trust, University of Zurich">ORCID &#10003;</span></h2>
 <p class="oneliner">Early-stage company likely focused on living-donor liver transplantation (LDLT), based on SIC code and founder&#x27;s clinical background — exact business model not observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -59,7 +153,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director ORCID CONFIRMED with genuine, relevant academic/clinical affiliations in transplant surgery and hepatobiliary research</li><li>Specialist SIC code (72110) suggesting R&amp;D intent rather than generic trading</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No abstract, product description, or grant funding to substantiate the business model</li><li>Generic incubator-style registered address, not a clinical or lab-specific location</li><li>Day-one incorporation with zero trading or funding history</li><li>Second director has no verifiable academic record (neutral, but no offsetting signal either)</li></ul>
 <p class="field"><span class="label">Interest score: 3</span> — credible academic founder but no funding, no product detail, and no evidence of what the company actually does commercially</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="3" data-incorporated="2026-07-21">
 <h2>PHAEORA LTD <span class="badge">Interest 3 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span><span class="pill pill-confirmed" title="GtR confirmed — Imperial College London">GtR &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no descriptive activity data beyond biotech/biotech-research SIC codes</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -71,7 +165,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED for both directors — genuine verified academic identities</li><li>GtR CONFIRMED for Angheliu — real prior UKRI grant history, Imperial College London link</li><li>Specialist SIC codes (72110, 72190) indicating R&amp;D intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No product, science, or mechanism disclosed anywhere in available data</li><li>Generic registered office address, not a wet-lab or specialist biotech cluster address</li><li>No Innovate UK/UKRI funding secured by the company itself</li><li>Company is brand new with zero trading or operational history</li></ul>
 <p class="field"><span class="label">Interest score: 3</span> — credible academic founder signal but zero substantive company or science data to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="3" data-incorporated="2026-07-17">
 <h2>OXIDE CERAMIC SYSTEMS LIMITED <span class="badge">Interest 3 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Queen Mary University of London">ORCID &#10003;</span></h2>
 <p class="oneliner">Early-stage venture apparently developing technical/advanced ceramics, likely oxide-based materials for industrial applications.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -83,7 +177,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic founder (Queen Mary University of London)</li><li>Specialist SIC code (23440 - technical ceramics) suggesting genuine deep-tech focus</li><li>Registered address at Lucideon, a recognised materials science/ceramics consultancy — plausible technical credibility signal</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No funding data (grant or equity) observable</li><li>No abstract, project detail, or evidence of product/technology beyond SIC code and address</li><li>Company only just incorporated — zero trading history</li><li>Second director has no verifiable academic or professional record provided</li></ul>
 <p class="field"><span class="label">Interest score: 3</span> — academic founder and specialist ceramics angle are notable, but no funding, no technical detail, and zero track record mean this is pre-signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="3" data-incorporated="2026-07-22">
 <h2>NATURE LOOPS LABS LIMITED <span class="badge">Interest 3 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of Cambridge, University of Glasgow, University of Oxford">ORCID &#10003;</span><span class="pill pill-confirmed" title="GtR confirmed — University of Oxford">GtR &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no product or business description available beyond SIC codes covering software publishing and other IT services.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -95,7 +189,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic identity</li><li>GtR CONFIRMED UKRI grant history</li><li>Multi-institution academic pedigree (Cambridge, Glasgow, Oxford)</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company incorporated with no discernible product, science, or business description</li><li>Residential/generic registered address, no incubator signal</li><li>No funding data actually provided despite template</li><li>SIC codes (software publishing, IT services) don&#x27;t obviously map to a life-sciences thesis</li></ul>
 <p class="field"><span class="label">Interest score: 3</span> — genuine academic credibility signal, but zero visibility into what the company actually does or whether it fits a life-sciences mandate</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-14">
 <h2>ECMERA THERAPEUTICS LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no business description available beyond SIC classification.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -107,7 +201,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Incubator address (St John&#x27;s Innovation Centre, Cambridge)</li><li>ORCID CONFIRMED for director Mun Leong Chan</li><li>Professorial title among directors suggests possible academic founder link</li><li>SIC 72110 (R&amp;D on biotechnology) matches life-sciences focus</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No business description, product, or science available</li><li>No grant funding or trading history — pre-revenue, pre-data</li><li>Just incorporated — essentially a shell at this point</li><li>Professor Duer&#x27;s institutional affiliation not confirmed</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — incubator address and one confirmed ORCID are mild positives, but company is a brand-new shell with no disclosed science, product, or funding</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-17">
 <h2>AR MED RESEARCH GROUP LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">Newly incorporated entity spanning construction, R&amp;D, and medical/dental practice activity — actual business focus unclear from SIC mix.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -119,7 +213,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has ORCID CONFIRMED academic record</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated in the future/very recently — no trading history</li><li>SIC codes are incoherent (construction, R&amp;D, GP practice, dental practice) — suggests generic template rather than a defined business plan</li><li>Virtual office registered address, common with shell/holding company registrations</li><li>No institutional affiliation listed for the director despite academic record</li><li>No funding, grant, or product data of any kind</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — a single verified academic founder is a mild positive, but no science, no funding, incoherent SIC codes, and a shell-style address make this pre-signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-22">
 <h2>MORGANIC ECOSYSTEMS LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of Cambridge">ORCID &#10003;</span></h2>
 <p class="oneliner">An early-stage venture combining agricultural/crop activity with software and R&amp;D services, per its SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -131,7 +225,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director Richard John Turner has ORCID CONFIRMED academic record affiliated with University of Cambridge</li><li>Mix of SIC codes spanning agriculture, software, and R&amp;D suggests a potentially interesting ag-bio-tech crossover</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No Innovate UK/UKRI grant match — no non-dilutive funding evidence</li><li>No abstract, product, or technology description available</li><li>Company incorporated very recently with no operating history</li><li>Generic registered address with no cluster or incubator signal</li><li>Broad, unfocused SIC code combination may indicate an unformed business model</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic founder credential noted, but no science description, no funding, and no operating history to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-14">
 <h2>SCIRA DIAGNOSTICS LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="GtR confirmed — Institute for Energy Technology">GtR &#10003;</span></h2>
 <p class="oneliner">A newly incorporated diagnostics company; no further detail on product or technology is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -143,7 +237,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director GtR CONFIRMED as UKRI-funded investigator</li><li>Stevenage location adjacent to established life-sciences cluster</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company incorporated only recently with no operational history</li><li>SIC code 72110 (R&amp;D in biotech) is generic and unconfirmed by other evidence</li><li>Director&#x27;s listed organisation (Institute for Energy Technology) does not obviously align with diagnostics, raising questions about relevance of grant history</li><li>Single director, no evidence of co-founders or wider team</li><li>No funding, product, or science details available</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — GtR-confirmed academic credential is a mild positive, but total absence of science, funding, or team detail plus an unexplained sector mismatch keeps this low priority pending more data</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-21">
 <h2>ALETHEIA DIAGNOSTICS LTD <span class="badge">Interest 2 / 5</span></h2>
 <p class="oneliner">An Oxford-registered company in biotech R&amp;D (SIC 72110); specific diagnostic product or technology not disclosed.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -155,7 +249,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 (R&amp;D) suggests genuine science focus rather than generic services</li><li>Oxford location plausible for biotech talent pool</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding identified</li><li>No ORCID matches for any director — no independently verifiable academic track record</li><li>Registered address is a generic serviced office, not a specialist incubator or lab space</li><li>Incorporation date is very recent — no operating history</li><li>No abstract, product, or mechanism data provided</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — too early and too thin on verifiable detail to assess; generic office address and no funding or academic signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-17">
 <h2>WILD BIO SEEDS LTD <span class="badge">Interest 2 / 5</span></h2>
 <p class="oneliner">An early-stage biotech company at Milton Park, Oxfordshire; specific business activity not disclosed in available data.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -167,7 +261,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Registered at Milton Park, a recognised biotech incubator/cluster</li><li>SIC code 72110 indicates R&amp;D in natural sciences/engineering focus</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading or operational history — pre-incorporation/shell stage</li><li>No grant funding or investment data available</li><li>No verifiable academic credentials (ORCID) for either director</li><li>No description of science, product, or market anywhere in the record</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — incubator address is a mild positive but there is no science, team credibility, or funding signal to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-19">
 <h2>AUVEXORA LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">A newly incorporated company with a stated mix of chemicals/e-commerce trade and biotech R&amp;D activity codes; no product or purpose described yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-19 &middot; <span class="label">SIC:</span> —</p>
@@ -179,7 +273,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director Carly Chapman has ORCID CONFIRMED academic record</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Day-one incorporation with no operating history</li><li>SIC codes are a scattergun mix (wholesale chemicals, retail, R&amp;D, other professional services) suggesting no clear business focus yet</li><li>No institution affiliation listed despite confirmed ORCID</li><li>Registered address is generic, not a life-sciences cluster</li><li>No grant funding or named project</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — Too early and unfocused to assess; one credible academic director is the only positive signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-20">
 <h2>LUCAI BIO LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">A newly incorporated company with SIC codes spanning software, biotech and other scientific R&amp;D — actual product/service not yet observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -191,7 +285,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes suggest intended biotech/R&amp;D focus (72110, 72190) alongside software (62012)</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding identified</li><li>No incubator or cluster address signal</li><li>Single director, no co-founders or advisors visible</li><li>Too early to assess any science, team depth or traction</li><li>Unverified ORCID — cannot be counted as credibility signal</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — pre-formation shell with no funding, no verified academic credentials, and no discernible product; nothing to underwrite yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-20">
 <h2>OXALIS DEEPBIO LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of Oxford">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no operational or product description available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -203,7 +297,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic link to University of Oxford</li><li>SIC code 72110 indicates biotech R&amp;D intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading history — just incorporated</li><li>No grant funding found</li><li>Residential registered address, not a lab or incubator</li><li>No science, product, or market description available</li><li>Single director, no visible co-founders or team depth</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — genuine academic credential but zero operational, scientific, or funding detail to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-14">
 <h2>MUSQUY LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Universidad de Cádiz">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no product, market, or activity description provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -215,7 +309,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has ORCID CONFIRMED academic identity linked to a Spanish university</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Multiple unrelated SIC codes (wholesale trade, food/beverage service, management consultancy, specialist design) suggesting no clear business focus</li><li>No abstract, product, or science description available</li><li>No funding evidence of any kind</li><li>Address does not signal a life-sciences or R&amp;D cluster</li><li>Company incorporated with future date, effectively pre-operational</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic founder present but no discernible business model, science, or funding; too early and unfocused to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-16">
 <h2>VOLTAI LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Not observable at this stage — no product or activity description available beyond registered SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -227,7 +321,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director holds a doctorate (Dr. title), suggesting academic background</li><li>SIC codes span electronics manufacturing (27900), software (62090), R&amp;D (71129), and IT consultancy (72190), suggesting a hardware/software/R&amp;D hybrid focus</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading history — incorporated very recently</li><li>No funding (grant or otherwise) observable</li><li>No science, product, or mechanism disclosed</li><li>Single director — no evidence of a founding team</li><li>Generic registered address, no cluster or incubator signal</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — pre-formation shell with no disclosed science, team depth, or funding; nothing yet to evaluate</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-17">
 <h2>SYRAVA LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — ALS Technichem M Sdn Bhd, International Medical University, Kolej Universiti Tunku Abdul Rahman, Technology Park Malaysia College, Universiti Putra Malaysia, University of Malaya">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no description of activity beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -239,7 +333,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC 72190 indicates intended R&amp;D focus</li><li>Director ORCID CONFIRMED, showing genuine academic publication history and real affiliations across Malaysian universities and an analytical chemistry firm</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Just incorporated — zero trading or financial history</li><li>Registered address is a mass-registration virtual office, not a science cluster or incubator</li><li>No grant funding identified</li><li>No description of actual product, technology, or market anywhere in the record</li><li>Secretary&#x27;s ORCID unverifiable</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic credibility signal present but no science, funding, or trading history to assess; too early</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-22">
 <h2>AIRE MEDTECH LIMITED <span class="badge">Interest 2 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of product or service provided beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -251,7 +345,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Registered at Nexus Leeds, a known university-linked incubator</li><li>Both directors hold doctoral titles, suggesting academic or technical expertise</li><li>SIC code 72190 (other R&amp;D on natural sciences/engineering) consistent with a genuine science-based startup</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading history — incorporated only recently</li><li>No grant funding identified</li><li>No ORCID record found for either director, so academic credentials unverified</li><li>No description of technology, market, or product available</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — incubator address and academic titles are mildly encouraging, but there is no verifiable science, funding, or track record to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-22">
 <h2>ODONT AI LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Amity University">ORCID &#10003;</span></h2>
 <p class="oneliner">An early-stage company apparently building an AI-related product for dentistry, though the specific application is not disclosed.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -263,7 +357,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic record for sole director</li><li>SIC codes indicate specific focus on computer programming/AI (62012) and R&amp;D (72190/74909)</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company incorporated only very recently — effectively pre-operational</li><li>No funding (grant or otherwise) evidenced</li><li>Single director, no co-founder or advisory signal visible</li><li>No product, science, or IP description available</li><li>Generic registered address with no sector cluster signal</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic founder credential is real but company is pre-formation with zero funding or product evidence</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-23">
 <h2>DR MARTA PATYJEWICZ LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — National Health Service">ORCID &#10003;</span></h2>
 <p class="oneliner">A newly incorporated personal services company for an NHS-affiliated clinician, spanning R&amp;D, specialist medical practice, and other human health activities.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -275,7 +369,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED — director has a verified academic publication record</li><li>NHS affiliation suggests clinical credibility</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Day-one incorporation with no operating history</li><li>SIC codes (72190, 86220, 86900) suggest a mixed R&amp;D/clinical-practice personal services vehicle rather than a scalable biotech venture</li><li>No evidence of a product, platform, or defensible IP</li><li>No funding (grant or equity) identified</li><li>Generic industrial-estate address, no cluster or incubator signal</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic credibility noted, but no product, funding, or company history to assess; looks like a personal service company, not a venture-scale biotech</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-15">
 <h2>VEROVIX AI LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Birmingham City University">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no product, service, or market description provided beyond registered SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -287,7 +381,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic record for one director (Ezike, Birmingham City University affiliation)</li><li>SIC codes span software (58290, 62012), data processing (63110), and R&amp;D (72190), suggesting a data/software or applied-research angle</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No product, science, or mechanism described anywhere in available data</li><li>No funding, grants, or financial history — company is brand new</li><li>Generic London registration address, not a specialist cluster</li><li>No trading history or evidence of activity beyond incorporation</li><li>One director has no verifiable academic or professional record</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — too early and too little disclosed to assess beyond one confirmed academic credential</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-20">
 <h2>PROSEHOS TECHNOLOGIES LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of Nottingham">ORCID &#10003;</span><span class="pill pill-confirmed" title="GtR confirmed — University of Nottingham">GtR &#10003;</span></h2>
 <p class="oneliner">A newly incorporated technology company with unclear commercial focus, likely spun out of academic research at University of Nottingham.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -299,7 +393,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has ORCID-confirmed academic publication record</li><li>Director has GtR-confirmed UKRI grant history as investigator</li><li>Address flags as incubator/cluster match</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Extremely early stage — incorporated 2026-07-20, essentially pre-operational</li><li>SIC codes (IT consultancy, software, R&amp;D-social sciences, other service activities) are broad and generic, not clearly life-sciences specific</li><li>No abstract, product, or funding data provided to substantiate any technology claim</li><li>Single-director company — no evidence of wider team or co-founders</li><li>No non-dilutive or dilutive funding evidence tied to this entity</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic credibility signal present but no science, product, or funding data to assess; too early to evaluate</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-18">
 <h2>ANVAYA SYSTEMS LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">Not enough data to determine what the company actually does beyond broad IT/R&amp;D SIC classification.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-18 &middot; <span class="label">SIC:</span> —</p>
@@ -311,7 +405,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has ORCID-confirmed academic publication record</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated too recently to have any trading, product, or funding history</li><li>No science, platform, or mechanism disclosed anywhere in the record</li><li>SIC codes (62012 business software, 72190 other R&amp;D) are generic and non-specific to life sciences</li><li>No institutional affiliation given for the director despite ORCID match</li><li>Single-director structure with no team depth visible</li><li>Oxford address is a common registration convenience, not confirmed lab/office presence</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic credential is real but there is no science, product, or funding signal to evaluate; far too early</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-22">
 <h2>ENSONOX LTD <span class="badge">Interest 2 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no product or market description provided beyond SIC codes suggesting fertiliser/chemical and R&amp;D activity.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -323,7 +417,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Professorial title on one director suggests possible academic/research background (unverified)</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading or funding history — pre-operational shell</li><li>No ORCID match for either director</li><li>Registered address is generic/residential, not a specialist science cluster</li><li>SIC codes (fertilisers 20150, R&amp;D 72190) are broad and don&#x27;t clarify actual product or science</li><li>No Innovate UK grant data matched</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — pre-incorporation-stage shell with unverified academic credentials and no funding or science detail</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-24">
 <h2>MITHRIL SYSTEMS LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">Unclear — SIC codes suggest software/IT and R&amp;D consultancy, not a specific life-sciences product</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -335,7 +429,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has ORCID CONFIRMED record, indicating a genuine academic publication history</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes (software, computer consultancy, R&amp;D) don&#x27;t clearly indicate a life-sciences focus</li><li>Registered address is a mass company-formation address, not a specific lab, incubator, or cluster</li><li>No abstract, grant, or project data to substantiate any scientific activity</li><li>Single-director company with no listed institutional affiliation</li><li>No trading history — pre-revenue, pre-product by definition</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — ORCID confirmation is a mild positive but there is no life-sciences signal, no funding, and a generic registered address; nothing here indicates a biotech worth screening yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-14">
 <h2>DYNATOMIX TECHNOLOGIES LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Iran University of Science and Technology, University of Nottingham Faculty of Engineering">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no product or service description available beyond SIC codes suggesting electrical equipment manufacturing, custom software, testing/analysis, and engineering R&amp;D.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -347,7 +441,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic credential for sole director</li><li>University of Nottingham engineering affiliation</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No product, mechanism, or market description available</li><li>SIC codes span electrical manufacturing, software, testing, and R&amp;D — unfocused or placeholder registration</li><li>No funding data, dilutive or non-dilutive</li><li>Single director, no evidence of co-founder or commercial team</li><li>No stated life-sciences angle despite fund&#x27;s mandate</li><li>Address shows no incubator/cluster signal</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — verified academic director is a mild positive, but no science, product, funding, or life-sciences relevance is observable; too early and too vague to act on</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-16">
 <h2>CARDIOCLARITY CONSULTING LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — British Cardiovascular Intervention Society, Royal College of Physicians, Sheffield Teaching Hospitals NHS Foundation Trust">ORCID &#10003;</span></h2>
 <p class="oneliner">A newly incorporated consultancy tied to a cardiology consultant, scope unclear from available data.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -359,7 +453,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director ORCID confirmed, real academic/clinical publication record</li><li>NHS Trust and specialist cardiology society affiliations indicate genuine clinical domain expertise</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes (management consultancy, other IT, other human health, residential care) suggest a consultancy/services shell, not a therapeutics or device developer</li><li>No science, product, or IP described</li><li>No funding, grant, or trading history</li><li>Single director, no co-founder or commercial/technical counterpart visible</li><li>Generic residential registered address</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — credible clinical founder but no visible venture-scale proposition; reads as a consulting practice, not an investable biotech</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-22">
 <h2>SAIDAX TECHNOLOGIES LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Queen Elizabeth Hospital">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no business description available beyond registered SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -371,7 +465,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has ORCID CONFIRMED record, indicating genuine academic publication history</li><li>SIC codes (62012, 62020, 72190) suggest software/R&amp;D focus, possibly health-tech given hospital affiliation</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No business description, product, or science detail available</li><li>No funding evidence, grant or otherwise</li><li>Residential registered address, no cluster or incubator signal</li><li>Single director, no co-founder or commercial operator visible</li><li>Company incorporated with future date — very early, essentially pre-formation</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic credibility signal present but company is a blank shell with no science, funding, or team detail to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-17">
 <h2>COMPUTATIONAL DESIGN SERVICES LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of California San Diego">ORCID &#10003;</span></h2>
 <p class="oneliner">Very early-stage engineering/design consultancy or R&amp;D vehicle; exact product not yet observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -383,7 +477,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic director with UCSD affiliation</li><li>Broad SIC codes spanning engineering design and R&amp;D, suggesting technical intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding identified</li><li>No abstract, product, or technology detail available</li><li>Generic registered address, no incubator/cluster signal</li><li>Company only days old — no track record</li><li>SIC codes are broad/generic, not specialist biotech codes</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — academic founder is a mild positive but there is no discernible science, product, or funding signal yet to justify attention now</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-24">
 <h2>VASCORAHEALTH LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Early-stage company registered under codes for manufacture of irradiation/electromedical equipment and R&amp;D in natural sciences/engineering — likely a medical devices or diagnostics venture, but no product detail available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -395,7 +489,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 26600 suggests specialist medical/electromedical equipment focus</li><li>SIC code 72190 indicates registered R&amp;D activity intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding evidence</li><li>No confirmed academic or industry credentials among directors</li><li>Generic registered address with no cluster signal</li><li>Five directors but no visible prior company or research track record</li><li>Too early to assess — incorporated only recently</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — pre-seed shell with specialist SIC codes but no verifiable team credentials, funding, or science detail</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-24">
 <h2>PIANDT LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — KPMG (United Kingdom), University of Edinburgh, University of Manchester">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no business description available beyond registered SIC codes spanning software and IT/scientific R&amp;D consultancy.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -407,7 +501,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director ORCID confirmed, verifying a genuine academic record</li><li>Academic affiliations with two established UK universities</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No business description or product/science evidence</li><li>SIC codes (software publishing, IT consultancy, other IT services, scientific R&amp;D) are broad/generic and not life-sciences-specific</li><li>No funding data</li><li>Sole director, no co-founder or advisory signal</li><li>Just incorporated — zero trading history</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — ORCID-confirmed academic director is a mild positive, but there is no discernible science, product, or funding to assess; this is pre-formation noise, not a screening candidate yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="2" data-incorporated="2026-07-22">
 <h2>MORPHEXA LIMITED <span class="badge">Interest 2 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no trading or product detail provided beyond a research SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -419,7 +513,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Registered at Nexus Leeds, a recognised university-linked incubator</li><li>Academic titles (Professor, Dr) among directors suggest research background</li><li>SIC 72190 indicates R&amp;D-focused intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding evidence</li><li>No product, science, or mechanism detail available</li><li>No ORCID match for either director despite academic titles</li><li>Company only just incorporated — no track record whatsoever</li></ul>
 <p class="field"><span class="label">Interest score: 2</span> — incubator address is mildly encouraging but there is no science, funding, or verified academic record to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>PEIYAO MEDICAL PUBLISHING LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 5 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">A newly incorporated company combining IT consultancy, management consultancy, R&amp;D, and educational support services, with a name suggesting a medical publishing focus.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -431,7 +525,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Mixed/unfocused SIC codes (IT, management consultancy, R&amp;D, education) with no clear biotech-specific classification</li><li>No named scientific mechanism, product, or platform</li><li>Generic registered office address with no cluster or incubator signal</li><li>Single-director structure with no visible prior company history provided</li><li>No funding (grant or otherwise) evidenced</li><li>Company only just incorporated — zero operating history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or credible team signal; reads as a shell or services company, not a biotech worth screening further</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>CHRIS POLL TRANSLATIONAL SCIENCE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Newly incorporated entity registered under a biotech R&amp;D SIC code; no evidence yet of what it actually does.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -443,7 +537,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 (R&amp;D in biotechnology) signals stated biotech intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company incorporated same-day or near-term; zero trading history</li><li>Registered address is a generic mass-registration office, not a specialist cluster or incubator</li><li>No grant funding, no science detail, no team background beyond one director</li><li>Single director, no co-founders or scientific advisory signal visible</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, funding, or team signal beyond an SIC code</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>GLOBAL BIO RESEARCH GROUP LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Newly incorporated entity nominally spanning pharmaceutical manufacturing and wholesale trade — actual activity unclear.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -455,7 +549,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Extremely early stage — incorporated with no track record</li><li>SIC code mix (manufacturing, wholesale, retail via internet, R&amp;D) is broad and generic, suggesting a shell or unformed business model</li><li>No grant funding, publications, or academic linkage evident</li><li>Single director with no verifiable research credentials</li><li>Registered address gives no cluster or incubator signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or traction; nothing to differentiate from a shell company</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-17">
 <h2>REFIND PEPTIDES UK LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated UK company registered under a biotechnology R&amp;D SIC code; specific business activity not yet observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -467,7 +561,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 (R&amp;D in biotechnology) suggests declared intent to operate in life sciences</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company incorporated too recently to show any track record</li><li>No grant funding, publications, or prior company history evident</li><li>Registered address shows no signs of specialist infrastructure or cluster presence</li><li>No ORCID records found for either director — no verifiable academic grounding</li><li>Company name references &#x27;peptides&#x27; but no science, platform, or pipeline data provided to substantiate this</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, funding, or team credibility signals</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>SWISS FANLEY HEEP BIOLOGICAL FUNCTION LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company, plausibly related to cosmetics/personal care products, biotech research services, or wholesale distribution of toiletries/perfumes given its SIC mix.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -479,7 +573,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Mixed, incoherent SIC codes (cosmetics manufacturing, wholesale of perfumes, biotech research, other personal service activities) suggesting no clear focus</li><li>No evidence of scientific platform, IP, or technical differentiation</li><li>Generic non-specialist registered address</li><li>No grant funding or external validation</li><li>Single director with no verifiable academic or industry track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or team signal; SIC codes suggest a small commercial/trading entity rather than a biotech venture</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-25">
 <h2>REGENEVE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">An early-stage entity registered under a biotech R&amp;D SIC code, with no disclosed product or research focus yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-25 &middot; <span class="label">SIC:</span> —</p>
@@ -491,7 +585,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 (R&amp;D in biotechnology) suggests declared intent to operate in life sciences</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Just incorporated — no trading or research history</li><li>Residential registered address, not a lab/incubator/cluster address</li><li>No grant funding identified</li><li>No ORCID match for sole director</li><li>Single-director structure with no visible team</li><li>No abstract, product, or platform information available</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with a SIC code and nothing else; no evidence of science, team credibility, or funding</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>TAD LIFE SCIENCES LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational or product detail provided beyond a biotech R&amp;D SIC classification.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -503,7 +597,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC 72110 (biotech R&amp;D) suggests intended focus area</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated very recently — no track record</li><li>No science, product, or mechanism disclosed</li><li>No funding data (grant or otherwise) evidenced</li><li>Generic registered address, not a known life-sciences hub or incubator</li><li>Single director with no visible academic or industry publication record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, team credentials, or funding; nothing here to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>MARICENE LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — registered for wholesale of chemicals/other products and R&amp;D in natural sciences/engineering, but no operational detail available</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -515,7 +609,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC 72110 suggests intended R&amp;D activity in natural sciences/engineering</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Shell-like day-one incorporation with no track record</li><li>Single director, no team visible</li><li>Generic registered office, no cluster/incubator signal</li><li>No grant funding or external validation found</li><li>No ORCID match — no verifiable academic publication record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; pure shell at this stage</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>LONDON BIOTECH INTERNATIONAL LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational detail beyond registration.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -527,7 +621,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes include 72110 (R&amp;D on biotechnology), signalling stated life-sciences intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated with future/forward date (2026-07-15), unusual and worth verifying</li><li>No funding, grant, or trading history</li><li>Registered address appears generic/serviced-office rather than a specialist cluster</li><li>No verifiable academic or industry track record for either director</li><li>No science, product, or pipeline detail provided</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell company with no verifiable science, team credibility, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-16">
 <h2>REINSI BIO LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated biotech R&amp;D company; no further detail on what it actually does is observable yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -539,7 +633,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC 72110 (research and experimental development on biotechnology) indicates stated R&amp;D intent</li><li>One director holds a doctoral title, suggesting possible technical background</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated at a residential address, not a lab or incubator</li><li>No grant funding, no science description, no evidence of activity</li><li>No ORCID match for either director — no verifiable publication record</li><li>Company appears to be pre-operational with no observable track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no science, funding, or credibility signals to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>HAMILTONIAN LABS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no product, service, or activity description available beyond SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -551,7 +645,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes suggest software/computing and R&amp;D focus (62012, 72110, 72190, 74909)</li><li>Registered near a known London innovation cluster (White City)</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated with a future-dated date (2026-07-20), suggesting placeholder/template data or a shelf company not yet trading</li><li>No description of product, science, or market available</li><li>No grant funding or external validation</li><li>Single director with no verifiable academic or entrepreneurial track record</li><li>No ORCID match — no independent credibility signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable activity, science, funding, or team credentials; nothing here to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>BENCHMARK PEPTIDES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Early-stage company positioned in testing/analysis and R&amp;D services, likely peptide-related work based on name</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -563,7 +657,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes include R&amp;D (72110/72190), suggesting genuine scientific intent rather than pure holding company</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No funding data of any kind</li><li>No evidence of technical platform or IP</li><li>Single-director structure with no visible track record</li><li>Generic residential address, no cluster/incubator signal</li><li>No ORCID match — no verifiable academic publication history</li><li>Incorporated too recently to show any traction</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell company at incorporation with no funding, no team evidence, no science detail</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-19">
 <h2>SUFIYA LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Newly incorporated company registered under a biotech R&amp;D SIC code; actual business activity not yet observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-19 &middot; <span class="label">SIC:</span> —</p>
@@ -575,7 +669,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 indicates stated R&amp;D intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading history</li><li>No funding data</li><li>No verifiable team credentials</li><li>Generic/residential registered address</li><li>Single director, no co-founders or advisors visible</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, funding, or team signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>PETITE ROOTS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — SIC codes suggest retail sale via mail order/internet combined with biotechnology R&amp;D, but no descriptive data provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -587,7 +681,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC code combination (mail order/internet retail + biotechnology R&amp;D) is unusual and unclear — inconsistent business description</li><li>No abstract, grant, or product information provided</li><li>Generic managed-office address, not a specialist life sciences location</li><li>Single director with no verifiable academic or biotech track record</li><li>No evidence of any funding, dilutive or non-dilutive</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, team pedigree, or location signal; essentially a blank shell at this stage</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-17">
 <h2>JCS Bionutrition Limited <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company nominally in biotech R&amp;D; no product, service, or activity detail is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -599,7 +693,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 (biotech R&amp;D) suggests declared intent to operate in life sciences</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated in the future (2026) — likely a data artefact or shell pre-registration, treat with caution</li><li>No founder academic or industry credentials observable</li><li>No funding, grant, or non-dilutive support evidenced</li><li>Generic non-cluster registered address</li><li>Shared surname directors with no visible prior company or research track record</li><li>No abstract, mechanism, or product description available</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or traction signal; essentially a blank shell registration</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-19">
 <h2>VELQEVRA LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">Unclear — SIC codes suggest a mix of chemical/toy wholesale, e-commerce, and R&amp;D activity, but no product or service is described.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-19 &middot; <span class="label">SIC:</span> —</p>
@@ -611,7 +705,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED for director Carly Chapman — verified genuine academic record</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes are incoherent for a life-sciences thesis (wholesale of chemicals/toys, e-commerce, R&amp;D) — unclear actual business activity</li><li>No science, product, or mechanism described anywhere in the record</li><li>No institutional affiliation listed for the ORCID-confirmed director</li><li>No funding, grant, or trading history — pre-revenue, pre-everything</li><li>Generic registered address with no cluster or incubator signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no discernible life-sciences thesis, incoherent SIC codes, no funding, day-one shell company</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-16">
 <h2>REGISTA LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company registered under a biotech R&amp;D SIC code; no further activity detail available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -623,7 +717,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 (R&amp;D in biotech) suggests stated life-sciences intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated with future date, unusually recent/pre-registration status</li><li>No grant data, no science description, no team credentials</li><li>Generic office address with no cluster or incubator signal</li><li>Single director with no verifiable academic or industry track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or traction; nothing to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>ALGAEBREATH MATERIALS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Very early-stage company positioned around paints/coatings and R&amp;D, likely algae-related materials, but no verifiable product or activity yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -635,7 +729,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes indicate specific materials/R&amp;D focus rather than generic trading shell</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated same year as this brief — zero track record</li><li>Single director with no disclosed relevant background</li><li>No academic or grant provenance found</li><li>Residential registered address, not a lab or incubator</li><li>No science, product, or funding detail available to assess technical credibility</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; pure shell at this stage</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>KMS-INDUSTRIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — SIC codes indicate retail via mail order/internet plus biotechnology R&amp;D, but no product or service description is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -647,7 +741,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No abstract or grant data to substantiate any biotech activity</li><li>SIC code 47910 (retail) is inconsistent with a serious biotech play, or suggests an unformed business model</li><li>Single-director company with no verifiable track record</li><li>No funding evidence at all</li><li>Freshly incorporated with nothing yet observable</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or team signal; SIC codes suggest ambiguous or unformed business model</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>RAKSHA THERAPEUTICS LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of business activity beyond a biotech R&amp;D SIC code</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -659,7 +753,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72110 (biotechnology R&amp;D) indicates stated intent to operate in life sciences</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated in the future / placeholder date (2026-07-23) — data integrity concern</li><li>No trading history, no science description, no team background beyond one name</li><li>Use of corporate secretary formation-agent service is a generic setup signal, not company-specific</li><li>No grant funding or academic publication record found for sole director</li><li>No location or cluster signal supporting life-sciences credibility</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, team credibility, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>PRIME RESEARCH SUPPLY LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational or product detail provided beyond SIC classification.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -671,7 +765,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Registered address is a generic company-formation agent address, not a specialist bioscience location</li><li>SIC code 72110 (R&amp;D biotech) present but no supporting evidence of actual research activity</li><li>No grant funding, publications, or prior company history evident</li><li>Single director with no verifiable academic or industry track record</li><li>Company incorporated with no further operational history to assess</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-like registration with no verifiable science, team credibility, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>PULHAT RESEARCH ACADEMY LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 4 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Not observable at this stage — no clear business activity described beyond mixed SIC codes</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -683,7 +777,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Mixed, unrelated SIC codes (publishing, IT consultancy, membership organisations, education) suggesting no defined business model</li><li>No science, product, or funding data of any kind</li><li>Single-director shell with no track record disclosed</li><li>Newly incorporated with no operating history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or team credibility signals; looks like an unformed shell</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>NIIVO LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of the company&#x27;s actual product or service is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -695,7 +789,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No product, science, or market description available</li><li>Single director with no verifiable academic or industry track record</li><li>Very recent/future incorporation date — effectively a shell at this point</li><li>SIC codes span unrelated sectors (electronics manufacturing, instruments, IT consultancy, R&amp;D) suggesting an unfocused or placeholder registration</li><li>No funding, grant, or investment signal of any kind</li><li>Generic/residential registered address, not a recognised life-sciences cluster</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility, funding, or focus; nothing to evaluate yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>MAKE IT REAL TECHNOLOGIES FOUNDATION C.I.C. <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational or product detail provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -707,7 +801,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Community Interest Company structure limits equity upside for investors</li><li>SIC code 72190 (other R&amp;D) is generic, not specialist/biotech-specific</li><li>No science, product, or market detail provided</li><li>No funding, grant, or traction evidence</li><li>Single director with no verifiable academic or industry track record</li><li>Incorporated on a forward/future date, suggesting placeholder or shell registration</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No verifiable science, team, funding, or traction; CIC structure is atypical for venture investment</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>COREWORD LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no product or activity description available beyond SIC codes suggesting software/IT and R&amp;D consultancy services.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -719,7 +813,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No described product, technology, or science — SIC codes are generic IT/software/R&amp;D consultancy, not obviously life-sciences</li><li>Registered at a mass-incorporation virtual office address, not a specialist address or incubator</li><li>No grant funding or external validation found</li><li>Too early to assess — incorporated with no trading or funding history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no discernible life-sciences angle, no funding, no verifiable team credentials, generic virtual address</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-16">
 <h2>CIRCUMSTANCE LABS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company positioned across software, other IT services and R&amp;D on natural sciences/engineering, but no product or activity yet observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -731,7 +825,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science, product, or mechanism disclosed</li><li>Single-director structure with no visible track record</li><li>Generic central London office address, not a specialist life-sciences location</li><li>No non-dilutive or dilutive funding evidence</li><li>SIC codes suggest software/IT/R&amp;D mix, not clearly biotech-specific</li><li>Company incorporated too recently to show any traction</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no science, funding, or team signal to evaluate</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-17">
 <h2>PS 1978 LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational description available beyond registered activity codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -743,7 +837,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Single-director shell with no track record disclosed</li><li>SIC codes span software (62012, 62020), R&amp;D (72190), and financial trading (63110) — an unusually broad, non-specific mix, possibly a placeholder filing</li><li>No scientific or technical description available</li><li>No funding, grant, or product evidence</li><li>Incorporation date is in the future relative to typical filing conventions — worth verifying record accuracy</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no evidence of any life-sciences activity, team credibility, or funding; effectively an empty shell at this stage</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>ROBURLABS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of activity beyond registered SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -755,7 +849,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Extremely early stage — incorporated with no operational history</li><li>No named founder credentials or prior track record</li><li>SIC codes span unrelated activities (software, R&amp;D, residential care, other services) — suggests unclear or unformed business focus</li><li>No funding data of any kind</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; nothing to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-16">
 <h2>HEIASOSA COMPANY TRADING LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no clear business activity described beyond generic SIC codes covering consultancy, R&amp;D, and creative services.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -767,7 +861,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Generic mixed SIC codes (management consultancy, R&amp;D other, other professional/scientific, other creative arts) suggest no defined focus</li><li>Virtual-office/formation-agent address, not a specialist or lab location</li><li>No funding, grant, or academic signal of any kind</li><li>Single director with no verifiable track record</li><li>Placeholder/unusual company name inconsistent with typical biotech naming conventions</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No science, no funding, no team credibility signal, and a shell-like registration profile</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-19">
 <h2>LIANE PRESHAW HORSE BEHAVIOUR AND TRAINING LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">Horse behaviour training and education services business.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-19 &middot; <span class="label">SIC:</span> —</p>
@@ -779,7 +873,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED for director</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes (software, R&amp;D, other professional services, veterinary) don&#x27;t obviously align with &#x27;horse behaviour and training&#x27; business name</li><li>No evidence of scientific or technology platform despite ORCID match</li><li>No institutional affiliation listed against ORCID, undermining relevance to a life-sciences thesis</li><li>No grant funding or other capital signal</li><li>Residential registered address</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no discernible science, product, or funding signal; this reads as a small personal services business, not a biotech</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>ARCA VSA LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — SIC codes suggest software/IT consultancy and R&amp;D services, but no product or activity is described.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -791,7 +885,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Brand-new shell with no trading or funding history</li><li>SIC codes (software, computer consultancy, R&amp;D) don&#x27;t align obviously with a life-sciences thesis</li><li>Single director with no verifiable academic or industry track record</li><li>Generic residential registered address, no cluster signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no evidence of life-sciences relevance, team credibility, or funding traction</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-16">
 <h2>CRK GLOBAL TECHNOLOGIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — SIC mix suggests IT consultancy, engineering design, and R&amp;D services rather than a single focused biotech product.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -803,7 +897,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes span unrelated disciplines (software, engineering, other R&amp;D) rather than a coherent life-sciences focus</li><li>No scientific or product description available</li><li>No grant funding or academic credentials evidenced</li><li>Incorporated with future/forward date, no track record</li><li>No indication this is a life-sciences company at all</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no evidence of life-sciences relevance, no team credibility signals, no funding, no product description</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>ROWLANDS BEES COMMUNITY INTEREST COMPANY <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A community interest company apparently focused on animal (likely bee-related) farming, with secondary codes for other R&amp;D, education/training, and other service activities.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -815,7 +909,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>CIC legal form limits dilutive fundraising and equity return potential — generally unsuitable for VC investment</li><li>No science, product, or technology detail provided</li><li>No funding evidence, non-dilutive or otherwise</li><li>Single director, no team depth</li><li>SIC codes (beekeeping, R&amp;D, education, other services) suggest a small community/agricultural project, not a scalable biotech venture</li><li>Generic residential registered address</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — CIC structure and lack of any technical, funding, or team signal make this a non-fit for VC screening</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>ONE ORIGIN LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no business description available beyond registered SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -827,7 +921,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporation date is in the future relative to any plausible filing — data integrity concern</li><li>SIC codes (47990 – other retail not in stores/stalls/markets; 72190 – other R&amp;D on natural sciences/engineering) are a mismatch, suggesting unclear or undecided business model</li><li>No abstract, grant, or product information provided</li><li>Single director with no verifiable track record</li><li>No evidence of life-sciences specific activity despite R&amp;D SIC code</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, team credibility, or coherent business model</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>PRESTON WILDERNESS PROJECT CIC <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">A Community Interest Company apparently focused on nature/education or recreation activities, not a life-sciences venture</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -839,7 +933,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>CIC legal form strongly suggests social/community purpose, not a scalable biotech venture</li><li>SIC codes (software, residential care, activities associations, other service activities) show no life-sciences or R&amp;D focus</li><li>No science, platform, or mechanism disclosed</li><li>No funding, grant, or investment data</li><li>No director has a confirmed ORCID or GtR record</li><li>Registered address has no biotech cluster signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — wrong sector entirely; a CIC with no discernible life-sciences activity, science, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>LODESTONE LABS LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Aligarh Muslim University, CGG Robertson, Imperial College of Science, Technology and Medicine, SLB, SLB Middle East, Saudi Aramco (Saudi Arabia), Society of Petroleum Engineers">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no product, service, or market description provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -851,7 +945,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director ORCID confirmed — genuine verified academic record</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes and director background are petroleum/geoscience engineering, not biotech — mismatch with fund thesis</li><li>No described science, product, or market</li><li>No grant funding or trading history</li><li>Registered address is residential, not a lab/incubator</li><li>Single director, no co-founder or team visible</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — mismatched sector, no biotech signal, no funding, no product</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>UNIPEPT LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no product, service, or R&amp;D description provided beyond generic wholesale/consultancy SIC codes</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -863,7 +957,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No description of business activity or science</li><li>SIC codes are broad/generic (wholesale, IT consultancy, other business support, other research) — not specialist biotech codes</li><li>No Innovate UK/UKRI grant data</li><li>No team background or prior venture history observable</li><li>Just incorporated — zero trading or development track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no substantive signal of a life-sciences business; looks like a shell or non-biotech venture at this point</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>BROADCAST INNOVATION TECHNOLOGIES LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Newly incorporated company with SIC codes spanning software, data processing, R&amp;D, and other services — no clear single business description observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -875,7 +969,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Registered at a known generic mass-incorporation address, not a specialist location</li><li>No funding, grant, or product data available</li><li>SIC code spread (software, data processing, R&amp;D, other services) suggests no defined focus yet</li><li>No ORCID match — no verifiable academic publication record</li><li>Incorporated very recently with no operating history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no science, funding, or credibility signals to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>HARMONT LABS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company registered under software/IT and R&amp;D consultancy SIC codes; no product or biotech focus is evidenced.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -887,7 +981,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes (62012, 62020, 62090, 72190) indicate software/IT consultancy, not life sciences — questionable fit for a life-sciences fund</li><li>No scientific, clinical, or platform information provided</li><li>No funding history, dilutive or non-dilutive</li><li>No academic or biotech credentials evidenced for sole director</li><li>Incorporation date is in the future / placeholder, suggesting incomplete or template data</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no life-sciences signal, no science, no funding, no team credibility evidence</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>ROLDEN LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no described business activity beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -899,7 +993,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No abstract, grant, or product data provided</li><li>SIC 72190 (other R&amp;D) is generic and uninformative</li><li>Registered address is residential, not a lab/incubator/cluster location</li><li>No ORCID matches for either director — no verifiable academic track record</li><li>Incorporation date appears to be in the future, suggesting placeholder or template data</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or traction signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>SOL-PHASE TECHNOLOGIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of product or activity provided beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -911,7 +1005,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated very recently with no operational history</li><li>Generic virtual-office registered address, commonly used by shell companies</li><li>No science, product, or market description available</li><li>No grant funding or external validation found</li><li>Single director with no verifiable academic or commercial track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No verifiable science, team credibility, or funding signal; indistinguishable from an empty shell at this stage</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>DIGITALSKY TECHNOLOGIES LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company with unclear business focus given a mixed set of legal, engineering, and IT-related SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -923,7 +1017,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Mass-registration registered address (Wenlock Road) suggests possible shelf company or formation-agent use, not a genuine operating signal</li><li>SIC codes span unrelated activities (legal, IT consultancy, engineering, market research) suggesting no defined business model yet</li><li>No grant funding, no science/technology detail, no team credentials evidenced</li><li>Single director with no disclosed relevant background</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or credible location signal; too early and too thin to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>OMNIAIRFID LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">An unregistered-stage company nominally in R&amp;D (SIC 72190), no disclosed product or activity yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -935,7 +1029,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading history — incorporated within days of this record</li><li>Residential registered address, not a lab or incubator</li><li>SIC code is generic R&amp;D classification, not sector-specific</li><li>No grant funding, patents, or publications evidenced</li><li>Single-director structure with no visible team or advisors</li><li>No science or technology described anywhere in available data</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, team depth, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>THE NATIONAL ACADEMY OF ARTIFICIAL INTELLIGENCE OF THE UNITED KINGDOM <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="GtR: 2 possible matches, unverified">GtR?</span></h2>
 <p class="oneliner">A newly incorporated entity styled as a national AI academy, spanning IT services, R&amp;D, professional membership, and education SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -947,7 +1041,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Grandiose &#x27;National Academy&#x27; naming with no evidence of official, governmental, or academic endorsement</li><li>Single director, no visible track record</li><li>Extremely broad, unfocused SIC code mix (IT, R&amp;D, membership bodies, education)</li><li>No funding, product, or science detail available</li><li>No credibility signals (ORCID/GtR unverified)</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — name-brand overreach with zero substantiating detail; classic shell-entity pattern</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>COMPACT ORBITAL GEARS 2026 LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no product, science, or Innovate UK data provided beyond a registration.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -959,7 +1053,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science, product, or mechanism disclosed</li><li>SIC codes (software, engineering R&amp;D, holding companies) suggest possible mismatch with life sciences focus — &#x27;Compact Orbital Gears&#x27; name also inconsistent with biotech</li><li>No funding evidence, dilutive or non-dilutive</li><li>No team credentials or prior track record observable</li><li>Address is generic industrial site, not a specialist cluster</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable life-sciences signal at all; name, SIC mix, and address suggest this may not even be a biotech company</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>CHANCERY TECHNOLOGIES LIMITED <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 5 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Not observable at this stage — SIC codes suggest software/IT services and data processing, but no product description available</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -971,7 +1065,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Single director with no verifiable track record</li><li>Residential address, not a specialist or incubator location</li><li>No grant funding or external validation</li><li>SIC codes are broad/generic IT and data-processing codes, not obviously life-sciences specific</li><li>Company incorporated with essentially no operating history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no science, no team credibility, no funding signal; nothing to differentiate from a shell company</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>KATALYST INNOVATION COLLABORATIVE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — SIC codes suggest engineering/scientific consultancy and R&amp;D services, but no operational detail is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -983,7 +1077,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director holds a doctoral title, suggesting technical background</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science, product, or market detail available</li><li>No grant funding evidence located</li><li>Residential registered address, not a lab or incubator</li><li>SIC codes are broad/generic (management consultancy, R&amp;D, other professional services) rather than specialist biotech codes</li><li>No ORCID match to confirm academic credentials</li><li>Pre-trading shell with no operational signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or specialist signal; looks like a freshly incorporated shell</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>I.B.O.S.F LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Newly incorporated company with SIC codes spanning management consultancy, environmental/other engineering testing, other R&amp;D, and software - no clear single business description available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -995,7 +1089,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company incorporated with future/forward date, effectively no operating history</li><li>SIC code mix (management consultancy, testing/analysis, other R&amp;D, software) is unfocused and doesn&#x27;t indicate a specific biotech thesis</li><li>Registered address is a generic mass-registration office, not a lab or life-sciences cluster address</li><li>No grant funding, no science detail, no team credentials evidenced</li><li>Single director with no disclosed relevant background</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No verifiable science, team, funding, or focus; essentially a blank-slate shell registration</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>POLAREON TECHNOLOGIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of product or service provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -1007,7 +1101,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 71122 (engineering-related activities) suggests technical/engineering focus</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated too recently to show any track record</li><li>No abstract, project, or funding data supplied</li><li>SIC codes (engineering design; computer consultancy) do not clearly indicate life-sciences relevance</li><li>Single director with no verifiable credentials</li><li>Generic address, no incubator or cluster signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; nothing to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>PHOS INNOVATIONS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of activity beyond a generic R&amp;D SIC code</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1019,7 +1113,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Shell-stage company with no operational history</li><li>SIC code 72190 (other R&amp;D) is generic and uninformative</li><li>Single-director structure with no evident academic or industry track record</li><li>No grant funding or external validation found</li><li>Registered address shows no incubator/cluster signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; nothing to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>TNT SUPPLIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company registered under a scientific R&amp;D SIC code; no further business description available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1031,7 +1125,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72190 (other R&amp;D natural sciences/engineering) suggests intended R&amp;D activity</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company name (&#x27;TNT Supplies&#x27;) is inconsistent with R&amp;D SIC code — suggests generic or placeholder incorporation</li><li>No science, product, or market description available</li><li>No funding, grant, or non-dilutive support evidence</li><li>No team credentials or prior track record observable</li><li>Address is generic, not a known life-sciences cluster or incubator</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; name/SIC mismatch suggests this may not be a genuine biotech play</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>VERIWATER LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A very early-stage company registered under technical testing and R&amp;D codes, likely related to water analysis or verification — not yet substantiated by activity.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1043,7 +1137,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes (71200 technical testing, 72190 R&amp;D) suggest a science/testing-oriented business model</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding evidence</li><li>No team background or prior track record disclosed</li><li>Generic residential registered address, not a lab or incubator</li><li>Single director with no visible academic or industry credentials</li><li>Company incorporated in the future relative to typical filing conventions — verify date accuracy</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; too early to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-16">
 <h2>ARF Archaeology Ltd <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company registered under a scientific R&amp;D SIC code, with no disclosed products or services yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -1055,7 +1149,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72190 indicates intended R&amp;D activity</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Shelton Street address is a generic mass-registration address, not a lab or incubator</li><li>No grant funding, publications, or prior track record found for the director</li><li>No science, product, or market detail available</li><li>Company incorporated too recently to show any activity</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or credible location signal; nothing to evaluate yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>BOUNDLESS REALITY LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — SIC mix suggests software development combined with health-related and educational support activities.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1067,7 +1161,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science, product, or mechanism observable</li><li>SIC codes span software, health, and education — unclear focus, possibly a shell or holding structure</li><li>No funding data (grant or otherwise) on record</li><li>Single director with no verifiable academic or industry track record</li><li>Company incorporated with future date relative to typical filing — very early/pre-operational</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no evidence of scientific substance, team credibility, or funding; nothing here to differentiate from a shelf company</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>SOUND REASON LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Not observable at this stage — no product, service or market description available beyond registered SIC codes</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1079,7 +1173,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes span software (58290, 62012, 62020) and R&amp;D (72190), suggesting some technical ambition</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Brand new shell company with no track record</li><li>Single director, no co-founders or team visible</li><li>No grant funding or external validation</li><li>Generic residential address, no cluster/incubator signal</li><li>SIC mix is broad/vague rather than pointing to a specific life-sciences niche</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — pre-seed shell with no verifiable science, team depth or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>PURE ENTRY LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — company registration mixes miscellaneous manufacturing, wholesale, retail, and R&amp;D SIC codes with no descriptive detail available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1091,7 +1185,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Shelton Street address is a generic mass-registration address used by thousands of shell companies, not a genuine business location</li><li>SIC code combination (miscellaneous manufacturing, wholesale, retail, R&amp;D) is incoherent and suggests a placeholder or unformed business plan</li><li>No abstract, grant, or funding data provided</li><li>No science, product, or mechanism inferable from the record</li><li>Single director with no verifiable track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or credible location signal; classic shell-company profile</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>ARDEN ADVANCED INNOVATION LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Northeast Petroleum University">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no product, service, or business description provided beyond registered activity codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1103,7 +1197,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has ORCID-confirmed academic publication record</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Generic mass-registration virtual office address, not a genuine R&amp;D or cluster location</li><li>No described product, technology, or business activity</li><li>No funding (grant or otherwise) observed</li><li>SIC codes are broad/generic (IT, engineering, management consultancy) and don&#x27;t indicate a specific biotech or life-sciences focus</li><li>Director&#x27;s academic field (petroleum engineering) has no apparent link to life sciences</li><li>Single director, no evidence of team or prior company track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no discernible life-sciences activity, generic shell-company signals, and academic background unrelated to biotech</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>PARAXON LTD. <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of activities beyond generic IT/software SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1115,7 +1209,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Formation-agent registered address (Shelton Street), not a lab or incubator</li><li>SIC codes are generic software/IT consultancy, not life-sciences-specific despite fund&#x27;s focus</li><li>No science, product, or market description available</li><li>No funding, grant, or trading history</li><li>Single-director company with no visible track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no life-sciences signal, generic shell-company profile, nothing to evaluate</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>TOMQUANTUM LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational detail provided beyond registration.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1127,7 +1221,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No Innovate UK grant data actually matched (placeholder fields only)</li><li>No science, product, or market detail available</li><li>Single director, no track record evidence</li><li>Generic residential address, no cluster/incubator signal</li><li>SIC code 72190 (other R&amp;D) is generic and uninformative</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, funding, or team signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-17">
 <h2>STAR CONSERVATION LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> —</p>
@@ -1139,7 +1233,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No Innovate UK/UKRI grant data provided</li><li>Registered address is a generic formation-agent address, not a specialist bioscience cluster</li><li>SIC codes (63110 data processing/hosting, 72190 other R&amp;D) are vague and not specific to a life-sciences modality</li><li>No ORCID match for director despite &#x27;Dr&#x27; title</li><li>Incorporated very recently — no operating history</li><li>No description of science, product, or business model available</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or team signal; nothing to differentiate from a shell filing</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>CIRRUMUSE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no substantive business description available beyond registered SIC codes covering software/IT services.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -1151,7 +1245,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No life-sciences SIC code — all four codes are IT/software-related (62012, 62020, 62090, 72190), inconsistent with a biotech thesis</li><li>No named science, platform, or mechanism</li><li>Single director with no disclosed relevant background</li><li>Residential registered address, no lab or cluster signal</li><li>No funding, grant, or non-dilutive support evidence</li><li>Incorporation date is in the future (2026-07-21), suggesting a data anomaly or placeholder shell</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no biotech signal whatsoever; appears to be an IT services shell, not a life-sciences company</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>AUREN ENERGY LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">An Aberdeen-registered company positioned around energy extraction and engineering services, though its actual product or activity is not yet observable.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -1163,7 +1257,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes span oil/gas extraction support, other engineering, and R&amp;D/engineering consultancy, suggesting an energy-tech angle</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science, technology, or mechanism disclosed</li><li>No funding (grant or equity) evidence</li><li>No team track record or academic credentials verifiable</li><li>Single director, no supporting management team</li><li>Company only days old — essentially a shell at this point</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable technology, team credibility, or funding signal; too early to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>SEAQUEST GROUP LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">An early-stage company registered across shipbuilding, engineering, and R&amp;D SIC codes, with no publicly observable product or activity yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1175,7 +1269,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated in the future (2026-07-15), suggesting placeholder or unverified data</li><li>Single-director structure with no visible track record</li><li>Generic mass-registration address, not a biotech/science cluster</li><li>SIC codes span unrelated fields (marine engineering, R&amp;D, engineering consultancy) — unclear focus</li><li>No science, product, or mechanism disclosed</li><li>No funding, grant, or trading history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or credible incorporation data; nothing here warrants further attention</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>SD SOLUTIONS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no described product or service beyond generic SIC codes for business/domestic software and R&amp;D.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -1187,7 +1281,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No product, science, or market description available</li><li>Single-director shell with no track record</li><li>Generic SIC codes (62012 software, 72190 R&amp;D) give no specific insight into actual activity</li><li>No funding history of any kind</li><li>Registered address is generic, not a recognised life-sciences cluster or incubator</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; nothing to evaluate</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>OPORTUNIDAD SPACE ANALYTICS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly registered company with a name suggesting space-related data analytics, but no verifiable activity yet.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -1199,7 +1293,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Company incorporated with future/forward date, suggesting placeholder or template record</li><li>No funding evidence of any kind</li><li>No team credentials verifiable</li><li>Generic residential registered address</li><li>Single director, no co-founder or advisory signal</li><li>SIC code 72190 (other R&amp;D) is generic and uninformative</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or traction signals; nothing to differentiate from a shell registration</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>SMOKING SNAKE DOWNHOLE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — registered entity with SIC codes suggesting R&amp;D and other technical consultancy, no further detail available</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -1211,7 +1305,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72190 (other R&amp;D natural sciences/engineering) suggests technical rather than purely commercial intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Placeholder/unresolved Innovate UK fields (title, abstract, amount not populated) — no non-dilutive funding evidenced</li><li>Company name (&#x27;Smoking Snake Downhole&#x27;) gives no clue to actual business activity</li><li>Single director, no co-founder or team depth visible</li><li>No ORCID record for director — cannot verify academic background</li><li>No trading history, website, or product information available</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — Shell-stage company with no verifiable science, team depth, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>SMARTSAFE HELMETS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Company name suggests smart/connected helmet technology, but no verified business activity is described in the data provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -1223,7 +1317,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72190 (R&amp;D in natural sciences/engineering) suggests intended R&amp;D activity</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated on a future/unusual date (2026-07-24), suggesting placeholder or test data — verify register accuracy</li><li>Single director, no co-founders or team depth visible</li><li>No funding, grant, or trading history</li><li>Generic shared-office address, not a specialist cluster</li><li>Company name suggests hardware/consumer safety product, unclear fit for a life-sciences fund mandate</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or sector fit; too early and too thin to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-16">
 <h2>CARDIFF INNOVATIONS LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no business activity description available beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-16 &middot; <span class="label">SIC:</span> —</p>
@@ -1235,7 +1329,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Registered address matches a Cardiff University building, suggesting possible academic spinout origin</li><li>SIC code 72190 (other R&amp;D on natural sciences/engineering) indicates R&amp;D intent rather than generic trading</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No ORCID matches for any director — no verifiable academic publication record</li><li>No Innovate UK/UKRI grant data present</li><li>No description of product, technology, or market</li><li>Brand-new shell company with zero operating history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credentials, or funding signal; address alone is not enough to act on</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>RADIANODE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no business description available beyond registered SIC codes spanning IT and testing/engineering services.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -1247,7 +1341,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Generic mass-registration virtual office address (Shelton Street)</li><li>No business description, science, or product inferable from SIC codes alone</li><li>No grant funding or external validation</li><li>Single director with no verifiable track record</li><li>SIC codes are broad/generic (IT consultancy, testing, holding company, engineering) rather than a clear biotech signal</li><li>Incorporated with a future/forward date, suggesting placeholder or unverified record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No science, no team signal, no funding, generic registration address; nothing to evaluate</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>JING CONSULTING GROUP LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — no description of products, services, or research focus provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -1259,7 +1353,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director has a confirmed ORCID record</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes (62012, 62020, 72190) indicate IT/software consultancy and R&amp;D — no biotech or life-sciences SIC code present</li><li>No company description, product, or science rationale available</li><li>Residential address, not a lab or incubator location</li><li>Single director, no co-founders or team depth visible</li><li>No grant funding or external validation found</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — SIC codes and available data point to IT consultancy, not life sciences; no scientific or commercial signal to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>PRIGAIA LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Newly incorporated company spanning computer programming, other research, and health/social care activities — actual focus unclear from SIC mix alone.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -1271,7 +1365,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Founder holds a doctoral title, suggesting specialist background (unverified)</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding or trading history</li><li>Residential registered address, no cluster/incubator signal</li><li>SIC code mix (software, R&amp;D, health/social care) is broad and non-specific, unclear actual business model</li><li>Sole director, no co-founder or team visible</li><li>ORCID search returned no match, so academic background unverified</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — pre-seed shell company with no verifiable science, funding, or team signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>ZEROSV TECHNOLOGIES LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — SIC codes suggest software/IT and other education/training activity, but no description of an actual product or service is provided.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1283,7 +1377,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes indicate software/IT/education, not life sciences — likely out of fund thesis</li><li>No science, product, or technology described anywhere in the record</li><li>Single director with no visible track record</li><li>No funding history, grant or otherwise</li><li>Generic registered office, no cluster/incubator signal</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No life-sciences relevance, no science described, no funding, no team signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>CLINILINK FOUNDATION CIC <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A Community Interest Company reportedly combining publishing, R&amp;D, and health/education activities, though its actual product or service is unclear.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1295,7 +1389,7 @@
 <p class="flags-title">Positive flags</p><ul><li>CIC structure suggests a stated social/community mission, which may fit health-education remit implied by SIC codes</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>CIC legal form is unusual for a venture-backed biotech — CICs have asset locks and capped returns, generally incompatible with equity VC investment</li><li>SIC code mix (publishing, R&amp;D, human health, other education) is scattered and doesn&#x27;t indicate a specific biotech platform or therapeutic focus</li><li>No ORCID match for either director — no verifiable academic or scientific credentials</li><li>No grant funding, no scientific rationale, no named technology observable</li><li>Incorporation date is in the future relative to typical filing conventions, suggesting this is a shell or pre-launch entity with no track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — CIC legal structure is fundamentally misaligned with venture equity investment, and there is no observable science, funding, or credentialed team to offset this</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-15">
 <h2>HELM PRODUCTS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no product or activity description available beyond registered SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-15 &middot; <span class="label">SIC:</span> —</p>
@@ -1307,7 +1401,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Shelton Street registered address is a generic mass-incorporation address, not a specialist life-sciences location</li><li>No ORCID record for either director — no verifiable academic publication link</li><li>SIC codes span domestic appliance manufacturing (27510), retail (47910), IT consultancy (72190) and R&amp;D (74100), suggesting an unfocused or placeholder registration rather than a defined biotech thesis</li><li>No grant funding, no product, no science described</li><li>Company incorporated with a future date (2026), indicating this record is speculative or pre-registration</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no discernible science, team credibility, funding, or focused business model to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>ELAURAI TECHNOLOGIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company whose stated activities span computer hardware, IT consultancy, engineering, and technical testing — actual product/service unclear.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -1319,7 +1413,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated too recently to show any track record</li><li>No grant funding identified</li><li>SIC codes are broad and mixed (hardware, IT consultancy, R&amp;D, testing) — suggests undefined or unformed business model</li><li>Registered address is residential, not a lab, incubator, or science park</li><li>No ORCID matches for either director — no verifiable academic or scientific credibility signal</li><li>No abstract, project, or award data provided — cannot assess technology or science claims</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, team credibility, or stage signal; nothing to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-14">
 <h2>GLUCOSPHERE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — SIC codes suggest software/IT and R&amp;D services, but no product or platform description is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> —</p>
@@ -1331,7 +1425,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director holds a doctorate (Dr. title), suggesting some academic background</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No grant funding or product data available</li><li>SIC codes are generic (software/IT, R&amp;D, other) and inconsistent with a focused biotech thesis — the name &#x27;Glucosphere&#x27; hints at diabetes/metabolic science but this is not supported by SIC or other data</li><li>Non-specialist registered address</li><li>No verifiable academic or industry track record for the sole director</li><li>Company incorporated with almost no public trail yet</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, funding, or team track record</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>CENTRE OF RESEARCH EXCELLENCE FOR THE ARTS, TECHNOLOGY AND ENTERPRISE LIMITED <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of Roehampton">ORCID &#10003;</span></h2>
 <p class="oneliner">Not observable at this stage — SIC codes suggest management consultancy, IT services, education and arts activities, but no described product or service.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1343,7 +1437,7 @@
 <p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED for director Daniel Justice Eshun (University of Roehampton affiliation)</li><li>Multiple directors hold academic doctorates</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No described product, technology, or business model</li><li>SIC codes span arts, IT consultancy, education and social work — unfocused, not a life-sciences profile</li><li>Registered address is a church, not a lab, incubator or office cluster</li><li>No grant funding or other capital evidence</li><li>No life-sciences relevance apparent from any data provided</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No discernible life-sciences angle, no funding, no product; nothing here for a biotech screening brief</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>SMABOUCHE LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Company registered under IT/software and other research SIC codes; no evidence yet of a specific life-sciences product or service.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -1355,7 +1449,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No life-sciences SIC code — mix of software/IT consultancy and other research/development codes, unclear fit for a life-sciences fund</li><li>No evidence of scientific platform, mechanism, or product</li><li>No grant funding or other capital signal</li><li>Generic/residential registered address, not a specialist cluster</li><li>No ORCID-confirmed academic credentials for any director</li><li>Incorporated with future date, suggesting placeholder or template record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no life-sciences signal, no funding, no team credibility markers; nothing here to justify further work</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>NOCTURNIS TECHNOLOGIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no description of activities available beyond SIC classification.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1367,7 +1461,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72190 (other R&amp;D natural sciences/engineering) suggests some scientific intent</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No Innovate UK grant match</li><li>No academic or industry provenance evidenced for either director</li><li>Generic/upmarket London address with no life-sciences cluster signal</li><li>Incorporated with no further public activity yet — too early to assess</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; pure shell at this point</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>LATITUDE MEDICAL LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational description available beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1379,7 +1473,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72190 indicates intended R&amp;D focus</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Extremely early stage — incorporated with no trading or funding history</li><li>No science, product, or market detail provided</li><li>Single director with no verifiable academic or industry track record</li><li>Generic residential registered address</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, team track record, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>GENSIQ LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Unclear — SIC codes suggest a mix of specialist trade, computing, engineering consultancy and R&amp;D activity, but no product or service description is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -1391,7 +1485,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Broad SIC code mix (engineering, computing, R&amp;D) could indicate a technical founder</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Residential registered address</li><li>No grant, funding, or trading data</li><li>No science, product, or market description available</li><li>Single-director company with no visible track record</li><li>Incorporation date is very recent, effectively pre-operational</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, or team signal; nothing to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>PELAGAIA LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated company with SIC codes spanning software development, computer consultancy, other scientific R&amp;D and other professional/scientific activities — no clear life-sciences product yet defined.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1403,7 +1497,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No IP, product, or science described anywhere in the record</li><li>SIC codes are generic IT/consultancy mix, not a specialist biotech code</li><li>Single director with no visible track record</li><li>No funding (grant or otherwise) evidenced</li><li>Registered address is residential, not a lab or life-sciences cluster</li><li>Incorporation date is inconsistent/future-dated, suggesting placeholder or test data</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No evidence of life-sciences activity, science, team credibility, or funding; nothing to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>ACORDA LABS LIMITED <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no trading or product information available beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1415,7 +1509,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science, product, or market description available</li><li>Incorporated too recently to show any track record</li><li>Registered address is generic/residential, not a life-sciences cluster or incubator</li><li>No grant funding or external validation observable</li><li>No ORCID records found for any director (neutral, but no offsetting positive signal either)</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility, or funding signal; nothing to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>VAS MEDTECH LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">A newly incorporated medtech company; specific product or focus not disclosed in available data.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -1427,7 +1521,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes indicate medical devices (32500) and R&amp;D (72190) focus</li><li>Director holds &#x27;Dr&#x27; title, suggesting possible clinical/academic background</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Incorporated with a future date (2026-07-21), which is unusual and warrants verification</li><li>Registered at a generic mass-incorporation virtual office address, not a life-sciences cluster</li><li>No ORCID match for either director — no verifiable academic track record</li><li>No funding data, no evidence of product, IP, or traction</li><li>Company is pre-operational with no public history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credentials, funding, or traction; address is a generic formation agent</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-22">
 <h2>ORBITAL AI SPACE LIMITED <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Not observable at this stage — no product or service description available beyond registered activity codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-22 &middot; <span class="label">SIC:</span> —</p>
@@ -1439,7 +1533,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading or funding history — company is brand new</li><li>No confirmed academic or industry credentials for the director</li><li>Generic serviced-office address, no specialist cluster signal</li><li>SIC codes (publishing, software, IT) suggest software/AI focus, not obviously life sciences — possible mismatch with fund thesis</li><li>No abstract or grant data to assess technology or science</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; SIC codes don&#x27;t even clearly indicate a life-sciences business</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-18">
 <h2>LAMINA SYSTEMS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational or product detail provided beyond registered activity codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-18 &middot; <span class="label">SIC:</span> —</p>
@@ -1451,7 +1545,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No product, science, or market detail provided</li><li>Single-director shell with no track record disclosed</li><li>No funding (grant or equity) evidence</li><li>Generic residential address, no cluster/incubator signal</li><li>SIC codes (measuring/testing instruments; other R&amp;D) are broad and not corroborated by other data</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — pre-operational shell with no verifiable signal beyond incorporation and SIC codes</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>OPERATIONAL CAPABILITY SYSTEMS LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 5 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Not observable at this stage — no description of product or activity available beyond SIC codes.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1463,7 +1557,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC code mix (aerospace/defence equipment, engineering, computer consultancy, other business support) is unusually broad and non-specific for a life-sciences thesis</li><li>Registered at a known generic mass-incorporation address, not a research cluster or incubator</li><li>No named academic founder or verifiable research background</li><li>No funding, grant, or product data of any kind</li><li>Extremely early — incorporated with essentially no public track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or location signal; nothing here to screen in</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>OXII LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no business description available beyond a generic R&amp;D SIC code.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -1475,7 +1569,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC code 72190 indicates registration for R&amp;D activity</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science, product, or market description available</li><li>No funding history, dilutive or non-dilutive</li><li>Residential registered address, no cluster/incubator signal</li><li>Single director with no verifiable academic or commercial track record</li><li>Incorporated as placeholder-style shell with no operational detail</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; nothing to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>LIVING PHYSICS <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">An early-stage R&amp;D company, purpose not yet inferable from available data.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1487,7 +1581,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC 72190 indicates registered focus on scientific R&amp;D</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No science or platform detail available</li><li>No funding history, dilutive or non-dilutive</li><li>Single director with no verifiable academic or prior-venture track record</li><li>Incorporated too recently to show any traction</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, team credibility, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-20">
 <h2>OVERTONE PHOTONICS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operating description available</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-20 &middot; <span class="label">SIC:</span> —</p>
@@ -1499,7 +1593,7 @@
 <p class="flags-title">Positive flags</p><ul><li>Director holds a doctorate, suggesting technical background</li><li>SIC codes indicate specialist manufacturing/R&amp;D focus</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>No description of company activity or product</li><li>No funding history (grant or equity) observable</li><li>Single-director structure with no visible track record</li><li>Generic registered address, no cluster or incubator signal</li><li>Incorporation date suggests this is either a data artefact or a pre-operational shell</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-21">
 <h2>BETOSIM LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no operational description available beyond registered SIC codes covering non-metallic mineral products, chemical/materials wholesale, R&amp;D, and engineering consultancy.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-21 &middot; <span class="label">SIC:</span> —</p>
@@ -1511,7 +1605,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>No trading history or business description available</li><li>Residential address, not a specialist or incubator location</li><li>No matched grant funding</li><li>No ORCID record for either director despite one holding a doctorate</li><li>SIC codes are broad/mixed (materials, wholesale, R&amp;D, engineering) suggesting an unclear or undefined business model</li><li>Incorporation date appears to be in the future, unusual and worth verifying for data error</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no verifiable science, funding, team credentials, or operational signal; nothing to assess yet</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>WRITEUP TECHNOLOGIES LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Not observable at this stage — no product description or trading activity available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -1523,7 +1617,7 @@
 <p class="flags-title">Positive flags</p><ul></ul>
 <p class="flags-title">Negative flags</p><ul><li>SIC codes (publishing, IT consultancy, R&amp;D other, education) suggest a software/services/education mix, not a life-sciences focus</li><li>No scientific or technical detail available</li><li>No funding, grant, or trading history</li><li>Single director with no verifiable academic or industry background</li><li>Very recent incorporation with no track record</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — no evidence of life-sciences relevance, no team credibility signals, no funding, nothing to assess</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>MATERNITY MEMO LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Very early-stage company registered under software and R&amp;D SIC codes, likely targeting maternity-related digital services, though no product detail is available.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
@@ -1535,7 +1629,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC codes suggest software/IT and R&amp;D focus (62012, 62090, 72190)</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Residential address, not a business or incubator location</li><li>No funding data (grant or equity) observable</li><li>No ORCID match for director</li><li>No evidence of team background, prior ventures, or domain expertise</li><li>Company is brand new with zero operating history</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — No verifiable science, funding, team credentials, or traction; pure shell registration at this stage</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-23">
 <h2>THE BLANKET LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 10 possible matches, unverified">ORCID?</span></h2>
 <p class="oneliner">Not observable at this stage — no descriptive activity data beyond a generic R&amp;D SIC code</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-23 &middot; <span class="label">SIC:</span> —</p>
@@ -1547,7 +1641,7 @@
 <p class="flags-title">Positive flags</p><ul><li>SIC 72190 (other R&amp;D natural sciences/engineering) suggests scientific rather than purely commercial intent</li><li>Oxford registration — proximity to academic ecosystem</li></ul>
 <p class="flags-title">Negative flags</p><ul><li>Just incorporated — no trading history, no products, no team detail</li><li>No grant funding, patents, or publications evidenced</li><li>Single director, no co-founder or advisory signal</li><li>Company name and address give no indication of actual technology or focus</li></ul>
 <p class="field"><span class="label">Interest score: 1</span> — too early, no verifiable science, team, or funding signal</p>
-<p class="flags-title">Open questions for a first call</p><ul></ul></div><hr><div class="company">
+<p class="flags-title">Open questions for a first call</p><ul></ul></div><div class="company" data-score="1" data-incorporated="2026-07-24">
 <h2>PANOPSYS LTD <span class="badge">Interest 1 / 5</span></h2>
 <p class="oneliner">Very early-stage company with SIC codes spanning software development, data processing, and research services — likely a tech/data or research-adjacent venture, but exact product is unclear.</p>
 <p class="field"><span class="label">Incorporated:</span> 2026-07-24 &middot; <span class="label">SIC:</span> —</p>
