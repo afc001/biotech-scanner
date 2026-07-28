@@ -73,6 +73,20 @@ def build_user_message(record: dict, template: str) -> str:
     )
 
 
+def _extract_text(message) -> str:
+    """Pull the text out of a Claude response, skipping non-text blocks
+    (e.g. ThinkingBlock, which appears when extended thinking is enabled)."""
+    text_parts = [
+        block.text for block in message.content if getattr(block, "type", None) == "text"
+    ]
+    if not text_parts:
+        raise RuntimeError(
+            f"No text block in Claude response (block types: "
+            f"{[getattr(b, 'type', type(b).__name__) for b in message.content]})"
+        )
+    return "".join(text_parts)
+
+
 def _parse_json(raw: str) -> dict:
     """Pull the JSON object out of a model response, tolerating stray fences."""
     raw = raw.strip()
@@ -93,7 +107,7 @@ def generate_brief(record: dict, client: Anthropic, system: str, template: str) 
             system=system,
             messages=[{"role": "user", "content": user_message}],
         )
-        raw = message.content[0].text
+        raw = _extract_text(message)
         try:
             brief = _parse_json(raw)
             if REQUIRED_KEYS - brief.keys():
