@@ -25,7 +25,7 @@
   <h1>UK Biotech Deal-Flow Scanner</h1>
   <p class="tagline">Automated screening briefs on newly incorporated UK biotech companies, generated from public filings.</p>
 
-  <p>This project generates one-page investment screening briefs on early-stage UK biotech companies, drawn from Companies House new-incorporation data (SIC 72110) and, in later versions, Innovate UK / UKRI grant records. Each brief is produced from the raw record alone: where the filing contains no supporting data, the field reads &ldquo;Not observable at this stage&rdquo; rather than inventing facts.</p>
+  <p>This project generates one-page investment screening briefs on early-stage UK biotech companies, drawn from Companies House new-incorporation data (SIC 72110/72190), then cross-checked director-by-director against ORCID (academic publication record) and UKRI Gateway to Research (public grant history) &mdash; both common-name-safe, never guessing at an ambiguous match. Each brief is produced from these sources alone: where there's no supporting data, the field reads &ldquo;Not observable at this stage&rdquo; rather than inventing facts.</p>
 
   <p>Generation (structured JSON) is kept separate from presentation (this rendered digest), so the archive can be re-rendered at any time without re-running the model. The pipeline is designed to run unattended on a daily schedule.</p>
 

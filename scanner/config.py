@@ -9,7 +9,10 @@ import os
 from pathlib import Path
 
 # --- SIC codes to sweep -----------------------------------------------------
-# 72110 = biotech R&D, 72190 = other natural-sciences R&D, 21100, 21200 = pharma manufacture.
+# 72110 = biotech R&D, 72190 = other natural-sciences R&D. Pharma-manufacture
+# codes 21100/21200 were tried and dropped: persistent Companies House 404s
+# on 21100, and both diluted signal quality more than they added -- see
+# .env.example for how to add them back as an override if you want to retest.
 SIC_CODES = os.getenv("SCANNER_SIC_CODES", "72110,72190").split(",")
 
 # --- How far back to look ---------------------------------------------------

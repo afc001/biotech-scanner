@@ -38,7 +38,103 @@ HTML_HEAD = """<!DOCTYPE html>
   .flags-title {{ font-weight:bold; margin:16px 0 4px; }}
   ul {{ margin:4px 0 10px; padding-left:24px; }} li {{ margin:3px 0; }}
   a {{ color:#1a3e6e; }}
+  .toolbar {{ display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }}
+  .toolbar label {{ display:flex; align-items:center; gap:6px; white-space:nowrap; }}
+  .toolbar select {{ font-size:15px; padding:2px 4px; }}
+  .result-count {{ margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }}
+  .company {{ border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }}
+  .week-header {{ font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }}
 </style></head><body><div class="page">
+"""
+
+TOOLBAR_HTML = """<div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
 """
 
 HTML_FOOT = """</div></body></html>"""
@@ -95,7 +191,11 @@ def _badge_md(source_label: str, result: dict | None) -> str:
 def _company_html(b: dict) -> str:
     s = score_int(b.get("interest_score", ""))
     badges_html = _badge_html("ORCID", b.get("orcid_badge")) + _badge_html("GtR", b.get("gtr_badge"))
-    parts = [f'<div class="company">',
+    incorporated = _esc(b.get("incorporated", ""))
+    # data-score/data-incorporated feed the toolbar's client-side score
+    # filter and "group by week" toggle (see TOOLBAR_HTML) -- purely a
+    # display-layer concern, no effect on the underlying brief JSON.
+    parts = [f'<div class="company" data-score="{s}" data-incorporated="{incorporated}">',
              f'<h2>{_esc(b["company_name"])} <span class="badge">Interest {s} / 5</span>{badges_html}</h2>',
              f'<p class="oneliner">{_esc(b.get("one_liner", ""))}</p>',
              f'<p class="field"><span class="label">Incorporated:</span> {_esc(b.get("incorporated",""))} '
@@ -153,7 +253,11 @@ def render_digest(briefs: list[dict], run_date: date | None = None) -> dict:
               'ORCID? / GtR? = possible match, unverified — common name, worth a manual check')
     html_body += (f'<h1>{_esc(title)}</h1><p class="meta">{_esc(meta)}</p>'
                   f'<p class="legend">{_esc(legend)}</p><hr>')
-    html_body += "<hr>".join(_company_html(b) for b in briefs) if briefs else "<p>No new companies today.</p>"
+    if briefs:
+        html_body += TOOLBAR_HTML
+        html_body += "".join(_company_html(b) for b in briefs)
+    else:
+        html_body += "<p>No new companies today.</p>"
     html_body += HTML_FOOT
     html_path = config.DIGESTS_DIR / f"{stamp}.html"
     html_path.write_text(html_body)

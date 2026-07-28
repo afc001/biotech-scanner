@@ -184,15 +184,46 @@ def _format_address(record: dict) -> str:
     return address
 
 
-def build_user_message(record: dict, template: str) -> str:
+def _format_innovate_uk_section(record: dict) -> str:
+    """Return the 'INNOVATE UK / UKRI DATA' block for the user message, or ''
+    if no project-level data was matched for this company.
+
+    No code path in this repo currently fetches project-level Innovate UK
+    data (scanner/gtr.py only does a director-NAME lookup, not a project
+    match) -- so record.get("innovate_uk_project") is always None today.
+    This function exists so that section activates automatically the day
+    project-level fetching IS built, without sending the model six lines of
+    literal unfilled '{title}'/'{abstract}'/etc. placeholders on every
+    single call in the meantime (which is what a static template.replace()
+    chain was doing before this fix)."""
+    project = record.get("innovate_uk_project")
+    if not project:
+        return ""
     return (
-        template.replace("{name}", record.get("company_name", ""))
+        "\n\nINNOVATE UK / UKRI DATA (if matched):\n"
+        f"Project title: {project.get('title', '')}\n"
+        f"Abstract: {project.get('abstract', '')}\n"
+        f"Award: £{project.get('amount', '')}, {project.get('start', '')} to {project.get('end', '')}\n"
+        f"Lead organisation: {project.get('org', '')}"
+    )
+
+
+def build_user_message(record: dict, template: str) -> str:
+    # The static template includes a trailing "INNOVATE UK / UKRI DATA"
+    # block with placeholders no code populates yet -- strip that static
+    # block and replace it with the conditional version above, which sends
+    # nothing at all until real project data exists (see its docstring).
+    static_block_start = template.find("\n\nINNOVATE UK / UKRI DATA")
+    base_template = template[:static_block_start] if static_block_start != -1 else template
+    msg = (
+        base_template.replace("{name}", record.get("company_name", ""))
         .replace("{date}", record.get("date_of_creation", ""))
         .replace("{sic_codes}", ", ".join(record.get("sic_codes", [])))
         .replace("{address}", _format_address(record))
         .replace("{officers with occupations and other appointments if fetched}",
                  _format_officers(record.get("officers", [])))
     )
+    return msg + _format_innovate_uk_section(record)
 
 
 def _extract_text(message) -> str:
