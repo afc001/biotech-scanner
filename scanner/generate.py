@@ -105,7 +105,7 @@ def generate_brief(record: dict, client: Anthropic, system: str, template: str) 
             model=config.MODEL,
             max_tokens=config.MAX_TOKENS,
             system=system,
-            thinking={"type": "disabled:"},
+            thinking={"type": "disabled"},
             messages=[{"role": "user", "content": user_message}],
         )
         raw = _extract_text(message)
