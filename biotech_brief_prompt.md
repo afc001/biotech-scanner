@@ -59,6 +59,10 @@ See `generate.py::load_prompt()` for the exact wording actually sent —
 treat that function as the source of truth if this doc and the code
 ever disagree.
 
+A fifth rule (`generate._web_search_rule()`) is appended only for the
+gated second (web-search) pass, not on every call — see "Signal
+status" below and `WEB_SEARCH_SPEC.md` for the full design.
+
 ## The JSON schema (structured output)
 
 ```json
@@ -133,15 +137,21 @@ already-saved briefs.
   with, and this is the cheapest, most deterministic way to check for
   more without a search API. Helps some briefs a lot, does nothing for
   brand-new shells with no site yet — that's expected, not a gap.
+- Web-search enrichment (`generate.enrich_with_web_search`) — a gated
+  second Claude pass with the real `web_search` tool attached, for any
+  brief scoring 2+ (opt-in via `SCANNER_FETCH_WEB_SEARCH=1`, off by
+  default). Real-tested 29 July 2026: reliably surfaces established
+  academics' staff pages/publication records and can find adjacent real
+  ventures search wouldn't otherwise catch, but does not reliably find
+  a brand-new small company's own website from a cold generic query
+  (that stays website.py's job — its result is fed into the pass-2
+  prompt too). Also caught a real false-positive: a company whose
+  ORCID-confirmed "academic founder" turned out, per search, to likely
+  be the host organisation's own CEO. Full design, findings, and cost
+  estimate in [`WEB_SEARCH_SPEC.md`](WEB_SEARCH_SPEC.md); example
+  output in `examples.html`.
 
 **Not yet built (future ideas):**
-- Broader web search (general search API, or Claude's web-search tool)
-  for company/founder mentions beyond a guessed-domain website check —
-  considered and deliberately deferred: real cost impact (per-brief or
-  gated-by-score), and LinkedIn specifically is a dead end for
-  automation (no public search API, scraping violates ToS). The
-  website check above is the cheap first step; this would be the next
-  one if it's worth the added spend.
 - Director cross-references beyond ORCID/GtR: e.g. same person also
   appearing at a university tech-transfer office (Oxford University
   Innovation, Cambridge Enterprise) = likely spinout signal.

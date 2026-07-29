@@ -27,6 +27,15 @@ def main() -> int:
         return 0
 
     briefs = generate.generate_all(records)
+
+    if config.FETCH_WEB_SEARCH:
+        print(f"\nWeb-search enrichment: enabled (threshold {config.WEB_SEARCH_ENRICH_THRESHOLD}+)")
+        briefs = generate.enrich_all_with_web_search(records, briefs)
+    else:
+        for b in briefs:
+            b.setdefault("search_enriched", False)
+            b.setdefault("search_sources", [])
+
     raw_path = render.save_raw_briefs(briefs)
     paths = render.render_digest(briefs)
     print(f"raw briefs: {raw_path}")

@@ -263,6 +263,44 @@ def _extract_text(message) -> str:
     return "".join(text_parts)
 
 
+def _extract_final_text(message) -> str:
+    """Pull ONLY the last text block out of a Claude response.
+
+    Needed for web-search-enriched calls specifically: with the web_search
+    tool attached, the response can interleave several text blocks (the
+    model narrating "I'll search for..." between searches) with
+    server_tool_use / web_search_tool_result blocks, and only the LAST text
+    block is the actual final JSON brief. _extract_text() above joins ALL
+    text blocks together, which is correct for a plain (no-tool) call but
+    would concatenate narration text in front of the JSON here and break
+    parsing."""
+    text_blocks = [b.text for b in message.content if getattr(b, "type", None) == "text"]
+    if not text_blocks:
+        raise RuntimeError(
+            f"No text block in Claude response (block types: "
+            f"{[getattr(b, 'type', type(b).__name__) for b in message.content]})"
+        )
+    return text_blocks[-1]
+
+
+def _extract_sources(message) -> list[str]:
+    """Pull cited source URLs out of a response's web_search_tool_result
+    blocks, deduped, in first-seen order. Used to show real, clickable
+    sources under a search-enriched brief -- see WEB_SEARCH_SPEC.md."""
+    seen: list[str] = []
+    for block in message.content:
+        if getattr(block, "type", None) != "web_search_tool_result":
+            continue
+        content = getattr(block, "content", None)
+        if not isinstance(content, list):
+            continue  # error result, not a list of hits -- nothing to add
+        for item in content:
+            url = getattr(item, "url", None)
+            if url and url not in seen:
+                seen.append(url)
+    return seen
+
+
 def _parse_json(raw: str) -> dict:
     """Pull the JSON object out of a model response, tolerating stray fences."""
     raw = raw.strip()
@@ -310,6 +348,113 @@ def generate_brief(record: dict, client: Anthropic, system: str, template: str) 
                   f"usage={getattr(message, 'usage', '?')}")
             print(f"    raw response ({len(raw)} chars): {raw!r}")
     raise RuntimeError(f"Failed to generate a valid brief for {record.get('company_name')}: {last_error}")
+
+
+WEB_SEARCH_TOOL_TYPE = "web_search_20250305"
+
+
+def _web_search_rule() -> str:
+    return (
+        "Web search rule: a web_search tool is attached to this request -- use it. "
+        "Search for the company name together with \"UK biotech\" (to find or confirm "
+        "a company website, in case one wasn't already supplied above), and for each "
+        "named director together with terms like \"LinkedIn\", \"university\", "
+        "\"research\", or \"spinout\" -- to check for academic staff pages, publication "
+        "records, spinout ventures, or funding/accelerator news. Use what the search "
+        "results actually say to revise one_liner, science, stage_signal, "
+        "team_provenance, funding, flags_positive, flags_negative, interest_score and "
+        "unknowns -- do not leave a field at \"Not observable at this stage\" if a "
+        "search result already answers it. Do not extrapolate beyond what a result "
+        "actually states: if a link between the company and something you found (e.g. "
+        "a director's other project) is plausible but not confirmed by name-match, say "
+        "so explicitly rather than asserting it as fact. Note vague marketing language "
+        "as such rather than inventing specifics. A company's own small/new website is "
+        "not always well-indexed by search -- if you can't find one, say so rather than "
+        "assuming it doesn't exist."
+    )
+
+
+def enrich_with_web_search(record: dict, brief: dict, client: Anthropic, system: str, template: str) -> dict:
+    """Re-run one company through the model with Claude's web_search tool
+    attached, gated by the caller to companies whose pass-1 (no-search)
+    interest_score already cleared config.WEB_SEARCH_ENRICH_THRESHOLD.
+
+    Falls back to the original pass-1 brief -- unchanged, with
+    search_enriched=False -- on ANY failure (bad JSON, API error, missing
+    text block), so one company's search hiccup never takes down a run.
+    See WEB_SEARCH_SPEC.md for the design rationale, cost estimate, and real
+    test findings (it reliably surfaces academic/professional profiles and
+    adjacent ventures, but is not a reliable substitute for the deterministic
+    guessed-domain check in website.py when it comes to finding a brand-new
+    small company's own site from a generic name search alone)."""
+    user_message = build_user_message(record, template)
+    search_system = system + "\n\n" + _web_search_rule()
+    try:
+        message = client.messages.create(
+            model=config.MODEL,
+            max_tokens=config.MAX_TOKENS,
+            system=search_system,
+            thinking={"type": "disabled"},
+            tools=[{
+                "type": WEB_SEARCH_TOOL_TYPE,
+                "name": "web_search",
+                "max_uses": config.WEB_SEARCH_MAX_USES,
+            }],
+            messages=[{"role": "user", "content": user_message}],
+        )
+        raw = _extract_final_text(message)
+        enriched = _parse_json(raw)
+        if REQUIRED_KEYS - enriched.keys():
+            raise ValueError(f"missing keys: {REQUIRED_KEYS - enriched.keys()}")
+        enriched["company_number"] = record.get("company_number", "")
+        enriched["sic_codes"] = record.get("sic_codes", [])
+        badges = _badge_summary(record.get("officers", []))
+        enriched["orcid_badge"] = badges["orcid"]
+        enriched["gtr_badge"] = badges["gtr"]
+        enriched["search_enriched"] = True
+        enriched["search_sources"] = _extract_sources(message)
+        return enriched
+    except Exception as exc:
+        print(f"  web-search enrichment failed for {record.get('company_name')}, "
+              f"keeping pass-1 brief unchanged: {exc}")
+        brief["search_enriched"] = False
+        brief["search_sources"] = []
+        return brief
+
+
+def _score_int(interest_score: str) -> int:
+    """Pull the leading integer out of an interest_score string like
+    '4 — ...'. Duplicated from render.score_int() rather than imported, so
+    generate.py doesn't take on a dependency on render.py for one regex."""
+    m = re.match(r"\s*(\d)", str(interest_score))
+    return int(m.group(1)) if m else 0
+
+
+def enrich_all_with_web_search(records: list[dict], briefs: list[dict]) -> list[dict]:
+    """Second pass: for every brief whose pass-1 interest_score is at or
+    above config.WEB_SEARCH_ENRICH_THRESHOLD, re-run with web search
+    attached and replace it in place. Briefs below the threshold are marked
+    search_enriched=False and left untouched -- no second API call spent on
+    companies pass 1 already wrote off."""
+    if not briefs:
+        return briefs
+    if not config.ANTHROPIC_API_KEY:
+        raise RuntimeError("ANTHROPIC_API_KEY is not set.")
+    client = Anthropic(api_key=config.ANTHROPIC_API_KEY)
+    system, template = load_prompt()
+    by_number = {r.get("company_number"): r for r in records}
+    out = []
+    for brief in briefs:
+        score = _score_int(brief.get("interest_score", ""))
+        if score < config.WEB_SEARCH_ENRICH_THRESHOLD:
+            brief["search_enriched"] = False
+            brief["search_sources"] = []
+            out.append(brief)
+            continue
+        record = by_number.get(brief.get("company_number"), {})
+        print(f"  web-search enrichment (score {score}): {brief.get('company_name')}")
+        out.append(enrich_with_web_search(record, brief, client, system, template))
+    return out
 
 
 def generate_all(records: list[dict]) -> list[dict]:

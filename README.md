@@ -25,12 +25,20 @@ website.py           gtr.py,      history lookup (common-name-safe, never
                                   companies that already have real content
                      |
                      v
-Claude API       ->  generate.py  each record -> structured JSON brief,
-                                  driven by biotech_brief_prompt.md (the same
+Claude API       ->  generate.py  pass 1: each record -> structured JSON brief,
+(pass 1)                          driven by biotech_brief_prompt.md (the same
                                   prompt used interactively); ORCID/GtR
                                   confirmations explicitly move interest_score,
                                   and a found website is used substantively
                                   rather than defaulting to generic filler
+                     |
+                     v
+Claude API +     ->  generate.py  pass 2 (opt-in, SCANNER_FETCH_WEB_SEARCH=1):
+web_search           enrich_with_ any brief scoring 2+ gets re-run with a real
+(pass 2, gated)      web_search   web search attached, re-checking the company
+                                  and its directors; falls back to the pass-1
+                                  brief unchanged on any failure -- see
+                                  WEB_SEARCH_SPEC.md
                      |
                      v
                      render.py     JSON -> dated markdown + HTML digest in
@@ -60,7 +68,7 @@ The raw briefs live in `data/briefs/`; the archive can be re-rendered any time
 | `scanner/orcid.py` | Director academic-credibility lookup (ORCID Public API, OAuth client-credentials) |
 | `scanner/gtr.py` | Director funding-history lookup (UKRI Gateway to Research, no auth needed) |
 | `scanner/website.py` | Guessed-domain live-website check, no auth needed |
-| `scanner/generate.py` | Claude API call, JSON parsing + validation, ORCID/GtR badge computation |
+| `scanner/generate.py` | Claude API call (pass 1), JSON parsing + validation, ORCID/GtR badge computation, gated web-search enrichment (pass 2) |
 | `scanner/render.py` | JSON -> dated md/html digest + archive index + score/week toolbar |
 | `run.py` | Orchestrator / entry point |
 | `.github/workflows/scan.yml` | Daily cron + manual trigger with backfill option |
@@ -98,6 +106,11 @@ python run.py
   Set `SCANNER_FETCH_GTR=0` if you'd rather not make the extra calls.
 - **Website check**: no key needed — plain HTTP GETs to guessed domains.
   Set `SCANNER_FETCH_WEBSITE=0` if you'd rather not make the extra calls.
+- **Web-search enrichment** (optional, real cost, off by default): uses
+  Claude's own web_search tool, no separate key needed. Set
+  `SCANNER_FETCH_WEB_SEARCH=1` to enable a second pass on any brief scoring
+  2+ — see [`WEB_SEARCH_SPEC.md`](WEB_SEARCH_SPEC.md) for how it works, real
+  test findings, and cost estimate before you turn it on.
 
 ### In GitHub Actions
 Add repo secrets (Settings -> Secrets and variables -> Actions): `CH_API_KEY`,
@@ -109,6 +122,21 @@ To trigger a one-off backfill instead of waiting for the daily cron: Actions
 tab -> "Daily biotech scan" -> "Run workflow" -> set `lookback_days` to the
 window you want. Run `dry_run_count.py --days N` locally first to see the
 cost before you do.
+
+To backfill a specific past calendar window instead of "N days before today"
+(e.g. the fortnight before your last backfill), fill in `incorporated_from`
+and `incorporated_to` on the same "Run workflow" form instead of
+`lookback_days` — both must be set together (`YYYY-MM-DD`), and they override
+`lookback_days` entirely if present. Check the cost first with
+`dry_run_count.py --from YYYY-MM-DD --to YYYY-MM-DD`.
+
+To turn on web-search enrichment for a single manual run, set
+`enable_web_search` to `1` on the same "Run workflow" form. To leave it on
+permanently once you trust it, add a repository variable (Settings ->
+Secrets and variables -> Actions -> Variables tab, not Secrets) named
+`SCANNER_FETCH_WEB_SEARCH` set to `1` — the workflow checks that on every
+scheduled run too. Read [`WEB_SEARCH_SPEC.md`](WEB_SEARCH_SPEC.md) first;
+this one has a real, non-trivial cost.
 
 ## Failure modes
 
@@ -150,13 +178,18 @@ cost before you do.
   for brand-new shells with no site yet — expected, not a gap.
 - `rerender_digest.py` / `dry_run_count.py` — free utilities for re-rendering
   the archive and estimating backfill cost before spending anything
+- Web-search enrichment (`scanner/generate.enrich_with_web_search`), gated to
+  any brief scoring 2+ (opt-in via `SCANNER_FETCH_WEB_SEARCH=1`) — a second,
+  real Claude web_search pass that re-checks the company and its directors.
+  This is what actually caught Vectis Biosciences (pass-1 score 2/5, missed
+  by every free signal) and, in real testing, correctly downgraded a
+  false-positive "academic founder" signal on another company once search
+  revealed the directors were the host organisation's own executives. Full
+  design, config, and real test findings in
+  [`WEB_SEARCH_SPEC.md`](WEB_SEARCH_SPEC.md); example output on
+  [`examples.html`](examples.html).
 
 **Not yet built (future ideas):**
-- Broader web search (general search API, or Claude's web-search tool) for
-  company/founder mentions beyond a guessed-domain check — considered and
-  deliberately deferred pending real cost/coverage tradeoffs; LinkedIn
-  specifically is a dead end for automation (no public search API, scraping
-  violates ToS)
 - Director cross-references beyond ORCID/GtR: e.g. same person also appearing
   at a university tech-transfer office (Oxford University Innovation, Cambridge
   Enterprise) = likely spinout signal

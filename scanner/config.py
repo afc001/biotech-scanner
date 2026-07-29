@@ -71,6 +71,20 @@ FETCH_GTR = os.getenv("SCANNER_FETCH_GTR", "1") == "1"
 # if you'd rather not make the extra HTTP calls.
 FETCH_WEBSITE = os.getenv("SCANNER_FETCH_WEBSITE", "1") == "1"
 
+# --- Web-search enrichment (optional second Claude pass, real cost) --------
+# Uses Claude's own built-in web_search tool ($10/1,000 searches + normal
+# token cost -- see https://platform.claude.com/docs for the current price)
+# to re-run a SECOND, gated pass on companies that already cleared
+# WEB_SEARCH_ENRICH_THRESHOLD on the free/cheap-signal (pass-1) brief. This
+# is what actually caught Vectis Biosciences: the pass-1 machine score was
+# only 2/5, and it took a human web search to find the real product. The
+# threshold defaults to 2 (not the usual alert threshold of 4) precisely
+# because that's the score Vectis got before anyone looked further.
+# See WEB_SEARCH_SPEC.md for the design writeup and real test findings.
+FETCH_WEB_SEARCH = os.getenv("SCANNER_FETCH_WEB_SEARCH", "0") == "1"  # opt-in until you've watched a few runs
+WEB_SEARCH_ENRICH_THRESHOLD = int(os.getenv("SCANNER_WEB_SEARCH_THRESHOLD", "2"))
+WEB_SEARCH_MAX_USES = int(os.getenv("SCANNER_WEB_SEARCH_MAX_USES", "4"))
+
 # --- Paths ------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
 PROMPT_FILE = ROOT / "biotech_brief_prompt.md"

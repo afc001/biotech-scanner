@@ -32,6 +32,9 @@ HTML_HEAD = """<!DOCTYPE html>
            margin-left:5px; white-space:nowrap; cursor:default; }}
   .pill-confirmed {{ background:#d7f0d9; color:#1a5c22; }}
   .pill-ambiguous {{ background:#fff2cc; color:#7a5c00; }}
+  .pill-search {{ background:#dce7f7; color:#1a3e6e; }}
+  .sources {{ color:#777; font-size:14px; margin:10px 0 0; }}
+  .sources a {{ color:#555; }}
   .legend {{ color:#777; font-size:13px; margin:0 0 22px; }}
   .oneliner {{ font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }}
   .field {{ margin:9px 0; }} .field .label {{ font-weight:bold; }}
@@ -188,9 +191,36 @@ def _badge_md(source_label: str, result: dict | None) -> str:
     return ""
 
 
+def _search_badge_html(b: dict) -> str:
+    """Small pill marking a brief that went through the gated web-search
+    enrichment pass (see generate.enrich_with_web_search / WEB_SEARCH_SPEC.md).
+    Distinguishes "we looked further and this is what we found" from a
+    pass-1-only brief, same silence-over-clutter philosophy as the ORCID/GtR
+    badges -- only appears when search actually ran."""
+    if not b.get("search_enriched"):
+        return ""
+    return '<span class="pill pill-search" title="Web-search enriched">&#128269; Web-verified</span>'
+
+
+def _sources_html(b: dict) -> str:
+    sources = b.get("search_sources") or []
+    if not sources:
+        return ""
+    links = ", ".join(f'<a href="{_esc(u)}">{_esc(u)}</a>' for u in sources)
+    return f'<p class="sources">Sources: {links}</p>'
+
+
+def _sources_md(b: dict) -> str:
+    sources = b.get("search_sources") or []
+    if not sources:
+        return ""
+    return "Sources: " + ", ".join(sources)
+
+
 def _company_html(b: dict) -> str:
     s = score_int(b.get("interest_score", ""))
-    badges_html = _badge_html("ORCID", b.get("orcid_badge")) + _badge_html("GtR", b.get("gtr_badge"))
+    badges_html = (_badge_html("ORCID", b.get("orcid_badge")) + _badge_html("GtR", b.get("gtr_badge"))
+                   + _search_badge_html(b))
     incorporated = _esc(b.get("incorporated", ""))
     # data-score/data-incorporated feed the toolbar's client-side score
     # filter and "group by week" toggle (see TOOLBAR_HTML) -- purely a
@@ -213,13 +243,20 @@ def _company_html(b: dict) -> str:
                  f'{_esc(justification)}</p>')
     unknowns = b.get("unknowns", []) or []
     parts.append('<p class="flags-title">Open questions for a first call</p><ul>' +
-                 "".join(f"<li>{_esc(u)}</li>" for u in unknowns) + "</ul></div>")
+                 "".join(f"<li>{_esc(u)}</li>" for u in unknowns) + "</ul>")
+    parts.append(_sources_html(b))
+    parts.append('</div>')
     return "\n".join(parts)
+
+
+def _search_badge_md(b: dict) -> str:
+    return " [\U0001F50D Web-verified]" if b.get("search_enriched") else ""
 
 
 def _company_md(b: dict) -> str:
     s = score_int(b.get("interest_score", ""))
-    badges_md = _badge_md("ORCID", b.get("orcid_badge")) + _badge_md("GtR", b.get("gtr_badge"))
+    badges_md = (_badge_md("ORCID", b.get("orcid_badge")) + _badge_md("GtR", b.get("gtr_badge"))
+                 + _search_badge_md(b))
     lines = [f'## {b["company_name"]} — Interest {s} / 5{badges_md}', "",
              f'> {b.get("one_liner", "")}', "",
              f'**Incorporated:** {b.get("incorporated","")} · **SIC:** {", ".join(b.get("sic_codes", [])) or "—"}', ""]
@@ -234,6 +271,9 @@ def _company_md(b: dict) -> str:
     lines += [f'**Interest score: {s}** — {justification}', ""]
     lines.append("**Open questions for a first call**"); lines.append("")
     lines += [f'- {u}' for u in (b.get("unknowns", []) or [])]; lines.append("")
+    sources_line = _sources_md(b)
+    if sources_line:
+        lines += [sources_line, ""]
     return "\n".join(lines)
 
 
@@ -250,7 +290,8 @@ def render_digest(briefs: list[dict], run_date: date | None = None) -> dict:
     # HTML
     html_body = HTML_HEAD.format(title=_esc(title))
     legend = ('ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · '
-              'ORCID? / GtR? = possible match, unverified — common name, worth a manual check')
+              'ORCID? / GtR? = possible match, unverified — common name, worth a manual check · '
+              '🔍 Web-verified = re-checked with a live web search (see Sources on that brief)')
     html_body += (f'<h1>{_esc(title)}</h1><p class="meta">{_esc(meta)}</p>'
                   f'<p class="legend">{_esc(legend)}</p><hr>')
     if briefs:

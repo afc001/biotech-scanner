@@ -19,6 +19,10 @@ on:
         description: "Fixed backfill window end, YYYY-MM-DD (must be set together with incorporated_from)"
         required: false
         default: ""
+      enable_web_search:
+        description: "Set to 1 to enable the gated web-search enrichment pass for this run (real cost -- see WEB_SEARCH_SPEC.md). Leave blank to use the repo's SCANNER_FETCH_WEB_SEARCH variable, or default off."
+        required: false
+        default: ""
 
 permissions:
   contents: write          # allow the job to commit digests back to the repo
@@ -58,6 +62,12 @@ jobs:
           # both are set (see scanner/config.py).
           SCANNER_INCORPORATED_FROM: ${{ github.event.inputs.incorporated_from || '' }}
           SCANNER_INCORPORATED_TO: ${{ github.event.inputs.incorporated_to || '' }}
+          # Real cost, off by default -- see WEB_SEARCH_SPEC.md. A manual-run
+          # input takes priority; otherwise falls back to a repo variable
+          # (Settings -> Secrets and variables -> Actions -> Variables) so you
+          # can turn it on permanently once you trust it, without editing this
+          # file; otherwise off.
+          SCANNER_FETCH_WEB_SEARCH: ${{ github.event.inputs.enable_web_search || vars.SCANNER_FETCH_WEB_SEARCH || '0' }}
         run: python run.py
 
       - name: Commit digests

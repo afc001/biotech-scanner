@@ -30,7 +30,6 @@ def count_for_window(days: int | None = None, date_from: str | None = None, date
         today = date.today()
         incorporated_from = (today - timedelta(days=days)).isoformat()
         incorporated_to = today.isoformat()
-
     by_number: dict[str, str] = {}
     per_sic: dict[str, int] = {}
 
