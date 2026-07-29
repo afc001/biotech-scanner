@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner — Example Outputs</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner — Example Outputs</h1><p class="meta">These are 3 real illustrative outputs, shown in the same format the daily digest uses. VECTIS BIOSCIENCES is the original demo case: the automated brief alone scored it 2/5, then a 10-minute human follow-up (LinkedIn + the company&#x27;s own site) revised it to 4/5 -- see the follow-up note below its card. KYTFOX and NON-OXIDE CERAMIC SYSTEMS are unedited automated output from the most recent live run: 165 companies were swept over a rolling 14-day window, and only these 2 cleared a 4/5 threshold -- a realistic ~1 in 80 hit rate, consistent with the goal of surfacing a handful of genuinely credible names per month rather than a long list to sift through manually.</p><p class="legend">ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check</p><hr><div class="company" data-score="4" data-incorporated="2026-07-13">
+<h2>VECTIS BIOSCIENCES LTD <span class="badge">Interest 4 / 5</span></h2>
+<p class="oneliner">Live tool for mechanistic drug-safety prediction from molecular structure, aimed at novel drug classes (PROTAC, CELMoD, IMiD) lacking clinical safety history.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-07-13 &middot; <span class="label">SIC:</span> 72110</p>
+<p class="field"><span class="label">Science.</span> Molecular docking (AutoDock Vina, 143 protein structures) -&gt; signalling-cascade modelling (OmniPath, 1,516 genes) -&gt; graph-neural-network refinement (LINCS-trained) -&gt; adverse-event classification (21 FDA-label-trained classifiers). External validation of Spearman R = 0.77 (p = 0.005) against independent RNA-seq on held-out drugs, across 22 drugs and 8 mechanism classes.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (17 days old at time of review); live product and website already in place ahead of any filings.</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Alice Condrat — Oxford biochemistry graduate with a drug-discovery background and stated ties to the University&#x27;s pharmacology department and an established lab (per LinkedIn, to confirm on a call). Directly relevant domain expertise.</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden WC2H 9JQ — a formation-agent address, tells you nothing about where the science actually happens; references to Oxford-based advisors and possible Oxford Science Enterprises involvement would make this a bona-fide university spinout, unconfirmed.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage. No Innovate UK / UKRI match; no filed accounts.</p>
+<p class="flags-title">Positive flags</p><ul><li>Live product with a specific technical approach and a stated external validation metric (Spearman R = 0.77)</li><li>Founder has directly relevant, verifiable domain expertise (Oxford biochemistry, drug-discovery background)</li><li>Genuine whitespace: safety prediction for modalities (PROTAC/CELMoD/IMiD) with no clinical precedent</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Registered at a generic formation-agent address, not a cluster/incubator</li><li>Spinout/OSE backing, funding, and independent validation all unconfirmed</li><li>Sole director; no wider team visible in the record</li></ul>
+<p class="field"><span class="label">Interest score: 4</span> — credible, directly-qualified founder plus a live product with a specific approach and a stated validation metric, in genuine whitespace. Held below 5 pending confirmation of spinout/OSE backing, funding, independent validation, and a team beyond the sole director.</p>
+<p class="flags-title">Open questions for a first call</p><ul><li>Is there confirmed Oxford Science Enterprises or university spinout backing?</li><li>What funding, if any, has been raised?</li><li>Is there a team beyond the sole director?</li><li>Has the validation metric been independently reproduced outside the company&#x27;s own reported results?</li></ul>
+<div class="field" style="background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; padding:14px 16px; margin-top:18px;">
+<p class="flags-title">Analyst follow-up — added 21 July 2026 by A. Chidlow</p>
+<p><em>Manual enrichment from public sources beyond the Companies House filing. The automated brief above reflects the analyst's revised assessment; the machine's own first-pass score was 2/5, based on the Companies House record alone (formation-agent address, no disclosed science, single unverified director).</em></p>
+<p><span class="label">Product</span> (verified on vectisbiosciences.com, 21 Jul 2026). A live tool for mechanistic drug-safety prediction from molecular structure, aimed at novel drug classes lacking clinical safety history. Pipeline: molecular docking &rarr; signalling-cascade modelling &rarr; graph-neural-network refinement &rarr; adverse-event classification. States external validation of Spearman R = 0.77 (p = 0.005) against independent RNA-seq on held-out drugs, across 22 drugs and 8 mechanism classes.</p>
+<p><span class="label">Founder</span> (per director's LinkedIn, to confirm on a call). Alice Condrat — an Oxford biochemistry graduate with a drug-discovery background and stated ties to the University's pharmacology department and an established lab. Directly relevant domain expertise.</p>
+<p><span class="label">Spinout status</span> (speculative — not established). References to Oxford-based advisors and possible Oxford Science Enterprises involvement would make this a bona-fide university spinout. Unconfirmed — a key question for a first call.</p>
+<p style="font-size:14px; color:#777;">Sources: Companies House record; vectisbiosciences.com (accessed 21 Jul 2026); linkedin.com/in/alicecondrat</p>
+</div>
+</div><div class="company" data-score="4" data-incorporated="2026-07-14">
+<h2>KYTFOX LIMITED <span class="badge">Interest 4 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — ETH Zurich, Technical University of Darmstadt">ORCID &#10003;</span><span class="pill pill-confirmed" title="GtR confirmed — University of Leeds">GtR &#10003;</span></h2>
+<p class="oneliner">Not observable at this stage — no product or business description provided beyond SIC classification.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-07-14 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage — SIC 72190 (other R&amp;D on natural sciences and engineering) suggests a research-stage venture, but no mechanism or platform disclosed.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no trading history, no confirmed grant award (Innovate UK section is a blank template, not real data).</p>
+<p class="field"><span class="label">Team provenance.</span> Dr Heiko Wurdak — ORCID CONFIRMED and GtR CONFIRMED, with affiliations at ETH Zurich, TU Darmstadt, and University of Leeds — strong academic pedigree and verified UKRI grant history. Dr Nadia Orsi — no ORCID match found, no further detail available.</p>
+<p class="field"><span class="label">Location signal.</span> Nexus, Discovery Way, Leeds — this is the University of Leeds innovation/incubator building, consistent with an academic spinout.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no Innovate UK grant data supplied (placeholder fields only).</p>
+<p class="flags-title">Positive flags</p><ul><li>Director Dr Heiko Wurdak has GtR CONFIRMED UKRI grant history — genuine verified funding track record</li><li>Director Dr Heiko Wurdak has ORCID CONFIRMED academic publication record</li><li>Registered at University of Leeds incubator (Nexus), indicating a likely academic spinout</li><li>Specialist R&amp;D SIC code consistent with early-stage science venture</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No product, science, or market description available</li><li>No funding data provided — cannot assess capitalisation or grant support</li><li>Company incorporated very recently with no operating history</li><li>Second director (Orsi) has no verifiable academic or professional record supplied</li></ul>
+<p class="field"><span class="label">Interest score: 4</span> — credible, verifiably grant-funded academic co-founder plus incubator address, but total absence of scientific or financial detail caps enthusiasm</p>
+<p class="flags-title">Open questions for a first call</p><ul><li>What is the actual technology/product KYTFOX is developing?</li><li>What is Dr Wurdak&#x27;s specific research area and how does it translate to a commercial thesis?</li><li>Has any Innovate UK or other grant actually been awarded to this entity?</li><li>What is Dr Orsi&#x27;s background and role in the company?</li><li>Is there IP being licensed from University of Leeds, ETH Zurich, or TU Darmstadt?</li></ul></div><div class="company" data-score="4" data-incorporated="2026-07-17">
+<h2>NON-OXIDE CERAMIC SYSTEMS LIMITED <span class="badge">Interest 4 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Queen Mary University of London">ORCID &#10003;</span></h2>
+<p class="oneliner">Early-stage venture focused on non-oxide ceramics manufacturing/materials, per SIC codes.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-07-17 &middot; <span class="label">SIC:</span> 23440, 72190</p>
+<p class="field"><span class="label">Science.</span> SIC 23440 (manufacture of other technical ceramics) suggests advanced/technical ceramic materials, possibly non-oxide ceramics (e.g. carbides, nitrides); no further technical detail provided</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no operating history or grant data yet</p>
+<p class="field"><span class="label">Team provenance.</span> Anthony Kinsella — ORCID CONFIRMED, affiliated with Queen Mary University of London, suggesting genuine academic materials science background; Elizabeth Katherine Mart — no ORCID match, role/background not observable</p>
+<p class="field"><span class="label">Location signal.</span> Registered at Lucideon Group Limited, Stone Business Park, Staffordshire — Lucideon is a known materials science/testing consultancy; this is a specialist industry cluster signal, not a generic registered-office address</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no Innovate UK/UKRI data provided</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic affiliation (Queen Mary University of London) for one director</li><li>Specialist SIC code (23440) indicating technical ceramics focus</li><li>Registered address at Lucideon, a recognised materials science/ceramics consultancy — plausible industry linkage</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No operating history, funding, or product data — pre-revenue, day-one shell</li><li>Second director has no verifiable academic or professional track record disclosed</li><li>No grant or investment data to corroborate technical claims</li></ul>
+<p class="field"><span class="label">Interest score: 4</span> — academic ORCID confirmation plus specialist ceramics SIC code and credible industry-linked address warrant a closer look despite zero operating history</p>
+<p class="flags-title">Open questions for a first call</p><ul><li>What is the specific non-oxide ceramic technology or IP being developed?</li><li>What is the relationship between the company and Lucideon (tenancy only, or collaboration/spinout)?</li><li>What is Elizabeth Mart&#x27;s professional background and role?</li><li>Is there any patent filing, licensing deal, or grant application in progress?</li></ul></div></div></body></html>
