@@ -8,7 +8,15 @@ on:
   workflow_dispatch:      # lets you trigger a run manually from the Actions tab
     inputs:
       lookback_days:
-        description: "Lookback window in days (leave blank for the normal daily default of 2 -- only widen this for a one-off backfill, and check dry_run_count.py's cost estimate first)"
+        description: "Lookback window in days (leave blank for the normal daily default of 2 -- only widen this for a one-off backfill, and check dry_run_count.py's cost estimate first). Ignored if incorporated_from/incorporated_to are set below."
+        required: false
+        default: ""
+      incorporated_from:
+        description: "Fixed backfill window start, YYYY-MM-DD (must be set together with incorporated_to; overrides lookback_days entirely)"
+        required: false
+        default: ""
+      incorporated_to:
+        description: "Fixed backfill window end, YYYY-MM-DD (must be set together with incorporated_from)"
         required: false
         default: ""
 
@@ -45,6 +53,11 @@ jobs:
           # given -- covers both the scheduled cron trigger (which has no
           # inputs at all) and a manual trigger left at its blank default.
           SCANNER_LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '2' }}
+          # Blank unless both are filled in on a manual trigger -- fetch.py
+          # raises if only one is set, and ignores LOOKBACK_DAYS entirely if
+          # both are set (see scanner/config.py).
+          SCANNER_INCORPORATED_FROM: ${{ github.event.inputs.incorporated_from || '' }}
+          SCANNER_INCORPORATED_TO: ${{ github.event.inputs.incorporated_to || '' }}
         run: python run.py
 
       - name: Commit digests

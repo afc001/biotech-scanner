@@ -5,6 +5,7 @@ estimate cost) before spending a single Claude token.
 
 Usage:
     python dry_run_count.py --days 30
+    python dry_run_count.py --from 2026-06-30 --to 2026-07-14
 
 Only hits the free Companies House search endpoint. No briefs are
 generated, no files are written, data/seen.json is left untouched.
@@ -19,10 +20,16 @@ import requests
 from scanner import config, fetch
 
 
-def count_for_window(days: int) -> dict:
-    today = date.today()
-    incorporated_from = (today - timedelta(days=days)).isoformat()
-    incorporated_to = today.isoformat()
+def count_for_window(days: int | None = None, date_from: str | None = None, date_to: str | None = None) -> dict:
+    if date_from or date_to:
+        if not (date_from and date_to):
+            raise ValueError("Provide both --from and --to, or neither.")
+        incorporated_from, incorporated_to = date_from, date_to
+        days = None
+    else:
+        today = date.today()
+        incorporated_from = (today - timedelta(days=days)).isoformat()
+        incorporated_to = today.isoformat()
 
     by_number: dict[str, str] = {}
     per_sic: dict[str, int] = {}
@@ -47,6 +54,7 @@ def count_for_window(days: int) -> dict:
 
     return {
         "days": days,
+        "window": f"{incorporated_from} -> {incorporated_to}",
         "sic_codes": config.SIC_CODES,
         "per_sic_raw_counts": per_sic,
         "unique_companies": len(by_number),
@@ -58,12 +66,14 @@ def count_for_window(days: int) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--days", type=int, default=30, help="lookback window in days")
+    parser.add_argument("--from", dest="date_from", default=None, help="fixed window start, YYYY-MM-DD (use with --to)")
+    parser.add_argument("--to", dest="date_to", default=None, help="fixed window end, YYYY-MM-DD (use with --from)")
     args = parser.parse_args()
 
-    result = count_for_window(args.days)
+    result = count_for_window(days=args.days, date_from=args.date_from, date_to=args.date_to)
 
     print()
-    print(f"=== DRY RUN: {result['days']}-day window, SIC codes {result['sic_codes']} ===")
+    print(f"=== DRY RUN: {result['window']}, SIC codes {result['sic_codes']} ===")
     for sic, n in result["per_sic_raw_counts"].items():
         print(f"  SIC {sic}: {n} raw hits")
     print(f"  unique companies in window (deduped across SIC codes): {result['unique_companies']}")

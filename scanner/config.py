@@ -20,6 +20,15 @@ SIC_CODES = os.getenv("SCANNER_SIC_CODES", "72110,72190").split(",")
 # late-appearing incorporation is not lost. The seen-store prevents duplicates.
 LOOKBACK_DAYS = int(os.getenv("SCANNER_LOOKBACK_DAYS", "2"))
 
+# --- Fixed calendar window override (for historical backfills) --------------
+# LOOKBACK_DAYS is always relative to today, so it can't target a specific
+# past window (e.g. "30 June to 14 July"). Setting BOTH of these to
+# YYYY-MM-DD dates overrides LOOKBACK_DAYS entirely and sweeps that exact
+# window instead. Leave both blank for normal day-to-day operation -- if only
+# one is set, fetch.py raises rather than silently guessing the other end.
+INCORPORATED_FROM = os.getenv("SCANNER_INCORPORATED_FROM", "")
+INCORPORATED_TO = os.getenv("SCANNER_INCORPORATED_TO", "")
+
 # --- Model ------------------------------------------------------------------
 # Sonnet is a good quality/cost default for briefs; swap to a cheaper model
 # for high volume, or a stronger one for a final polish pass.

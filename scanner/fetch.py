@@ -153,9 +153,20 @@ def get_new_companies() -> list[dict]:
     permanently drop companies that were fetched but never actually
     processed into a digest.
     """
-    today = date.today()
-    incorporated_from = (today - timedelta(days=config.LOOKBACK_DAYS)).isoformat()
-    incorporated_to = today.isoformat()
+    if config.INCORPORATED_FROM or config.INCORPORATED_TO:
+        if not (config.INCORPORATED_FROM and config.INCORPORATED_TO):
+            raise RuntimeError(
+                "SCANNER_INCORPORATED_FROM and SCANNER_INCORPORATED_TO must both be set "
+                "for a fixed-window run -- only one was provided."
+            )
+        incorporated_from = config.INCORPORATED_FROM
+        incorporated_to = config.INCORPORATED_TO
+        print(f"Fixed-window override active: {incorporated_from} -> {incorporated_to} "
+              f"(SCANNER_LOOKBACK_DAYS ignored)")
+    else:
+        today = date.today()
+        incorporated_from = (today - timedelta(days=config.LOOKBACK_DAYS)).isoformat()
+        incorporated_to = today.isoformat()
 
     seen = _load_seen()
     by_number: dict[str, dict] = {}
