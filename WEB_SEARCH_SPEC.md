@@ -88,25 +88,43 @@ output is on `examples.html`. Findings:
   content is included in the pass-2 prompt too (via the same
   `_format_website()` used in pass 1), and the model DOES use it
   substantively (confirmed in the second, realistic test below).
+- **Generic web search is NOT a substitute for ORCID's own registry search
+  — correction, important.** An earlier version of this doc and
+  `examples.html` said Claude's web_search tool "could not verify" Alice
+  Condrat's academic background, and scored Vectis conservatively (2/5) on
+  that basis. This was wrong, and the real cause is worth recording: (1) the
+  test that produced that result never actually called `orcid.py`'s lookup
+  for her at all — the officer record was hand-built without an ORCID check,
+  so the model was never told one had even been attempted; and (2) the
+  general `web_search` tool, separately, really did fail to surface her real
+  ORCID record (orcid.org/0000-0003-4936-4430, University of Oxford
+  affiliation) even when asked to search her name plus Oxford/research/
+  LinkedIn terms — confirmed by a follow-up real search that also came up
+  empty on the exact ORCID ID. These are two different, both-true findings:
+  `orcid.py`'s exact given-name/family-name registry match is a
+  fundamentally different (and more precise) mechanism than generic web
+  search, which is exactly why it stays a separate pass-1 source rather than
+  something pass 2's search is expected to rediscover. Once her real ORCID
+  was supplied as pass-1 input (as `orcid.py` would do in a real run),
+  pass 1 correctly scored her 4/5 per the ORCID scoring rule — but running
+  pass 2's web search on top of that brought the score back down to 3/5,
+  because general search still couldn't independently corroborate anything
+  beyond the ORCID record itself. That's a real, useful thing to know: the
+  two passes don't always agree, and a second pass can occasionally be MORE
+  conservative than the first even without finding anything actually
+  negative, simply because it re-derives the whole assessment rather than
+  only updating it with new evidence. Worth watching for on other companies,
+  not something to silently average away.
 - **Search is much better at verifying established academics than quieter
-  founders.** For KYTFOX, search found a genuine, verifiable University of
-  Leeds staff page for director Heiko Wurdak, plus his ResearchGate, PubMed
-  and Google Scholar records, AND an adjacent real project ("Assemblify")
-  that no other signal in the pipeline could have surfaced. For Vectis,
-  search could NOT verify director Alice Condrat's claimed Oxford academic
-  background — the score correctly stayed cautious rather than being talked
-  up. Older, more publication-heavy academics leave more of a findable
-  trail than newer or quieter founders; that's a real, useful thing to know
-  about this feature's limits, not a bug.
-- **Correction, important:** an earlier "manual analyst follow-up" for
-  Vectis (written in a prior session, before this feature existed) asserted
-  Alice Condrat was "an Oxford biochemistry graduate... ties to the
-  University pharmacology department" based on a stated LinkedIn read. Real
-  web search could not independently verify this. That earlier claim should
-  be treated as unconfirmed, not fact — `examples.html` has been rewritten
-  to use only what this session's real, tested search pass actually found,
-  which is more cautious (score stays at 2/5, team provenance marked
-  unverifiable).
+  founders via general search specifically** (separate from the ORCID point
+  above, which uses a different mechanism entirely). For KYTFOX, search
+  found a genuine, verifiable University of Leeds staff page for director
+  Heiko Wurdak, plus his ResearchGate, PubMed and Google Scholar records,
+  AND an adjacent real project ("Assemblify") that no other signal in the
+  pipeline could have surfaced. Older, more publication-heavy academics
+  leave more of a findable trail via general search than newer or quieter
+  founders — a real, useful thing to know about general search's limits,
+  distinct from what ORCID's own registry search can do.
 - **Search can downgrade a score, correctly.** NON-OXIDE CERAMIC SYSTEMS
   looked promising on free signals alone (ORCID-confirmed academic,
   specialist Lucideon address) — pass-1 score 3. Real search found that
@@ -155,3 +173,11 @@ their time, even though search itself now runs on the majority.
 - No `allowed_domains`/`blocked_domains` restriction yet — unrestricted
   search worked fine in testing; revisit only if results turn out noisy at
   scale.
+- Pass 2 currently re-derives the whole brief from scratch rather than only
+  adjusting pass 1's assessment based on NEW evidence found — the Vectis
+  4-to-3 shift above happened with no new negative evidence, just a
+  slightly more conservative re-read. A future refinement could instruct
+  pass 2 to explicitly anchor on the pass-1 score and only move it when it
+  can point to a specific new fact, rather than re-scoring independently —
+  worth considering if this kind of unexplained drift shows up often once
+  it's run on real daily volume.
