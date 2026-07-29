@@ -1,0 +1,56 @@
+[
+  {
+    "company_name": "SPACEFIELD TRANSFORMATION TECHNOLOGIES LTD",
+    "incorporated": "2026-07-29",
+    "one_liner": "Not observable at this stage — no description of activity beyond registered SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation shell with no operational data yet",
+    "team_provenance": "No directors listed or fetched — cannot assess background",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company formation agent mass-registration address, not a genuine lab/incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available",
+      "Registered address is a generic company-formation mill address, not a life-sciences cluster or incubator",
+      "SIC codes (software/IT consultancy, other IT services, R&D other natural sciences) do not clearly indicate a life-sciences focus",
+      "No evidence of funding, grants, or scientific activity",
+      "Incorporation date is in the future relative to typical filing conventions, suggesting possible data entry issue or pre-registration shell"
+    ],
+    "interest_score": "1 - no verifiable team, science, funding, or credible location signal; likely a shell or too early to assess",
+    "unknowns": [],
+    "company_number": "17368270",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null
+  },
+  {
+    "company_name": "PORT HILL CONSULTANCY SERVICES LTD",
+    "incorporated": "2026-07-29",
+    "one_liner": "Not observable at this stage — no description of activity beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other activity signals available",
+    "team_provenance": "No directors listed or fetched — cannot assess background",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine lab or incubator cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available",
+      "Registered at a known mass-incorporation virtual address, undermining any location-based credibility signal",
+      "SIC code (72190, other R&D) is generic and uninformative",
+      "Incorporation date is in the future relative to typical filing norms, suggesting a placeholder or newly-shelf-registered entity",
+      "No evidence of any actual scientific activity, product, or team"
+    ],
+    "interest_score": "1 - no verifiable information beyond a shell-like registration at a generic formation address",
+    "unknowns": [],
+    "company_number": "17368414",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null
+  }
+]
