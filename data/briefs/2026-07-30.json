@@ -1,0 +1,312 @@
+[
+  {
+    "company_name": "LOOPRX.AI LIMITED",
+    "incorporated": "2026-07-29",
+    "one_liner": "Not observable at this stage — no product/service description provided beyond SIC codes suggesting software/biotech R&D",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue shell",
+    "team_provenance": "Two directors: Dr Damian Crowther (no ORCID match) and Prof Valeriya Malysheva (ORCID CONFIRMED), with academic affiliations spanning Babraham Institute, University of Cambridge, VIB-UAntwerp Center for Molecular Neurology and others — strong neuroscience/molecular biology research pedigree",
+    "location_signal": "177 Hills Road, Cambridge — known Cambridge biotech/tech cluster address, though generic office building rather than named incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED for Prof Malysheva — verified academic publication record",
+      "Strong multi-institution academic affiliations (Babraham, Cambridge, VIB-UAntwerp) suggesting credible neuroscience/molecular biology expertise",
+      "Cambridge cluster address"
+    ],
+    "flags_negative": [
+      "Incorporated same-day/very recently — zero trading history",
+      "No description of product, technology, or business model available",
+      "SIC codes (72110 research/experimental development on biotechnology, 72190 other R&D on natural sciences) are broad and uninformative on specifics",
+      "No funding data (grant or equity) provided"
+    ],
+    "interest_score": "2 - credible academic founder signal but company is a pre-formation shell with no discernible science, product, or funding to assess",
+    "unknowns": [],
+    "company_number": "17368875",
+    "sic_codes": [
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-0919-7845",
+      "institutions": [
+        "Babraham Institute",
+        "Institut de Génétique et de Biologie Moléculaire et Cellulaire",
+        "LMS London Institute of Medical Sciences",
+        "Lomonosov Moscow State University",
+        "University of Cambridge",
+        "University of Cambridge Trinity Hall",
+        "VIB-UAntwerp Center for Molecular Neurology"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "TIMOLEON THERAPEUTICS LTD",
+    "incorporated": "2026-07-29",
+    "one_liner": "Not observable at this stage — no business description available beyond registration data.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operational or funding data yet",
+    "team_provenance": "Sole director/secretary Riccardo Ferro (Italian national), ORCID CONFIRMED (0000-0001-6532-4856), affiliated with Breast Cancer Now — suggests oncology research background, likely breast cancer focus",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company formation agent address (mass-registration address, not a genuine lab/incubator signal)",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Director has ORCID CONFIRMED academic identity",
+      "Affiliation with Breast Cancer Now suggests relevant oncology research background"
+    ],
+    "flags_negative": [
+      "Shelton Street address is a generic mass-incorporation registered office, not a lab or incubator signal",
+      "No science, product, or funding detail available",
+      "Single-director structure with no other team visibility",
+      "SIC codes (software/IT/management consultancy) are generic and don't confirm a life-sciences operating model despite the name"
+    ],
+    "interest_score": "2 - academic pedigree noted but company is pre-substance; nothing yet to evaluate scientifically or commercially",
+    "unknowns": [],
+    "company_number": "17369610",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-6532-4856",
+      "institutions": [
+        "Breast Cancer Now"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PURIVO BIOLABS LTD",
+    "incorporated": "2026-07-29",
+    "one_liner": "Sells research-use-only peptides and reference materials to labs/institutions via an online catalogue.",
+    "science": "Not a platform/therapeutics play — appears to be a peptide supply/distribution business with QC (chromatography, lot-specific assay data) rather than an R&D or drug discovery program.",
+    "stage_signal": "Day-one incorporation; website already live with e-commerce catalogue, suggesting this is a trading/commercial launch rather than a research-stage spinout.",
+    "team_provenance": "Single director/secretary (same person), no ORCID match found — no evidence of academic research background.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-registration address (generic formation-agent address, not a lab or incubator).",
+    "funding": "Not observable at this stage — no grant or investment data provided; appears to be a self-funded trading business.",
+    "flags_positive": [
+      "Live commercial website with defined product/customer proposition",
+      "Claims lot-specific QC (four assays per batch) suggesting some operational process in place"
+    ],
+    "flags_negative": [
+      "Generic mass-registration address, not a lab/incubator/cluster",
+      "No ORCID match for sole director — no verified academic or research credibility signal",
+      "SIC codes (72110/72190 R&D) don't match actual activity, which is commercial peptide sales, not R&D",
+      "Sells peptides explicitly RUO/not for human use — regulatory grey-zone product category common in low-quality supplement/grey-market peptide trade",
+      "No funding, grant, or investor data",
+      "Single-director shell-like structure with no visible team"
+    ],
+    "interest_score": "1 - looks like a peptide e-commerce reseller, not a venture-backable biotech asset",
+    "unknowns": [],
+    "company_number": "17369565",
+    "sic_codes": [
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EYKOS LIMITED",
+    "incorporated": "2026-07-29",
+    "one_liner": "Unclear — SIC codes suggest bespoke software development and other scientific/technical R&D, but no specific product or focus is stated.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Single director, Arun Can Orson Sharma, British national; no ORCID match found — no evidence of academic publication history under this search",
+    "location_signal": "Mildenhall, Suffolk — generic commercial/industrial address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporation date is in the future (2026), suggesting a data anomaly or placeholder record — treat with caution",
+      "SIC codes (software development, other R&D) are generic and do not confirm life-sciences relevance",
+      "No named science, product, or team background",
+      "No funding evidence, dilutive or non-dilutive",
+      "Single-director company with no additional corroborating detail"
+    ],
+    "interest_score": "1 - no verifiable life-sciences signal, anomalous incorporation date, essentially a blank-slate shell record",
+    "unknowns": [],
+    "company_number": "17368927",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VFP AEROSPACE LTD",
+    "incorporated": "2026-07-30",
+    "one_liner": "Not observable at this stage — no description of business activity beyond SIC codes",
+    "science": "SIC codes suggest engineering/technical consultancy (71129), R&D on natural sciences/engineering (72190), and IP licensing (77400), but no specifics on aerospace technology or platform provided",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Single director, Andrew Michael Cheadle, British — no ORCID match found; no other biographical or company history provided",
+    "location_signal": "Great Portland Street, London — generic registered office/formation-agent address, not a known biotech or life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "R&D-related SIC code (72190) suggests possible technical/scientific focus",
+      "IP licensing SIC code (77400) may indicate IP-centric business model"
+    ],
+    "flags_negative": [
+      "No description of actual technology or product",
+      "Single director with no verifiable academic or industry track record",
+      "Generic registered address, no incubator/cluster signal",
+      "Aerospace SIC mix is unusual for a life-sciences fund's remit",
+      "Company incorporated with no operational history"
+    ],
+    "interest_score": "1 — no substantive data to assess; outside typical life-sciences remit and pre-operational",
+    "unknowns": [],
+    "company_number": "17370251",
+    "sic_codes": [
+      "71129",
+      "72190",
+      "77400"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ORIGIN8 LTD",
+    "incorporated": "2026-07-29",
+    "one_liner": "Unclear — Companies House record suggests a research/consultancy entity, but the only live website found (origin8.com) is an unrelated indie games studio, not this company.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated registration); no product or research output observable",
+    "team_provenance": "Two directors: Amanda Lenhardt (Canadian) — GtR CONFIRMED as a UKRI-funded investigator affiliated with King's College London, a real positive signal; ORCID unresolved (multiple possible matches, not confirmed). Elizabeth Davinia Young (British) — no ORCID record found, no other data.",
+    "location_signal": "60 Tottenham Court Road, Suite 6367a, Fitzrovia, London — this is a virtual office/mail-forwarding address (Regus/serviced office pattern), not a lab, incubator, or campus address. Generic signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided beyond the director's prior GtR-linked grant history at King's College London",
+    "flags_positive": [
+      "GtR CONFIRMED investigator (Amanda Lenhardt, King's College London) — genuine UKRI grant history"
+    ],
+    "flags_negative": [
+      "Website found at obvious domain match is unrelated (games studio), no genuine company web presence located",
+      "Virtual/generic registered office address",
+      "SIC codes (management consultancy, computer consultancy, data processing, other professional/scientific) are broad and uninformative for a life-sciences thesis",
+      "No science, product, or funding detail observable"
+    ],
+    "interest_score": "2 - one credible academic-grant signal, but no verifiable science, product, or company web presence to support a life-sciences investment thesis",
+    "unknowns": [],
+    "company_number": "17369864",
+    "sic_codes": [
+      "70229",
+      "72190",
+      "72200",
+      "73200"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "C8FE9778-6515-4707-8C25-085925E2AD1C",
+      "organisation": "KING'S COLLEGE LONDON"
+    },
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HARD TECHNOLOGIES LTD",
+    "incorporated": "2026-07-29",
+    "one_liner": "Not observable at this stage — no description of product or activity provided beyond SIC codes suggesting machinery manufacturing and R&D services.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no further activity data",
+    "team_provenance": "Two British directors; no prior company history given. Ruben, A.M. — no ORCID match. Zhang, X. — name too common to verify, inconclusive.",
+    "location_signal": "Forma House, Bowling Green Lane, London EC1R — a known shared-office/serviced-address provider, not a specialist incubator",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "SIC codes indicate hard-tech/engineering plus R&D focus"
+    ],
+    "flags_negative": [
+      "Incorporated less than a month ago — essentially pre-operational",
+      "Generic serviced-office address, not a specialist cluster or incubator",
+      "No funding, grant, or product data available",
+      "No verifiable academic or founder track record"
+    ],
+    "interest_score": "1 - too early and too little data to assess; pure shell-stage filing",
+    "unknowns": [],
+    "company_number": "17369098",
+    "sic_codes": [
+      "28990",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VEDA LEGACY HOLDINGS LIMITED",
+    "incorporated": "2026-07-30",
+    "one_liner": "A real estate strategy/advisory firm offering property portfolio planning and asset optimisation services.",
+    "science": "Not observable at this stage — no scientific or technical platform; this is a real estate services business, not a life-sciences company.",
+    "stage_signal": "Day-one incorporation, generic services company with a marketing website",
+    "team_provenance": "Single director, Adeyemi Olaoye (Nigerian); no ORCID record found; no evident academic or biotech background",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-registration address (formations-agent address), not an incubator or life-sciences cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes and website both indicate a real estate/property advisory business, not life sciences",
+      "Registered at a known generic mass-incorporation address, not a specialist or cluster location",
+      "No scientific mechanism, platform, or IP evident",
+      "Single director with no relevant academic or biotech track record",
+      "Website is generic marketing copy with no specifics on operations, track record, or team"
+    ],
+    "interest_score": "1 - Out of sector; a real estate services company, not a biotech investment candidate",
+    "unknowns": [],
+    "company_number": "17370289",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SEMANTIKS SYSTEMS LIMITED",
+    "incorporated": "2026-07-29",
+    "one_liner": "Not observable at this stage — record gives no description of activity beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity yet observable",
+    "team_provenance": "Single director, Anthony Oliver Head; no ORCID match found; no prior company history provided",
+    "location_signal": "Residential-style address in Frome, Somerset — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes span software (58290), business/domain-specific software (62012), other tech consultancy (72190), and creative/artistic activities (90030) — suggests some tech/creative crossover, though unconfirmed"
+    ],
+    "flags_negative": [
+      "Brand-new shell with no trading history",
+      "No funding, grant, or product evidence",
+      "No academic or industry credentials confirmed for sole director",
+      "Generic address, no cluster signal",
+      "SIC code mix is broad and unfocused, consistent with an undefined shell rather than a specific venture"
+    ],
+    "interest_score": "1 - pre-everything shell company, no verifiable signal to assess",
+    "unknowns": [],
+    "company_number": "17369352",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "72190",
+      "90030"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
