@@ -1,0 +1,589 @@
+[
+  {
+    "company_name": "PUREPATH LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "A newly incorporated biotech R&D company; specific product or service not stated.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operating history",
+    "team_provenance": "Single director, Kevin Patrick Knight, British — no ORCID match found (no inference drawn from this)",
+    "location_signal": "Residential-looking address in Guisborough, England — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 indicates R&D in biotechnology, consistent with life-sciences focus"
+    ],
+    "flags_negative": [
+      "No operating history",
+      "Single-director structure with no visible academic or industry track record",
+      "No funding data",
+      "Generic/residential registered address"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17374316",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PK BIOTICS LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — company is newly incorporated with no described product or service beyond SIC classifications.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, no public activity yet",
+    "team_provenance": "Three directors (two British/Irish, one German with 'Dr' title); no ORCID matches found for any — cannot confirm academic publication history",
+    "location_signal": "Castle House, Guildford — generic registered office address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "SIC codes suggest food/biological product manufacturing (10890) plus wholesale/retail — coherent business scope, not a shell",
+      "Director holds a doctoral title (Dr Tosch), suggesting technical background"
+    ],
+    "flags_negative": [
+      "No science, product, or mechanism disclosed",
+      "No funding evidence, dilutive or non-dilutive",
+      "Registered address is generic, not a specialist biotech location",
+      "No ORCID matches for any director — academic credentials unverified",
+      "Incorporated too recently to show any track record"
+    ],
+    "interest_score": "1 - No verifiable science, funding, or track record; pure pre-seed shell at this point",
+    "unknowns": [],
+    "company_number": "17373291",
+    "sic_codes": [
+      "10890",
+      "46380",
+      "47910",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AANOX LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no product, website, or business description provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, no operational history",
+    "team_provenance": "Single director, Deepak Kakran; ORCID confirmed as a real academic publication record, but no institutional affiliation listed",
+    "location_signal": "Residential address in Epsom — generic, not a lab/incubator cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED for director — verified genuine academic publication record",
+      "SIC codes indicate software/computer consultancy and R&D activity (62012, 72110)"
+    ],
+    "flags_negative": [
+      "Single-director shell with no described product or science",
+      "Residential registered address, no institutional affiliation for director",
+      "No funding, grant, or trading history — brand new entity"
+    ],
+    "interest_score": "2 - ORCID confirmation is a mild positive but there is no discernible business, science, or funding signal to assess",
+    "unknowns": [],
+    "company_number": "17372808",
+    "sic_codes": [
+      "62012",
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0006-8237-6651",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ESCO2 GROUP LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no description of activity beyond SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, future-dated — appears not yet trading",
+    "team_provenance": "Single director, British national; no ORCID match found (inconclusive, not a negative)",
+    "location_signal": "66 Paul Street, London EC2A — known WeWork/generic registered-office address, not a specialist biotech cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 71122 (engineering) and 72190 (other R&D) suggest possible technical/R&D intent"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future/unverified",
+      "Single-director shell with no observable activity, funding, or team depth",
+      "SIC mix (mining support 09100 + engineering + R&D) is incoherent for a life-sciences thesis",
+      "Generic registered-office address"
+    ],
+    "interest_score": "1 - shell company with no verifiable activity, science, or team signal",
+    "unknowns": [],
+    "company_number": "17372778",
+    "sic_codes": [
+      "09100",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DB APPLIED LABS LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "An unincorporated-stage IT/software and R&D-services company; no specific product or biotech application stated.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Sole director Denys Botuk (Ukrainian); no ORCID match found; no prior company history provided",
+    "location_signal": "Barking, England — generic residential/commercial address, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 suggests intent toward R&D activity"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future/erroneous (2026), data integrity concern",
+      "No science, product, or funding detail",
+      "Generic address with no life-sciences cluster signal",
+      "SIC mix (IT services + R&D) is generic and non-specific to biotech",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable biotech activity, science, or funding",
+    "unknowns": [],
+    "company_number": "17373358",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CLOTHO AI LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no description of product or service provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other maturity signals",
+    "team_provenance": "Single individual (Wei, Luyao) holding both director and secretary roles; no prior company history or academic affiliation confirmed",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-registration address (formation-agent/virtual office), not a genuine incubator or research cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "SIC codes indicate software/IT and R&D-adjacent activity (62012, 72190)"
+    ],
+    "flags_negative": [
+      "Incorporated with a future/forward date (2026-07-31), suggesting placeholder or test data — needs verification",
+      "Registered at a known mass-registration virtual office address, not a specialist cluster",
+      "Single director/secretary with no verifiable track record",
+      "No science, product, team background, or funding data available"
+    ],
+    "interest_score": "1 - essentially no verifiable information beyond a bare incorporation record",
+    "unknowns": [],
+    "company_number": "17373495",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ZEIWW LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Early-stage venture building a 'waterborne energy intelligence platform' — likely marine/vessel energy data analytics, per its own holding page.",
+    "science": "Unclear technical mechanism; website references a 'Vessel Data Portal' suggesting data/software for marine energy monitoring, but no methodology, sensors, or algorithms described.",
+    "stage_signal": "Pre-launch holding page only — no product, no described traction; company is effectively day-one.",
+    "team_provenance": "Sole director Paul Simavari, British, ORCID CONFIRMED with Newcastle University affiliation — a real, verified academic record, though field of research not specified here.",
+    "location_signal": "Registered address is a residential-looking street in Darlington — no evident incubator or cluster affiliation.",
+    "funding": "Not observable at this stage.",
+    "flags_positive": [
+      "ORCID CONFIRMED director with Newcastle University affiliation",
+      "Specialist SIC codes (62012 software, 63110 data processing) consistent with stated data-platform focus",
+      "Live company website, however early-stage"
+    ],
+    "flags_negative": [
+      "Website is a bare holding page with no product, customers, or team detail",
+      "Vague 'energy intelligence' framing with no technical specifics",
+      "No funding, grant, or revenue data available",
+      "Generic residential registered address, no cluster signal"
+    ],
+    "interest_score": "2 - ORCID-confirmed academic founder is a mild positive, but company is pre-product with no substantive public information",
+    "unknowns": [],
+    "company_number": "17374360",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0005-8817-4877",
+      "institutions": [
+        "Newcastle University"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CILLIUMFLUX LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no product, market, or activity description provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Two directors, French and British nationality; no ORCID records found for either — no confirmed academic or prior company links from data provided",
+    "location_signal": "St Albans registered address — generic serviced/registered-office style address (Wren House), no evident biotech cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 indicates R&D intent"
+    ],
+    "flags_negative": [
+      "Brand new shell with no trading history",
+      "No science, product, or market described",
+      "No ORCID/GtR-confirmed academic credibility",
+      "Generic registered address with no cluster/incubator signal",
+      "No funding data of any kind"
+    ],
+    "interest_score": "1 — no verifiable science, team credibility, funding, or traction; pure shell at this stage",
+    "unknowns": [],
+    "company_number": "17374538",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SUPERSTRATA LIMITED",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no operational description available beyond registration data",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — pre-operational, no track record",
+    "team_provenance": "Two individual directors (one American, one British) plus a corporate secretarial firm (Winston Taylor Secretaries Limited, a standard formation-agent service, not indicative of substantive involvement); no academic or prior-company links established",
+    "location_signal": "5 New Street Square, London EC4A — a generic central London commercial/legal-services address, likely a registered-office service rather than an operational or cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated only recently — effectively no operating history",
+      "SIC codes span unrelated activities (software, data processing, financial holding, R&D) — no clear focus signalled",
+      "No science, product, or team background disclosed",
+      "Generic registered address consistent with a formation-agent service, not a lab or incubator"
+    ],
+    "interest_score": "1 - no discernible science, team credibility, funding, or focus; nothing here to evaluate",
+    "unknowns": [],
+    "company_number": "17373546",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIGA TECHNOLOGIES LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "A technology holding company building a portfolio of consumer platforms (travel booking and ecommerce), not a life-sciences company.",
+    "science": "Not observable at this stage — no biotech/life-sciences platform or mechanism described; website describes generic travel and ecommerce products (Tuvi, Roog).",
+    "stage_signal": "Day-one incorporation with a live website already showcasing two unrelated consumer-tech products; appears pre-revenue holding structure.",
+    "team_provenance": "Single director, Dr Zimin Liang, ORCID CONFIRMED but no institution listed; no evident academic or life-sciences background.",
+    "location_signal": "128 City Road, London — generic registered office/company-formation address (widely used mass-registration address), not a specialist bioscience incubator or cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED for director Dr Zimin Liang"
+    ],
+    "flags_negative": [
+      "SIC codes and website indicate general software/holding company, not life sciences",
+      "No science, platform, or modality relevant to biotech",
+      "Generic mass-registration address, not a bioscience cluster",
+      "No funding or grant data",
+      "Portfolio companies (travel, ecommerce) unrelated to health/life sciences"
+    ],
+    "interest_score": "1 — not a life-sciences company; outside fund mandate on all visible evidence",
+    "unknowns": [],
+    "company_number": "17373918",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0005-6105-7777",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AUREA INTELLIGENCE LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no description of product or service provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other evidence of trading, product, or funding activity",
+    "team_provenance": "Single director, Callum Michael Riding-Smith, British; no ORCID match found; no other companies or academic links stated",
+    "location_signal": "Bacup, Lancashire — residential/generic address, no evidence of incubator or life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of business activity beyond generic software SIC codes (58290, 62012, 62090, 72190)",
+      "SIC codes indicate general software/IT, not life sciences",
+      "Single-director shell with no funding, product, or trading history",
+      "Generic residential address, no cluster/incubator signal",
+      "Incorporation date is in the future relative to typical filing conventions — verify record accuracy"
+    ],
+    "interest_score": "1 - no life-sciences relevance, no team or funding signal, pre-trading shell",
+    "unknowns": [],
+    "company_number": "17373910",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LEGIS LABS LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — SIC codes suggest software/IT services and other scientific R&D, but no product or business description is available",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated, effectively pre-launch or shell)",
+    "team_provenance": "Single director, Alexandra Tran (Australian); ORCID search returned only unresolved possible matches, not a confirmed link",
+    "location_signal": "Old Addenbrookes Site, Cambridge — a known biomedical/life-sciences redevelopment cluster near the old hospital site; potentially a positive cluster signal but address alone doesn't confirm lab or incubator tenancy",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Cambridge biomedical cluster address (Old Addenbrookes Site)",
+      "SIC codes span IT/software and other R&D, suggesting a tech or data-science angle"
+    ],
+    "flags_negative": [
+      "No business description or product information available",
+      "Single director, no visible team depth",
+      "No funding (grant or equity) on record",
+      "Incorporation date is unusually forward-dated, limiting any track record"
+    ],
+    "interest_score": "2 - no discernible science, product, or funding signal; address is suggestive but unconfirmed",
+    "unknowns": [],
+    "company_number": "17374085",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ORWYNHEALTH LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond registration details.",
+    "science": "SIC codes suggest software development, computer consultancy, other R&D (natural sciences/engineering), and human health activities — but no specific mechanism, platform, or modality is stated.",
+    "stage_signal": "Day-one incorporation; no operational or funding history yet.",
+    "team_provenance": "Single director, Dr Arjuna Mahinda Imbuldeniya, British. No ORCID match found — no verified academic publication record. No prior company history provided.",
+    "location_signal": "Residential/generic London address (Stockwell) — no evidence of incubator or life-sciences cluster affiliation.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Director holds 'Dr' title, suggesting possible academic/clinical background",
+      "SIC codes span both digital health (software/consultancy) and health activities, suggesting a health-tech angle"
+    ],
+    "flags_negative": [
+      "Incorporated in the future (2026-07-31) — likely a data artefact requiring verification",
+      "No trading history, product, or science description available",
+      "No funding, grant, or investment evidence",
+      "Sole director with no corroborated academic or industry track record",
+      "Generic residential-style registered address"
+    ],
+    "interest_score": "1 - No verifiable science, team credibility, funding, or traction; nothing to assess yet.",
+    "unknowns": [],
+    "company_number": "17374862",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AETRACH INDUSTRIES LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Unclear — SIC codes suggest a mix of software development and engineering/scientific consultancy, but no description of actual activity is available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or funding history",
+    "team_provenance": "Single director, no disclosed prior companies or academic affiliation; no ORCID match found (not a negative signal, simply absent)",
+    "location_signal": "Residential-looking address in Luton — no indication of incubator, cluster, or lab space",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual business activity beyond broad SIC codes",
+      "Single director with no visible track record",
+      "Generic residential registered address, not a life-sciences cluster or incubator",
+      "No evidence of grant funding, IP, or scientific programme"
+    ],
+    "interest_score": "1 — no discernible life-sciences signal; appears to be a generic shell/consultancy at incorporation stage",
+    "unknowns": [],
+    "company_number": "17374869",
+    "sic_codes": [
+      "62012",
+      "71122",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AGO RECCE LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — no company website or description provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operating history",
+    "team_provenance": "Single director, Andrei Gosman (Romanian national); no ORCID match found; no prior company history provided",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-registration address (formation agent/virtual office), not a genuine incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes (62012 business software, 72190 R&D other natural sciences/engineering) suggest tech/R&D intent"
+    ],
+    "flags_negative": [
+      "Shelton Street is a generic mass-registration address, not evidence of a real R&D base",
+      "No funding, grant, or product data",
+      "Single director with no verifiable academic or industry track record",
+      "Incorporation date is dated in the future relative to typical filings, suggesting a placeholder or newly-templated shell"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17372952",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INTELLIGENCE BY DESIGN LAB LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Not observable at this stage — SIC codes suggest software/IT consultancy and R&D, but no product or activity description is available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading shell",
+    "team_provenance": "Single director, Raquel Ruiz Porte Petit (Mexican national); no ORCID match found; no prior companies or academic affiliation stated",
+    "location_signal": "Serviced office (Signature) in Birmingham — generic flexible-office address, not a known biotech/life-sciences cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated with a forward date (2026), unusual and worth verifying",
+      "No science, product, or activity detail available",
+      "Serviced/virtual office address, no cluster or incubator signal",
+      "SIC codes indicate generic IT/consultancy rather than life sciences",
+      "Single director with no evidence of relevant scientific background"
+    ],
+    "interest_score": "1 — no science, no team credibility signal, no funding; nothing here for a life-sciences fund",
+    "unknowns": [],
+    "company_number": "17372753",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INTERNATIONAL SOCIETY OF APPLIED SCIENCE TECHNOLOGY AND ENGINEERING",
+    "incorporated": "2026-07-31",
+    "one_liner": "A newly incorporated entity combining publishing, R&D, conference organising, and professional membership association activities.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operational history",
+    "team_provenance": "Single director (Liu, Yuchi); no prior company history or academic affiliation provided",
+    "location_signal": "Cambridge address (Station Square) — could be office/serviced suite; not confirmed as a life-sciences incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporation date is in the future (2026), suggesting a data anomaly or shell pre-registration",
+      "SIC code mix (publishing, R&D, conference organising, membership association) is inconsistent with a focused biotech/life-sciences venture",
+      "Single director with no verifiable track record",
+      "No evidence of scientific IP, product, or research focus",
+      "Name suggests a trade body or membership organisation, not a commercial biotech company"
+    ],
+    "interest_score": "1 - No discernible life-sciences technology, product, or team signal; structure resembles a membership/publishing body, not an investable biotech",
+    "unknowns": [],
+    "company_number": "17373171",
+    "sic_codes": [
+      "58141",
+      "72190",
+      "82302",
+      "94120"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BIOGRONOMY LTD",
+    "incorporated": "2026-07-31",
+    "one_liner": "Develops stimuli-responsive polymer additives for crop-inputs that release active ingredients on demand.",
+    "science": "Polymer science-based 'smart additives' — stimuli-responsive polymers designed to trigger release of agricultural actives (e.g. fertiliser/pesticide) at the right time and location; mechanism details not specified beyond marketing language.",
+    "stage_signal": "Day-one incorporation (future-dated), pre-revenue, website exists but describes solution in general terms — early/pre-commercial.",
+    "team_provenance": "Sole director/secretary Dr Samuel Robertshaw, ORCID CONFIRMED, Lancaster University affiliation — likely academic spinout.",
+    "location_signal": "Registered at Lancaster University's Research and Enterprise Services address — university incubator/spinout signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic founder with Lancaster University affiliation",
+      "University incubator registered address indicating institutional spinout support",
+      "Specialist SIC code (72190 - other R&D)",
+      "Clear technology thesis on live company website"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future/unverifiable",
+      "Single director — no evidence of wider team or commercial hires",
+      "No funding, grant, or revenue data provided",
+      "Website content is high-level marketing with no technical or IP specifics"
+    ],
+    "interest_score": "3 - credible academic spinout signal but too early and undocumented to rate higher",
+    "unknowns": [],
+    "company_number": "17374089",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0005-8901-3557",
+      "institutions": [
+        "Lancaster University"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
