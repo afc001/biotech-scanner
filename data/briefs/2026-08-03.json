@@ -1,0 +1,283 @@
+[
+  {
+    "company_name": "MEIOSYS LTD",
+    "incorporated": "2026-08-03",
+    "one_liner": "A genomics software company positioning around 'population-aware genomics' via something called the P14e Platform.",
+    "science": "Website references a 'P14e Platform' and 'population-aware genomics' but gives no mechanistic, technical, or data-modality detail — this is marketing copy, not a science description.",
+    "stage_signal": "Day-one incorporation (registered August 2026, future-dated relative to typical filings); SIC codes indicate business/domestic software and software publishing rather than a wet-lab biotech.",
+    "team_provenance": "Two directors: Dr Ines De Santiago Domingos de Jesus (no ORCID match found) and Amit Jain (name too common to verify). No prior company history or academic affiliations stated.",
+    "location_signal": "Residential flat address in London (Streatham) — generic, not an incubator or life-sciences cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Founder holds a doctorate (Dr title), suggesting some academic background",
+      "Website live with a defined product name (P14e Platform) rather than pure shell"
+    ],
+    "flags_negative": [
+      "Registered address is a residential flat, not a lab or incubator",
+      "SIC codes suggest software/IT company, not biotech R&D — mismatch with 'genomics' branding",
+      "Website content is entirely marketing fluff with no technical substance",
+      "No ORCID/GtR confirmation for either director",
+      "No funding, grant, or investment data available",
+      "Incorporation date appears to be in the future, unusual/unverifiable"
+    ],
+    "interest_score": "2 - generic software-style registration with unsubstantiated genomics branding and no verifiable scientific or funding signal",
+    "unknowns": [],
+    "company_number": "17375850",
+    "sic_codes": [
+      "62012",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BEATQUANTUM LIMITED",
+    "incorporated": "2026-08-03",
+    "one_liner": "Provides applied post-quantum cryptography software/consulting, claiming to build and run PQC implementations in production.",
+    "science": "Post-quantum cryptography — claims FIPS 203/204/205 key generation implementation, published publicly on a site called kyber.club since April 2025 (predates incorporation date, which is inconsistent or a placeholder company date).",
+    "stage_signal": "Day-one incorporation per Companies House, but website claims prior production work since April 2025 — suggests pre-existing unincorporated activity or rebrand, not a true pre-revenue startup.",
+    "team_provenance": "Single director, Santosh Kashinath Pandit, British. No ORCID match. No prior companies or academic affiliation stated or observable.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company formation/virtual office address (generic, high-volume registration address), not a specialist cluster or incubator.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Specialist SIC codes (62012, 62020, 72190) aligned with software/R&D",
+      "Website claims concrete technical output (FIPS 203/204/205 key generation) rather than pure marketing language",
+      "Claims of a live public demonstration (kyber.club) predating incorporation"
+    ],
+    "flags_negative": [
+      "Registered address is a mass-registration virtual office, not a signal of substance",
+      "Single director with no verifiable academic or industry track record",
+      "Incorporation date (Aug 2026) inconsistent with website's claimed activity since April 2025 — unclear corporate history or possible data error",
+      "No funding, grant, or investor information available",
+      "Website heavy on claims ('world first', 'world-leading') without independent verification"
+    ],
+    "interest_score": "2 - Interesting technical claim but single-founder, generic address, no funding evidence, and unverified/inconsistent timeline",
+    "unknowns": [],
+    "company_number": "17376173",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INTELLIGENT MOTION LTD",
+    "incorporated": "2026-08-02",
+    "one_liner": "A software/R&D company, likely involving computer vision or motion-related applications, but core business unclear from filing alone.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — pre-trading shell",
+    "team_provenance": "Single director, Gregory Forostovsky, British national; no ORCID match found (not a negative signal, just absence of academic record); no prior companies or academic links visible in this data",
+    "location_signal": "Windsor residential/commercial address — not a known biotech cluster or incubator; appears generic",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes suggest software/computer consultancy and R&D (62012, 72190) — could indicate tech-enabled platform"
+    ],
+    "flags_negative": [
+      "Incorporated same day as filing — zero operating history",
+      "Single director, no visible team",
+      "No grant or funding data",
+      "Generic address with no life-sciences or tech cluster signal",
+      "No evidence this is life-sciences relevant at all — SIC codes are generic IT/R&D, not biotech-specific"
+    ],
+    "interest_score": "1 - no evidence of biotech relevance, no funding, no track record; likely outside fund thesis",
+    "unknowns": [],
+    "company_number": "17375431",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AEGIS MARITIME SYSTEMS LTD",
+    "incorporated": "2026-08-03",
+    "one_liner": "Not observable at this stage — SIC codes suggest fabricated metal products, electronic components, and other R&D, but no product or activity description provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Single director, British national; no ORCID match found (not a negative signal, absence is uninformative)",
+    "location_signal": "Generic residential-looking address in Glynrhedyn, Wales — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Single-director shell with no described product, science, or activity",
+      "No funding, grant, or partnership data available",
+      "Too early to assess team credibility or technical differentiation"
+    ],
+    "interest_score": "1 - pre-operational shell company with no substantive data to assess",
+    "unknowns": [],
+    "company_number": "17376369",
+    "sic_codes": [
+      "25990",
+      "26110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KELDAC LIMITED",
+    "incorporated": "2026-08-03",
+    "one_liner": "A newly incorporated company with a general R&D SIC code; specific activity not disclosed.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no operational history",
+    "team_provenance": "Single director, Ian Leslie Zantboer, British; no ORCID match found; no prior companies or academic links stated",
+    "location_signal": "Residential/rural address in Farthingstone, Northamptonshire — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Shell-stage company, days/weeks old, no evidence of activity",
+      "SIC 72190 (other R&D) is generic — no life-sciences specificity",
+      "Residential registered address, not a lab or incubator",
+      "No grant funding, publications, or team credentials evidenced"
+    ],
+    "interest_score": "1 — no verifiable science, team, or funding signal; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17375953",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GESTUREFLOW TECHNOLOGIES LIMITED",
+    "incorporated": "2026-08-03",
+    "one_liner": "Not observable at this stage — no description of product or activity provided beyond SIC codes suggesting software and R&D services.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signal",
+    "team_provenance": "Two directors, no ORCID match found for either; no prior company history or academic affiliation provided",
+    "location_signal": "Residential flat address in London — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated very recently with no trading or product history",
+      "Registered address is a residential flat, not a lab, incubator, or commercial R&D site",
+      "SIC codes (software, other IT, R&D) are broad and non-specific to a biotech thesis",
+      "No evidence of scientific founder credentials or grant funding"
+    ],
+    "interest_score": "1 - No verifiable science, team, or funding signal; nothing here to differentiate from a shell company",
+    "unknowns": [],
+    "company_number": "17375799",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GROGU ENTERPRISES LTD",
+    "incorporated": "2026-08-01",
+    "one_liner": "Registered entity with SIC codes spanning software/IT services and data processing; not a biotech company based on the codes present.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no funding or operational history",
+    "team_provenance": "Single director, Maria Raluca Minea; no ORCID match found; no prior company history provided",
+    "location_signal": "Perry Barr, Birmingham — generic residential/commercial address, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (62012, 62090, 63110, 72190) indicate IT/software/data activity, not life sciences — likely outside fund mandate",
+      "No scientific, technical, or academic signal in the record",
+      "Newly incorporated shell with no operational or funding evidence"
+    ],
+    "interest_score": "1 - Not a life-sciences company on available evidence; no basis for further review",
+    "unknowns": [],
+    "company_number": "17375110",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MEDSTUFFIES LTD",
+    "incorporated": "2026-08-03",
+    "one_liner": "An online medical education platform offering courses, clinical reference tools, and exam-prep content for medical students and clinicians.",
+    "science": "Not a biotech/therapeutic play — this is an ed-tech/content platform (clinical knowledge engines, Q-banks, atlases) with no drug, diagnostic, or device modality involved.",
+    "stage_signal": "Day-one incorporation, but website already live with substantial built-out content, suggesting product predates or coincides with incorporation.",
+    "team_provenance": "Sole director Moath Naser, Jordanian, ORCID CONFIRMED, affiliated with Hashemite University — academic medical background consistent with producing clinical education content.",
+    "location_signal": "Edinburgh serviced-office address (Young St) — generic registered-agent style address, not a known life-sciences cluster or incubator.",
+    "funding": "No grant or investment data provided — appears self-funded or bootstrapped at this stage.",
+    "flags_positive": [
+      "Director has ORCID CONFIRMED academic identity",
+      "Live, apparently mature product website with broad content scope"
+    ],
+    "flags_negative": [
+      "Not a life-sciences/biotech company — SIC codes (retail, computer services, residential/social care, human health) and content confirm this is ed-tech, not therapeutics/diagnostics/platform biotech",
+      "No funding, grant, or commercial traction data",
+      "Single director, no evidence of team or scientific advisory board",
+      "No IP, clinical, or regulatory angle relevant to a biotech fund"
+    ],
+    "interest_score": "1 - not a biotech investment; this is a medical education content business, outside fund thesis",
+    "unknowns": [],
+    "company_number": "SC897800",
+    "sic_codes": [
+      "47910",
+      "72190",
+      "85590",
+      "85600"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0004-7221-6369",
+      "institutions": [
+        "Hashemite University"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NEDAB LTD",
+    "incorporated": "2026-08-01",
+    "one_liner": "Unclear — SIC codes suggest optical/photonic instrument manufacturing combined with other R&D, but no description of actual product or service.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — pre-trading shell",
+    "team_provenance": "Single director, Lionel John Helmuth Peter Baden, British — no ORCID match found; no prior company history provided",
+    "location_signal": "Horsham residential/generic address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 26701 (manufacture of optical instruments/photonic equipment) suggests a hardware/instrumentation angle rather than generic consultancy"
+    ],
+    "flags_negative": [
+      "No trading history — incorporated too recently to assess anything",
+      "No named science, product, or technology description",
+      "Single director with no visible academic or industry track record",
+      "Generic residential address, no cluster or incubator signal",
+      "No funding, grant, or investment data"
+    ],
+    "interest_score": "1 - Empty shell with no discernible technology, team credibility, or funding; nothing to evaluate yet",
+    "unknowns": [],
+    "company_number": "17375266",
+    "sic_codes": [
+      "26701",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
