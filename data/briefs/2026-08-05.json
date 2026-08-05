@@ -1,0 +1,518 @@
+[
+  {
+    "company_name": "EGYPTIAN GOLD TECH LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — SIC codes suggest software development and R&D in natural sciences/engineering, but no actual activity description is given.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no evidence of operations yet",
+    "team_provenance": "Single director, Adam James Cartwright, British — no ORCID match found, no prior company history supplied",
+    "location_signal": "Residential-style address in Walsall — no incubator, cluster, or lab signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Pre-incorporation stage, no trading history",
+      "Generic residential registered address",
+      "No team background or credentials supplied",
+      "No science, product, or funding detail available",
+      "Single director with no verifiable academic or industry track record"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17381448",
+    "sic_codes": [
+      "62012",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NEXAPEPTIDE LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "A UK-based reseller/distributor of research-grade peptides (>99% purity, per manufacturer's Certificate of Analysis) to laboratory and scientific customers.",
+    "science": "Not a platform or drug developer — appears to be a trading/distribution business sourcing peptides from a third-party GMP-certified manufacturer, not originating novel science itself.",
+    "stage_signal": "Day-one incorporation; website already live and positioned as a commercial supply operation rather than an R&D-stage startup.",
+    "team_provenance": "Two directors, Carr-Wilkinson and Wilkinson — no ORCID matches found (not meaningful either way per scoring rules). No visible academic or prior-company track record from data provided.",
+    "location_signal": "Generic office address in Mirfield, West Yorkshire — no evidence of incubator, university cluster, or life-sciences hub affiliation.",
+    "funding": "Not observable at this stage — no grant or investment data provided; SIC code 72110 (R&D on natural sciences) sits oddly against the site's clear retail/distribution positioning.",
+    "flags_positive": [
+      "Live commercial website with clear customer-facing proposition",
+      "Claims GMP-sourced material and batch-level Certificate of Analysis"
+    ],
+    "flags_negative": [
+      "Business model is reselling/distribution, not IP-generating R&D — weak fit for a venture-style biotech investment",
+      "SIC code (R&D) mismatches actual described activity (retail supply)",
+      "No evidence of proprietary science, patents, or platform",
+      "No funding history, grant or equity, disclosed",
+      "Generic office address, no cluster or incubator signal",
+      "Very early incorporation with no track record"
+    ],
+    "interest_score": "1 — this looks like a peptide supply/trading business, not a venture-backable biotech; no IP, no R&D signal despite SIC code",
+    "unknowns": [],
+    "company_number": "17380537",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EIRCLE EXPLORATION LIMITED",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of publishing, film/video production, and R&D activities, but no descriptive data provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other stage indicators",
+    "team_provenance": "Sole director Tarkan Ahmet, British; no ORCID match found; no prior company history provided",
+    "location_signal": "Residential/generic address in Colchester, Essex — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual business activity beyond generic SIC codes",
+      "Mixed/unrelated SIC codes (publishing, film production, R&D) suggest unclear or undefined business model",
+      "No funding, grant, or product data of any kind",
+      "Generic residential-style address with no cluster or incubator signal"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17380314",
+    "sic_codes": [
+      "58110",
+      "59120",
+      "72190",
+      "72200"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HASEYA HEALTH LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "A direct-to-consumer supplement brand offering hormone-stage and heritage-tailored liposomal products for women.",
+    "science": "Liposomal delivery format for supplements, marketed by life stage and heritage; no mechanism, formulation detail, or clinical data provided.",
+    "stage_signal": "Pre-launch/day-one incorporation with a live marketing website — appears to be a consumer wellness brand rather than a biotech R&D company.",
+    "team_provenance": "Single director (Gita Cathalina Samuelsson, Australian); no ORCID match; no prior company history or academic affiliation stated.",
+    "location_signal": "Residential-style address in Leigh Woods, Bristol — no incubator or cluster signal.",
+    "funding": "Not observable at this stage.",
+    "flags_positive": [
+      "Live, branded consumer website with defined product positioning"
+    ],
+    "flags_negative": [
+      "SIC codes indicate retail/consultancy/residential care, not R&D or biotech",
+      "No science, IP, or clinical evidence behind 'liposomal' claims",
+      "No grant funding or non-dilutive support identified",
+      "Single director with no verifiable scientific or entrepreneurial track record",
+      "Marketing language is emotive/consumer-facing, not substantiated by data"
+    ],
+    "interest_score": "1 - consumer supplement brand, not a life-sciences investment case",
+    "unknowns": [],
+    "company_number": "17379608",
+    "sic_codes": [
+      "47910",
+      "72190",
+      "85590",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "URBAN ECOTOPIA LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — SIC codes suggest software/IT and management consultancy, but no description of actual product or market is available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or product data yet",
+    "team_provenance": "Single named director, Gerardo Ezequiel Martin Carreno, Spanish national — no ORCID record found; no evident academic or prior company links",
+    "location_signal": "27 Old Gloucester Street, London — a well-known mass company-formation/registered-office address, not a lab, incubator, or life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not a specialist or lab address",
+      "SIC codes (software, consultancy) do not clearly indicate a life-sciences business at all",
+      "No science, product, or team background disclosed",
+      "No funding, grant, or investor signal",
+      "ORCID search returned no matching record — no verifiable academic credibility"
+    ],
+    "interest_score": "1 - no discernible life-sciences activity, generic registration, no team or funding signal",
+    "unknowns": [],
+    "company_number": "17380717",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DESR ADVISORY LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "A newly incorporated firm registered for management consultancy and other scientific R&D — insufficient detail to determine actual activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading history",
+    "team_provenance": "Not observable at this stage — no directors listed or fetched",
+    "location_signal": "66 Paul Street, London EC2A 4NA — generic registered office address, commonly used by company formation agents; not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 (other R&D on natural sciences/engineering) suggests possible scientific intent"
+    ],
+    "flags_negative": [
+      "No directors listed — cannot assess team credibility",
+      "SIC 70229 is generic management consultancy, not biotech-specific",
+      "Registered address is a generic formation-agent address, not a specialist cluster",
+      "No science, product, or funding detail available",
+      "Incorporated on a future/near-future date suggesting this record may be a placeholder or very recent shell"
+    ],
+    "interest_score": "1 - No verifiable information beyond a bare incorporation record; nothing to assess",
+    "unknowns": [],
+    "company_number": "17381950",
+    "sic_codes": [
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ROOTRISK LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — no descriptive data beyond SIC codes suggesting software/computer consultancy and R&D services.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Two British directors, Kench and Taylor; no ORCID match for either (not a negative signal, simply absent)",
+    "location_signal": "Great Portland Street, London — generic registered office/formation-agent address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 74901 suggests some R&D-related activity intent"
+    ],
+    "flags_negative": [
+      "Brand new shell with no science, product, or funding data",
+      "Generic central London registered address, likely a company formation service rather than an operational base",
+      "SIC codes (software, management consultancy, R&D) do not clearly indicate a biotech/life-sciences focus"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; pure shell at this stage",
+    "unknowns": [],
+    "company_number": "17380487",
+    "sic_codes": [
+      "62012",
+      "72190",
+      "74901"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NEXYV LIMITED",
+    "incorporated": "2026-08-05",
+    "one_liner": "An affiliate/content marketing website selling buying guides for unrelated consumer products (baby sleepers, pastry molds, gate hardware); not a life-sciences company.",
+    "science": "Not observable at this stage — no scientific or biotech content of any kind on the website or in the record.",
+    "stage_signal": "Day-one shell incorporation paired with a generic affiliate-marketing website; SIC code (72190, other R&D) does not match actual business activity observed.",
+    "team_provenance": "No directors listed or fetched — no information available.",
+    "location_signal": "Registered address is a generic residential/serviced address in Ruislip; no incubator, cluster, or life-sciences signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Website content is entirely unrelated to the SIC code or any life-sciences activity — appears to be a generic affiliate/content site",
+      "No directors listed",
+      "No science, team, or funding signals of any kind",
+      "Mismatch between registered SIC code (R&D) and actual business (consumer buying guides) suggests shell or repurposed company"
+    ],
+    "interest_score": "1 - no evidence of any life-sciences activity; appears to be an unrelated affiliate marketing shell",
+    "unknowns": [],
+    "company_number": "17382091",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FIG HEALTH LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — no product, service, or activity description provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other stage evidence",
+    "team_provenance": "Two directors, no ORCID record found for either; no prior company or academic links stated",
+    "location_signal": "Residential address in Tadworth, Surrey — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes span software (62012), other research (72190), and human health activities (86900), suggesting a health-tech/data angle"
+    ],
+    "flags_negative": [
+      "Newly incorporated with no track record",
+      "Registered address is residential, not a life-sciences cluster or incubator",
+      "No ORCID matches for either director",
+      "No funding, grant, or product information available"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17379800",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "72190",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KUSTODIAN GOVERNANCE LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — no description of product or activity provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Single named individual (Peter Albert Parker) holding both director and secretary roles; no prior company history or academic affiliation provided; ORCID/GtR checks inconclusive due to common name",
+    "location_signal": "Residential-looking address in Pinner, Middlesex — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No product, science, or activity description available",
+      "SIC codes (72190 R&D, 74909 other professional/scientific) are generic and uninformative",
+      "Single-person director/secretary structure with no track record",
+      "Generic residential registered address"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; nothing to assess",
+    "unknowns": [],
+    "company_number": "17380293",
+    "sic_codes": [
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FORGENIX LIMITED",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — no product, sector focus, or business description provided beyond SIC codes suggesting R&D/education activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity indicators",
+    "team_provenance": "Single director, Yuguang Wang; no prior company history or academic affiliation disclosed",
+    "location_signal": "Great Portland Street, London — generic serviced-office/virtual address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Brand new shell with no operating history",
+      "No science, product, or market description available",
+      "Single director with no verifiable track record",
+      "Generic London office address, no cluster/incubator signal"
+    ],
+    "interest_score": "1 — no verifiable science, team, or funding signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17379954",
+    "sic_codes": [
+      "72190",
+      "72200",
+      "85600"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "COANTIFY EARTH TECHNOLOGIES LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — no operational or product detail provided beyond generic R&D SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (shell-stage; no trading history)",
+    "team_provenance": "Sole director Idris Dala Bukar, Nigerian nationality; no ORCID record found; no prior company history or academic affiliation given",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company-formation/virtual-office address used by thousands of shell companies; not a genuine biotech cluster or incubator signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered at a mass company-formation address (Shelton Street), not a lab or incubator",
+      "SIC code 72190 (other R&D) is generic and non-specific to life sciences",
+      "No science, product, or market detail available",
+      "No funding, grant, or investor data",
+      "Single director with no verifiable academic or industry track record",
+      "Incorporated very recently — no operating history"
+    ],
+    "interest_score": "1 - shell company with no verifiable science, funding, or credible signal; likely too early or too speculative to assess",
+    "unknowns": [],
+    "company_number": "17380349",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SONINI LABS LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — no description of what the company actually does beyond broad SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals yet",
+    "team_provenance": "Single named director (Victor Usas Bardot, Betty — French national); no prior company history or academic links provided; ORCID search returned no matching record",
+    "location_signal": "66 Paul Street, London EC2A 4NA — this is a well-known generic company-formation/registered-office address used by thousands of shell companies, not a specialist bioscience cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes include R&D (72190) suggesting intended scientific activity"
+    ],
+    "flags_negative": [
+      "Generic mass-registration address, not a life-sciences cluster or incubator",
+      "No named science, platform, or product",
+      "No grant funding or academic pedigree evidence",
+      "Very recent/future incorporation date with no trading history",
+      "SIC mix (R&D, business support, other personal services) is unusually broad and non-specific for a biotech"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; generic shell-style registration",
+    "unknowns": [],
+    "company_number": "17379697",
+    "sic_codes": [
+      "72190",
+      "74909",
+      "81299"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ZENHY LTD",
+    "incorporated": "2026-08-04",
+    "one_liner": "Not observable at this stage — no description of activity available beyond registered SIC codes.",
+    "science": "SIC codes suggest possible activity in industrial gases/chemicals (20110), electronic equipment manufacturing (27900), and wholesale of other machinery/equipment (46690), but no mechanism, platform or modality is disclosed.",
+    "stage_signal": "Day-one incorporation — no operational or funding history yet.",
+    "team_provenance": "Single director, Li-Pang Lin. No ORCID match found. No prior companies or academic links disclosed.",
+    "location_signal": "Ludgate Hill, London — generic City of London registered office, commonly used by formation agents; not a known biotech/life-sciences cluster or incubator address.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual business activity",
+      "Mixed/generic SIC codes spanning chemicals, electronics, and wholesale — inconsistent with a focused biotech thesis",
+      "Generic registered office typical of shell/formation-agent addresses",
+      "No academic or scientific credentials evidenced for sole director",
+      "Very early — incorporated with no track record"
+    ],
+    "interest_score": "1 — no evidence of life-sciences relevance, single unverified director, generic address, no funding or scientific detail",
+    "unknowns": [],
+    "company_number": "17381059",
+    "sic_codes": [
+      "20110",
+      "27900",
+      "46690",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NUMETVA LABS LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — no product, market, or activity description provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Sole director Ahmed Bilal; no prior company history or academic affiliation confirmed",
+    "location_signal": "Residential-looking address in Bury — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated with future/forward date, effectively no operating history",
+      "SIC codes mix retail (47910) with R&D (72190) — unclear actual focus",
+      "No science, product, or team background disclosed",
+      "Generic residential address, no cluster or incubator signal"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17381754",
+    "sic_codes": [
+      "47910",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BUNNY VON KARATZ LIMITED",
+    "incorporated": "2026-08-04",
+    "one_liner": "Luxury jewellery brand embedding NFC chips into fine jewellery, marketed as 'the world's first fine jewellery powered by secure NFC technology.'",
+    "science": "Not biotech science — this is NFC (near-field communication) chip integration into jewellery, a consumer electronics/luxury goods application, not a life-sciences technology.",
+    "stage_signal": "Pre-launch/day-one incorporation; website is a marketing landing page with email sign-up only, no product, pricing, or shipping detail.",
+    "team_provenance": "Two directors, same surname (likely family), no ORCID matches, no evident academic or prior biotech company links.",
+    "location_signal": "Residential-looking London address (Weltje Road, W6) — not a lab, incubator, or life-sciences cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences or biotech company — outside fund mandate",
+      "SIC codes (electronics manufacture, publishing) confirm non-biotech nature",
+      "No product live, only a pre-launch marketing page",
+      "No funding, grant, or R&D signal of any kind",
+      "No academic or scientific credentials among directors"
+    ],
+    "interest_score": "1 - Out-of-mandate luxury goods/consumer electronics venture, not life sciences; no scientific or funding signal to assess even generically.",
+    "unknowns": [],
+    "company_number": "17380924",
+    "sic_codes": [
+      "26200",
+      "32120",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SIVOOL LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — no description of product or service provided beyond SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Sole director Olugbenga Paul Martins, British national; no ORCID match found; no prior company history provided",
+    "location_signal": "Residential-style address in Basingstoke — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of technology, product, or business activity",
+      "Single director with no verifiable academic or industry track record",
+      "Generic residential registered address",
+      "SIC codes span software (62012, 62090), engineering (71122) and R&D (72190) — unfocused or placeholder mix",
+      "Newly incorporated shell with no funding or grant history"
+    ],
+    "interest_score": "1 — no verifiable science, team, or funding signal to justify a closer look",
+    "unknowns": [],
+    "company_number": "17381765",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
