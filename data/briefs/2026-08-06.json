@@ -1,0 +1,516 @@
+[
+  {
+    "company_name": "AVERON BIOTECH LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Company details are too sparse to determine what it actually does beyond a generic wholesale/R&D/leasing/IP-licensing SIC mix.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other progress markers evident",
+    "team_provenance": "Sole listed director Elvin Mustafayev; ORCID search returned 6 possible matches (unresolved, not treated as signal either way); no prior company history or academic affiliation provided",
+    "location_signal": "St Mary At Hill, London EC3R — a serviced/virtual office address (financial district, not a life-sciences cluster or incubator); generic signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Extremely recent incorporation with no operational history",
+      "SIC codes (wholesale of pharma goods, R&D, real estate leasing, head office activities) are broad and non-specific, not indicative of a focused biotech platform",
+      "Single director, no co-founders or scientific advisors disclosed",
+      "Registered address is a generic serviced office, not a recognised life-sciences incubator",
+      "No science, mechanism, or product described anywhere in the record"
+    ],
+    "interest_score": "1 - No verifiable science, team credibility, funding, or location signal; nothing to differentiate this from a shell registration",
+    "unknowns": [],
+    "company_number": "17383543",
+    "sic_codes": [
+      "46460",
+      "72110",
+      "73200",
+      "77400"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 6
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VELOARC BIO LIMITED",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — no substantive description of activity beyond SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading shell",
+    "team_provenance": "Single named director, Dr Kwok Ngai Ping Albert; title 'Dr' suggests possible academic or clinical background but no ORCID match found to substantiate publication history; no prior company history disclosed",
+    "location_signal": "Ashford, Kent — generic commercial building address, no known biotech incubator or cluster association",
+    "funding": "No grant or investment data provided",
+    "flags_positive": [
+      "SIC code 72110 (biotechnology R&D) indicates stated intent to operate in life sciences"
+    ],
+    "flags_negative": [
+      "No science, product, or platform described",
+      "No funding evidence, dilutive or non-dilutive",
+      "No ORCID match for director despite 'Dr' title",
+      "Generic registered address, no cluster signal",
+      "Single director, no team depth visible"
+    ],
+    "interest_score": "1 - shell company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17384283",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FLOWTEMPO LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — no description of activity beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data",
+    "team_provenance": "Two directors (one British, one Japanese nationality listed); no confirmed academic or prior-company links",
+    "location_signal": "Doncaster residential/generic address — no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes span software (62090) and R&D services (72110, 72190), suggesting tech/R&D intent"
+    ],
+    "flags_negative": [
+      "Newly incorporated with no track record",
+      "No funding, grant, or product data available",
+      "Generic registered address with no cluster/incubator signal",
+      "No verifiable team credentials"
+    ],
+    "interest_score": "1 - no verifiable science, funding, or team signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17382945",
+    "sic_codes": [
+      "62090",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 4
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NODICULTURE LIMITED",
+    "incorporated": "2026-08-06",
+    "one_liner": "Developing better methods to store, prepare and apply biological crop inputs (biostimulants/biofertilisers) so more of their value reaches crops.",
+    "science": "Agri-biologicals/microbial soil health platform focused on formulation, storage and application methods to improve efficacy of existing biostimulants and biofertilisers — not a novel molecule or organism play as described.",
+    "stage_signal": "Day-one incorporation (note: future-dated, 2026); website live with marketing content but no product, trial, or pipeline detail.",
+    "team_provenance": "Two directors — Tristan James Bush (Australian, no ORCID match) and Dr Vijayalakshmi Gunasekaran (British, possible ORCID matches but unresolved/common name, not confirmed). Dr title suggests academic background but unverified.",
+    "location_signal": "1 Casson Square, London SE1 — appears to be a generic/flexible-office or serviced address, not a known life-sciences incubator.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Agritech/biologicals SIC code (01610) aligns with stated business",
+      "One director holds a doctorate, suggesting possible academic grounding"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future (2026-08-06) — likely a data anomaly requiring clarification",
+      "Website is vague marketing copy with no specifics on technology, IP, trials, or team credentials",
+      "No ORCID confirmation for either director",
+      "No funding, grant, or investment signal of any kind",
+      "No evidence of differentiated science — described as improving delivery of existing third-party biologicals, not proprietary biology"
+    ],
+    "interest_score": "2 — too early, no verified team credentials, no funding signal, and vague, generic value proposition",
+    "unknowns": [],
+    "company_number": "17384222",
+    "sic_codes": [
+      "01610",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CAFLUENTE LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — no company description or website provided beyond SIC codes suggesting recycling/materials recovery and R&D activity.",
+    "science": "SIC 38320 (recovery of sorted materials) and 72190 (other R&D on natural sciences/engineering) suggest a materials-recovery or recycling technology angle, but no mechanism or platform is described in the data.",
+    "stage_signal": "Day-one incorporation (August 2026) — pre-trading shell at this point.",
+    "team_provenance": "Three directors. Dr Kylee Rebecca Goode has an ORCID-confirmed record with affiliations to the Institution of Chemical Engineers and University of Birmingham — a genuine academic chemical engineering link. William Dawson Hennessy and Dr Ilija Rasovic show no matching ORCID records.",
+    "location_signal": "71-75 Shelton Street, London — a known mass-registration/virtual office address (Companies House formation agent hub), not an incubator or lab cluster. Generic, low-signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID-confirmed academic director (Dr Goode) with University of Birmingham chemical engineering affiliation",
+      "SIC codes indicate a specific materials-recovery/R&D focus rather than generic consultancy"
+    ],
+    "flags_negative": [
+      "Brand-new shell company with no trading history",
+      "Registered at a mass-incorporation virtual office address, not a specialist cluster",
+      "No science, product, or funding detail available",
+      "Two of three directors show no verifiable academic record"
+    ],
+    "interest_score": "2 - pre-formation shell with one credible academic director but no science, funding, or traction data to assess",
+    "unknowns": [],
+    "company_number": "17382518",
+    "sic_codes": [
+      "38320",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-0339-9411",
+      "institutions": [
+        "Institution of Chemical Engineers",
+        "The University of Birmingham",
+        "University of Birmingham"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ADAPTIVE FOOD SYSTEMS LIMITED",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — company name suggests food technology, but no description provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "day-one incorporation, no other evidence of activity",
+    "team_provenance": "Two directors, both Indian nationals; no ORCID confirmation for either (one no match, one unresolved multiple matches); no prior company history given",
+    "location_signal": "124-128 City Road, London — this is a well-known mass-incorporation/virtual office address (used by thousands of shell companies), not a genuine biotech cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, technology, or market",
+      "Generic mass-registration address, not a specialist cluster or incubator",
+      "SIC codes span instruments manufacturing, IT consultancy, and other R&D — inconsistent/unclear focus",
+      "No funding, grant, or trading history",
+      "Incorporated too recently to have any track record"
+    ],
+    "interest_score": "1 — no verifiable science, team, or funding signal; pure shell at this point",
+    "unknowns": [],
+    "company_number": "17383585",
+    "sic_codes": [
+      "26511",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 4
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INBUILT MEDICAL TECHNOLOGIES LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "A newly incorporated medical devices company; specific product or application not disclosed in available data.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, no grant or product data yet visible",
+    "team_provenance": "Single director, Dylan Mark Ashton, Australian national; no ORCID match found; no prior companies or academic affiliations observable",
+    "location_signal": "30 Premier House Waterloo Terrace, London — appears to be a generic registered office / formation-agent address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes (32500 medical instruments, 72190 R&D) indicate genuine medtech intent rather than a shell"
+    ],
+    "flags_negative": [
+      "Company incorporated very recently — no operating history",
+      "No funding, grant, or product data available",
+      "Single director with no verifiable academic or industry track record",
+      "Registered address shows no signs of specialist life-sciences location"
+    ],
+    "interest_score": "1 - Too early and too little data to assess; nothing here beyond a shell registration",
+    "unknowns": [],
+    "company_number": "17382854",
+    "sic_codes": [
+      "32500",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VALERUN TECHNOLOGIES LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Unclear — SIC codes suggest software/data processing and R&D activity, but no specific product or service is described.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Single director, Vanessen Naiker Rungasamy, British — no ORCID match found, no prior company history provided",
+    "location_signal": "66 Paul Street, London EC2A — this is a well-known mass-registration/virtual office address used by thousands of shell companies, not a specialist incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered at a generic mass-incorporation address, not a biotech/life-sciences cluster or incubator",
+      "SIC codes (software/data processing, R&D) do not indicate a life-sciences focus",
+      "No science, product, or platform described anywhere in the record",
+      "Single director with no visible academic or industry track record",
+      "No funding, grants, or other credibility signals present"
+    ],
+    "interest_score": "1 - no discernible life-sciences angle, generic shell-like registration, nothing to evaluate",
+    "unknowns": [],
+    "company_number": "17383447",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BELUA LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "A privacy-focused contacts app for iPhone (per company website), not a life-sciences product.",
+    "science": "Not observable at this stage — website describes a consumer software app, not any biotech/life-sciences mechanism or platform.",
+    "stage_signal": "Website copyright dated 2019 and attributed to a different entity (Felicitas Publica Limited), while Companies House incorporation date is 2026-08-06 — inconsistent, suggests recycled or template website, not a live operating business tied to this entity.",
+    "team_provenance": "Single director, Anthony Chris Chris Zboralski, British, no ORCID match. No prior company history or academic links evident.",
+    "location_signal": "71 Stepney Green, London — generic residential/commercial address, no incubator or life-sciences cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (software/IT consultancy) and website content (consumer contacts app) show no connection to life sciences",
+      "Website content and copyright notice reference a different, unrelated company name and a 2019 date, predating incorporation — raises doubt about website's relevance to this entity",
+      "No funding, grant, or scientific platform evidence of any kind",
+      "Incorporation date is in the future (2026), suggesting a data/record anomaly"
+    ],
+    "interest_score": "1 - no life-sciences relevance, mismatched company identity signals, and no funding or team credibility evidence",
+    "unknowns": [],
+    "company_number": "17384168",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GRACEFUL OS LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Unknown — a coming-soon placeholder site gives no indication of what the company actually does",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-launch placeholder website with no product or content",
+    "team_provenance": "Sole director/secretary Iliya Hristov (Bulgarian); no ORCID match; no prior company history provided",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — this is a well-known mass company-formation/registered-office address, not a genuine operating or incubator location",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered address is a generic formation-agent address, not a lab, incubator, or cluster location",
+      "SIC codes (software publishing, other IT services, holding companies) give no biotech/life-sciences signal",
+      "Website is a bare 'coming soon' page with no description of product, science, or team",
+      "No evidence of academic founder, grant funding, or scientific mechanism",
+      "Company incorporated only weeks ago with essentially no public information"
+    ],
+    "interest_score": "1 — no discernible life-sciences angle, no science, no team credibility signal, generic registration address",
+    "unknowns": [],
+    "company_number": "17383403",
+    "sic_codes": [
+      "62012",
+      "72190",
+      "77400"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RETROFIT AUDIT SOLUTIONS LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "A newly incorporated firm apparently offering some form of building retrofit auditing/consultancy, based on SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or product evidence yet",
+    "team_provenance": "Single director, Joseph James James Norman, British; no ORCID match found; no prior company history provided",
+    "location_signal": "Kingfisher House, Gateshead — generic commercial office address, no obvious cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes span engineering (71122) and R&D-adjacent consultancy (72190), suggesting some technical intent"
+    ],
+    "flags_negative": [
+      "Brand new shell company with no trading history",
+      "No funding, grants, or team credentials evidenced",
+      "SIC mix (management consultancy, engineering, R&D) is broad and generic, not a clear specialist signal",
+      "Single director with no disclosed academic or industry background"
+    ],
+    "interest_score": "1 - No verifiable science, team, funding, or traction; too early to assess",
+    "unknowns": [],
+    "company_number": "17382873",
+    "sic_codes": [
+      "70229",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ZAIVA LIMITED",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of food product manufacture, internet retail, and R&D activity, but no descriptive material is provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Single director, Zain Akif, British national; no ORCID match found; no prior companies or academic links stated",
+    "location_signal": "45 Albemarle Street, London W1S — Mayfair address; upmarket but generic, not a known life-sciences incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated too recently to show any track record",
+      "No science, product, or team detail beyond SIC codes",
+      "SIC code mix (food manufacture 10860, internet retail 47910, R&D 72190, other business support 74909) is incoherent for a focused biotech thesis",
+      "Mayfair address may be a registered-office/formation-agent address rather than a genuine operational base",
+      "No funding, grant, or investor signal of any kind"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; SIC mix suggests this may not even be a focused biotech play",
+    "unknowns": [],
+    "company_number": "17383220",
+    "sic_codes": [
+      "10860",
+      "47910",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SKINTRACK.PRO LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — company name and SIC suggest possible skin-monitoring/dermatology R&D, but no descriptive data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Single director, Lisa Jane Willetts (New Zealander); no ORCID match found; no prior companies or academic links stated",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company-formation/virtual-office address (generic mass-registration address, not a specialist incubator)",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72190 (R&D in natural sciences/engineering) suggests intended research activity"
+    ],
+    "flags_negative": [
+      "Shelton Street registered address is a mass-incorporation virtual office, not a genuine lab/cluster location",
+      "No science, product, or team detail available",
+      "Single director with no verifiable academic or industry track record",
+      "No funding or grant data",
+      "Incorporated too recently to show any traction"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17384164",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CHARATLAS LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — no trading activity or business description available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — pre-trading shell, no operational history",
+    "team_provenance": "Three PhD-holder directors (Dutch, Italian, Greek); two with ORCID-confirmed publication records but no institutional affiliations listed; SIC codes suggest software/IT and scientific R&D/consultancy mix",
+    "location_signal": "128 City Road, London — known generic company-formation/registered-office address, not a specialist life-sciences incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Two directors have ORCID-confirmed academic publication records (DE CRISTANO, STAMOULI)",
+      "All-doctorate director team suggests genuine technical/scientific grounding"
+    ],
+    "flags_negative": [
+      "Incorporated with future-dated/very recent date — essentially no operating history",
+      "No stated business description, product, or science beyond generic SIC codes",
+      "Registered address is a generic formation-agent address, not a cluster or incubator signal",
+      "No institutional affiliations listed for either ORCID-confirmed director",
+      "No funding, grant, or Innovate UK data provided"
+    ],
+    "interest_score": "2 — academic credibility present but zero substantive information on what the company actually does; too early to assess",
+    "unknowns": [],
+    "company_number": "17384280",
+    "sic_codes": [
+      "62090",
+      "72190",
+      "74901",
+      "74909"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-8926-0049",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "OXON LABS LTD",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — no description of activities beyond a generic R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity recorded",
+    "team_provenance": "Single director, Paul Bate, British; no ORCID match found (inconclusive — not a negative signal); no prior company history provided",
+    "location_signal": "International House, South Molton Street, London — serviced office/virtual-office style address, not a known life-sciences cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of scientific activity or product",
+      "Registered address consistent with generic serviced-office registration, not a specialist cluster or incubator",
+      "SIC code 72190 (other R&D) is non-specific — could be any sector",
+      "Single-director shell with no visible track record"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or location signal; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17382146",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ALBION VITA BIOSCIENCE HOLDINGS LIMITED",
+    "incorporated": "2026-08-05",
+    "one_liner": "Not observable at this stage — SIC codes suggest food/dietetic products, homogenized food preparations, non-store retail, and other scientific R&D, but no descriptive material provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, future-dated; no other activity evidence",
+    "team_provenance": "Single director, Sha, Guanghe (Chinese national); no ORCID match found; no other companies or academic links stated",
+    "location_signal": "Generic serviced-office/virtual address (Initial Business Centre, Manchester) — not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic virtual office address, not a specialist bioscience location",
+      "No ORCID match for sole director (not derogatory alone, but no offsetting positive signal either)",
+      "SIC codes mix food products and retail with scientific R&D — unclear actual focus",
+      "No funding, grant, or product data whatsoever",
+      "Single-director shell with no visible traction"
+    ],
+    "interest_score": "1 — no verifiable science, team, funding, or credible location signal; reads as a shell registration",
+    "unknowns": [],
+    "company_number": "17382673",
+    "sic_codes": [
+      "10860",
+      "10890",
+      "47910",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
