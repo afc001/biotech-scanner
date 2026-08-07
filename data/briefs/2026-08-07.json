@@ -1,0 +1,559 @@
+[
+  {
+    "company_name": "STRATUM THERAPEUTICS LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — no evidence of what the company actually does",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; parked domain suggests pre-launch or shell status",
+    "team_provenance": "Single director, Ricky Smith; no ORCID confirmation (only unverified possible matches, disregarded); no prior company history provided",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — this is a well-known mass company-formation agent address, not a lab, incubator, or biotech cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered address is a generic company-formation agent, not a biotech-relevant location",
+      "Website is an unconfigured parked domain with no company information",
+      "SIC codes (computer consultancy, business support, holding company) do not indicate life-sciences activity",
+      "No science, product, or team background disclosed anywhere",
+      "Single director with no verifiable academic or industry credentials"
+    ],
+    "interest_score": "1 - no verifiable evidence of a life-sciences business; likely a freshly incorporated shell with no operational signal",
+    "unknowns": [],
+    "company_number": "17384458",
+    "sic_codes": [
+      "72110",
+      "74909",
+      "77400"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AVA HORIZON LIMITED",
+    "incorporated": "2026-08-06",
+    "one_liner": "Unclear — SIC codes suggest a mix of medical device wholesale, medical/dental instrument manufacturing, R&D and human health/social work activities",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Three directors, one styled Dr (Mirnezami), one secretary; no ORCID matches found for any — absence is not itself meaningful",
+    "location_signal": "Michelin House, Fulham Road, London — a prestigious commercial address, not a known biotech incubator or cluster; likely a serviced office",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "Multiple SIC codes spanning medical devices, R&D and health services suggest a health-tech or medtech focus",
+      "Director holds a doctoral title (Dr Mirnezami), unverified academic link"
+    ],
+    "flags_negative": [
+      "Incorporated with future/forward date (2026), unusual and warrants verification",
+      "No science, product, or team background disclosed",
+      "No funding evidence, dilutive or non-dilutive",
+      "Generic prestige address, not a specialist life-sciences location",
+      "No corroborating ORCID or GtR records for any director"
+    ],
+    "interest_score": "1 - no operational, scientific, or funding evidence to assess",
+    "unknowns": [],
+    "company_number": "17384533",
+    "sic_codes": [
+      "46690",
+      "62012",
+      "72190",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KALADRIAN ENGINEERING LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — SIC codes suggest instrumentation, aerospace/aircraft manufacture, engineering R&D, and other engineering activities, but no descriptive material is provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no trading or funding history",
+    "team_provenance": "Sole director Joshua Owen Evans, British national; no ORCID match (not meaningful either way); no prior company or academic links stated",
+    "location_signal": "Registered address is a business park unit in Poole (Nuffield Industrial Estate) — light industrial/generic, not a known biotech or life-sciences cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Pre-incorporation/day-one entity with no track record",
+      "SIC codes span instrumentation, aircraft manufacture and generic engineering R&D — no clear life-sciences focus",
+      "No funding, grant, or team credentials evidenced",
+      "Generic industrial estate address, no cluster or incubator signal"
+    ],
+    "interest_score": "1 — no evidence of life-sciences relevance, no team or funding signal, too early and too undefined to assess",
+    "unknowns": [],
+    "company_number": "17386400",
+    "sic_codes": [
+      "26511",
+      "30300",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "APOLLO AP67 LIMITED",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no trading activity or product description available beyond registration.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — pre-trading shell",
+    "team_provenance": "Three directors. Jamie Heath has an ORCID-confirmed academic record (affiliation: East Carolina University). Dr Richard Mason has a GtR-confirmed UKRI grant history, linked to Mason Digital Limited — suggests a prior/parallel company rather than a fresh academic spinout. Richard Butt's identity is unverified (common name).",
+    "location_signal": "Cambridge address (CB1 2JD) — plausible cluster location, but generic office building, not a named incubator/accelerator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic director (Jamie Heath)",
+      "GtR CONFIRMED UKRI-funded investigator (Dr Richard Mason)",
+      "Cambridge registered address"
+    ],
+    "flags_negative": [
+      "SIC code 72190 is generic R&D — no indication of therapeutic area or modality",
+      "No trading history, product, or funding data — pure shell at this point",
+      "No stated connection between directors' academic backgrounds and a coherent company thesis",
+      "Mason's link to a separate company (Mason Digital Limited) raises questions about focus/bandwidth"
+    ],
+    "interest_score": "2 - two credibility-verified directors are notable, but there is zero substantive information on what the company actually does",
+    "unknowns": [],
+    "company_number": "17386670",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-6612-0468",
+      "institutions": [
+        "East Carolina University"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "B86BEB00-2FE5-4694-88DF-2644D4C462DF",
+      "organisation": "MASON DIGITAL LIMITED"
+    },
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NOTAM RADAR CIC",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — no description of product or service provided beyond SIC codes covering software, data processing, web portals, and R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (CIC structure) — pre-trading",
+    "team_provenance": "Sole director Lee Stimmel, British, ORCID CONFIRMED (0000-0003-3510-2501) with academic affiliations at Clark University and Worcester Polytechnic Institute — real, verified academic record, but field of research not stated here.",
+    "location_signal": "27 Old Gloucester Street, London — a well-known mass company-formation/registered-office address, not a lab, incubator, or life-sciences cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Director has ORCID CONFIRMED academic record",
+      "SIC codes suggest data/software R&D focus"
+    ],
+    "flags_negative": [
+      "Generic mass-registration address, not a specialist or lab address",
+      "No description of what the company actually does",
+      "Community Interest Company structure limits profit distribution and typical VC-style exit routes",
+      "No funding, product, or market information available",
+      "Single-director company with no visible team"
+    ],
+    "interest_score": "2 — verified academic director is a mild positive, but CIC structure, generic address, and complete absence of a stated product make this too thin to assess",
+    "unknowns": [],
+    "company_number": "17384938",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "63120",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-3510-2501",
+      "institutions": [
+        "Clark University",
+        "Worcester Polytechnic Institute"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KORIGO-ED LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — no product, service or activity description provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other trading or activity signals",
+    "team_provenance": "Sole director Jatinder Khipal, ORCID CONFIRMED (0000-0002-7109-5727) but no institutional affiliation listed — genuine academic publication record exists but link to this company's focus area is unclear",
+    "location_signal": "Residential flat address in Leicester — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED director — verified genuine academic publication record"
+    ],
+    "flags_negative": [
+      "No description of business activity beyond generic 'other research and experimental development on natural sciences and engineering' SIC code",
+      "Residential address, not a lab or incubator",
+      "Single director, no co-founders or team visible",
+      "No grant or funding data",
+      "Incorporated very recently — no track record"
+    ],
+    "interest_score": "2 - ORCID confirmation is a mild positive but there is no discernible science, product, or funding signal to assess",
+    "unknowns": [],
+    "company_number": "17386469",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-7109-5727",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ROCKR PROOF LABS LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no description of activities provided beyond a generic R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading",
+    "team_provenance": "Three British directors; Jack Clancy has an ORCID CONFIRMED record but no institutional affiliation listed; David Joseph Brian Clancy and Colin Michael Seaman have no matching ORCID record",
+    "location_signal": "128 City Road, London EC1V 2NX — this is a well-known mass-registration/virtual office address, not a specialist bioscience cluster or incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "SIC code 72190 indicates registered R&D activity",
+      "ORCID CONFIRMED for director Jack Clancy"
+    ],
+    "flags_negative": [
+      "Company incorporated only very recently — no track record",
+      "No science, product, or market description available",
+      "Registered address is a generic virtual-office location, not a bioscience-specific site",
+      "ORCID-confirmed director has no listed institutional affiliation, limiting credibility of the signal",
+      "No funding, grant, or traction data provided"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, product, or funding; ORCID hit alone is insufficient to justify follow-up",
+    "unknowns": [],
+    "company_number": "17386737",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0008-0712-1215",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CARGO VISION DYNAMICS LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Unclear — SIC codes suggest software/IT services with possible engineering design and R&D activity, name implies logistics/imaging or vision-based cargo technology",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading or product history",
+    "team_provenance": "Two directors, one Russian (Chukanov) and one British (Watson) national; no ORCID matches found for either — no confirmed academic or publication link",
+    "location_signal": "Residential/generic address in Gosforth, Newcastle — no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated in the future/very recently — essentially no operating history",
+      "No grant funding, patents, or product evidence provided",
+      "Generic registered address, not a known biotech or tech incubator",
+      "SIC codes are broad IT/software/R&D mix, not specific to a defined life-sciences niche",
+      "No ORCID confirmation for either director"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team credibility signals",
+    "unknowns": [],
+    "company_number": "17385412",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "REIS GLOBAL LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "A consultancy and manufacturing services provider combining IT/data/analytics with operations, per its own website.",
+    "science": "No specific technology, platform, or mechanism described — website uses generic 'Industry 4.0'/IT-OT convergence language with no technical detail.",
+    "stage_signal": "Day-one incorporation (note: future-dated, likely a data anomaly) with a pre-existing generic marketing website; not a research spinout pattern.",
+    "team_provenance": "Two directors sharing a surname (likely family), no ORCID matches for either — no evidence of academic or scientific background.",
+    "location_signal": "Residential-looking address in Borehamwood, Hertfordshire — no incubator, cluster, or life-sciences signal.",
+    "funding": "No grant or investment data provided; no evidence of non-dilutive or dilutive funding.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No scientific or biotech content anywhere in company description or website",
+      "SIC codes indicate generic IT/consultancy business, not life sciences",
+      "No technical founders or academic credentials evident",
+      "Website content is vague corporate marketing with no specifics",
+      "Not a life-sciences company at all — likely out of scope for this fund"
+    ],
+    "interest_score": "1 — generic IT/consultancy business with no life-sciences relevance whatsoever",
+    "unknowns": [],
+    "company_number": "17386195",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CUSTODIAN SYSTEMS LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "A newly incorporated IT/software and technical consultancy business; no biotech or life-sciences activity is evident from the data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no operational history",
+    "team_provenance": "Sole director Mark Charles McLaughlin, British national; no ORCID match found; no prior companies or academic links stated",
+    "location_signal": "Residential-looking address in Crail, Scotland — no incubator, cluster, or lab signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes indicate generic software/IT consultancy, not life sciences",
+      "No scientific, clinical, or platform detail of any kind",
+      "Single director, no team depth",
+      "No funding, grant, or investment data",
+      "Address shows no specialist or cluster signal"
+    ],
+    "interest_score": "1 - Not a life-sciences company on any available evidence; outside fund scope",
+    "unknowns": [],
+    "company_number": "SC898371",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "APOLLO AP70 LIMITED",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no described product, service or research focus in the record.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Three British directors. Jamie Heath — ORCID confirmed, affiliated with East Carolina University (academic link). Dr Richard Mason — GtR confirmed as a UKRI-funded investigator, linked to Mason Digital Limited (prior company). Richard Butt — unverified name match, not treated as signal.",
+    "location_signal": "Cambridge address (Station Road) — plausible cluster location, but generic office building, not a named incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic director (Jamie Heath, East Carolina University)",
+      "GtR CONFIRMED UKRI-funded investigator (Dr Richard Mason)",
+      "Cambridge registration — recognised biotech/tech cluster"
+    ],
+    "flags_negative": [
+      "SIC code 72190 is generic 'other R&D' — no specialist life-sciences classification",
+      "No described product, technology or science",
+      "No funding, grant or trading history — pre-revenue, pre-everything",
+      "Very recent incorporation, essentially a shell at this point"
+    ],
+    "interest_score": "2 - two credible academic/grant-linked directors, but zero disclosed science, product or funding makes this unassessable",
+    "unknowns": [],
+    "company_number": "17386669",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-6612-0468",
+      "institutions": [
+        "East Carolina University"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "B86BEB00-2FE5-4694-88DF-2644D4C462DF",
+      "organisation": "MASON DIGITAL LIMITED"
+    },
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INTERFEROLAB LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Ground-based interferometry system for passively tracking and localising satellites in GEO orbit.",
+    "science": "Passive RF interferometry using a distributed fleet of steerable, low-power antennas to achieve sub-50m 3D localisation accuracy, with full GEO belt rescanned hourly — no radar emissions, no weather dependency.",
+    "stage_signal": "Day-one incorporation (Aug 2026) with an already-live, polished company website describing specific technical claims — suggests pre-incorporation product development.",
+    "team_provenance": "Three directors: Dr James Morgan Dawson and Benjamin Richard Hansen (no ORCID match — inconclusive), and Talon Myburgh (ORCID CONFIRMED, Rhodes University Faculty of Science affiliation) — genuine verified academic credential.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company-formation/virtual office address, not a specialist deep-tech cluster or incubator. Generic signal.",
+    "funding": "No grant or investment data provided. SIC codes (manufacturing of measuring instruments, IT services, data processing, engineering) support a hardware/software space-tech remit but confirm no funding source.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic director (Talon Myburgh, Rhodes University)",
+      "Specialist, technically detailed proposition (SDA/interferometry) rather than generic pitch",
+      "Live, substantive company website pre-dating typical seed traction stage",
+      "Defence/space-relevant SIC codes matching stated technology"
+    ],
+    "flags_negative": [
+      "Very recent incorporation — no operating history",
+      "Generic virtual-office registered address, no cluster/incubator signal",
+      "No funding (grant or equity) disclosed",
+      "Two of three directors have no verifiable academic/professional track record from data given",
+      "No customer, contract, or pilot evidence beyond marketing copy"
+    ],
+    "interest_score": "3 - credible niche technical proposition and one verified academic founder, but too early and undocumented to rate higher",
+    "unknowns": [],
+    "company_number": "17385033",
+    "sic_codes": [
+      "30300",
+      "62090",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-0804-9362",
+      "institutions": [
+        "Rhodes University Faculty of Science"
+      ]
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CORTEXLABS AI LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage — SIC codes suggest software/data infrastructure or AI-adjacent research, but no description given",
+    "science": "Not observable at this stage",
+    "stage_signal": "day-one incorporation",
+    "team_provenance": "Single director, no prior company history provided, no ORCID match found",
+    "location_signal": "Nottingham address, generic commercial building — no identifiable incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual product or science",
+      "Single-director shell at incorporation",
+      "SIC codes span software, data processing, and R&D — too broad to indicate real focus",
+      "No funding, grant, or team-track-record data provided"
+    ],
+    "interest_score": "1 - pre-revenue shell with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17385502",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NEREUS COMPOSITES LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Early-stage company apparently working with plastics/composite materials, possibly with an engineering or R&D services angle",
+    "science": "Not observable at this stage — SIC codes suggest plastics products (22290), other manufacturing (32990), engineering activities (71129) and other R&D (72190), but no technical description is provided",
+    "stage_signal": "Day-one incorporation — no operating history",
+    "team_provenance": "Sole director Luca Benjamin Derrick, British national. No ORCID match found. No prior company history or academic affiliation stated",
+    "location_signal": "Residential-looking address in Kenilworth — not a known incubator or cluster address; generic signal",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "Broad SIC coverage suggesting materials/engineering/R&D focus"
+    ],
+    "flags_negative": [
+      "Incorporated very recently — effectively pre-operational",
+      "No funding data (grant or equity)",
+      "No evidence of academic or industry pedigree",
+      "Single director with no verifiable track record",
+      "Generic address, no cluster/incubator signal"
+    ],
+    "interest_score": "1 — no verifiable team, science, or funding signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17386319",
+    "sic_codes": [
+      "22290",
+      "32990",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EIGENENGINE LTD",
+    "incorporated": "2026-08-06",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity visible",
+    "team_provenance": "Two British directors, one holding a Dr title; no confirmed academic or prior company links found",
+    "location_signal": "Ruislip, London — generic serviced-office style address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated with future-dated/very recent date, effectively no operating history",
+      "SIC codes indicate software/IT consultancy, not a specialist biotech or life-sciences code",
+      "No evidence of funding, grants, or product/platform detail",
+      "Generic registered address with no cluster or incubator signal"
+    ],
+    "interest_score": "1 - shell-stage company with no science, funding, or credible biotech signal visible",
+    "unknowns": [],
+    "company_number": "17386372",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "APOLLO AP56 LIMITED",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no described product or activity beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — pre-trading shell, no operational history",
+    "team_provenance": "Three British directors. Jamie Heath: ORCID confirmed, affiliation East Carolina University — genuine academic record. Dr Richard Mason: GtR confirmed as UKRI-funded investigator, linked to Mason Digital Limited — real grant history, though field/relevance unclear. Richard Butt: ORCID unverified (name too common).",
+    "location_signal": "22 Station Road, Cambridge — known Cambridge cluster address, plausible innovation-hub location though could also be a generic registered-office/accountant address; not confirmed as a lab incubator.",
+    "funding": "None disclosed — no grant or equity funding data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic (Jamie Heath, East Carolina University)",
+      "GtR CONFIRMED UKRI-funded investigator (Dr Richard Mason)",
+      "Cambridge registered address — recognised life-sciences/tech cluster"
+    ],
+    "flags_negative": [
+      "Incorporated same-day — zero trading or operational history",
+      "SIC code 72190 is generic 'other research' — no indication of therapeutic area or modality",
+      "No funding, product, or science details disclosed",
+      "Mason Digital Limited link suggests possible digital/software rather than biotech focus — unclear fit for life-sciences thesis"
+    ],
+    "interest_score": "2 - Two verified credible academics, but zero operational or scientific detail; too early to assess fit",
+    "unknowns": [],
+    "company_number": "17386666",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-6612-0468",
+      "institutions": [
+        "East Carolina University"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "B86BEB00-2FE5-4694-88DF-2644D4C462DF",
+      "organisation": "MASON DIGITAL LIMITED"
+    },
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
