@@ -1,0 +1,356 @@
+[
+  {
+    "company_name": "DIASPAR TECHNOLOGIES LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no descriptive activity beyond registered SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation shell, no operational or funding data yet",
+    "team_provenance": "Single director, Dr Luke Eason Gyth Cox — 'Dr' title suggests possible academic background but no ORCID match found to corroborate",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — this is a well-known mass company-formation/registered-agent address, not a genuine operating or cluster location; generic signal, not a real premises indicator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes cover engineering R&D (71129) and software/IT (72110, 72190), suggesting deep-tech ambition"
+    ],
+    "flags_negative": [
+      "Incorporated at a mass-registration address, not an incubator or lab cluster",
+      "No ORCID match despite 'Dr' title — cannot verify claimed academic credibility",
+      "No funding, grant, or product data of any kind",
+      "Single director, no team depth visible",
+      "Future-dated incorporation date is unusual and worth verifying for data error"
+    ],
+    "interest_score": "1 - shell company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17388154",
+    "sic_codes": [
+      "71129",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VERIOMICS LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "A software platform offering research and decision-support tools (literature intelligence and analytical workflow management) for life-sciences researchers.",
+    "science": "Not a biotech/therapeutics play — appears to be a SaaS platform with modules for literature discovery, experimental design, data validation, workflow planning, ML-based insights, and compliance/audit tracking. No wet-lab science or drug/device mechanism described.",
+    "stage_signal": "Day-one incorporation (future-dated: 2026-08-07) — pre-trading shell with a live marketing website already built out; likely pre-revenue.",
+    "team_provenance": "Single director, Bilal Shafiq. ORCID search returned only unverified possible matches on a common name — not confirmed, treat as neutral. No prior company history or academic affiliation observable.",
+    "location_signal": "Middlesbrough registered address — generic, not a known biotech cluster or incubator.",
+    "funding": "No grant or investment data provided. Not observable at this stage.",
+    "flags_positive": [
+      "Live, professionally built product website with named platform modules suggesting real product development effort",
+      "SIC codes indicate software/IT and R&D focus (62012, 72110, 72190) consistent with stated business"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future / inconsistent (2026-08-07), suggesting a data anomaly or unformed entity",
+      "No funding, grant, or investor signal of any kind",
+      "Single director with no verifiable academic or industry track record",
+      "Platform claims (ten integrated capabilities) are broad and unproven — no evidence of customers, pilots, or validation",
+      "Not a life-sciences IP or therapeutics company despite sector framing — this is enterprise software, a different risk/return profile"
+    ],
+    "interest_score": "2 — early-stage software platform with no funding, no verified team credentials, and an unresolved incorporation date anomaly",
+    "unknowns": [],
+    "company_number": "17388633",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIVING VENTURES LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "A management/business advisory service for hospitality businesses, offering bookkeeping, accounting and growth strategy support.",
+    "science": "Not applicable — this is a hospitality business services consultancy, not a life-sciences or R&D company.",
+    "stage_signal": "Day-one incorporation; website describes an established service offering (\"30 years experience\") despite the company itself being brand new — likely a rebrand or new corporate vehicle for an existing consultancy practice.",
+    "team_provenance": "Single director/secretary, James Anthony McCulloch, British, no ORCID record (not meaningful given sector). No indication of academic or scientific background.",
+    "location_signal": "Ruislip, London — generic serviced-office-style address, no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code (72110 — research/experimental development on biotechnology) does not match actual business activity described on the company website (hospitality business advisory services)",
+      "No life-sciences relevance whatsoever — appears to be a mismatched or misclassified filing",
+      "No funding, no scientific team, no IP signal"
+    ],
+    "interest_score": "1 - not a life-sciences company; mismatched SIC code and consultancy business model with no R&D content",
+    "unknowns": [],
+    "company_number": "17387860",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BIOGUTAI LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no product or market description provided beyond SIC codes",
+    "science": "SIC codes (27900 electronic equipment, 62090/72110/72190 IT and R&D) suggest a biomedical devices/AI diagnostics angle, but no mechanism or platform detail is given",
+    "stage_signal": "Day-one incorporation, pre-revenue, no grant or funding data provided",
+    "team_provenance": "Sole director John Greenman, Emeritus Professor — academic title suggests university background; ORCID and GtR both show only unconfirmed possible matches, not verified",
+    "location_signal": "Future Space, UWE North Gate, Bristol — recognised university incubator/innovation cluster, a positive signal for early-stage science ventures",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Registered at Future Space UWE incubator, a genuine science/tech cluster",
+      "Director holds Emeritus Professor title, indicating academic seniority"
+    ],
+    "flags_negative": [
+      "No product, science, or market description available",
+      "No funding (grant or equity) data provided",
+      "Single director, no team depth visible",
+      "Company incorporated on future-dated record (2026), unusually early-stage with no operational detail",
+      "ORCID/GtR matches unconfirmed — cannot verify research track record"
+    ],
+    "interest_score": "2 — incubator address and academic director title are mildly encouraging, but total absence of science, funding, or verified credentials makes this unscreenable",
+    "unknowns": [],
+    "company_number": "17388222",
+    "sic_codes": [
+      "27900",
+      "62090",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AILGORITHMIC INTELLIGENT TECHNOLOGIES LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no product or business description provided beyond SIC codes suggesting software/IT and data services.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue/pre-product shell company",
+    "team_provenance": "Single director, Vasileios Vasileiadis (Greek national); ORCID search returned only possible/unverified matches — not a confirmed academic link",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — a well-known company formation agent/mass-registration address, not a lab, incubator, or cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes indicate software/IT and data processing focus"
+    ],
+    "flags_negative": [
+      "Generic registered agent address, not a genuine operational or cluster location",
+      "No science, product, or team detail available",
+      "No funding (grant or private) evidenced",
+      "ORCID match unverified — cannot confirm academic credibility",
+      "Just incorporated with no track record"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, funding, or traction signals",
+    "unknowns": [],
+    "company_number": "17387476",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 6
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INVISICATH LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "Unclear — name suggests a catheter-related medical device, but no descriptive data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated / very recent), pre-trading",
+    "team_provenance": "Two academic-titled directors (Dr Xiao Shujun, Dr Zhu Lichang), both Chinese nationals; no prior company history or academic affiliation confirmed",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual address, not a lab or incubator; generic signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72190 indicates R&D intent",
+      "Both directors hold academic 'Dr' titles, suggesting research background"
+    ],
+    "flags_negative": [
+      "Registered at a known virtual-office/formation-agent address, not a specialist cluster",
+      "No grant funding, publications, or product data provided",
+      "Company name implies a medical device but no supporting science disclosed",
+      "ORCID matches unresolved for both directors — cannot verify academic credentials"
+    ],
+    "interest_score": "1 - no verifiable science, funding, or credible location signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17387712",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 7
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ISARS SOLUTIONS LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "A newly registered company nominally spanning measuring/testing instruments, other manufacturing, and other scientific R&D — no operational detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record); no product, activity, or funding evidence yet",
+    "team_provenance": "Single listed director, Mefenya Tanetsing Ulrich Ronald; no ORCID match found; no prior company history provided",
+    "location_signal": "Registered address is a residential-looking street address in Wigan (with an odd 'Southampton' locality field) — generic, not an incubator or science cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes touch instrumentation and scientific R&D (26511, 72190), suggesting intended deep-tech focus"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future/anomalous, suggesting a data artefact or shell registration",
+      "No funding, grants, or trading history",
+      "Single director with no verifiable academic or industry track record",
+      "Address inconsistency (Wigan postcode listed under 'Southampton') raises basic data-quality concerns"
+    ],
+    "interest_score": "1 - no verifiable activity, team, science, or funding; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17387568",
+    "sic_codes": [
+      "26511",
+      "32990",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HYPER ORBITS LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no descriptive data beyond SIC codes indicating software/computer consultancy and R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other stage indicators",
+    "team_provenance": "Single director, Jaswant Singh; no prior company history or academic links observable",
+    "location_signal": "Residential apartment address in Nottingham — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Extremely early — incorporated with no operational data",
+      "Registered address is a residential flat, not a lab, incubator or science park",
+      "SIC codes suggest generic IT/R&D activity, not a specific biotech modality",
+      "Single-director structure with no visible team depth"
+    ],
+    "interest_score": "1 - No verifiable science, team, funding, or location signal; nothing to differentiate from a shell company",
+    "unknowns": [],
+    "company_number": "17386919",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PX TWIN LIMITED",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no description of activity beyond SIC classification",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or funding history",
+    "team_provenance": "Two British directors, no ORCID matches found for either — no confirmed academic or prior company links",
+    "location_signal": "Mildenhall, Suffolk — generic industrial/commercial unit address, no known biotech cluster or incubator association",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 indicates R&D intent (other natural sciences/engineering research)"
+    ],
+    "flags_negative": [
+      "Shell-stage company with no operational history",
+      "No grant funding or non-dilutive support observable",
+      "No academic or ORCID-confirmed credentials for either director",
+      "Generic registered address, not a known life-sciences hub"
+    ],
+    "interest_score": "1 - pre-operational shell with no verifiable science, team credentials, or funding signal",
+    "unknowns": [],
+    "company_number": "17387524",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HIKVERA LIMITED",
+    "incorporated": "2026-08-08",
+    "one_liner": "Not observable at this stage — no substantive company activity or product description found.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with parked domain — no operational signal",
+    "team_provenance": "Single director (Shafqaat Ahmed); no ORCID match; no prior company or academic link evident",
+    "location_signal": "Residential-style address in Bolton — generic, no cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Website is an unclaimed Porkbun placeholder page, not a functioning company site",
+      "SIC codes (retail, IT consultancy, residential care, other services) are generic/mismatched and give no clear indication of a life-sciences focus",
+      "No evidence of scientific, technical, or biotech activity of any kind",
+      "Incorporation date is in the future relative to typical filings, suggesting placeholder or test data"
+    ],
+    "interest_score": "1 - no evidence this is a life-sciences company at all; nothing to screen",
+    "unknowns": [],
+    "company_number": "17388655",
+    "sic_codes": [
+      "47910",
+      "72190",
+      "85590",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CINQUO SOLUTIONS LTD",
+    "incorporated": "2026-08-07",
+    "one_liner": "Not observable at this stage — no description of activity beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated / very recent registration), no operational history",
+    "team_provenance": "Three British/Canadian directors, none with confirmed ORCID academic record; no prior company links evident",
+    "location_signal": "Residential address in Barton Under Needwood, Staffordshire — generic, not an incubator or cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes span engineering/technical consultancy (71122), computer consultancy (72190), and other professional/scientific activities (74909), suggesting intended technical service offering"
+    ],
+    "flags_negative": [
+      "No trading history",
+      "Residential registered address",
+      "No grant or investment data available",
+      "No verified academic credentials for any director",
+      "SIC mix is broad/generic rather than specialist biotech code"
+    ],
+    "interest_score": "1 - shell-stage company with no science, funding, or team signal to assess",
+    "unknowns": [],
+    "company_number": "17387869",
+    "sic_codes": [
+      "71122",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
