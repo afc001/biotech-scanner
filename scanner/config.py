@@ -92,6 +92,7 @@ DATA_DIR = ROOT / "data"
 SEEN_STORE = DATA_DIR / "seen.json"
 BRIEFS_DIR = DATA_DIR / "briefs"          # raw JSON briefs, one file per run
 DIGESTS_DIR = ROOT / "digests"            # rendered md + html digests (served by Pages)
+DB_PATH = DATA_DIR / "scanner.db"         # queryable run history (runs/companies/scores)
 
 # Known incubator / cluster addresses — a positive location signal.
 # Substrings are matched case-insensitively against the registered address.

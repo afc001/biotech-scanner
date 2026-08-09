@@ -144,7 +144,7 @@ def _normalise(item: dict) -> dict:
     }
 
 
-def get_new_companies() -> list[dict]:
+def get_new_companies() -> tuple[list[dict], dict]:
     """Sweep all SIC codes, drop anything already seen, enrich with officers.
 
     NOTE: this does NOT mark companies as seen — that only happens once a
@@ -152,6 +152,16 @@ def get_new_companies() -> list[dict]:
     marked them seen here, a crash in generate.py or render.py would
     permanently drop companies that were fetched but never actually
     processed into a digest.
+
+    Returns (new_companies, fetch_counts). fetch_counts is
+    {"n_fetched": int, "n_sic_matched": int} -- raw API hits summed across
+    SIC codes, before the seen-store/cross-SIC dedup below. The two keys are
+    equal by construction: the Companies House API filters by SIC code
+    server-side (via the sic_codes search param), so there is no separate
+    "matched by SIC" stage distinct from "fetched" in this pipeline -- both
+    are still returned so the runs table's funnel shape stays meaningful if
+    a future version of the pipeline ever fetches more broadly and filters
+    locally.
     """
     if config.INCORPORATED_FROM or config.INCORPORATED_TO:
         if not (config.INCORPORATED_FROM and config.INCORPORATED_TO):
@@ -170,6 +180,7 @@ def get_new_companies() -> list[dict]:
 
     seen = _load_seen()
     by_number: dict[str, dict] = {}
+    n_fetched = 0
 
     for sic in config.SIC_CODES:
         sic = sic.strip()
@@ -179,6 +190,7 @@ def get_new_companies() -> list[dict]:
         except requests.HTTPError as exc:
             print(f"  SIC {sic} failed after retries, skipping this run: {exc}")
             continue
+        n_fetched += len(sic_results)
         for item in sic_results:
             number = item.get("company_number")
             if not number or number in seen or number in by_number:
@@ -215,7 +227,7 @@ def get_new_companies() -> list[dict]:
             if record["website"].get("status") == "found":
                 print(f"    Website found: {record['company_name']} -> {record['website'].get('url')}")
 
-    return new_companies
+    return new_companies, {"n_fetched": n_fetched, "n_sic_matched": n_fetched}
 
 
 def mark_seen(records: list[dict], run_date: date | None = None) -> None:
