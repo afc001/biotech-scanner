@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner Digest — 2026-08-09</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .pill-search { background:#dce7f7; color:#1a3e6e; }
+  .sources { color:#777; font-size:14px; margin:10px 0 0; }
+  .sources a { color:#555; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner Digest — 2026-08-09</h1><p class="meta">Generated 2026-08-09 · 3 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><p class="legend">ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check · 🔍 Web-verified = re-checked with a live web search (see Sources on that brief)</p><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" data-score="2" data-incorporated="2026-08-08">
+<h2>Frame Wearable Ltd <span class="badge">Interest 2 / 5</span></h2>
+<p class="oneliner">A pre-launch wearable device aiming to measure blood pressure continuously via ultrasound.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-08-08 &middot; <span class="label">SIC:</span> 47910, 72190</p>
+<p class="field"><span class="label">Science.</span> Ultrasound-based sensing for continuous, non-invasive blood pressure tracking — mechanism described only at concept level, no technical detail on transducer design, validation, or accuracy given.</p>
+<p class="field"><span class="label">Stage.</span> Pre-product; website explicitly states &#x27;Product concept. Final design in development.&#x27; Company incorporated with a future-dated date (2026-08-08), which is unusual and worth verifying.</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Suvan Goel, British national. No ORCID match found (not a negative signal on its own). No prior company history or academic affiliation provided.</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address used by thousands of companies; not a genuine incubator or lab signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul><li>Working, live company website with a clear product narrative</li><li>SIC code 72190 (R&amp;D) suggests intended R&amp;D activity</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Shelton Street is a generic mass-registration address, not a real signal of lab/cluster presence</li><li>Incorporation date is in the future/erroneous (2026-08-08), needs clarification</li><li>No named science, engineers, or advisors — single director, no team visible</li><li>No evidence of working prototype, clinical validation, or regulatory pathway (Class II medical device territory)</li><li>No funding, grant, or investment data at all</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — pre-concept wearable idea with generic address, no team depth, no funding, and unresolved incorporation date anomaly</p>
+<p class="flags-title">Open questions for a first call</p><ul></ul>
+
+</div><div class="company" data-score="1" data-incorporated="2026-08-08">
+<h2>KMF SCIENCE &amp; NUTRITION LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">A one-person consultancy offering product development and manufacturing support for cosmetics and food/nutrition companies.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-08-08 &middot; <span class="label">SIC:</span> 72190, 74909</p>
+<p class="field"><span class="label">Science.</span> Not a research/platform company — website describes contract product development and manufacturing consultancy, not a proprietary technology or mechanism.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation with a pre-existing marketing website claiming prior track record; appears to be a consultancy launch rather than a new R&amp;D venture.</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Marek Adam Barnas (Polish national). No ORCID match. Website claims &#x27;10+ years experience&#x27; and &#x27;250+ product launches&#x27; in cosmetics/food, but no verifiable company or publication history provided.</p>
+<p class="field"><span class="label">Location signal.</span> Residential flat address in Crewe — no lab, incubator, or cluster signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>Live, professionally presented website with a stated service offering</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Residential registered address, not a lab or incubator</li><li>SIC codes (management consultancy, other research/development) indicate a services business, not a biotech IP company</li><li>No verifiable evidence for claimed &#x27;10+ years&#x27; or &#x27;250+ launches&#x27;</li><li>Single director, no co-founders or scientific team visible</li><li>No funding, grants, or IP signals of any kind</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — a consultancy/services business, not an investable biotech; no IP, no science, no funding signal</p>
+<p class="flags-title">Open questions for a first call</p><ul></ul>
+
+</div><div class="company" data-score="1" data-incorporated="2026-08-08">
+<h2>MORAH GROUP LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — SIC codes suggest software/IT consultancy and R&amp;D services, but no descriptive material provided</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-08-08 &middot; <span class="label">SIC:</span> 62012, 62020, 62090, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other stage evidence</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Dr Mogos Anday Gebremedhin (British/Eritrean); &#x27;Dr&#x27; title suggests academic or clinical background but no ORCID match found, so this cannot be verified</p>
+<p class="field"><span class="label">Location signal.</span> Residential flat address, London — generic, not a known cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Incorporation date is in the future (2026-08-08) — likely a data/record anomaly worth checking</li><li>No description of business activity beyond generic SIC codes</li><li>Single-director company with no funding, grant, or product evidence</li><li>Residential registered address</li><li>ORCID check returned no matching record for the director</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no substantive evidence of a life-sciences business; generic IT/consultancy SIC codes and no science, funding, or team signal</p>
+<p class="flags-title">Open questions for a first call</p><ul></ul>
+
+</div></div></body></html>
