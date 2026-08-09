@@ -1,60 +1,27 @@
 [
   {
-    "company_name": "KMF SCIENCE & NUTRITION LIMITED",
-    "incorporated": "2026-08-08",
-    "one_liner": "A one-person consultancy offering product development and manufacturing support for cosmetics and food/nutrition companies.",
-    "science": "Not a research/platform company — website describes contract product development and manufacturing consultancy, not a proprietary technology or mechanism.",
-    "stage_signal": "Day-one incorporation with a pre-existing marketing website claiming prior track record; appears to be a consultancy launch rather than a new R&D venture.",
-    "team_provenance": "Single director, Marek Adam Barnas (Polish national). No ORCID match. Website claims '10+ years experience' and '250+ product launches' in cosmetics/food, but no verifiable company or publication history provided.",
-    "location_signal": "Residential flat address in Crewe — no lab, incubator, or cluster signal.",
-    "funding": "Not observable at this stage",
-    "flags_positive": [
-      "Live, professionally presented website with a stated service offering"
-    ],
-    "flags_negative": [
-      "Residential registered address, not a lab or incubator",
-      "SIC codes (management consultancy, other research/development) indicate a services business, not a biotech IP company",
-      "No verifiable evidence for claimed '10+ years' or '250+ launches'",
-      "Single director, no co-founders or scientific team visible",
-      "No funding, grants, or IP signals of any kind"
-    ],
-    "interest_score": "1 — a consultancy/services business, not an investable biotech; no IP, no science, no funding signal",
-    "unknowns": [],
-    "company_number": "17388701",
-    "sic_codes": [
-      "72190",
-      "74909"
-    ],
-    "orcid_badge": null,
-    "gtr_badge": null,
-    "search_enriched": false,
-    "search_sources": []
-  },
-  {
-    "company_name": "MORAH GROUP LTD",
-    "incorporated": "2026-08-08",
-    "one_liner": "Not observable at this stage — SIC codes suggest software/IT consultancy and R&D services, but no descriptive material provided",
+    "company_name": "PROBA RESEARCH LTD",
+    "incorporated": "2026-08-09",
+    "one_liner": "Unclear — registered for retail via mail order/internet and biotechnology R&D, but no description of an actual product or research programme is available.",
     "science": "Not observable at this stage",
-    "stage_signal": "Day-one incorporation, no other stage evidence",
-    "team_provenance": "Single director, Dr Mogos Anday Gebremedhin (British/Eritrean); 'Dr' title suggests academic or clinical background but no ORCID match found, so this cannot be verified",
-    "location_signal": "Residential flat address, London — generic, not a known cluster or incubator",
+    "stage_signal": "Day-one incorporation, no evidence of activity yet",
+    "team_provenance": "Sole director Jarred Shaun Abrahams, British national; no ORCID match found; no prior company history provided",
+    "location_signal": "Residential address in Staines-upon-Thames — not an incubator or life-sciences cluster",
     "funding": "Not observable at this stage",
     "flags_positive": [],
     "flags_negative": [
-      "Incorporation date is in the future (2026-08-08) — likely a data/record anomaly worth checking",
-      "No description of business activity beyond generic SIC codes",
-      "Single-director company with no funding, grant, or product evidence",
-      "Residential registered address",
-      "ORCID check returned no matching record for the director"
+      "Incorporated with a mixed/odd SIC combination (mail order retail + biotech R&D), suggesting an unformed or opportunistic business plan",
+      "Residential registered address, not a specialist location",
+      "No named team beyond a single director",
+      "No funding, grant, or product evidence of any kind",
+      "Note: incorporation date is in the future (2026), which itself is an anomaly worth checking in the underlying record"
     ],
-    "interest_score": "1 — no substantive evidence of a life-sciences business; generic IT/consultancy SIC codes and no science, funding, or team signal",
+    "interest_score": "1 - No verifiable science, team, funding, or activity; nothing to assess",
     "unknowns": [],
-    "company_number": "17388776",
+    "company_number": "17389104",
     "sic_codes": [
-      "62012",
-      "62020",
-      "62090",
-      "72190"
+      "47910",
+      "72110"
     ],
     "orcid_badge": null,
     "gtr_badge": null,
@@ -62,30 +29,28 @@
     "search_sources": []
   },
   {
-    "company_name": "Frame Wearable Ltd",
-    "incorporated": "2026-08-08",
-    "one_liner": "A pre-launch wearable device aiming to measure blood pressure continuously via ultrasound.",
-    "science": "Ultrasound-based sensing for continuous, non-invasive blood pressure tracking — mechanism described only at concept level, no technical detail on transducer design, validation, or accuracy given.",
-    "stage_signal": "Pre-product; website explicitly states 'Product concept. Final design in development.' Company incorporated with a future-dated date (2026-08-08), which is unusual and worth verifying.",
-    "team_provenance": "Sole director Suvan Goel, British national. No ORCID match found (not a negative signal on its own). No prior company history or academic affiliation provided.",
-    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address used by thousands of companies; not a genuine incubator or lab signal.",
-    "funding": "Not observable at this stage — no grant or investment data provided.",
-    "flags_positive": [
-      "Working, live company website with a clear product narrative",
-      "SIC code 72190 (R&D) suggests intended R&D activity"
-    ],
+    "company_name": "POSTERN SYSTEMS LTD",
+    "incorporated": "2026-08-09",
+    "one_liner": "Not observable at this stage — no description of products or services provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other activity signals available",
+    "team_provenance": "Sole director Hong Cai, British; no prior company history or academic links provided",
+    "location_signal": "Residential flat address in London — generic, not a known incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
     "flags_negative": [
-      "Shelton Street is a generic mass-registration address, not a real signal of lab/cluster presence",
-      "Incorporation date is in the future/erroneous (2026-08-08), needs clarification",
-      "No named science, engineers, or advisors — single director, no team visible",
-      "No evidence of working prototype, clinical validation, or regulatory pathway (Class II medical device territory)",
-      "No funding, grant, or investment data at all"
+      "No description of business activity beyond generic SIC codes (software publishing, business/domestic software, other IT services)",
+      "Residential address, no incubator or cluster signal",
+      "Single director, no visible team",
+      "No funding (grant or private) evidence",
+      "Too new to show any traction"
     ],
-    "interest_score": "2 — pre-concept wearable idea with generic address, no team depth, no funding, and unresolved incorporation date anomaly",
+    "interest_score": "1 - shell-stage company with no verifiable science, team depth, or funding signal",
     "unknowns": [],
-    "company_number": "17388953",
+    "company_number": "17389087",
     "sic_codes": [
-      "47910",
+      "58290",
+      "62012",
       "72190"
     ],
     "orcid_badge": null,
