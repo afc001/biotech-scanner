@@ -76,8 +76,7 @@
     if (!result) { return; }
     var row = result.values[0];
     statsEl.innerHTML = '<strong>' + row[0] + '</strong> companies screened since launch across ' +
-      '<strong>' + row[1] + '</strong> days live &middot; <strong>' + row[2] + '</strong> flagged for a closer look ' +
-      '&mdash; real numbers, pulled live from the same database you can query yourself below.';
+      '<strong>' + row[1] + '</strong> days live &middot; <strong>' + row[2] + '</strong> flagged for a closer look.';
     statsEl.style.display = '';
   }).catch(function () {
     // Silent by design -- see comment above.

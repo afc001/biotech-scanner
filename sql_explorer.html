@@ -61,6 +61,29 @@
   <h1>SQL Explorer</h1>
   <p class="tagline">Run real SQL against the live scanner database — in your browser, read-only, nothing leaves your tab.</p>
 
+  <div id="status">Loading sql.js and data/scanner.db&hellip;</div>
+
+  <div class="presets" id="presets">
+    <button data-sql="SELECT COUNT(*) AS n_runs, SUM(n_fetched) AS n_fetched, SUM(n_sic_matched) AS n_sic_matched,&#10;       SUM(n_address_matched) AS n_address_matched, SUM(n_scored) AS n_scored, SUM(n_surfaced) AS n_surfaced&#10;FROM runs;">Funnel</button>
+    <button data-sql="SELECT analyst_verdict, COUNT(*) AS n FROM scores&#10;WHERE analyst_verdict IS NOT NULL GROUP BY analyst_verdict;">Precision</button>
+    <button data-sql="SELECT analyst_verdict, COUNT(*) AS n, AVG(interest_score) AS mean_interest_score,&#10;       AVG(orcid_confirmed) AS mean_orcid_confirmed, AVG(gtr_confirmed) AS mean_gtr_confirmed,&#10;       AVG(incubator_matched) AS mean_incubator_matched, AVG(website_found) AS mean_website_found,&#10;       AVG(search_enriched) AS mean_search_enriched&#10;FROM scores WHERE analyst_verdict IS NOT NULL GROUP BY analyst_verdict ORDER BY analyst_verdict;">Component means</button>
+    <button data-sql="SELECT c.name, c.company_number, s.interest_score, r.run_date, c.incorporated_on&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;JOIN runs r ON r.run_id = s.run_id&#10;ORDER BY s.interest_score DESC, r.run_date DESC LIMIT 15;">Top-scored companies</button>
+    <button data-sql="SELECT c.name, c.company_number, c.incorporated_on, s.orcid_status, s.gtr_status, s.interest_score&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;WHERE s.orcid_confirmed = 1 OR s.gtr_confirmed = 1&#10;ORDER BY s.interest_score DESC LIMIT 50;">Confirmed ORCID/GtR</button>
+    <button data-sql="SELECT source, COUNT(*) AS n_runs, MIN(run_date) AS earliest, MAX(run_date) AS latest&#10;FROM runs GROUP BY source;">Migrated vs. live runs</button>
+    <button data-sql="SELECT c.name, c.company_number, s.interest_score, r.run_date&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;JOIN runs r ON r.run_id = s.run_id&#10;WHERE s.repeat_founder_confirmed = 1&#10;ORDER BY r.run_date DESC;">Repeat founders (same sector)</button>
+  </div>
+
+  <textarea id="sqlBox" disabled spellcheck="false">SELECT * FROM runs ORDER BY run_date DESC LIMIT 10;</textarea>
+  <div class="controls">
+    <button id="runBtn" disabled>Run query</button>
+    <span class="hint">Read-only: only SELECT/WITH is allowed. Results capped at 500 rows. A company name in the results links to its full digest brief when <code>company_number</code> is also selected.</span>
+  </div>
+
+  <div id="sqlError"></div>
+  <div id="resultsWrap"><div id="results"></div></div>
+
+  <hr>
+
   <p>This loads <code>data/scanner.db</code> &mdash; the same SQLite database the
   scanner's own pipeline writes to on every run &mdash; directly into your browser
   via <a href="https://sql.js.org" target="_blank" rel="noopener">sql.js</a>
@@ -68,8 +91,6 @@
   runs entirely client-side, on an in-memory copy of the file your browser just
   downloaded. Nothing you type here is sent anywhere, and nothing you run can
   change the real data.</p>
-
-  <div id="status">Loading sql.js and data/scanner.db&hellip;</div>
 
   <details class="panel" open>
     <summary>Schema reference</summary>
@@ -122,26 +143,6 @@
     </details>
   </details>
 
-  <div class="presets" id="presets">
-    <button data-sql="SELECT COUNT(*) AS n_runs, SUM(n_fetched) AS n_fetched, SUM(n_sic_matched) AS n_sic_matched,&#10;       SUM(n_address_matched) AS n_address_matched, SUM(n_scored) AS n_scored, SUM(n_surfaced) AS n_surfaced&#10;FROM runs;">Funnel</button>
-    <button data-sql="SELECT analyst_verdict, COUNT(*) AS n FROM scores&#10;WHERE analyst_verdict IS NOT NULL GROUP BY analyst_verdict;">Precision</button>
-    <button data-sql="SELECT analyst_verdict, COUNT(*) AS n, AVG(interest_score) AS mean_interest_score,&#10;       AVG(orcid_confirmed) AS mean_orcid_confirmed, AVG(gtr_confirmed) AS mean_gtr_confirmed,&#10;       AVG(incubator_matched) AS mean_incubator_matched, AVG(website_found) AS mean_website_found,&#10;       AVG(search_enriched) AS mean_search_enriched&#10;FROM scores WHERE analyst_verdict IS NOT NULL GROUP BY analyst_verdict ORDER BY analyst_verdict;">Component means</button>
-    <button data-sql="SELECT c.name, c.company_number, s.interest_score, r.run_date, c.incorporated_on&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;JOIN runs r ON r.run_id = s.run_id&#10;ORDER BY s.interest_score DESC, r.run_date DESC LIMIT 15;">Top-scored companies</button>
-    <button data-sql="SELECT c.name, c.company_number, c.incorporated_on, s.orcid_status, s.gtr_status, s.interest_score&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;WHERE s.orcid_confirmed = 1 OR s.gtr_confirmed = 1&#10;ORDER BY s.interest_score DESC LIMIT 50;">Confirmed ORCID/GtR</button>
-    <button data-sql="SELECT source, COUNT(*) AS n_runs, MIN(run_date) AS earliest, MAX(run_date) AS latest&#10;FROM runs GROUP BY source;">Migrated vs. live runs</button>
-    <button data-sql="SELECT c.name, c.company_number, s.interest_score, r.run_date&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;JOIN runs r ON r.run_id = s.run_id&#10;WHERE s.repeat_founder_confirmed = 1&#10;ORDER BY r.run_date DESC;">Repeat founders (same sector)</button>
-  </div>
-
-  <textarea id="sqlBox" disabled spellcheck="false">SELECT * FROM runs ORDER BY run_date DESC LIMIT 10;</textarea>
-  <div class="controls">
-    <button id="runBtn" disabled>Run query</button>
-    <span class="hint">Read-only: only SELECT/WITH is allowed. Results capped at 500 rows. A company name in the results links to its full digest brief when <code>company_number</code> is also selected.</span>
-  </div>
-
-  <div id="sqlError"></div>
-  <div id="resultsWrap"><div id="results"></div></div>
-
-  <hr>
   <p><a href="index.html">&larr; Project home</a></p>
 </div>
 
