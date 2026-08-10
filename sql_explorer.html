@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SQL Explorer — UK Biotech Deal-Flow Scanner</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:820px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .tagline { color:#555; font-size:16px; margin:0 0 22px; }
+  p { margin:0 0 16px; }
+  a { color:#1a3e6e; }
+  hr { border:none; border-top:1px solid #ddd; margin:30px 0; }
+
+  /* Anything interactive/reference switches to the site's sans-serif
+     "control" convention, matching the digest pages' score-filter toolbar. */
+  .panel { font-family:Arial,Helvetica,sans-serif; background:#f6f6f4;
+           border:1px solid #e2e2df; border-radius:6px; padding:14px 16px; margin:0 0 18px; }
+  .panel summary { cursor:pointer; font-weight:bold; font-size:15px; }
+  .schema-table { border-collapse:collapse; width:100%; margin-top:10px; font-size:14px; }
+  .schema-table th, .schema-table td { text-align:left; padding:4px 10px 4px 0; vertical-align:top; }
+  .schema-table th { border-bottom:1px solid #ccc; }
+  .schema-table code { font-family:"SF Mono",Consolas,monospace; font-size:13px; }
+
+  #status { font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#666; margin:0 0 18px; }
+  #status.error { color:#a22; }
+  #status.ready { color:#1a5c22; }
+
+  .presets { font-family:Arial,Helvetica,sans-serif; display:flex; flex-wrap:wrap; gap:8px; margin:0 0 14px; }
+  .presets button { font-size:13px; padding:6px 11px; border:1px solid #c9c9c5; border-radius:14px;
+                     background:#fff; cursor:pointer; color:#1a3e6e; }
+  .presets button:hover { background:#eef2f8; }
+  .presets button:disabled, #runBtn:disabled, #sqlBox:disabled { opacity:0.5; cursor:not-allowed; }
+
+  #sqlBox { width:100%; box-sizing:border-box; font-family:"SF Mono",Consolas,monospace;
+            font-size:14px; padding:10px; border:1px solid #c9c9c5; border-radius:6px;
+            resize:vertical; min-height:90px; }
+  .controls { font-family:Arial,Helvetica,sans-serif; display:flex; align-items:center;
+              gap:12px; margin:10px 0 18px; }
+  #runBtn { font-size:14px; padding:8px 18px; border:none; border-radius:6px;
+            background:#1a3e6e; color:#fff; cursor:pointer; }
+  #runBtn:hover { background:#15315a; }
+  .hint { font-family:Arial,Helvetica,sans-serif; color:#888; font-size:13px; }
+
+  #sqlError { font-family:"SF Mono",Consolas,monospace; font-size:13.5px; color:#a22;
+              background:#fdeeee; border-left:3px solid #a22; padding:10px 12px; margin:0 0 14px;
+              white-space:pre-wrap; display:none; }
+
+  #results table.sql-results { border-collapse:collapse; width:100%; font-size:14px;
+                                font-family:"SF Mono",Consolas,monospace; margin:0 0 8px; }
+  table.sql-results th, table.sql-results td { border:1px solid #ddd; padding:5px 8px; text-align:left; }
+  table.sql-results th { background:#f0f0ee; font-family:Arial,Helvetica,sans-serif; font-weight:bold; }
+  table.sql-results tr:nth-child(even) td { background:#fafaf9; }
+  .sql-null { color:#999; font-style:italic; }
+  .sql-note { font-family:Arial,Helvetica,sans-serif; color:#777; font-size:13px; margin:0 0 20px; }
+  #resultsWrap { overflow-x:auto; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>SQL Explorer</h1>
+  <p class="tagline">Run real SQL against the live scanner database — in your browser, read-only, nothing leaves your tab.</p>
+
+  <p>This loads <code>data/scanner.db</code> &mdash; the same SQLite database the
+  scanner's own pipeline writes to on every run &mdash; directly into your browser
+  via <a href="https://sql.js.org" target="_blank" rel="noopener">sql.js</a>
+  (SQLite compiled to WebAssembly). There is no server involved: the query engine
+  runs entirely client-side, on an in-memory copy of the file your browser just
+  downloaded. Nothing you type here is sent anywhere, and nothing you run can
+  change the real data.</p>
+
+  <div id="status">Loading sql.js and data/scanner.db&hellip;</div>
+
+  <details class="panel" open>
+    <summary>Schema reference</summary>
+
+    <details open style="margin-top:12px;">
+      <summary><code>runs</code> &mdash; one row per pipeline run (live or migrated from history)</summary>
+      <table class="schema-table">
+        <tr><th>column</th><th>meaning</th></tr>
+        <tr><td><code>run_id</code></td><td>PK</td></tr>
+        <tr><td><code>run_date</code></td><td>YYYY-MM-DD</td></tr>
+        <tr><td><code>prompt_version</code></td><td>hash of the assembled system prompt; NULL for migrated/historical runs (never captured)</td></tr>
+        <tr><td><code>git_sha</code></td><td>commit that produced this run; NULL historically</td></tr>
+        <tr><td><code>n_fetched</code> / <code>n_sic_matched</code></td><td>raw Companies House hits before dedup; equal by construction (the API filters by SIC server-side); NULL historically</td></tr>
+        <tr><td><code>n_address_matched</code></td><td>fetched companies matched to a known incubator/cluster address; NULL historically</td></tr>
+        <tr><td><code>n_scored</code> / <code>n_surfaced</code></td><td>briefs generated / at-or-above the alert threshold; backfilled for every historical run</td></tr>
+        <tr><td><code>source</code></td><td><code>'live'</code> or <code>'migrated'</code> (imported from pre-database history)</td></tr>
+      </table>
+    </details>
+
+    <details open style="margin-top:10px;">
+      <summary><code>companies</code> &mdash; one row per company ever seen</summary>
+      <table class="schema-table">
+        <tr><th>column</th><th>meaning</th></tr>
+        <tr><td><code>company_number</code></td><td>PK, Companies House number (text — Scottish numbers are "SC"-prefixed)</td></tr>
+        <tr><td><code>name</code> / <code>incorporated_on</code> / <code>sic_codes</code></td><td>comma-joined SIC codes, e.g. "72110,72190"</td></tr>
+        <tr><td><code>registered_address</code> / <code>website</code> / <code>website_status</code></td><td>only ever populated by a live run; NULL for companies only known from migrated history</td></tr>
+      </table>
+    </details>
+
+    <details open style="margin-top:10px;">
+      <summary><code>scores</code> &mdash; one row per (company, run) score</summary>
+      <table class="schema-table">
+        <tr><th>column</th><th>meaning</th></tr>
+        <tr><td><code>score_id</code></td><td>PK</td></tr>
+        <tr><td><code>company_number</code> / <code>run_id</code></td><td>FKs; UNIQUE together — a company can be re-scored under a later run without losing its original row</td></tr>
+        <tr><td><code>interest_score</code></td><td>1&ndash;5, parsed from the model's free-text score</td></tr>
+        <tr><td><code>interest_score_raw</code></td><td>the original text, e.g. "4 &mdash; reason..."</td></tr>
+        <tr><td><code>orcid_status</code> / <code>orcid_confirmed</code></td><td>confirmed / ambiguous / no_match / NULL, and a derived 0/1 flag</td></tr>
+        <tr><td><code>gtr_status</code> / <code>gtr_confirmed</code></td><td>same pattern, UKRI Gateway to Research</td></tr>
+        <tr><td><code>incubator_match</code> / <code>incubator_matched</code></td><td>matched signal name + 0/1 flag; <b>NULL</b> means never checked (migrated row), <b>0</b> means checked and no match (live row)</td></tr>
+        <tr><td><code>website_status</code> / <code>website_found</code></td><td>same NULL-vs-0 distinction as above</td></tr>
+        <tr><td><code>search_enriched</code></td><td>0/1, whether the opt-in web-search pass ran</td></tr>
+        <tr><td><code>surfaced</code></td><td>0/1, at/above the alert threshold at the time of that run</td></tr>
+        <tr><td><code>analyst_verdict</code></td><td>NULL / 'relevant' / 'noise' &mdash; manual label</td></tr>
+        <tr><td><code>raw_response</code></td><td>the full brief, as JSON text</td></tr>
+        <tr><td><code>prompt_version</code></td><td>denormalized copy of <code>runs.prompt_version</code></td></tr>
+      </table>
+    </details>
+  </details>
+
+  <div class="presets" id="presets">
+    <button data-sql="SELECT COUNT(*) AS n_runs, SUM(n_fetched) AS n_fetched, SUM(n_sic_matched) AS n_sic_matched,&#10;       SUM(n_address_matched) AS n_address_matched, SUM(n_scored) AS n_scored, SUM(n_surfaced) AS n_surfaced&#10;FROM runs;">Funnel</button>
+    <button data-sql="SELECT analyst_verdict, COUNT(*) AS n FROM scores&#10;WHERE analyst_verdict IS NOT NULL GROUP BY analyst_verdict;">Precision</button>
+    <button data-sql="SELECT analyst_verdict, COUNT(*) AS n, AVG(interest_score) AS mean_interest_score,&#10;       AVG(orcid_confirmed) AS mean_orcid_confirmed, AVG(gtr_confirmed) AS mean_gtr_confirmed,&#10;       AVG(incubator_matched) AS mean_incubator_matched, AVG(website_found) AS mean_website_found,&#10;       AVG(search_enriched) AS mean_search_enriched&#10;FROM scores WHERE analyst_verdict IS NOT NULL GROUP BY analyst_verdict ORDER BY analyst_verdict;">Component means</button>
+    <button data-sql="SELECT c.name, c.company_number, s.interest_score, r.run_date, c.incorporated_on&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;JOIN runs r ON r.run_id = s.run_id&#10;ORDER BY s.interest_score DESC, r.run_date DESC LIMIT 15;">Top-scored companies</button>
+    <button data-sql="SELECT c.name, c.company_number, c.incorporated_on, s.orcid_status, s.gtr_status, s.interest_score&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;WHERE s.orcid_confirmed = 1 OR s.gtr_confirmed = 1&#10;ORDER BY s.interest_score DESC LIMIT 50;">Confirmed ORCID/GtR</button>
+    <button data-sql="SELECT source, COUNT(*) AS n_runs, MIN(run_date) AS earliest, MAX(run_date) AS latest&#10;FROM runs GROUP BY source;">Migrated vs. live runs</button>
+  </div>
+
+  <textarea id="sqlBox" disabled spellcheck="false">SELECT * FROM runs ORDER BY run_date DESC LIMIT 10;</textarea>
+  <div class="controls">
+    <button id="runBtn" disabled>Run query</button>
+    <span class="hint">Read-only: only SELECT/WITH is allowed. Results capped at 500 rows. A company name in the results links to its full digest brief when <code>company_number</code> is also selected.</span>
+  </div>
+
+  <div id="sqlError"></div>
+  <div id="resultsWrap"><div id="results"></div></div>
+
+  <hr>
+  <p><a href="index.html">&larr; Project home</a></p>
+</div>
+
+<script src="vendor/sql-wasm.js"></script>
+<script>
+(function () {
+  var statusEl = document.getElementById('status');
+  var sqlBox = document.getElementById('sqlBox');
+  var runBtn = document.getElementById('runBtn');
+  var errorEl = document.getElementById('sqlError');
+  var resultsEl = document.getElementById('results');
+  var presetsEl = document.getElementById('presets');
+  var db = null;
+  var companyRunDate = {}; // company_number -> most recent run_date, for deep-linking into digests
+
+  var ROW_CAP = 500;
+  var CELL_CAP = 300;
+
+  // Built once after the DB loads: every company has at least one scores
+  // row (upsert_company always runs alongside insert_score -- see
+  // scanner/db.py), so this covers every company_number that could ever
+  // show up in a result. MAX(run_date) picks the latest run if a company
+  // is ever re-scored under a future prompt version.
+  function buildCompanyRunDateIndex() {
+    var res = db.exec(
+      "SELECT company_number, MAX(run_date) AS run_date " +
+      "FROM scores JOIN runs USING (run_id) GROUP BY company_number"
+    )[0];
+    companyRunDate = {};
+    if (!res) return;
+    var numIdx = res.columns.indexOf('company_number');
+    var dateIdx = res.columns.indexOf('run_date');
+    res.values.forEach(function (row) {
+      companyRunDate[row[numIdx]] = row[dateIdx];
+    });
+  }
+
+  // Whole-word match anywhere in the (comment-stripped) query. This is UX
+  // clarity, not a security boundary -- sql.js runs on an in-memory,
+  // per-tab copy that's discarded on reload, so nothing here can touch the
+  // real repo either way. SQLite allows a CTE prefix on INSERT/UPDATE/
+  // DELETE, so checking only the first keyword would miss e.g.
+  // "WITH x AS (SELECT 1) DELETE FROM runs" -- hence the blacklist scan.
+  // Known false-positive: this also matches inside string literals, e.g.
+  // "... WHERE name LIKE '%CREATE%'" would be rejected. Not worth a real
+  // tokenizer for a read-only showcase guard.
+  var FORBIDDEN = /\b(insert|update|delete|drop|alter|create|replace|attach|detach|pragma|vacuum|reindex|analyze)\b/i;
+
+  function isReadOnlyQuery(sqlText) {
+    var stripped = sqlText.replace(/--[^\n]*/g, ' ').replace(/\/\*[\s\S]*?\*\//g, ' ').trim();
+    if (!stripped) return false;
+    var body = stripped.replace(/;\s*$/, '');
+    if (body.indexOf(';') !== -1) return false;
+    if (!/^(select|with)\b/i.test(body)) return false;
+    if (FORBIDDEN.test(body)) return false;
+    return true;
+  }
+
+  function showError(msg) {
+    errorEl.textContent = msg;
+    errorEl.style.display = 'block';
+  }
+
+  function clearError() {
+    errorEl.textContent = '';
+    errorEl.style.display = 'none';
+  }
+
+  function renderResults(result) {
+    resultsEl.innerHTML = '';
+    if (!result) {
+      resultsEl.textContent = 'Query ran but returned no result set.';
+      return;
+    }
+    var rows = result.values;
+    var truncated = rows.length > ROW_CAP;
+    var shown = truncated ? rows.slice(0, ROW_CAP) : rows;
+
+    if (shown.length === 0) {
+      resultsEl.textContent = '0 rows returned.';
+      return;
+    }
+
+    var table = document.createElement('table');
+    table.className = 'sql-results';
+    var thead = document.createElement('tr');
+    result.columns.forEach(function (c) {
+      var th = document.createElement('th');
+      th.textContent = c;
+      thead.appendChild(th);
+    });
+    table.appendChild(thead);
+
+    // Deep-link into the digest archive when the result has enough to
+    // resolve a target: prefer linking the human-readable "name" cell,
+    // falling back to "company_number" itself if there's no name column.
+    // Either way we need company_number in the row somewhere to look up
+    // which dated digest page (and anchor) it lives on -- a query that
+    // selects neither gets plain text, same as any other cell.
+    var cnIdx = result.columns.indexOf('company_number');
+    var nameIdx = result.columns.indexOf('name');
+    var linkIdx = nameIdx !== -1 ? nameIdx : cnIdx;
+
+    shown.forEach(function (row) {
+      var tr = document.createElement('tr');
+      row.forEach(function (cell, colIdx) {
+        var td = document.createElement('td');
+        if (cell === null) {
+          var span = document.createElement('span');
+          span.className = 'sql-null';
+          span.textContent = 'NULL';
+          td.appendChild(span);
+        } else {
+          var text = String(cell);
+          var displayText = text.length > CELL_CAP ? text.slice(0, CELL_CAP) + '…' : text;
+          if (colIdx === linkIdx && cnIdx !== -1 && companyRunDate[row[cnIdx]]) {
+            var a = document.createElement('a');
+            a.href = 'digests/' + companyRunDate[row[cnIdx]] + '.html#company-' + encodeURIComponent(row[cnIdx]);
+            a.textContent = displayText;
+            td.appendChild(a);
+          } else {
+            td.textContent = displayText;
+          }
+          if (text.length > CELL_CAP) { td.title = text; }
+        }
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+    resultsEl.appendChild(table);
+
+    var note = document.createElement('p');
+    note.className = 'sql-note';
+    note.textContent = truncated
+      ? (ROW_CAP + ' of ' + rows.length + ' rows shown (capped) — add a LIMIT to see a different slice.')
+      : (rows.length + ' row' + (rows.length === 1 ? '' : 's') + ' returned.');
+    resultsEl.appendChild(note);
+  }
+
+  function runQuery() {
+    clearError();
+    var sqlText = sqlBox.value;
+    if (!isReadOnlyQuery(sqlText)) {
+      showError('Only a single SELECT/WITH statement is allowed here (read-only showcase) — ' +
+        'statements containing INSERT/UPDATE/DELETE/DROP/PRAGMA/etc., or multiple stacked ' +
+        'statements, are blocked before they reach the database.');
+      resultsEl.innerHTML = '';
+      return;
+    }
+    try {
+      var results = db.exec(sqlText);
+      renderResults(results[0]);
+    } catch (err) {
+      resultsEl.innerHTML = '';
+      showError(err.message);
+    }
+  }
+
+  presetsEl.addEventListener('click', function (evt) {
+    var btn = evt.target.closest('button');
+    if (!btn) return;
+    sqlBox.value = btn.getAttribute('data-sql');
+    runQuery();
+  });
+  runBtn.addEventListener('click', runQuery);
+
+  function loadDatabase() {
+    return fetch('data/scanner.db', { cache: 'no-cache' })
+      .then(function (resp) {
+        if (!resp.ok) { throw new Error('HTTP ' + resp.status + ' fetching data/scanner.db'); }
+        return resp.arrayBuffer();
+      })
+      .then(function (buf) { return new Uint8Array(buf); });
+  }
+
+  Promise.all([
+    initSqlJs({ locateFile: function (file) { return 'vendor/' + file; } }),
+    loadDatabase(),
+  ]).then(function (res) {
+    var SQL = res[0];
+    db = new SQL.Database(res[1]);
+    buildCompanyRunDateIndex();
+    statusEl.textContent = 'Ready — query the live database below.';
+    statusEl.className = 'ready';
+    sqlBox.disabled = false;
+    runBtn.disabled = false;
+    runQuery();
+  }).catch(function (err) {
+    statusEl.textContent = 'Could not load the database in your browser: ' + err.message +
+      '. If you opened this page directly as a file (file://…), it needs to be served ' +
+      'over http:// instead — e.g. `python -m http.server` from the repo root.';
+    statusEl.className = 'error';
+  });
+})();
+</script>
+</body>
+</html>

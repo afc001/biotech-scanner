@@ -225,7 +225,10 @@ def _company_html(b: dict) -> str:
     # data-score/data-incorporated feed the toolbar's client-side score
     # filter and "group by week" toggle (see TOOLBAR_HTML) -- purely a
     # display-layer concern, no effect on the underlying brief JSON.
-    parts = [f'<div class="company" data-score="{s}" data-incorporated="{incorporated}">',
+    # id lets sql_explorer.html deep-link a query result straight to this
+    # company's brief (digests/{date}.html#company-{company_number}).
+    company_id = _esc(b.get("company_number", ""))
+    parts = [f'<div class="company" id="company-{company_id}" data-score="{s}" data-incorporated="{incorporated}">',
              f'<h2>{_esc(b["company_name"])} <span class="badge">Interest {s} / 5</span>{badges_html}</h2>',
              f'<p class="oneliner">{_esc(b.get("one_liner", ""))}</p>',
              f'<p class="field"><span class="label">Incorporated:</span> {_esc(b.get("incorporated",""))} '
@@ -242,8 +245,12 @@ def _company_html(b: dict) -> str:
     parts.append(f'<p class="field"><span class="label">Interest score: {s}</span> — '
                  f'{_esc(justification)}</p>')
     unknowns = b.get("unknowns", []) or []
-    parts.append('<p class="flags-title">Open questions for a first call</p><ul>' +
-                 "".join(f"<li>{_esc(u)}</li>" for u in unknowns) + "</ul>")
+    if unknowns:
+        # Below-threshold briefs deliberately get an empty unknowns list
+        # (see generate.load_prompt()'s cost-control rule) -- omit the
+        # heading entirely rather than showing it followed by nothing.
+        parts.append('<p class="flags-title">Open questions for a first call</p><ul>' +
+                     "".join(f"<li>{_esc(u)}</li>" for u in unknowns) + "</ul>")
     parts.append(_sources_html(b))
     parts.append('</div>')
     return "\n".join(parts)
@@ -269,8 +276,10 @@ def _company_md(b: dict) -> str:
         lines += [f'- {i}' for i in (b.get(key, []) or [])]; lines.append("")
     justification = re.sub(r"^\s*\d\s*[—-]?\s*", "", str(b.get("interest_score", "")))
     lines += [f'**Interest score: {s}** — {justification}', ""]
-    lines.append("**Open questions for a first call**"); lines.append("")
-    lines += [f'- {u}' for u in (b.get("unknowns", []) or [])]; lines.append("")
+    unknowns = b.get("unknowns", []) or []
+    if unknowns:
+        lines.append("**Open questions for a first call**"); lines.append("")
+        lines += [f'- {u}' for u in unknowns]; lines.append("")
     sources_line = _sources_md(b)
     if sources_line:
         lines += [sources_line, ""]
@@ -319,7 +328,8 @@ def _rebuild_index() -> None:
                      reverse=True)
     body = HTML_HEAD.format(title="Biotech Scanner — Digest Archive")
     body += '<h1>Biotech Scanner — Digest Archive</h1>'
-    body += '<p class="meta">Daily automated screening digests of newly incorporated UK biotech companies.</p><hr><ul>'
+    body += '<p class="meta">Daily automated screening digests of newly incorporated UK biotech companies.</p>'
+    body += '<p><a href="../index.html">&larr; Project home</a> &middot; <a href="../sql_explorer.html">Run SQL against the live database &rarr;</a></p><hr><ul>'
     body += "".join(f'<li><a href="{d}.html">{d}</a></li>' for d in digests)
     body += "</ul>" + HTML_FOOT
     (config.DIGESTS_DIR / "index.html").write_text(body)
