@@ -36,6 +36,8 @@ HTML_HEAD = """<!DOCTYPE html>
   .sources {{ color:#777; font-size:14px; margin:10px 0 0; }}
   .sources a {{ color:#555; }}
   .legend {{ color:#777; font-size:13px; margin:0 0 22px; }}
+  .legend summary {{ cursor:pointer; font-weight:bold; }}
+  .legend p {{ margin:8px 0 0; }}
   .oneliner {{ font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }}
   .field {{ margin:9px 0; }} .field .label {{ font-weight:bold; }}
   .flags-title {{ font-weight:bold; margin:16px 0 4px; }}
@@ -51,6 +53,7 @@ HTML_HEAD = """<!DOCTYPE html>
   .week-header {{ font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
                    border-bottom:1px solid #ccc; padding-bottom:6px;
                    font-family:Arial,Helvetica,sans-serif; }}
+  .archive-summary {{ color:#777; font-size:15px; }}
 </style></head><body><div class="page">
 """
 
@@ -340,7 +343,8 @@ def render_digest(briefs: list[dict], run_date: date | None = None) -> dict:
               'directorships — well-connected, but likely not day-to-day operational here · '
               '🔍 Web-verified = re-checked with a live web search (see Sources on that brief)')
     html_body += (f'<h1>{_esc(title)}</h1><p class="meta">{_esc(meta)}</p>'
-                  f'<p class="legend">{_esc(legend)}</p><hr>')
+                  f'<details class="legend"><summary>Badge legend</summary>'
+                  f'<p>{_esc(legend)}</p></details><hr>')
     if briefs:
         html_body += TOOLBAR_HTML
         html_body += "".join(_company_html(b) for b in briefs)
@@ -361,14 +365,28 @@ def render_digest(briefs: list[dict], run_date: date | None = None) -> dict:
 
 
 def _rebuild_index() -> None:
-    """Regenerate digests/index.html listing every dated digest, newest first."""
+    """Regenerate digests/index.html listing every dated digest, newest
+    first, each annotated with company count and top score (read from the
+    already-saved JSON, no API calls) so a visitor can tell which days are
+    worth opening before clicking into any of them."""
     digests = sorted((p.stem for p in config.DIGESTS_DIR.glob("*.html") if p.stem != "index"),
                      reverse=True)
     body = HTML_HEAD.format(title="Biotech Scanner — Digest Archive")
     body += '<h1>Biotech Scanner — Digest Archive</h1>'
     body += '<p class="meta">Daily automated screening digests of newly incorporated UK biotech companies.</p>'
     body += '<p><a href="../index.html">&larr; Project home</a> &middot; <a href="../sql_explorer.html">Run SQL against the live database &rarr;</a></p><hr><ul>'
-    body += "".join(f'<li><a href="{d}.html">{d}</a></li>' for d in digests)
+    items = []
+    for d in digests:
+        briefs_path = config.BRIEFS_DIR / f"{d}.json"
+        n = 0
+        top = 0
+        if briefs_path.exists():
+            briefs = json.loads(briefs_path.read_text())
+            n = len(briefs)
+            top = max((score_int(b.get("interest_score", "")) for b in briefs), default=0)
+        summary = f"{n} compan{'y' if n == 1 else 'ies'}, top score {top}/5" if n else "0 companies"
+        items.append(f'<li><a href="{d}.html">{d}</a> <span class="archive-summary">— {_esc(summary)}</span></li>')
+    body += "".join(items)
     body += "</ul>" + HTML_FOOT
     (config.DIGESTS_DIR / "index.html").write_text(body)
 

@@ -20,17 +20,20 @@ Companies House  ->  fetch.py     new incorporations (SIC 72110/72190),
                      |
                      v
 ORCID / GtR /    ->  orcid.py,    director academic-credibility + UKRI funding-
-website.py           gtr.py,      history lookup (common-name-safe, never
-                     website.py   guesses), plus a live-website check for
-                                  companies that already have real content
+website.py /         gtr.py,      history lookup (common-name-safe, never
+repeat_founder.py    website.py,  guesses), a live-website check, and a
+                     repeat_      Companies House officer-appointments check
+                     founder.py   for a prior/current directorship at another
+                                  company in this same target sector
                      |
                      v
 Claude API       ->  generate.py  pass 1: each record -> structured JSON brief,
 (pass 1)                          driven by biotech_brief_prompt.md (the same
-                                  prompt used interactively); ORCID/GtR
-                                  confirmations explicitly move interest_score,
-                                  and a found website is used substantively
-                                  rather than defaulting to generic filler
+                                  prompt used interactively); ORCID/GtR/repeat-
+                                  founder confirmations explicitly move
+                                  interest_score, and a found website is used
+                                  substantively rather than defaulting to
+                                  generic filler
                      |
                      v
 Claude API +     ->  generate.py  pass 2 (opt-in, SCANNER_FETCH_WEB_SEARCH=1):
@@ -46,11 +49,17 @@ web_search           enrich_with_ any brief scoring 2+ gets re-run with a real
                                   toolbar; archive index rebuilt
                      |
                      v
+                     db.py         Every run also lands in data/scanner.db
+                                  (SQLite) -- run/company/score history,
+                                  queryable with scanner/stats.py or live in
+                                  the browser via sql_explorer.html
+                     |
+                     v
 GitHub Actions   ->  scan.yml      runs the above daily at 06:00 UTC (or on
                                   demand via workflow_dispatch, with an optional
                                   lookback-window override for backfills),
-                                  commits the digest back to the repo, Pages
-                                  serves it
+                                  commits the digest + database back to the
+                                  repo, Pages serves it
 ```
 
 Design principle: **generation (JSON) is separate from presentation (markdown/HTML).**
@@ -68,13 +77,18 @@ The raw briefs live in `data/briefs/`; the archive can be re-rendered any time
 | `scanner/orcid.py` | Director academic-credibility lookup (ORCID Public API, OAuth client-credentials) |
 | `scanner/gtr.py` | Director funding-history lookup (UKRI Gateway to Research, no auth needed) |
 | `scanner/website.py` | Guessed-domain live-website check, no auth needed |
-| `scanner/generate.py` | Claude API call (pass 1), JSON parsing + validation, ORCID/GtR badge computation, gated web-search enrichment (pass 2) |
+| `scanner/repeat_founder.py` | Director repeat-founder check via Companies House's own officer-appointments API, no separate auth needed |
+| `scanner/generate.py` | Claude API call (pass 1), JSON parsing + validation, ORCID/GtR/repeat-founder badge computation, gated web-search enrichment (pass 2) |
 | `scanner/render.py` | JSON -> dated md/html digest + archive index + score/week toolbar |
+| `scanner/db.py` | SQLite schema + all reads/writes to `data/scanner.db` (stdlib `sqlite3`, no ORM) |
+| `scanner/stats.py` | Funnel / precision / per-signal component-mean queries + CLI over `data/scanner.db` |
 | `run.py` | Orchestrator / entry point |
 | `.github/workflows/scan.yml` | Daily cron + manual trigger with backfill option |
 | `data/seen.json` | Company numbers already processed (never reprocessed) |
 | `data/briefs/*.json` | Raw JSON briefs, one file per run — re-renderable without re-calling the model |
+| `data/scanner.db` | Queryable run/company/score history — see [`sql_explorer.html`](https://afc001.github.io/biotech-scanner/sql_explorer.html) |
 | `digests/*.html` | Rendered daily digests (served by Pages) |
+| `sql_explorer.html`, `vendor/` | Client-side SQL browser over `data/scanner.db` (SQLite compiled to WebAssembly via vendored `sql.js`) — read-only, runs entirely in the visitor's own browser, no backend |
 
 ### Utility scripts (all free — no Anthropic API calls)
 
@@ -82,7 +96,9 @@ The raw briefs live in `data/briefs/`; the archive can be re-rendered any time
 |---|---|
 | `dry_run_count.py --days N` | Count how many companies a longer lookback window would sweep up, and estimate cost, before spending anything on a backfill |
 | `rerender_digest.py --date YYYY-MM-DD` (or `--all`) | Re-render an existing digest from its saved JSON, for free — use after any `render.py` change |
-| `test_orcid_live.py` / `test_gtr_live.py` / `test_website_live.py` | Diagnostic: run real ORCID/GtR/website lookups against today's already-fetched companies, without touching `data/seen.json` |
+| `test_orcid_live.py` / `test_gtr_live.py` / `test_website_live.py` / `test_repeat_founder_live.py` | Diagnostic: run real ORCID/GtR/website/repeat-founder lookups against today's already-fetched companies, without touching `data/seen.json` |
+| `migrate_history.py` | One-off, idempotent: import all historical `data/briefs/*.json` into `data/scanner.db` |
+| `label_history.py` | Interactive CLI: label surfaced companies relevant/noise for the precision stats in `scanner/stats.py` |
 
 ## Running it
 
@@ -188,13 +204,38 @@ this one has a real, non-trivial cost.
   design, config, and real test findings in
   [`WEB_SEARCH_SPEC.md`](WEB_SEARCH_SPEC.md); example output on
   [`examples.html`](examples.html).
+- Repeat-founder check (`scanner/repeat_founder.py`) — follows each
+  director's own Companies House officer-appointments link (no separate
+  registration, reuses `CH_API_KEY`) to check for a prior/current
+  directorship at another company in this same target sector. A confirmed
+  same-sector match raises `interest_score` and must appear in
+  `flags_positive`, the same rule strength as ORCID/GtR. A director holding
+  several other *active* directorships at once is flagged separately as an
+  "advisor pattern" — an explicitly two-sided signal (well-connected, but
+  likely not day-to-day operational here), woven into the narrative fields
+  rather than either flags list.
+- Queryable run history (`scanner/db.py`, `data/scanner.db`) — every run's
+  fetch/company/score data lands in a committed SQLite database (stdlib
+  `sqlite3`, no ORM), migrated from the full pre-database history via
+  `migrate_history.py`. `scanner/stats.py` computes funnel, precision, and
+  per-signal component-mean statistics (which signals actually separate
+  hand-labelled relevant companies from noise — `label_history.py` is the
+  CLI for producing those labels). [`sql_explorer.html`](https://afc001.github.io/biotech-scanner/sql_explorer.html)
+  runs real, read-only SQL against the same database entirely client-side
+  (SQLite compiled to WebAssembly via a vendored `sql.js`) — no backend,
+  nothing leaves the visitor's browser.
 
 **Not yet built (future ideas):**
 - Director cross-references beyond ORCID/GtR: e.g. same person also appearing
   at a university tech-transfer office (Oxford University Innovation, Cambridge
   Enterprise) = likely spinout signal
-- SIC combinations: 72110 + 21100 together suggests therapeutics ambition
-  rather than services
+- Persons with Significant Control (PSC) — Companies House exposes actual
+  equity/control ownership via a separate, free endpoint, not used yet; would
+  reveal prior institutional backing (a VC fund already listed as a PSC) or a
+  nominee/shell structure
+- SIC combinations as a signal — e.g. an R&D code alongside a manufacturing
+  code might suggest therapeutics ambition rather than services; not pursued
+  yet
 - Project-level Innovate UK / UKRI grant data (title, abstract, award amount) —
   only the director-*name* lookup via GtR is wired in today; the user message
   template has a conditional section ready for this the day it's built

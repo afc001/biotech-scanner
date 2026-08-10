@@ -109,6 +109,8 @@
         <tr><td><code>interest_score_raw</code></td><td>the original text, e.g. "4 &mdash; reason..."</td></tr>
         <tr><td><code>orcid_status</code> / <code>orcid_confirmed</code></td><td>confirmed / ambiguous / no_match / NULL, and a derived 0/1 flag</td></tr>
         <tr><td><code>gtr_status</code> / <code>gtr_confirmed</code></td><td>same pattern, UKRI Gateway to Research</td></tr>
+        <tr><td><code>repeat_founder_status</code> / <code>repeat_founder_confirmed</code></td><td>same_sector_confirmed / other_sector_only / no_other_appointments_found / NULL, and a derived 0/1 flag; <b>NULL</b> means this signal didn't exist yet when the row was generated, not "checked, no match"</td></tr>
+        <tr><td><code>advisor_pattern</code></td><td>0/1, director holds several other <em>active</em> directorships at once (well-connected, but likely not day-to-day operational); same NULL-means-predates-the-signal rule as above</td></tr>
         <tr><td><code>incubator_match</code> / <code>incubator_matched</code></td><td>matched signal name + 0/1 flag; <b>NULL</b> means never checked (migrated row), <b>0</b> means checked and no match (live row)</td></tr>
         <tr><td><code>website_status</code> / <code>website_found</code></td><td>same NULL-vs-0 distinction as above</td></tr>
         <tr><td><code>search_enriched</code></td><td>0/1, whether the opt-in web-search pass ran</td></tr>
@@ -127,6 +129,7 @@
     <button data-sql="SELECT c.name, c.company_number, s.interest_score, r.run_date, c.incorporated_on&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;JOIN runs r ON r.run_id = s.run_id&#10;ORDER BY s.interest_score DESC, r.run_date DESC LIMIT 15;">Top-scored companies</button>
     <button data-sql="SELECT c.name, c.company_number, c.incorporated_on, s.orcid_status, s.gtr_status, s.interest_score&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;WHERE s.orcid_confirmed = 1 OR s.gtr_confirmed = 1&#10;ORDER BY s.interest_score DESC LIMIT 50;">Confirmed ORCID/GtR</button>
     <button data-sql="SELECT source, COUNT(*) AS n_runs, MIN(run_date) AS earliest, MAX(run_date) AS latest&#10;FROM runs GROUP BY source;">Migrated vs. live runs</button>
+    <button data-sql="SELECT c.name, c.company_number, s.interest_score, r.run_date&#10;FROM scores s JOIN companies c ON c.company_number = s.company_number&#10;JOIN runs r ON r.run_id = s.run_id&#10;WHERE s.repeat_founder_confirmed = 1&#10;ORDER BY r.run_date DESC;">Repeat founders (same sector)</button>
   </div>
 
   <textarea id="sqlBox" disabled spellcheck="false">SELECT * FROM runs ORDER BY run_date DESC LIMIT 10;</textarea>

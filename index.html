@@ -18,6 +18,8 @@
   ul.links li { margin: 0 0 12px; font-size: 19px; }
   a { color: #1a3e6e; }
   .note { font-style: italic; color: #666; font-size: 15px; margin-top: 34px; border-top: 1px solid #ddd; padding-top: 16px; }
+  .stats { color: #555; font-size: 16px; margin: 0 0 28px; }
+  .stats strong { color: #1a1a1a; }
 </style>
 </head>
 <body>
@@ -25,7 +27,9 @@
   <h1>UK Biotech Deal-Flow Scanner</h1>
   <p class="tagline">Automated screening briefs on newly incorporated UK biotech companies, generated from public filings.</p>
 
-  <p>This project generates one-page investment screening briefs on early-stage UK biotech companies, drawn from Companies House new-incorporation data (SIC 72110/72190), then cross-checked director-by-director against ORCID (academic publication record) and UKRI Gateway to Research (public grant history) &mdash; both common-name-safe, never guessing at an ambiguous match. Each brief is produced from these sources alone: where there's no supporting data, the field reads &ldquo;Not observable at this stage&rdquo; rather than inventing facts.</p>
+  <p class="stats" id="liveStats" style="display:none;"></p>
+
+  <p>This project generates one-page investment screening briefs on early-stage UK biotech companies, drawn from Companies House new-incorporation data (SIC 72110/72190), then cross-checked director-by-director against ORCID (academic publication record), UKRI Gateway to Research (public grant history), and Companies House's own officer-appointment records for a repeat-founder-in-sector signal &mdash; all common-name-safe or structurally verified, never guessing at an ambiguous match. Each brief is produced from these sources alone: where there's no supporting data, the field reads &ldquo;Not observable at this stage&rdquo; rather than inventing facts.</p>
 
   <p>Generation (structured JSON) is kept separate from presentation (this rendered digest), so the archive can be re-rendered at any time without re-running the model. The pipeline is designed to run unattended on a daily schedule.</p>
 
@@ -35,10 +39,50 @@
     <li><a href="examples.html">View example outputs &rarr;</a> <span style="font-size:15px;color:#666;">(3 real briefs run through the new web-search enrichment pass)</span></li>
     <li><a href="demo_briefs.html">View the original demo digest &rarr;</a> <span style="font-size:15px;color:#666;">(3 companies, sample format)</span></li>
     <li><a href="biotech_brief_prompt.md">View the generation prompt &amp; brief schema &rarr;</a></li>
-    <li><a href="demo_briefs.json">View the raw JSON briefs &rarr;</a></li>
+    <li><a href="demo_briefs.json">View the demo digest's raw JSON &rarr;</a> <span style="font-size:15px;color:#666;">(sample format &mdash; for real briefs, use the SQL explorer or archive above)</span></li>
+    <li><a href="https://github.com/afc001/biotech-scanner">View the source on GitHub &rarr;</a></li>
   </ul>
 
   <p class="note">Screening aids from public filings, not investment advice.</p>
 </div>
+<script src="vendor/sql-wasm.js"></script>
+<script>
+(function () {
+  // Live headline numbers pulled from the same data/scanner.db that
+  // sql_explorer.html lets you query directly -- same mechanism (sql.js,
+  // SQLite compiled to WebAssembly), reused here just to show 3 numbers.
+  // #liveStats starts hidden and ONLY becomes visible on full success; any
+  // failure (ad-blocker, old browser, network hiccup) leaves it hidden and
+  // touches nothing else on the page -- this must never look broken.
+  var statsEl = document.getElementById('liveStats');
+  if (!statsEl || typeof initSqlJs !== 'function') { return; }
+
+  function loadDatabase() {
+    return fetch('data/scanner.db', { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) { throw new Error('fetch failed'); } return r.arrayBuffer(); })
+      .then(function (buf) { return new Uint8Array(buf); });
+  }
+
+  Promise.all([
+    initSqlJs({ locateFile: function (f) { return 'vendor/' + f; } }),
+    loadDatabase(),
+  ]).then(function (res) {
+    var db = new res[0].Database(res[1]);
+    var result = db.exec(
+      'SELECT (SELECT COUNT(*) FROM companies) AS n_companies, ' +
+      '(SELECT COUNT(DISTINCT run_date) FROM runs) AS n_days, ' +
+      '(SELECT COALESCE(SUM(n_surfaced), 0) FROM runs) AS n_surfaced'
+    )[0];
+    if (!result) { return; }
+    var row = result.values[0];
+    statsEl.innerHTML = '<strong>' + row[0] + '</strong> companies screened since launch across ' +
+      '<strong>' + row[1] + '</strong> days live &middot; <strong>' + row[2] + '</strong> flagged for a closer look ' +
+      '&mdash; real numbers, pulled live from the same database you can query yourself below.';
+    statsEl.style.display = '';
+  }).catch(function () {
+    // Silent by design -- see comment above.
+  });
+})();
+</script>
 </body>
 </html>
