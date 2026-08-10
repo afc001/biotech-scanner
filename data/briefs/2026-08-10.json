@@ -1,35 +1,341 @@
 [
   {
-    "company_name": "LUCIDEM LTD",
+    "company_name": "AMBROSE HEALTHCARE (EUROPE) LTD",
     "incorporated": "2026-08-10",
-    "one_liner": "Not observable at this stage — SIC codes suggest a mix of computing, data processing, and R&D services, but no descriptive material is provided.",
+    "one_liner": "Not observable at this stage — no company website or description provided beyond registration data.",
     "science": "Not observable at this stage",
-    "stage_signal": "Day-one incorporation — no trading or product history yet",
-    "team_provenance": "Sole director Dr. Liyuan Xue; no prior company history disclosed",
-    "location_signal": "124 City Road, London, EC1V 2NX — this is a well-known mass-registration/virtual office address (used by thousands of companies), not a genuine biotech or academic cluster signal",
+    "stage_signal": "Day-one incorporation; no grant, product, or trading activity on record.",
+    "team_provenance": "Sole director Tobias Adam Wilson Waterworth, British national; no ORCID match found; no other appointments found under this officer record.",
+    "location_signal": "Registered address in Halstead, Essex — appears to be a residential or generic commercial address, not a known biotech incubator or cluster.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 (biotech R&D) indicates declared sector intent"
+    ],
+    "flags_negative": [
+      "Shell-stage company with no evidence of activity, funding, or team depth",
+      "Single director, no co-founders or scientific advisory signal",
+      "Generic non-cluster registered address",
+      "No grant or non-dilutive funding history found"
+    ],
+    "interest_score": "1 - pre-formation shell with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17390141",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "TEST247 LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "Not observable at this stage — no descriptive information provided beyond SIC codes suggesting testing/R&D activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Sole named director Jack Bradley Bentley is a REPEAT FOUNDER CONFIRMED (same sector), currently also a director at CHEM RESEARCH LTD (SIC 21100/46750/72110, active) — prior experience in a related sector (pharma/chemical manufacturing plus R&D). No ORCID match found, which is not itself informative.",
+    "location_signal": "Great Portland Street, London W1W — generic central London business address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director has active role at another company in SIC 72110 space",
+      "SIC codes span testing (71200) and R&D (72110/72190), suggesting a specialist technical focus"
+    ],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "No funding data (grant or equity)",
+      "Very recent incorporation with minimal public footprint",
+      "Generic registered address, no incubator/cluster signal"
+    ],
+    "interest_score": "2 - repeat founder in-sector is a mild positive, but total absence of science, funding, or descriptive detail makes this too early to assess",
+    "unknowns": [],
+    "company_number": "17389648",
+    "sic_codes": [
+      "71200",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 2,
+      "active_count": 2,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "STERIPOINT LIMITED",
+          "company_number": "15338944",
+          "company_status": "active",
+          "appointed_on": "2026-07-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "86900"
+          ]
+        },
+        {
+          "company_name": "CHEM RESEARCH LTD",
+          "company_number": "SC865609",
+          "company_status": "active",
+          "appointed_on": "2025-10-08",
+          "resigned_on": null,
+          "sic_codes": [
+            "21100",
+            "46750",
+            "72110"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "CHEM RESEARCH LTD",
+          "company_number": "SC865609",
+          "company_status": "active",
+          "appointed_on": "2025-10-08",
+          "resigned_on": null,
+          "sic_codes": [
+            "21100",
+            "46750",
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 2
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SINGULARY LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Single named director, Khariton Alekseevich Matveev (Grenadian nationality listed); one other prior appointment, not in target sector; no ORCID match found",
+    "location_signal": "Mappin House, Winsley Street, London — a well-known shared/serviced office and registered-agent address used by many unrelated companies, not a specialist biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market available",
+      "Generic mass-registration-style registered address, not a life-sciences hub or incubator",
+      "SIC codes (62012 software, 72190 other R&D) are broad and not specific to a life-sciences modality",
+      "No funding, grant, or non-dilutive support evidence",
+      "Single director with no sector-confirmed track record"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; incorporated too recently to assess",
+    "unknowns": [],
+    "company_number": "17389687",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PRECISIONXL LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "Not observable at this stage — no product/service description provided beyond SIC codes suggesting IT/software (72190) and human health activities (86220).",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no other evidence of traction",
+    "team_provenance": "Two academic/clinical directors. Dr Manuel Salto-Tellez has ORCID CONFIRMED (0000-0001-8586-282X) with extensive affiliations in pathology and cancer research (Queen's University Belfast, ICR, University of Oxford, University of Pennsylvania, among others) — a strong, verified academic credibility signal. Dr Peter William Hamilton holds 6 other directorships, none confirmed in the target sector (informational only). Salto-Tellez holds 2 other directorships, also none confirmed in target sector.",
+    "location_signal": "Residential-style address in Belfast (8 Everton Drive, BT6 0LJ) — not a recognisable incubator or cluster address; likely a director's home or registered agent address rather than a lab/office space.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED for Dr Manuel Salto-Tellez, with deep and verifiable academic/clinical pathology and cancer research background"
+    ],
+    "flags_negative": [
+      "No description of company activity beyond generic SIC codes",
+      "No funding data provided",
+      "Registered address is generic/residential, not a specialist cluster",
+      "Just incorporated, no operating history"
+    ],
+    "interest_score": "3 - Strong academic credibility on one founder, but no visible product, funding, or traction to assess yet",
+    "unknowns": [],
+    "company_number": "NI742822",
+    "sic_codes": [
+      "72190",
+      "86220"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-8586-282X",
+      "institutions": [
+        "Belfast Health and Social Care Trust",
+        "Coláiste Ríoga Lianna na hÉireann",
+        "National University Health System",
+        "National University Hospital",
+        "National University of Singapore",
+        "Northern Ireland Molecular Diagnostics",
+        "Northwick Park Hospital",
+        "Queen's University Belfast",
+        "Queen's University Belfast Centre for Cancer Research & Cell Biology",
+        "R-W Technischen Hochschule Aachen",
+        "Royal Marsden Hospital",
+        "St. Mary's Hospital",
+        "The Institute for Cancer Research",
+        "The Royal College of Pathologists",
+        "The Royal University of Leiden",
+        "University of Edinburgh",
+        "University of Oviedo",
+        "University of Oxford",
+        "University of Pennsylvania"
+      ]
+    },
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DUOLOGS LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "Not observable at this stage — no descriptive or website data provided beyond generic software/R&D SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one shell incorporation; no grant, product, or trading history observable",
+    "team_provenance": "Single director, Pieter Dirk de Wet, British national; no ORCID match found; no other directorships found under this officer record — no verifiable prior track record",
+    "location_signal": "Registered address is a residential-looking address in Stafford (Trent Close) — no incubator or cluster signal",
     "funding": "Not observable at this stage — no grant or investment data provided",
     "flags_positive": [],
     "flags_negative": [
-      "Generic mass-registration address, not a specialist or incubator location",
-      "No description of actual product, science, or market",
-      "SIC codes are broad/computing-oriented (62012, 63110, 63120, 72190), unclear fit for a life-sciences thesis",
-      "Single director, no visible team or track record",
-      "Incorporated with no operating history"
+      "No science, product, or market description available",
+      "Residential registered address, not a lab/incubator/cluster",
+      "Single director with no verifiable track record (academic or entrepreneurial)",
+      "Mixed SIC codes (publishing, software, consultancy) suggest an undifferentiated or unformed business model",
+      "No funding, grant, or traction data of any kind"
     ],
-    "interest_score": "1 - No verifiable science, team, or funding signal; address is a red flag for shell-company registration rather than a genuine R&D operation",
+    "interest_score": "1 - no verifiable science, team credibility, or funding signal; pure shell at this stage",
     "unknowns": [],
-    "company_number": "17389465",
+    "company_number": "17390489",
     "sic_codes": [
+      "58290",
       "62012",
-      "63110",
-      "63120",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EFRM CONSULTING LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "A newly incorporated consultancy of unclear specific focus, spanning management consultancy, R&D-adjacent, and education/training SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points yet",
+    "team_provenance": "Sole director Dr Ellen Frances Ruth Miller, British; no ORCID match found; no prior directorships found under this officer record",
+    "location_signal": "Residential/generic address in Magherafelt, Northern Ireland — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence yet of a specific product, technology, or scientific mechanism",
+      "Multiple broad/generic SIC codes (consultancy, R&D, education) suggest an undefined business model",
+      "Pre-revenue, pre-everything shell at this stage"
+    ],
+    "interest_score": "1 - too early to assess; no science, team, or funding signal beyond incorporation",
+    "unknowns": [],
+    "company_number": "NI742826",
+    "sic_codes": [
+      "70229",
+      "72190",
+      "74909",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SECONDMATTER LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "Unclear — no substantive description available; SIC codes span other manufacturing, software/IT consultancy, other business services, and admin/secretarial activities.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with a placeholder domain-parking page, no product or activity described",
+    "team_provenance": "Sole director Manav Hemal Vakil, Indian nationality, ORCID CONFIRMED (0000-0003-2928-7845) — a genuine verified academic publication record, though no institution listed; no other appointments found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a known mass-registration/virtual office address used by thousands of UK companies; not a specific biotech incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic record for sole director"
+    ],
+    "flags_negative": [
+      "No description of business activity; website is an unconfigured domain-parking placeholder",
+      "Generic mass-registration virtual office address",
+      "Mixed, non-specific SIC codes with no life-sciences code present",
+      "Company incorporated with no visible operations"
+    ],
+    "interest_score": "1 - no discernible life-sciences activity, product, or funding; just an incorporated shell with a parked domain",
+    "unknowns": [],
+    "company_number": "17390060",
+    "sic_codes": [
+      "32990",
+      "72190",
+      "74909",
+      "82920"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-2928-7845",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VECTUS LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "Unclear — Companies House SIC codes suggest motor vehicle parts/engineering or IP/tech consultancy, but no verified company-specific description exists",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue by definition",
+    "team_provenance": "CHEUNG, Wai Man — ORCID CONFIRMED, academic affiliation at City University of Hong Kong (positive credibility signal); REA, James Edward — no ORCID match, 2 other appointments held but none confirmed in target sector (uninformative)",
+    "location_signal": "111 New Union Street, Coventry — generic registered office, no obvious incubator/cluster signal observable",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic director (Cheung Wai Man, City University of Hong Kong)"
+    ],
+    "flags_negative": [
+      "Website found (vectus.com) is unrelated — it belongs to a US fixed-wireless broadband ISP ('Vectus is now Geolinks'), not this UK entity; provides zero substantive information about this company",
+      "SIC codes (29320 motor vehicle parts, 71121 engineering, 72190 R&D) are inconsistent with any inferable single business model",
+      "No product, science, or market description available from any source provided"
+    ],
+    "interest_score": "2 — one verified academic founder is a mild positive, but there is no verifiable description of what the company actually does, and the only website found is a mismatched US ISP",
+    "unknowns": [],
+    "company_number": "17389806",
+    "sic_codes": [
+      "29320",
+      "71121",
       "72190"
     ],
     "orcid_badge": {
-      "status": "ambiguous",
-      "candidate_count": 5
+      "status": "confirmed",
+      "orcid_id": "0000-0001-8717-8052",
+      "institutions": [
+        "City University of Hong Kong"
+      ]
     },
     "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
     "search_enriched": false,
     "search_sources": []
   }

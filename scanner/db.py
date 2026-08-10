@@ -66,6 +66,9 @@ CREATE TABLE IF NOT EXISTS scores (
     orcid_confirmed   INTEGER,
     gtr_status        TEXT,
     gtr_confirmed     INTEGER,
+    repeat_founder_status    TEXT,
+    repeat_founder_confirmed INTEGER,
+    advisor_pattern          INTEGER,
     incubator_match   TEXT,
     incubator_matched INTEGER,
     website_status    TEXT,
@@ -104,9 +107,31 @@ def get_connection(db_path: str | Path | None = None) -> sqlite3.Connection:
     return conn
 
 
+# Columns added to `scores` after the table was first created. CREATE TABLE
+# IF NOT EXISTS alone silently no-ops against an already-existing table and
+# never adds new columns to it -- these ALTER TABLE additions are the only
+# way an already-populated data/scanner.db picks them up without dropping
+# and recreating the table (and losing everything in it). When adding a
+# future column to `scores`, add it here too, not just in SCHEMA_SQL.
+SCORES_COLUMNS_ADDED_AFTER_CREATE = [
+    ("repeat_founder_status", "TEXT"),
+    ("repeat_founder_confirmed", "INTEGER"),
+    ("advisor_pattern", "INTEGER"),
+]
+
+
+def _migrate_schema(conn: sqlite3.Connection) -> None:
+    existing = {row[1] for row in conn.execute("PRAGMA table_info(scores)")}
+    for column, coltype in SCORES_COLUMNS_ADDED_AFTER_CREATE:
+        if column not in existing:
+            conn.execute(f"ALTER TABLE scores ADD COLUMN {column} {coltype}")
+
+
 def init_db(conn: sqlite3.Connection) -> None:
-    """Create the schema if it doesn't exist yet. Safe to call every run."""
+    """Create the schema if it doesn't exist yet, and add any columns
+    introduced after the table was first created. Safe to call every run."""
     conn.executescript(SCHEMA_SQL)
+    _migrate_schema(conn)
     conn.commit()
 
 
@@ -240,6 +265,24 @@ def insert_score(
     gtr_status = gtr_badge.get("status") if gtr_badge else None
     gtr_confirmed = 1 if gtr_status == "confirmed" else 0
 
+    # Unlike orcid_badge/gtr_badge (which predate every currently-migrated
+    # historical row, so a naive .get()-based 0 default is harmless),
+    # repeat_founder_badge/advisor_pattern are keys that simply don't exist
+    # on any brief generated before this feature -- checking key presence,
+    # not just truthiness, is what correctly gives historical rows NULL
+    # ("never checked") instead of 0 ("checked, not confirmed").
+    if "repeat_founder_badge" in brief:
+        rf_badge = brief.get("repeat_founder_badge")
+        repeat_founder_status = rf_badge.get("status") if rf_badge else None
+        repeat_founder_confirmed = 1 if repeat_founder_status == "same_sector_confirmed" else 0
+    else:
+        repeat_founder_status, repeat_founder_confirmed = None, None
+
+    if "advisor_pattern" in brief:
+        advisor_pattern = 1 if brief.get("advisor_pattern") else 0
+    else:
+        advisor_pattern = None
+
     if incubator_match is _UNSET:
         incubator_match_val, incubator_matched = None, None
     else:
@@ -262,12 +305,14 @@ def insert_score(
         INSERT INTO scores (
             company_number, run_id, interest_score, interest_score_raw,
             orcid_status, orcid_confirmed, gtr_status, gtr_confirmed,
+            repeat_founder_status, repeat_founder_confirmed, advisor_pattern,
             incubator_match, incubator_matched, website_status, website_found,
             search_enriched, surfaced, raw_response, prompt_version
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (company_number, run_id, interest_score, interest_score_raw,
          orcid_status, orcid_confirmed, gtr_status, gtr_confirmed,
+         repeat_founder_status, repeat_founder_confirmed, advisor_pattern,
          incubator_match_val, incubator_matched,
          website_status_val, website_found,
          search_enriched, int(bool(surfaced)), json.dumps(brief), prompt_version),

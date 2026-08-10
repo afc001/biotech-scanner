@@ -23,7 +23,7 @@ Rules:
 
 ## Rules appended at runtime (NOT in the fenced block above)
 
-`scanner/generate.py`'s `load_prompt()` appends two more rules to the
+`scanner/generate.py`'s `load_prompt()` appends several more rules to the
 system prompt in code, after the schema. They're not in the fenced
 block above because they reference config values / exact enrichment
 wording that only make sense assembled in Python — but they ARE sent
@@ -46,6 +46,20 @@ manual run will silently behave differently from the pipeline:
   unverified" note (common name, too many candidates to confirm) must
   be treated as inconclusive — neither a positive nor a negative
   signal, and not mentioned in either flags list at all.
+- **Repeat-founder scoring rule (same sector):** a director note reading
+  "REPEAT FOUNDER CONFIRMED (same sector)" means Companies House's own
+  officer-appointment records confirm this director holds/held another
+  directorship at a company in the same target sector — MUST be named
+  in `flags_positive` and MUST raise `interest_score`, same strength as
+  the ORCID/GtR rule above. Absence of other appointments, or
+  appointments outside the target sector, must NOT lower the score —
+  most first-time founders genuinely have none.
+- **Repeat-founder scoring rule (advisor/portfolio pattern):** a director
+  note reading "ADVISOR PATTERN" means this director holds
+  `config.REPEAT_FOUNDER_ADVISOR_THRESHOLD` (currently 4) or more other
+  *active* directorships at once — an explicitly two-sided signal
+  (well-connected, but likely not day-to-day operational here), woven
+  into `team_provenance`/`stage_signal` rather than either flags list.
 - **Website rule:** if a COMPANY WEBSITE section is present (a real
   live site was found — see `scanner/website.py`), treat it as
   genuine first-party company communication and use it substantively

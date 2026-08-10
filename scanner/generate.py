@@ -70,6 +70,34 @@ def load_prompt() -> tuple[str, str]:
         f"anything. And a note reading \"possible matches, unverified\" is inconclusive by "
         f"construction (the name was too common to confirm) — do not treat it as either a positive "
         f"or a negative signal; do not mention it in flags_positive or flags_negative at all.\n\n"
+        f"Repeat-founder scoring rule (same sector): a director note reading \"REPEAT FOUNDER "
+        f"CONFIRMED (same sector)\" means we independently verified, via Companies House's own "
+        f"officer-appointment records (not a name guess), that this director holds or held another "
+        f"directorship at a company in the same target sector (SIC {', '.join(config.SIC_CODES)}) "
+        f"this scanner covers, excluding the company being scanned itself. Treat this as a real, "
+        f"meaningful positive credibility signal — prior experience actually building a company in "
+        f"this exact sector. It MUST be named in flags_positive and MUST raise interest_score versus "
+        f"an otherwise-identical company with no such confirmation. Conversely: do NOT lower "
+        f"interest_score or add a flags_negative entry just because a director has no other "
+        f"appointments, or only appointments outside the target sector — most legitimate first-time "
+        f"founders genuinely have no prior directorships at all, and Companies House can split the "
+        f"same real person across multiple different officer records for reasons that are not fully "
+        f"documented, so a \"no other appointments found\" note is not proof of first-time-founder "
+        f"status, only that none were found under this specific officer record. A note reading \"N "
+        f"other appointment(s), none confirmed in target sector\" is informational only — do not "
+        f"treat it as either a positive or a negative signal, and do not mention it in flags_positive "
+        f"or flags_negative.\n\n"
+        f"Repeat-founder scoring rule (advisor/portfolio pattern): a director note reading \"ADVISOR "
+        f"PATTERN\" means this director currently holds {config.REPEAT_FOUNDER_ADVISOR_THRESHOLD} or "
+        f"more other active directorships at once — a genuinely two-sided signal, NOT a simple "
+        f"positive or negative, and NOT a flags_positive/flags_negative mandate like the rule above. "
+        f"It suggests the director is well-connected and well-regarded (worth naming positively) but "
+        f"also unlikely to be closely involved in this company's day-to-day running (a caveat worth "
+        f"naming alongside it, not a red flag on its own) — weave both sides into team_provenance or "
+        f"stage_signal, in whichever direction the rest of the evidence points, rather than adding it "
+        f"to either flags list. As above, a director with fewer other active appointments than this "
+        f"threshold is not evidence of anything — most legitimate founders simply have few or no "
+        f"other directorships.\n\n"
         f"Website rule: if a COMPANY WEBSITE section is present, treat it as genuine first-party "
         f"company communication (not hearsay, not to be second-guessed) and USE it substantively in "
         f"one_liner/science/stage_signal/funding wherever it actually answers that field -- do NOT "
@@ -123,42 +151,97 @@ def _format_gtr(gtr_result: dict | None) -> str | None:
     return None  # unparseable_name / lookup_failed — not worth surfacing
 
 
+def _format_repeat_founder(rf_result: dict | None) -> str | None:
+    """Render a repeat_founder.lookup_director() result as a short factual
+    note, or None if there's nothing worth saying (no appointments link /
+    lookup failed -- a data-quality gap, not a fact about the director).
+    Composes the sector-match note and the advisor-pattern note into one
+    string when both apply, since they're independent facts about the same
+    officer."""
+    if not rf_result:
+        return None
+    status = rf_result.get("status")
+    if status in ("no_appointments_link", "lookup_failed"):
+        return None
+
+    parts = []
+    if status == "same_sector_confirmed":
+        matches = rf_result.get("same_sector_matches") or []
+        best_match = next((m for m in matches if not m.get("resigned_on")), matches[0]) if matches else None
+        if best_match:
+            state = "active" if not best_match.get("resigned_on") else f"resigned {best_match['resigned_on']}"
+            sic = "/".join(best_match.get("sic_codes") or [])
+            extra = f", {len(matches) - 1} more" if len(matches) > 1 else ""
+            parts.append(
+                f"REPEAT FOUNDER CONFIRMED (same sector) — director at "
+                f"{best_match.get('company_name', '')} (SIC {sic}, {state}){extra}"
+            )
+    elif status == "other_sector_only":
+        n = rf_result.get("total_results", 0)
+        cap_note = " (not all checked — high appointment count)" if rf_result.get("sic_lookup_capped") else ""
+        parts.append(f"Repeat founder: {n} other appointment(s), none confirmed in target sector{cap_note}")
+    elif status == "no_other_appointments_found":
+        parts.append("Repeat founder: no other appointments found under this officer record")
+
+    active = rf_result.get("active_count", 0)
+    if active >= config.REPEAT_FOUNDER_ADVISOR_THRESHOLD:
+        parts.append(f"ADVISOR PATTERN: {active} other active director appointments")
+
+    return " | ".join(parts) if parts else None
+
+
 def _badge_summary(officers: list[dict]) -> dict:
-    """Compute one best-case ORCID/GtR badge status across all of a company's
-    officers, for the visible badge on the rendered digest page.
+    """Compute one best-case badge status per source across all of a
+    company's officers, for the visible badges on the rendered digest page.
 
     Derived directly from the enrichment results attached to each officer
-    (not the model's prose) so the badge can never hallucinate or drift out
-    of sync with what orcid.py/gtr.py actually found -- same reasoning as
-    _format_orcid()/_format_gtr() being the single source of truth for the
-    prompt text.
-
-    Priority per source: confirmed > ambiguous with <=10 candidates (still
-    "a human could resolve it") > everything else (no_match / a too-common
-    ambiguous match / unparseable / lookup failed / no result at all), which
-    all collapse to "no badge" -- matches the existing philosophy of silence
-    over clutter for weak signals.
+    (not the model's prose) so a badge can never hallucinate or drift out
+    of sync with what orcid.py/gtr.py/repeat_founder.py actually found --
+    same reasoning as the _format_*() functions being the single source of
+    truth for the prompt text.
     """
 
-    def best(source: str) -> dict | None:
+    def best(source: str, rank_fn) -> dict | None:
         best_result, best_rank = None, -1
         for o in officers or []:
             result = o.get(source)
             if not result:
                 continue
-            status = result.get("status")
-            if status == "confirmed":
-                rank = 2
-            elif status == "ambiguous" and isinstance(result.get("candidate_count"), int) \
-                    and result["candidate_count"] <= 10:
-                rank = 1
-            else:
-                rank = 0
+            rank = rank_fn(result)
             if rank > best_rank:
                 best_rank, best_result = rank, result
         return best_result if best_rank > 0 else None
 
-    return {"orcid": best("orcid"), "gtr": best("gtr")}
+    def orcid_gtr_rank(result: dict) -> int:
+        # confirmed > ambiguous with <=10 candidates (still "a human could
+        # resolve it") > everything else, which collapses to "no badge" --
+        # silence over clutter for weak signals.
+        status = result.get("status")
+        if status == "confirmed":
+            return 2
+        if status == "ambiguous" and isinstance(result.get("candidate_count"), int) \
+                and result["candidate_count"] <= 10:
+            return 1
+        return 0
+
+    def repeat_founder_rank(result: dict) -> int:
+        if result.get("status") == "same_sector_confirmed":
+            return 2
+        if (result.get("active_count") or 0) >= config.REPEAT_FOUNDER_ADVISOR_THRESHOLD:
+            return 1
+        return 0
+
+    return {
+        "orcid": best("orcid", orcid_gtr_rank),
+        "gtr": best("gtr", orcid_gtr_rank),
+        "repeat_founder": best("repeat_founder", repeat_founder_rank),
+        # Company-wide, not "the one officer the badge picked" -- any
+        # officer meeting the threshold makes this true.
+        "advisor_pattern": any(
+            (o.get("repeat_founder") or {}).get("active_count", 0) >= config.REPEAT_FOUNDER_ADVISOR_THRESHOLD
+            for o in officers or []
+        ),
+    }
 
 
 def _format_officers(officers: list[dict]) -> str:
@@ -179,6 +262,9 @@ def _format_officers(officers: list[dict]) -> str:
         gtr_note = _format_gtr(o.get("gtr"))
         if gtr_note:
             bits.append(gtr_note)
+        repeat_founder_note = _format_repeat_founder(o.get("repeat_founder"))
+        if repeat_founder_note:
+            bits.append(repeat_founder_note)
         parts.append(" — ".join(b for b in bits if b))
     return "; ".join(parts)
 
@@ -340,6 +426,8 @@ def generate_brief(record: dict, client: Anthropic, system: str, template: str) 
             badges = _badge_summary(record.get("officers", []))
             brief["orcid_badge"] = badges["orcid"]
             brief["gtr_badge"] = badges["gtr"]
+            brief["repeat_founder_badge"] = badges["repeat_founder"]
+            brief["advisor_pattern"] = badges["advisor_pattern"]
             return brief
         except (ValueError, json.JSONDecodeError) as e:
             last_error = e
@@ -411,6 +499,8 @@ def enrich_with_web_search(record: dict, brief: dict, client: Anthropic, system:
         badges = _badge_summary(record.get("officers", []))
         enriched["orcid_badge"] = badges["orcid"]
         enriched["gtr_badge"] = badges["gtr"]
+        enriched["repeat_founder_badge"] = badges["repeat_founder"]
+        enriched["advisor_pattern"] = badges["advisor_pattern"]
         enriched["search_enriched"] = True
         enriched["search_sources"] = _extract_sources(message)
         return enriched

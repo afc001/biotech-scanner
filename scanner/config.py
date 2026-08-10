@@ -71,6 +71,29 @@ FETCH_GTR = os.getenv("SCANNER_FETCH_GTR", "1") == "1"
 # if you'd rather not make the extra HTTP calls.
 FETCH_WEBSITE = os.getenv("SCANNER_FETCH_WEBSITE", "1") == "1"
 
+# --- Companies House officer-appointments repeat-founder check -------------
+# No API key needed -- reuses the same CH_API_KEY basic auth as everything
+# else in fetch.py. Every officer already returned by /company/{number}/
+# officers carries a links.officer.appointments URL to that person's full
+# appointment history across every company they've ever directed -- this
+# follows it to check for a prior/current directorship in the same target
+# sector (SIC_CODES). Free, no registration, on by default like ORCID/GtR.
+FETCH_REPEAT_FOUNDER = os.getenv("SCANNER_FETCH_REPEAT_FOUNDER", "1") == "1"
+
+# A director with this many or more CURRENT/active other directorships
+# (excluding the company being scanned) is flagged as an "advisor pattern"
+# -- well-connected, but likely not day-to-day operational here. Its own
+# named, env-overridable constant so it can be retuned without a code change.
+REPEAT_FOUNDER_ADVISOR_THRESHOLD = int(os.getenv("SCANNER_REPEAT_FOUNDER_ADVISOR_THRESHOLD", "4"))
+
+# Cap on how many of a director's other companies get a full company-profile
+# lookup (to read sic_codes and confirm a same-sector match). Protects
+# against a request-volume spike on a professional/nominee director listed
+# at dozens or hundreds of shell companies -- beyond this cap we stop
+# fetching SIC codes, but the raw appointment count is still surfaced as a
+# "professional/nominee director pattern" note, never silently truncated.
+REPEAT_FOUNDER_SIC_LOOKUP_CAP = int(os.getenv("SCANNER_REPEAT_FOUNDER_SIC_CAP", "10"))
+
 # --- Web-search enrichment (optional second Claude pass, real cost) --------
 # Uses Claude's own built-in web_search tool ($10/1,000 searches + normal
 # token cost -- see https://platform.claude.com/docs for the current price)

@@ -152,6 +152,10 @@ def main() -> None:
     print("  runs:      n_fetched, n_sic_matched, n_address_matched, prompt_version, git_sha")
     print("  companies: registered_address, website, website_status")
     print("  scores:    incubator_match, incubator_matched, website_status, website_found")
+    print()
+    print("Also NULL for all migrated rows (a different reason: this signal didn't exist")
+    print("yet when they were generated, not just unpersisted):")
+    print("  scores:    repeat_founder_status, repeat_founder_confirmed, advisor_pattern")
 
 
 if __name__ == "__main__":

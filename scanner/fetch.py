@@ -18,7 +18,7 @@ from datetime import date, timedelta
 
 import requests
 
-from . import config, gtr, orcid, website
+from . import config, gtr, orcid, repeat_founder, website
 
 SEARCH_URL = f"{config.CH_API_BASE}/advanced-search/companies"
 PAGE_SIZE = 100  # advanced search allows up to 5000; 100 keeps responses small
@@ -88,6 +88,10 @@ def fetch_officers(company_number: str) -> list[dict]:
                 "occupation": o.get("occupation", ""),
                 "nationality": o.get("nationality", ""),
                 "dob": f"{dob.get('month', '')}/{dob.get('year', '')}".strip("/"),
+                # Path to this officer's own appointment history across
+                # every company they've ever directed -- see
+                # repeat_founder.py, which follows this link.
+                "appointments_link": o.get("links", {}).get("officer", {}).get("appointments", ""),
             }
         )
     return officers
@@ -205,6 +209,8 @@ def get_new_companies() -> tuple[list[dict], dict]:
             print(f"  ORCID enrichment: {'enabled' if orcid.enabled() else 'skipped (ORCID_CLIENT_ID/SECRET not set)'}")
         if config.FETCH_GTR:
             print("  GtR enrichment: enabled")
+        if config.FETCH_REPEAT_FOUNDER:
+            print("  Repeat-founder enrichment: enabled")
         for record in new_companies:
             record["officers"] = fetch_officers(record["company_number"])
             if config.FETCH_ORCID:
@@ -217,6 +223,13 @@ def get_new_companies() -> tuple[list[dict], dict]:
                 for o in record["officers"]:
                     if "gtr" in o:
                         print(f"    GtR lookup: {o.get('name', '')} -> {o['gtr'].get('status')}")
+            if config.FETCH_REPEAT_FOUNDER:
+                record["officers"] = repeat_founder.enrich_officers(
+                    record["officers"], record["company_number"]
+                )
+                for o in record["officers"]:
+                    if "repeat_founder" in o:
+                        print(f"    Repeat-founder lookup: {o.get('name', '')} -> {o['repeat_founder'].get('status')}")
 
     if config.FETCH_WEBSITE:
         # Independent of FETCH_OFFICERS -- this is a company-level check

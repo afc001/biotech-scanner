@@ -191,6 +191,39 @@ def _badge_md(source_label: str, result: dict | None) -> str:
     return ""
 
 
+def _repeat_founder_badge_html(rf_result: dict | None) -> str:
+    """Pill badge for a confirmed same-sector repeat-founder match, mirroring
+    _badge_html()'s green-tick styling. Silent for every other status --
+    same silence-over-clutter philosophy as the ORCID/GtR badges."""
+    if not rf_result or rf_result.get("status") != "same_sector_confirmed":
+        return ""
+    matches = rf_result.get("same_sector_matches") or []
+    names = ", ".join(m.get("company_name", "") for m in matches) or "another company in this sector"
+    title = f"Repeat founder (same sector) — {names}"
+    return f'<span class="pill pill-confirmed" title="{_esc(title)}">Repeat Founder &#10003;</span>'
+
+
+def _repeat_founder_badge_md(rf_result: dict | None) -> str:
+    if not rf_result or rf_result.get("status") != "same_sector_confirmed":
+        return ""
+    return " [Repeat Founder ✓]"
+
+
+def _advisor_pattern_badge_html(b: dict) -> str:
+    """Pill badge for the advisor/portfolio-pattern signal (a director with
+    several other active directorships at once). Amber, like the
+    ambiguous-match badges, since it's an explicitly two-sided signal, not
+    a simple positive."""
+    if not b.get("advisor_pattern"):
+        return ""
+    return ('<span class="pill pill-ambiguous" '
+            'title="Director(s) hold several other active directorships">Advisor Pattern</span>')
+
+
+def _advisor_pattern_badge_md(b: dict) -> str:
+    return " [Advisor Pattern]" if b.get("advisor_pattern") else ""
+
+
 def _search_badge_html(b: dict) -> str:
     """Small pill marking a brief that went through the gated web-search
     enrichment pass (see generate.enrich_with_web_search / WEB_SEARCH_SPEC.md).
@@ -220,7 +253,8 @@ def _sources_md(b: dict) -> str:
 def _company_html(b: dict) -> str:
     s = score_int(b.get("interest_score", ""))
     badges_html = (_badge_html("ORCID", b.get("orcid_badge")) + _badge_html("GtR", b.get("gtr_badge"))
-                   + _search_badge_html(b))
+                   + _repeat_founder_badge_html(b.get("repeat_founder_badge"))
+                   + _advisor_pattern_badge_html(b) + _search_badge_html(b))
     incorporated = _esc(b.get("incorporated", ""))
     # data-score/data-incorporated feed the toolbar's client-side score
     # filter and "group by week" toggle (see TOOLBAR_HTML) -- purely a
@@ -263,7 +297,8 @@ def _search_badge_md(b: dict) -> str:
 def _company_md(b: dict) -> str:
     s = score_int(b.get("interest_score", ""))
     badges_md = (_badge_md("ORCID", b.get("orcid_badge")) + _badge_md("GtR", b.get("gtr_badge"))
-                 + _search_badge_md(b))
+                 + _repeat_founder_badge_md(b.get("repeat_founder_badge"))
+                 + _advisor_pattern_badge_md(b) + _search_badge_md(b))
     lines = [f'## {b["company_name"]} — Interest {s} / 5{badges_md}', "",
              f'> {b.get("one_liner", "")}', "",
              f'**Incorporated:** {b.get("incorporated","")} · **SIC:** {", ".join(b.get("sic_codes", [])) or "—"}', ""]
@@ -300,6 +335,9 @@ def render_digest(briefs: list[dict], run_date: date | None = None) -> dict:
     html_body = HTML_HEAD.format(title=_esc(title))
     legend = ('ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · '
               'ORCID? / GtR? = possible match, unverified — common name, worth a manual check · '
+              'Repeat Founder ✓ = confirmed prior/current directorship at another company in this '
+              'sector (hover for detail) · Advisor Pattern = director holds several other active '
+              'directorships — well-connected, but likely not day-to-day operational here · '
               '🔍 Web-verified = re-checked with a live web search (see Sources on that brief)')
     html_body += (f'<h1>{_esc(title)}</h1><p class="meta">{_esc(meta)}</p>'
                   f'<p class="legend">{_esc(legend)}</p><hr>')
