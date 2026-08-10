@@ -1,0 +1,36 @@
+[
+  {
+    "company_name": "LUCIDEM LTD",
+    "incorporated": "2026-08-10",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of computing, data processing, and R&D services, but no descriptive material is provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading or product history yet",
+    "team_provenance": "Sole director Dr. Liyuan Xue; no prior company history disclosed",
+    "location_signal": "124 City Road, London, EC1V 2NX — this is a well-known mass-registration/virtual office address (used by thousands of companies), not a genuine biotech or academic cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not a specialist or incubator location",
+      "No description of actual product, science, or market",
+      "SIC codes are broad/computing-oriented (62012, 63110, 63120, 72190), unclear fit for a life-sciences thesis",
+      "Single director, no visible team or track record",
+      "Incorporated with no operating history"
+    ],
+    "interest_score": "1 - No verifiable science, team, or funding signal; address is a red flag for shell-company registration rather than a genuine R&D operation",
+    "unknowns": [],
+    "company_number": "17389465",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "63120",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 5
+    },
+    "gtr_badge": null,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
