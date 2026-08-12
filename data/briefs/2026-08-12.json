@@ -1,0 +1,732 @@
+[
+  {
+    "company_name": "PREVAIL BIO LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no operational or product detail beyond generic registration data.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with future/forward-dated registration; pre-operational shell at this point",
+    "team_provenance": "Single director, British national. No ORCID match found (not a negative signal — most founders have none). 2 other appointments held, none confirmed in target sector (SIC 72110/72190) — informational only, not a positive or negative signal.",
+    "location_signal": "128 City Road, London, EC1V 2NX — a well-known mass company-formation/virtual-office address, not a specialist biotech incubator. Generic signal, not a cluster indicator.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or business description available",
+      "Registered address is a generic mass-registration address, not a life-sciences cluster or incubator",
+      "SIC mix (software/consultancy/computer programming plus computer consultancy) does not clearly indicate a biotech/life-sciences operation",
+      "Single-director structure with no team depth visible"
+    ],
+    "interest_score": "1 - no verifiable science, team depth, funding, or location signal; nothing here to differentiate from a generic shell company",
+    "unknowns": [],
+    "company_number": "17393443",
+    "sic_codes": [
+      "62012",
+      "70229",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AXOLYRA LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no company description or website provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no evidence of trading or product yet",
+    "team_provenance": "Two directors (one also acting as secretary), both Sri Lankan nationals; no ORCID matches, no confirmed prior directorships in this sector",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual-office address, not a life-sciences cluster or incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered at a generic mass-incorporation virtual office address, not a specialist cluster",
+      "SIC codes are broad/mixed (manufacturing, real estate, IT consultancy, other professional services) rather than a clear biotech/pharma classification",
+      "No science, product, or funding detail available",
+      "No verifiable academic or repeat-founder credentials for either director"
+    ],
+    "interest_score": "1 - No verifiable science, funding, or credible signal; generic formation-agent address and mixed SIC codes suggest a shell or unrelated venture",
+    "unknowns": [],
+    "company_number": "17394333",
+    "sic_codes": [
+      "26600",
+      "71122",
+      "72110",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BASET PHARMA LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no product, platform, or market description provided beyond SIC codes suggesting pharma manufacturing/wholesale and R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data yet",
+    "team_provenance": "Sole director Ahmed Somaida, Egyptian national, ORCID-confirmed academic (Philipp University of Marburg) and a confirmed repeat founder — already director of BASET FOR PHARMACEUTICALS LIMITED, an active company in the same sector (SIC 46460/72110/72190/86102). This entity appears to be a related or successor vehicle to that existing company.",
+    "location_signal": "Residential flat address in Pimlico, London — generic, not a lab or incubator address",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic affiliation (Philipp University of Marburg)",
+      "REPEAT FOUNDER CONFIRMED (same sector) — director at existing active pharma company with matching SIC codes"
+    ],
+    "flags_negative": [
+      "No science, product, or business description available",
+      "Residential registered address, not a specialist or lab facility",
+      "Unclear relationship/purpose relative to the pre-existing sister company (BASET FOR PHARMACEUTICALS LIMITED) — could be a shell, rebrand, or genuine new venture"
+    ],
+    "interest_score": "3 - credible repeat founder with academic pedigree, but zero disclosed substance on what this specific new entity does",
+    "unknowns": [],
+    "company_number": "17393777",
+    "sic_codes": [
+      "21100",
+      "46460",
+      "72110",
+      "86102"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-1011-0652",
+      "institutions": [
+        "Philipp University of Marburg"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "BASET FOR PHARMACEUTICALS LIMITED",
+          "company_number": "16178465",
+          "company_status": "dissolved",
+          "appointed_on": "2025-01-13",
+          "resigned_on": null,
+          "sic_codes": [
+            "46460",
+            "72110",
+            "72190",
+            "86102"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "BASET FOR PHARMACEUTICALS LIMITED",
+          "company_number": "16178465",
+          "company_status": "dissolved",
+          "appointed_on": "2025-01-13",
+          "resigned_on": null,
+          "sic_codes": [
+            "46460",
+            "72110",
+            "72190",
+            "86102"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MABICON BIOSOLUTIONS LIMITED",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC classification for biotech research.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Sole director/secretary is the same individual (Veena Sreenath); no ORCID match, no prior directorships found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a known mass-registration/virtual office address, not a genuine biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72110 (biotechnology R&D) classification"
+    ],
+    "flags_negative": [
+      "Generic mass-incorporation registered address, not a lab or incubator",
+      "Single-person company with no external validation of expertise",
+      "No grant funding, publications, or product/platform information available",
+      "Incorporated only very recently — essentially a shell at this point"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or location signal; indistinguishable from a shelf company",
+    "unknowns": [],
+    "company_number": "17392793",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PIONEER PEPTIDES LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Sells research-grade peptides (research use only) to laboratories, with third-party purity testing and UK dispatch.",
+    "science": "Not a drug discovery or platform play — appears to be a peptide supply/distribution business, sourcing or synthesising peptides and verifying purity via HPLC/mass-spec. No proprietary science or IP indicated.",
+    "stage_signal": "Day-one incorporation with an already-live commercial website (catalogue, quotes, shop) — suggests this is a trading/e-commerce launch rather than a pre-revenue R&D company.",
+    "team_provenance": "Sole director David Fergus Milligan, British, no ORCID match, no other appointments found under this officer record. No visible academic or prior-company background.",
+    "location_signal": "66 Paul Street, London EC2A — a well-known generic company-formation/serviced-office address (widely used by shell and newly-incorporated companies), not a lab or science-cluster address.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live commercial website with defined product catalogue and stated QC process (CoA, HPLC/MS)"
+    ],
+    "flags_negative": [
+      "Generic mass-registration address inconsistent with a lab-based operation",
+      "No evidence of proprietary science, IP, or platform — reads as a commodity reseller",
+      "Explicit disclaimer: not for therapeutic/diagnostic use, ruling out drug development angle",
+      "No team credentials or prior track record found",
+      "SIC code (72110) mismatches the actual business, which is product sales not R&D"
+    ],
+    "interest_score": "1 - commodity peptide reseller with no R&D, IP, or credible founder signal; not a venture-scale biotech play",
+    "unknowns": [],
+    "company_number": "17392936",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EUROPEAN ACADEMY OF SCIENCES AND HUMANITIES",
+    "incorporated": "2026-08-11",
+    "one_liner": "Newly incorporated entity described as an academy spanning sciences and humanities, with no biotech-specific detail disclosed.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; future-dated record with no operational history",
+    "team_provenance": "Single named director, Dr Bizhang Yang; no ORCID match found; 3 other appointments held but none confirmed in the life-sciences/software target sector",
+    "location_signal": "128 City Road, London — a well-known mass-registration/virtual office address, not a specialist biotech or academic cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic virtual-office registered address, no cluster/incubator signal",
+      "SIC codes and name suggest an academic/membership body rather than a biotech operating company",
+      "No science, product, or funding data disclosed",
+      "No target-sector experience confirmed for the director"
+    ],
+    "interest_score": "1 - no discernible biotech activity, thesis, or team signal; appears to be a non-commercial academy-style entity",
+    "unknowns": [],
+    "company_number": "17393809",
+    "sic_codes": [
+      "72190",
+      "72200",
+      "85590",
+      "94990"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GREEN EFUELS TECHNOLOGY LIMITED",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no company website or descriptive filing text provided beyond SIC codes suggesting engineering/energy consultancy and R&D activities.",
+    "science": "Not observable at this stage — SIC codes (71122 engineering design, 72190 other R&D) imply technical/engineering focus but no mechanism or technology detail is given despite the name referencing e-fuels.",
+    "stage_signal": "Day-one incorporation (Aug 2026, i.e. brand new entity at time of filing) with no grant or trading history yet.",
+    "team_provenance": "Three British directors. Chetan Laddha has an ORCID-confirmed academic record and is a REPEAT FOUNDER CONFIRMED in the same sector (director at Transformational Energy Limited, SIC 71122/72190), but also shows an ADVISOR PATTERN with 4 other active directorships — suggests strong sector credibility but likely limited day-to-day involvement here. Christopher William Smith has an ORCID-confirmed record with University of Groningen affiliation, no other appointments found. Barrie Thomas has no ORCID match and other appointments outside the target sector.",
+    "location_signal": "Suite address in Glasgow — a serviced-office/registered-agent style suite, not a known biotech incubator or cluster; generic signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED for two directors (Laddha, Smith)",
+      "REPEAT FOUNDER CONFIRMED (same sector) for Laddha, prior directorship at a similarly-coded energy/engineering company",
+      "Academic affiliation (University of Groningen) for Smith"
+    ],
+    "flags_negative": [
+      "No description of technology, product, or market anywhere in the record",
+      "No funding (grant or equity) evidence",
+      "Very recent incorporation with no operational history",
+      "Generic registered office with no sector cluster signal"
+    ],
+    "interest_score": "3 - repeat-founder and ORCID signals are genuine positives, but total absence of any science, product, or funding detail makes this pre-diligence-ready at best",
+    "unknowns": [],
+    "company_number": "SC898854",
+    "sic_codes": [
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-3312-5902",
+      "institutions": []
+    },
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 5,
+      "active_count": 4,
+      "resigned_count": 1,
+      "other_companies": [
+        {
+          "company_name": "TRANSFORMATIONAL ENERGY LIMITED",
+          "company_number": "14115095",
+          "company_status": "active",
+          "appointed_on": "2026-04-25",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "71122",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "CAPTAIN ENERGY LTD",
+          "company_number": "SC772984",
+          "company_status": "active",
+          "appointed_on": "2023-06-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "71122",
+            "72190",
+            "74909"
+          ]
+        },
+        {
+          "company_name": "BIOFOUNDRY INNOVATIONS LTD",
+          "company_number": "SC754465",
+          "company_status": "active",
+          "appointed_on": "2023-01-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "71122",
+            "72110",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "SAVITR INNOVATION LIMITED",
+          "company_number": "10944444",
+          "company_status": "dissolved",
+          "appointed_on": "2021-01-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "41100",
+            "68100",
+            "68209",
+            "74909"
+          ]
+        },
+        {
+          "company_name": "GREEN H2 HUB LTD",
+          "company_number": "SC803302",
+          "company_status": "dissolved",
+          "appointed_on": "2024-03-17",
+          "resigned_on": "2024-09-10",
+          "sic_codes": [
+            "71122",
+            "74909"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "TRANSFORMATIONAL ENERGY LIMITED",
+          "company_number": "14115095",
+          "company_status": "active",
+          "appointed_on": "2026-04-25",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "71122",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "CAPTAIN ENERGY LTD",
+          "company_number": "SC772984",
+          "company_status": "active",
+          "appointed_on": "2023-06-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "71122",
+            "72190",
+            "74909"
+          ]
+        },
+        {
+          "company_name": "BIOFOUNDRY INNOVATIONS LTD",
+          "company_number": "SC754465",
+          "company_status": "active",
+          "appointed_on": "2023-01-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "71122",
+            "72110",
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 5
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "METHANE BRIEF CIC",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no description of activities beyond a generic R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, CIC structure (community interest company, not a standard VC-fundable equity vehicle)",
+    "team_provenance": "No directors listed or fetched — cannot assess",
+    "location_signal": "Residential flat address in London, no incubator/cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "CIC legal form — asset lock and non-distributable profits make it unsuitable for standard equity investment",
+      "No directors listed — cannot verify team credibility",
+      "Residential address, not a lab/incubator/cluster location",
+      "No description of science, product, or market",
+      "Incorporation date appears to be in the future relative to typical filing — data quality concern"
+    ],
+    "interest_score": "1 - CIC structure is a poor fit for VC; no team, science, or funding data to assess",
+    "unknowns": [],
+    "company_number": "17394898",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LUMENROBOTICS LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no descriptive detail beyond a name implying robotics/optics.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points",
+    "team_provenance": "Sole director Adelin-Laurentiu Pop, British national. No ORCID match found. No other appointments found under this officer record.",
+    "location_signal": "Residential-looking address in Camberley — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No information on product, science, or market",
+      "Sole director with no track record found",
+      "Generic residential registered address",
+      "Incorporation too recent to show any traction"
+    ],
+    "interest_score": "1 - shell-stage registration with no substantive information to assess",
+    "unknowns": [],
+    "company_number": "17392562",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ENTANGLED LABS LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Website describes the company as a mobile game developer (iOS arcade/puzzle game 'Mach Block') — inconsistent with SIC codes suggesting computer consultancy/other tech.",
+    "science": "Not observable at this stage — no life-sciences mechanism, platform, or modality described anywhere in the provided data.",
+    "stage_signal": "Day-one incorporation (dated 2026, likely a forward/placeholder date); website content appears to be unrelated legacy or template material, not describing a biotech venture.",
+    "team_provenance": "Sole director Mariia Baidachna, Ukrainian national, ORCID CONFIRMED with University of Glasgow affiliation — a real, verified academic record. No other directorships found under this officer record.",
+    "location_signal": "97 Queen's Gate, London SW7 5AB — a serviced-office/virtual-office address near Imperial College; not a recognised life-sciences incubator.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic affiliation (University of Glasgow)"
+    ],
+    "flags_negative": [
+      "Website content describes a mobile game studio, not a life-sciences or biotech business — total mismatch with fund's mandate",
+      "SIC codes (62012 computer consultancy, 72190 other R&D) do not indicate any biotech/life-sciences activity",
+      "Incorporation date (2026) appears anomalous/future-dated",
+      "No science, product, or platform described anywhere relevant to life sciences"
+    ],
+    "interest_score": "1 - no evidence of any life-sciences activity; appears to be a mismatched or irrelevant company for this fund's mandate",
+    "unknowns": [],
+    "company_number": "17394827",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0005-7705-8520",
+      "institutions": [
+        "University of Glasgow"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DROM RESEARCH LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no website or description provided; SIC mix suggests software/IT services with a research or training component.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no evidence of activity yet",
+    "team_provenance": "Sole director Bogdan Traian Nuti, Romanian national. No ORCID match, no other directorships found under this officer record — no verifiable prior track record either way.",
+    "location_signal": "Registered address in Dagenham — generic residential/commercial address, not a known incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No trading history — incorporated with future date, effectively pre-operational",
+      "Mixed SIC codes (62012, 62090, 72190, 85590) suggest unclear or unfocused business model",
+      "No funding, grant, or product evidence of any kind"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or activity signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17394575",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FIN THERM TECHNOLOGY LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no company description or website provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Single director, Mohammed Fazin Kareem; no ORCID match found; no other appointments found under this officer record — neither fact is meaningful either way",
+    "location_signal": "Residential address in Chellaston, Derby — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Very early — incorporated with no visible activity, product, or funding",
+      "SIC 71122 (engineering) paired with 72190 (R&D) is a broad, non-specific combination that doesn't clarify what the company does",
+      "Single-director structure with no further evidence of traction"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, funding, or team credibility signals",
+    "unknowns": [],
+    "company_number": "17392575",
+    "sic_codes": [
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GENBLOK TECHNOLOGIES LIMITED",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no company website or description provided; SIC codes suggest electrical control apparatus manufacturing plus scientific R&D",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or product data available",
+    "team_provenance": "Sole director Amir Golad, British national; holds 2 other appointments, none confirmed in target sector; no ORCID record found",
+    "location_signal": "Registered address is a shared/serviced office building (Hampstead West) — generic, not a recognised life-sciences incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or website information available",
+      "Very recent incorporation with no operating history",
+      "Registered address appears to be a generic serviced-office, not a specialist cluster",
+      "SIC codes (electrical apparatus manufacturing + R&D) don't clearly indicate a life-sciences focus"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, or funding signal; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17393091",
+    "sic_codes": [
+      "27120",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIMRA AI NEXUS LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — SIC codes suggest software/IT consultancy possibly touching R&D (72190), but no description of product or purpose provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; SIC 72190 alongside three IT/software codes is a common but non-specific mix — no evidence of a defined R&D programme.",
+    "team_provenance": "Sole director Dr Shahzad Yousuf, British. No ORCID match found. No other appointments found under this officer record — first-time founder status not established either way.",
+    "location_signal": "3 Boyd Street, London E1 1FQ — generic residential/commercial East London address, no evident incubator or cluster affiliation.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, technology, or market",
+      "Single generic-sounding address with no cluster/incubator signal",
+      "No funding data (grant or equity) provided",
+      "'Dr' title unverified — no ORCID match to substantiate academic background"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team credentials; nothing to differentiate from thousands of generic IT-SIC incorporations",
+    "unknowns": [],
+    "company_number": "17393526",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CATHEDRA SPA LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Pre-launch wellness/spa concept combining sanctuary-style design with unspecified 'immersive technologies' for rest and restoration.",
+    "science": "No identifiable scientific mechanism — website references 'science' and 'research' only as marketing language, with no technology, modality, or clinical basis specified.",
+    "stage_signal": "Day-one incorporation (dated 2026, i.e. not yet effective/future-dated), pre-launch 'coming soon' website with no product detail.",
+    "team_provenance": "Single director, no ORCID match, no prior directorships found under this officer record — no evidence of academic or biotech background.",
+    "location_signal": "Residential/generic address in St Leonards on Sea — no incubator, cluster, or life-sciences signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code (72190) mismatched to apparent business activity (spa/wellness, not R&D)",
+      "No scientific or technical substance behind 'science meets sacred' branding",
+      "Website is placeholder/pre-launch with no product, evidence, or team detail",
+      "Incorporation date appears future-dated, suggesting a data or filing anomaly",
+      "Generic/residential registered address"
+    ],
+    "interest_score": "1 — no life-sciences substance; appears to be a wellness/spa branding exercise misclassified under an R&D SIC code",
+    "unknowns": [],
+    "company_number": "17392643",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FIFO TECH LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Not observable at this stage — no description of product or service provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue by default given age",
+    "team_provenance": "Two directors, both British, surname suggests possible family connection; no confirmed ORCID or repeat-founder history for either",
+    "location_signal": "Office address in Birmingham — generic office suite designation, no indication of an accelerator or research cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No discernible business description from SIC codes alone (mix of software, R&D, and human health SIC codes is inconsistent/unclear)",
+      "No funding, grant, or non-dilutive signal present",
+      "No academic or repeat-founder credibility markers confirmed"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17394622",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190",
+      "85600"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 4
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "UKIND LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "Unknown — website is a placeholder page with no description of the business.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (dated 2026, i.e. pre-incorporation/future-dated record); website not yet built",
+    "team_provenance": "Sole director Amanda Haigh, British; holds 4 other appointments but none confirmed in target sector (SIC 72110/72190) — informational only, not a signal",
+    "location_signal": "Wetherby residential/generic address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No live product, service description, or website content beyond 'Coming Soon'",
+      "SIC codes (62012 software, 72190 R&D) not yet supported by any visible evidence of activity",
+      "Incorporation date is in the future/unverified, worth checking record accuracy"
+    ],
+    "interest_score": "1 - no discernible activity, science, or content to assess",
+    "unknowns": [],
+    "company_number": "17394699",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MEDIA4YOUIOW LTD",
+    "incorporated": "2026-08-11",
+    "one_liner": "A drone services and web/design agency offering mapping, surveying, thermal imaging, and drone consultancy alongside website/logo design.",
+    "science": "Not observable at this stage — this is a commercial drone-services and digital agency, not a research or platform technology company",
+    "stage_signal": "Day-one incorporation with an already-live, fairly built-out commercial website — suggests a trading services business rather than an R&D venture",
+    "team_provenance": "Sole director Benjamin Charles Horwood, British national. No ORCID match, no other appointments found under this officer record — no evidence of academic or repeat-founder background",
+    "location_signal": "66 Paul Street, London EC2A 4NA — a well-known mass company-formation/registered-office address, not a lab or incubator signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not sector-specific",
+      "No R&D, IP, or science/technology platform evident — service business model",
+      "SIC codes (media, IT consultancy, business support) do not match a life-sciences or deep-tech thesis",
+      "No funding, grant, or investor signal of any kind"
+    ],
+    "interest_score": "1 - Not a life-sciences or biotech company; a local drone/media services business, outside fund thesis entirely",
+    "unknowns": [],
+    "company_number": "17394812",
+    "sic_codes": [
+      "62090",
+      "72190",
+      "74100",
+      "74202"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
