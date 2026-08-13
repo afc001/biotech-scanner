@@ -1,0 +1,1017 @@
+[
+  {
+    "company_name": "GEOCARB LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no trading or product description available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no other supporting data (grant, website) yet available",
+    "team_provenance": "Sole director John Michael Cloughley is a REPEAT FOUNDER CONFIRMED in the same sector (SIC 72190, active directorship at Energy 4 Structures Ltd, plus one more). He also shows an ADVISOR PATTERN with 7 other active directorships — suggests a well-connected, experienced operator but likely limited day-to-day bandwidth for this specific venture.",
+    "location_signal": "Residential-style address in Mellor, Stockport — no incubator or cluster signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector)"
+    ],
+    "flags_negative": [
+      "No trading history, product, or funding data yet — company incorporated very recently",
+      "Generic residential registered address"
+    ],
+    "interest_score": "2 - repeat-founder credibility noted, but nothing else yet observable to assess",
+    "unknowns": [],
+    "company_number": "17396677",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 12,
+      "active_count": 7,
+      "resigned_count": 5,
+      "other_companies": [
+        {
+          "company_name": "E 4 GRID LTD",
+          "company_number": "14023807",
+          "company_status": "active",
+          "appointed_on": "2022-04-04",
+          "resigned_on": null,
+          "sic_codes": [
+            "99999"
+          ]
+        },
+        {
+          "company_name": "HIVE PROPERTY HOLDINGS LTD",
+          "company_number": "13129818",
+          "company_status": "active",
+          "appointed_on": "2021-01-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "68100"
+          ]
+        },
+        {
+          "company_name": "CLOUGHLEYS LLP",
+          "company_number": "OC427130",
+          "company_status": "dissolved",
+          "appointed_on": "2019-04-30",
+          "resigned_on": null,
+          "sic_codes": []
+        },
+        {
+          "company_name": "ENERGY 4 STRUCTURES LTD",
+          "company_number": "07339529",
+          "company_status": "dissolved",
+          "appointed_on": "2010-08-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "E4 STRUCTURES LTD",
+          "company_number": "07230644",
+          "company_status": "active",
+          "appointed_on": "2010-04-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "22290"
+          ]
+        },
+        {
+          "company_name": "ENERGY 4 STRUCTURES LTD",
+          "company_number": "04125779",
+          "company_status": "active",
+          "appointed_on": "2001-07-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "PROCESS PLASTICS LIMITED",
+          "company_number": "02188290",
+          "company_status": "dissolved",
+          "appointed_on": "",
+          "resigned_on": null,
+          "sic_codes": [
+            "3663"
+          ]
+        },
+        {
+          "company_name": "THE JODRELL LIMITED",
+          "company_number": "15315355",
+          "company_status": "active",
+          "appointed_on": "2023-11-28",
+          "resigned_on": "2025-11-24",
+          "sic_codes": [
+            "55209"
+          ]
+        },
+        {
+          "company_name": "THE HIVE SHORT STAYS LIMITED",
+          "company_number": "11374651",
+          "company_status": "active",
+          "appointed_on": "2018-05-22",
+          "resigned_on": "2024-09-17",
+          "sic_codes": [
+            "55209"
+          ]
+        },
+        {
+          "company_name": "IAN MANN & SON FUNERAL DIRECTORS LIMITED",
+          "company_number": "03947809",
+          "company_status": "active",
+          "appointed_on": "2000-11-16",
+          "resigned_on": "2026-02-25",
+          "sic_codes": [
+            "96030"
+          ]
+        },
+        {
+          "company_name": "PRO-TEC MOULDINGS LIMITED",
+          "company_number": "02908625",
+          "company_status": "dissolved",
+          "appointed_on": "1994-03-17",
+          "resigned_on": "1995-03-03",
+          "sic_codes": null
+        },
+        {
+          "company_name": "PROPAC THERMOFORMING LIMITED",
+          "company_number": "02759082",
+          "company_status": "active",
+          "appointed_on": "1992-10-26",
+          "resigned_on": "1999-02-22",
+          "sic_codes": null
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "ENERGY 4 STRUCTURES LTD",
+          "company_number": "07339529",
+          "company_status": "dissolved",
+          "appointed_on": "2010-08-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "ENERGY 4 STRUCTURES LTD",
+          "company_number": "04125779",
+          "company_status": "active",
+          "appointed_on": "2001-07-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": true,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PEPTILION RESEARCH LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no description of product, technology, or target market provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Single named individual holding both director and secretary roles; no ORCID match found (inconclusive, not a negative); holds 7 other active directorships (ADVISOR PATTERN) none confirmed in the target sector (SIC 72110/72190) — suggests a well-connected individual spread across multiple ventures, raising doubt about hands-on involvement here",
+    "location_signal": "Mossop Street, Chelsea, London — an upmarket residential/commercial address, not a known biotech cluster or incubator; likely a registered-office-service address rather than a lab or R&D site",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "SIC 72110 (biotech R&D) code suggests intended life-sciences focus"
+    ],
+    "flags_negative": [
+      "No description of science, product or market",
+      "No funding evidence (grant or equity)",
+      "Single director also acting as secretary, no team depth shown",
+      "Address gives no cluster/incubator signal",
+      "Extremely early — incorporated only weeks ago at time of writing"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, team depth, or funding; nothing here to assess yet",
+    "unknowns": [],
+    "company_number": "17395865",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 7,
+      "active_count": 7,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "LEO INTELLIGENCE LTD",
+          "company_number": "17372553",
+          "company_status": "active",
+          "appointed_on": "2026-07-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "62090"
+          ]
+        },
+        {
+          "company_name": "KAZOKU CORPORATION LTD",
+          "company_number": "15794078",
+          "company_status": "active",
+          "appointed_on": "2024-06-22",
+          "resigned_on": null,
+          "sic_codes": [
+            "62090"
+          ]
+        },
+        {
+          "company_name": "EDENBRIDGE HOLDINGS LTD",
+          "company_number": "15511043",
+          "company_status": "active",
+          "appointed_on": "2024-02-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "64205"
+          ]
+        },
+        {
+          "company_name": "EMANUELLE FASHION LTD",
+          "company_number": "15511064",
+          "company_status": "dissolved",
+          "appointed_on": "2024-02-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "46160"
+          ]
+        },
+        {
+          "company_name": "HIA DESIGN LTD",
+          "company_number": "14673829",
+          "company_status": "active",
+          "appointed_on": "2023-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "99999"
+          ]
+        },
+        {
+          "company_name": "HIA TECHNOLOGY LTD",
+          "company_number": "13849162",
+          "company_status": "active",
+          "appointed_on": "2022-01-14",
+          "resigned_on": null,
+          "sic_codes": [
+            "99999"
+          ]
+        },
+        {
+          "company_name": "HIA GROUP HOLDINGS LTD",
+          "company_number": "13612901",
+          "company_status": "active",
+          "appointed_on": "2021-09-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229"
+          ]
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 7
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SIRIUS PROTEINS LIMITED",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no description of activities beyond SIC classification",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-registration or pre-launch shell",
+    "team_provenance": "Three British directors; no confirmed ORCID academic links (one inconclusive due to common name); no confirmed repeat-founder history in target sector",
+    "location_signal": "9 Appold Street, London EC2A — a well-known serviced/flexible office building (WeWork-type), not a specialist life-sciences incubator; generic signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of science, product, or activity available",
+      "SIC 77400 (leasing of IP) alongside 72110 (biotech R&D) is unusual and unexplained",
+      "Generic flexible-office address, not a specialist cluster or incubator",
+      "No funding, grant, or academic signal of any kind"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, or funding signal; pure shell at this stage",
+    "unknowns": [],
+    "company_number": "17395792",
+    "sic_codes": [
+      "72110",
+      "77400"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BUMPSIGNAL LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no company website or description provided beyond registered activity codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Single director, Dr. John Emaimo Bolanle; no ORCID match found; one other directorship held, not confirmed in target sector",
+    "location_signal": "Residential-looking address in Coventry — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of funding, product, or team depth",
+      "Only one director, no confirmed academic or sector-specific track record",
+      "Address shows no incubator/cluster affiliation",
+      "Company incorporated very recently with essentially no track record"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17396053",
+    "sic_codes": [
+      "62012",
+      "72190",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ONNUM LIMITED",
+    "incorporated": "2026-08-13",
+    "one_liner": "Not observable at this stage — no descriptive data beyond SIC classification for other research and experimental development on natural sciences and engineering.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Single director, Benedict Harrison, British national. No ORCID match found, no prior directorships found under this officer record — neither is evidence of anything either way.",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — this is a well-known mass company-formation/registered-agent address, not indicative of a physical R&D presence or cluster location.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered agent address, generic formation service, no evidence of physical operations",
+      "No science, product, or funding data available — incorporated too recently to assess"
+    ],
+    "interest_score": "1 - Shell-stage company with no discernible science, team credentials, or funding signal; nothing here to differentiate it",
+    "unknowns": [],
+    "company_number": "17397668",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MODUS AR LTD",
+    "incorporated": "2026-08-13",
+    "one_liner": "Early-stage company registered across hardware, computing, data processing, and R&D SIC codes — likely AR/hardware-software venture, but no descriptive detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data yet",
+    "team_provenance": "Three directors (two British, one Portuguese); no ORCID matches, no confirmed repeat-founder history in target sector",
+    "location_signal": "Residential/generic address in Shrewsbury — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No grant funding or non-dilutive support observed",
+      "No academic or repeat-founder credibility signals confirmed",
+      "Generic residential address, no cluster or incubator affiliation",
+      "Mixed SIC codes suggest unclear or undefined business focus"
+    ],
+    "interest_score": "1 - brand-new shell with no verified team credentials, funding, or clear proposition",
+    "unknowns": [],
+    "company_number": "17397782",
+    "sic_codes": [
+      "26200",
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AGGREGATEOS LIMITED",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not enough disclosed to say precisely, but SIC codes point to a software/data/IT platform business, possibly with an R&D-related SIC (72190) attached.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history, no grant record, no website provided",
+    "team_provenance": "Two directors: James Raymond Brown (British, 9 other active directorships — ADVISOR PATTERN, none confirmed in target sector, suggesting a well-connected but likely non-operational board presence) and Dr Mohammad Heydari (Iranian, ORCID unresolvable due to common name — inconclusive, no other appointments found under this officer record)",
+    "location_signal": "Unit 8 Nepicar Park, Wrotham, Kent — a business park/serviced office address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or funding detail disclosed",
+      "Incorporated only recently — no track record",
+      "Generic business park address, not a specialist life-sciences location",
+      "SIC mix (publishing, computer consultancy, financial holding, R&D) is unfocused and doesn't clearly signal a biotech play"
+    ],
+    "interest_score": "2 - no discernible biotech signal; mixed SIC codes and generic address suggest this may not even be a life-sciences company",
+    "unknowns": [],
+    "company_number": "17395500",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 9,
+      "active_count": 9,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "AGGREGATE SYSTEMS GROUP HOLDINGS LIMITED",
+          "company_number": "16996090",
+          "company_status": "active",
+          "appointed_on": "2026-01-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "EAVEE AI LIMITED",
+          "company_number": "16090236",
+          "company_status": "active",
+          "appointed_on": "2024-11-20",
+          "resigned_on": null,
+          "sic_codes": [
+            "62090"
+          ]
+        },
+        {
+          "company_name": "ANDREWS RECRUITMENT GROUP LIMITED",
+          "company_number": "15629454",
+          "company_status": "active",
+          "appointed_on": "2024-04-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "78109"
+          ]
+        },
+        {
+          "company_name": "KRA BROWN GROUP LIMITED",
+          "company_number": "15317677",
+          "company_status": "active",
+          "appointed_on": "2023-11-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "VANQUISH ENGINEERING GROUP LIMITED",
+          "company_number": "15065438",
+          "company_status": "dissolved",
+          "appointed_on": "2023-08-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "74990"
+          ]
+        },
+        {
+          "company_name": "BATCHING & BLENDING SYSTEMS LIMITED",
+          "company_number": "03232965",
+          "company_status": "active",
+          "appointed_on": "2021-11-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "26512"
+          ]
+        },
+        {
+          "company_name": "SHARK ESMS LIMITED",
+          "company_number": "11763223",
+          "company_status": "active",
+          "appointed_on": "2019-01-14",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "NEPICAR MANAGEMENT LIMITED",
+          "company_number": "09864989",
+          "company_status": "active",
+          "appointed_on": "2018-08-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "68320"
+          ]
+        },
+        {
+          "company_name": "KRA BROWN ELECTRICAL SERVICES LIMITED",
+          "company_number": "06303545",
+          "company_status": "active",
+          "appointed_on": "2017-01-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 9
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AEROSPACE&MARINE&INNO LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no descriptive filing, website, or grant data provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no other operational data",
+    "team_provenance": "Sole director Dr Margarita Dufresne (French national). No ORCID match found. REPEAT FOUNDER CONFIRMED (same sector) — currently a director at AERO&HYDRO&INNO LTD (SIC 72190, active), plus one further appointment noted but not detailed.",
+    "location_signal": "Residential flat address on Hayling Island — generic, no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director also runs AERO&HYDRO&INNO LTD, a similarly-named SIC 72190 company"
+    ],
+    "flags_negative": [
+      "No trading history, website, or grant data to assess",
+      "Company name and sector strongly overlap with director's other active company (AERO&HYDRO&INNO LTD) — unclear if this is a distinct venture or duplicate/shell structure",
+      "Residential registered address"
+    ],
+    "interest_score": "2 - Repeat founder in sector is a mild positive, but near-total absence of substantive data and an unexplained near-duplicate company name warrant caution, not engagement, at this stage",
+    "unknowns": [],
+    "company_number": "17396661",
+    "sic_codes": [
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 2,
+      "active_count": 2,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "AERO&HYDRO&INNO LTD",
+          "company_number": "15304686",
+          "company_status": "dissolved",
+          "appointed_on": "2023-11-23",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "KITE-MD POWER LTD",
+          "company_number": "12049257",
+          "company_status": "dissolved",
+          "appointed_on": "2019-06-13",
+          "resigned_on": null,
+          "sic_codes": [
+            "27110",
+            "35110",
+            "71122",
+            "72190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "AERO&HYDRO&INNO LTD",
+          "company_number": "15304686",
+          "company_status": "dissolved",
+          "appointed_on": "2023-11-23",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "KITE-MD POWER LTD",
+          "company_number": "12049257",
+          "company_status": "dissolved",
+          "appointed_on": "2019-06-13",
+          "resigned_on": null,
+          "sic_codes": [
+            "27110",
+            "35110",
+            "71122",
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 2
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GEOLYSI LIMITED",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no description of activity beyond a general R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other public signal of activity",
+    "team_provenance": "Single director, Maria Levisianou (British); no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "Residential-style address in Cardiff — no obvious incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 indicates intended R&D activity"
+    ],
+    "flags_negative": [
+      "Incorporated on a future/very recent date with essentially no track record",
+      "No funding, grant, or product information available",
+      "Single-director company with no verified academic or entrepreneurial credentials",
+      "Generic registered address with no cluster/incubator signal"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17396333",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "TRANSCASTAI LTD",
+    "incorporated": "2026-08-13",
+    "one_liner": "A private, on-device AI workspace for Mac that transcribes, translates and works with speech, meetings and documents in real time.",
+    "science": "Not a biotech/life-sciences science base — this is an AI/software transcription-translation product running locally on Apple Silicon/Intel Macs, with private-server, cloud and offline deployments planned. No underlying model or technical architecture disclosed.",
+    "stage_signal": "Day-one incorporation but product already live and downloadable (macOS), suggesting pre-incorporation development. Windows version in development.",
+    "team_provenance": "Single director, Vinnit Rajni Patel (British). One other appointment held, not confirmed in target sector (SIC 72110/72190). No ORCID match. No evidence of academic background.",
+    "location_signal": "Residential/generic London address (Harewood House, SW15) — no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Functional, downloadable product already live at incorporation",
+      "Clear commercial positioning (pricing, roadmap, multi-platform plan)"
+    ],
+    "flags_negative": [
+      "Not a life-sciences or biotech company — outside fund's stated mandate",
+      "Single-director company with no life-sciences SIC codes",
+      "No funding, grant, or investor data disclosed",
+      "No scientific or clinical evidence base — this is a consumer/enterprise software tool"
+    ],
+    "interest_score": "1 - Out of sector: this is a consumer AI productivity tool, not a life-sciences investment candidate",
+    "unknowns": [],
+    "company_number": "17397706",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "COPRAXA LTD",
+    "incorporated": "2026-08-13",
+    "one_liner": "Not observable at this stage — no product or market description provided beyond SIC classification.",
+    "science": "Not observable at this stage — SIC codes suggest software/IT and R&D activity, but no mechanism or platform detail given",
+    "stage_signal": "Day-one incorporation, pre-revenue by definition",
+    "team_provenance": "Two Iranian academic-linked directors. Dr Arya Shabani has ORCID-confirmed publication record across robotics/industrial informatics institutions (Sharif, UPC, University of Bath, University of Tehran) and is a confirmed repeat founder in the same sector (active director at Native Labs Ltd, SIC 72110). Dr Seyed Moein Mir Fakhar has no ORCID match and no other appointments found under this officer record.",
+    "location_signal": "Swindon (North Star House) — generic serviced-office address, not a recognised biotech cluster or incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic record for Dr Shabani",
+      "REPEAT FOUNDER CONFIRMED (same sector) — Dr Shabani active at another SIC 72110 company",
+      "Academic affiliations spanning multiple respected institutions"
+    ],
+    "flags_negative": [
+      "No science, product, or market description available",
+      "Generic non-specialist registered address",
+      "SIC codes indicate general software/IT/R&D, not a specific biotech or life-sciences classification",
+      "No funding data of any kind"
+    ],
+    "interest_score": "2 - credible repeat-founder academic director, but zero visibility into what the company actually does or whether it's life-sciences relevant",
+    "unknowns": [],
+    "company_number": "17397675",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-5851-079X",
+      "institutions": [
+        "Institute of Robotics and Industrial Informatics",
+        "Islamic Azad University South Tehran Branch",
+        "Sharif University of Technology",
+        "Universitat Politècnica de Catalunya",
+        "University of Bath",
+        "University of Tehran"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "NATIVE LABS LTD",
+          "company_number": "14919214",
+          "company_status": "active",
+          "appointed_on": "2025-03-25",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "NATIVE LABS LTD",
+          "company_number": "14919214",
+          "company_status": "active",
+          "appointed_on": "2025-03-25",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THE INVENTION OF EVERYTHING LIMITED",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no description of activity beyond registered SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant, product, or trading data available",
+    "team_provenance": "Two directors — Bartlomiej Czarnecki (Polish, ORCID confirmed to a real academic publication record but no institution listed, no other appointments found) and Warren Andrew Hardy (British, no ORCID match, no other appointments found). No evidence of prior company-building or academic institutional affiliation.",
+    "location_signal": "Residential/rural address in Worcestershire — not a known biotech cluster or incubator; generic signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED for director Czarnecki — genuine academic publication record verified"
+    ],
+    "flags_negative": [
+      "SIC mix (software, financial intermediation, computer consultancy, holding companies) is inconsistent with a life-sciences thesis — no biotech-specific SIC code",
+      "No trading history, product, or science description available",
+      "Generic non-cluster address",
+      "Company name and SIC codes suggest a generalist or holding vehicle rather than a focused biotech play"
+    ],
+    "interest_score": "1 - No discernible life-sciences activity, thesis, or funding; ORCID hit alone doesn't establish a biotech opportunity",
+    "unknowns": [],
+    "company_number": "17396557",
+    "sic_codes": [
+      "62012",
+      "64209",
+      "72190",
+      "77400"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0006-1397-0999",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "APOGEE DIGITAL LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — company records show no description of activity beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading",
+    "team_provenance": "Single director, no ORCID match, no other appointments found under this officer record — no corroborating background evidence",
+    "location_signal": "Residential flat address in Birmingham — generic, not a known cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (software, R&D, management consultancy, other IT) suggest no clear specialism yet",
+      "Residential address, not a lab or incubator",
+      "No evidence of scientific/technical founder background",
+      "No funding, grant, or product information available"
+    ],
+    "interest_score": "1 - shell-stage company with no science, team, or funding signal to evaluate",
+    "unknowns": [],
+    "company_number": "17395572",
+    "sic_codes": [
+      "62012",
+      "70229",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KINGSTON SCIENTIFIC LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no description of activity beyond SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data",
+    "team_provenance": "Sole director, Chinese nationality noted; no ORCID match found (inconclusive); no other appointments found under this officer record",
+    "location_signal": "128 City Road, London — a well-known mass-registration/virtual office address (generic, not a genuine biotech cluster or incubator signal)",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered address is a high-volume generic/virtual office address, not a specialist life-sciences location",
+      "No description of scientific activity, product, or technology available",
+      "No funding, grant, or partnership data",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - no substantive data to assess; generic registration only",
+    "unknowns": [],
+    "company_number": "17397224",
+    "sic_codes": [
+      "71122",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CSKN LABS LIMITED",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of cosmetics/toiletries manufacture, irradiation/electromedical equipment, online retail, and R&D, but no descriptive material is provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Sole director Laura Samantha Carter, British national. No ORCID match. One other directorship found, not confirmed in target sector — informational only, not a signal either way",
+    "location_signal": "Ground Floor Cooper House, Regents Park Road, London N3 — generic commercial address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No trading or scientific detail available",
+      "Incorporated with a future/forward date (2026), unusual and worth verifying",
+      "SIC code mix (cosmetics manufacture, electromedical equipment, online retail, R&D) is broad and incoherent, suggesting an unformed business model"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, team pedigree, funding, or coherent sector focus",
+    "unknowns": [],
+    "company_number": "17396201",
+    "sic_codes": [
+      "20420",
+      "26600",
+      "47910",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ASTRA ANALYTICS LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no description of activity provided beyond registered SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other operational signals available",
+    "team_provenance": "Single director, Majid Saadabadi (British). No ORCID match found and no other directorships found under this officer record — neither confirms nor rules out relevant background",
+    "location_signal": "Great Portland Street, London — generic registered-office address, commonly used by formation agents; not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of technology, product, or market",
+      "SIC mix (engineering/testing, R&D-other, computer consultancy) suggests a services or analytics business, not clearly a biotech play",
+      "Single-director company with no verifiable track record",
+      "No funding, grant, or academic linkage evidence"
+    ],
+    "interest_score": "1 - Essentially no verifiable signal; nothing to distinguish this from a shell registration",
+    "unknowns": [],
+    "company_number": "17395087",
+    "sic_codes": [
+      "71122",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MIPTOXU LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history, no grant record, no website provided",
+    "team_provenance": "Two directors, one Slovak (Dr. Kristina Kleinova) and one Russian (Mikhail Medvedev). ORCID checks inconclusive for both (too many possible matches to verify) — not treated as signal either way. No confirmed prior directorships found for either.",
+    "location_signal": "Dickson Poon Building, Canterbury Road, Oxford — this is a University of Oxford estates address; plausible academic/institutional cluster link, but unconfirmed as a formal incubator or spinout scheme",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Dual SIC code (62012 software + 72190 R&D) suggests a tech/science hybrid model",
+      "Oxford address with academic building name — possible university proximity"
+    ],
+    "flags_negative": [
+      "Incorporated only recently — no operating history",
+      "No funding, grant, or product data of any kind",
+      "Director academic/professional credentials unverifiable via ORCID",
+      "No evidence yet linking directors formally to Oxford University"
+    ],
+    "interest_score": "2 - Interesting address signal only; everything else is unverified or absent",
+    "unknowns": [],
+    "company_number": "17395868",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CIVANTRA GROUP LTD",
+    "incorporated": "2026-08-12",
+    "one_liner": "Not observable at this stage — no business description, website, or grant data provided beyond registration.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; SIC mix (management consultancy, engineering/R&D-related, other scientific research, R&D on biotech) suggests a consultancy or holding vehicle rather than a focused biotech platform",
+    "team_provenance": "Sole director Joseph Osamwonyi Ediae — ORCID confirmed (0000-0002-9168-2099), a real, verified academic publication record. Listed affiliations span multiple UK and Nigerian universities (Anglia Ruskin, Birmingham City, Salford, Ambrose Alli, University of Benin) and several Nigeria-registered companies (Cancron Nigeria, Edijocyril De Company, Rubber Estates Nigeria). No other appointments found under this officer record at Companies House.",
+    "location_signal": "Residential address in Middleton, Manchester — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic identity for sole director"
+    ],
+    "flags_negative": [
+      "No business description, product, or science disclosed",
+      "SIC codes are broad/generic (consultancy, other R&D) rather than specialist biotech codes",
+      "Multiple unrelated international company affiliations (Nigeria-registered entities, rubber estates) raise questions about focus",
+      "Pre-incorporation date (2026) suggests placeholder/shelf registration rather than active trading entity"
+    ],
+    "interest_score": "2 — single verified academic credential, but no discernible science, product, or funding; SIC mix and diffuse affiliations suggest a generalist vehicle, not a focused biotech",
+    "unknowns": [],
+    "company_number": "17397368",
+    "sic_codes": [
+      "70229",
+      "71122",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-9168-2099",
+      "institutions": [
+        "Ambrose Alli University",
+        "Anglia Ruskin University",
+        "Birmingham City University",
+        "Cancron Nigeria Limited",
+        "Edijocyril De Company Limited",
+        "Rubber Estates Nigeria Limited",
+        "University of Benin",
+        "University of Salford"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
