@@ -1,0 +1,451 @@
+[
+  {
+    "company_name": "SERADIAG REAGENTS LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "An early-stage reagents/diagnostics company, name suggests serology-based diagnostic reagent development, but no further detail provided.",
+    "science": "Not observable at this stage — no mechanism, platform, or modality described beyond company name implying serological diagnostics.",
+    "stage_signal": "Day-one incorporation (shell stage, no trading history or grant data provided).",
+    "team_provenance": "Two directors. Shaun David Bond holds one other appointment, not confirmed in target sector. Dr Adam Sidaway is GtR CONFIRMED as a UKRI-funded investigator, linked to Cambridge RNA Technologies Ltd, and is a REPEAT FOUNDER CONFIRMED (same sector) via an active directorship at Morphokinetics Ltd (SIC 72110), plus one more appointment — indicating genuine prior R&D company-building experience in this exact sector.",
+    "location_signal": "Registered at B25 Bioinnovation Centre, Cambridge Science Park — CONFIRMED incubator/cluster address, a positive cluster signal.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [
+      "Cambridge Science Park incubator address",
+      "Dr Adam Sidaway GtR CONFIRMED as UKRI-funded investigator",
+      "REPEAT FOUNDER CONFIRMED (same sector) — active director at another SIC 72110 company"
+    ],
+    "flags_negative": [
+      "Day-one incorporation, no operating or financial history",
+      "No science, product, or funding detail available yet",
+      "Company name implies a diagnostics focus but this is unverified by any other data"
+    ],
+    "interest_score": "4 — credible repeat founder with confirmed sector experience and a UKRI-linked academic co-founder, based in a strong cluster, but still a pre-trading shell",
+    "unknowns": [
+      "What is the actual product/reagent platform and target diagnostic application?",
+      "What is the relationship between this company and Cambridge RNA Technologies Ltd / Morphokinetics Ltd — shared IP, spin-out, or fully independent?",
+      "Is there any funding (grant or private) already secured or in progress?",
+      "What is Shaun Bond's operational role and background relative to Dr Sidaway's scientific input?"
+    ],
+    "company_number": "17400367",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "FC906F07-7348-41DE-8558-CF3D539876E4",
+      "organisation": "CAMBRIDGE RNA TECHNOLOGIES LTD"
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 3,
+      "active_count": 3,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "MORPHOKINETICS LTD",
+          "company_number": "17053090",
+          "company_status": "active",
+          "appointed_on": "2026-02-24",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "SIDAWAY GROUP HOLDINGS LTD",
+          "company_number": "16977261",
+          "company_status": "active",
+          "appointed_on": "2026-01-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "CAMBRIDGE RNA TECHNOLOGIES LTD",
+          "company_number": "16352238",
+          "company_status": "active",
+          "appointed_on": "2025-03-30",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "MORPHOKINETICS LTD",
+          "company_number": "17053090",
+          "company_status": "active",
+          "appointed_on": "2026-02-24",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CAMBRIDGE RNA TECHNOLOGIES LTD",
+          "company_number": "16352238",
+          "company_status": "active",
+          "appointed_on": "2025-03-30",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 3
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NATURE GP LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Not observable at this stage — no operational description available beyond registered SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or product data yet",
+    "team_provenance": "Single director, Dr Graham William Prescott, British. No ORCID match found (not a negative signal — absence is not evidence of anything). No prior appointments found under this officer record.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address, not a specialist bio-cluster or incubator. Generic signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Virtual-office registered address commonly used for shell/holding entities",
+      "SIC mix (70229 management consultancy, 72190 R&D other, 74901 environmental consultancy) is vague and not specifically biotech-focused",
+      "No science, product, or funding data available",
+      "'Dr' title suggests academic background but no ORCID or grant record confirms this"
+    ],
+    "interest_score": "1 - No verifiable science, funding, or team credentials; generic virtual address; too early to assess",
+    "unknowns": [],
+    "company_number": "17401882",
+    "sic_codes": [
+      "70229",
+      "72190",
+      "74901"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ROAR LIKE A LION LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Newly incorporated entity with no clear business description observable from the record alone.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history, no product or funding evidence yet",
+    "team_provenance": "Single director, Christopher Fitzgerald Stormont, British national. No ORCID match. One other appointment noted, not confirmed in target sector — uninformative on its own.",
+    "location_signal": "Registered at a third-party accountancy/formation agent address (D S Burge And Co Ltd) — generic company-formation service address, not a lab, incubator, or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (64209 financial holding, 70229 management consultancy, 72190 R&D) suggest an unfocused or shell-like structure rather than a defined biotech proposition",
+      "Registered at a generic accountancy-service address, not a science location",
+      "No science, product, or funding detail observable"
+    ],
+    "interest_score": "1 - Shell-stage company with no discernible science, team credibility signal, or funding; nothing here to differentiate it from a generic newly-formed entity",
+    "unknowns": [],
+    "company_number": "17401308",
+    "sic_codes": [
+      "64209",
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KNOWD TECHNOLOGIES LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Not observable at this stage — no description of product or service in the data provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points to stage",
+    "team_provenance": "Single director, Emilio Andres Loo Monardez, Chilean national; no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "124 City Road, London — this is a well-known mass company-formation/virtual office address, not a specialist incubator; carries no meaningful signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Very recent incorporation with no operational history",
+      "SIC codes span unrelated activities (publishing, computer programming, R&D, information services) suggesting no clear business focus yet",
+      "Registered address is a generic mass-registration address, not a specialist cluster",
+      "No science, product, or funding detail available"
+    ],
+    "interest_score": "1 - no discernible science, funding, or credibility signal; nothing to evaluate yet",
+    "unknowns": [],
+    "company_number": "17401566",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NIXI DISCOVERY LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Not observable at this stage — no business description available beyond SIC classification",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue shell with no public activity yet",
+    "team_provenance": "Sole director Dr Vanessa Restrepo Schild, ORCID CONFIRMED, affiliated with University of Oxford — genuine academic research background verified. One other prior appointment found, not in target sector, so not a confirmed repeat founder in this space",
+    "location_signal": "Seymour Place, London — generic registered office / formation-agent style address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic founder (University of Oxford)",
+      "Specialist SIC code 72190 (other research and experimental development)"
+    ],
+    "flags_negative": [
+      "Just incorporated, zero trading or operational history",
+      "No science, product, or funding detail available",
+      "Generic registered address, not a specialist life-sciences hub"
+    ],
+    "interest_score": "2 - credible academic founder but nothing yet to assess beyond that",
+    "unknowns": [],
+    "company_number": "17401896",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-3486-454X",
+      "institutions": [
+        "University of Oxford"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DELTACOVE LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Unknown — the domain deltacove.com is an unrelated third-party domain-sales parking page, not the company's actual website",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other evidence of activity",
+    "team_provenance": "Sole director Hywel Wyn Evans, British national; no ORCID match; no other appointments found under this officer record — no evidence either way of academic or founder background",
+    "location_signal": "66 Paul Street, London EC2A 4NA — this is a well-known mass-registration/formation-agent address, not a genuine incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code 72190 (R&D) but no corroborating website, science, or activity evident",
+      "Registered address is a generic mass-incorporation address, not a specialist cluster",
+      "Website found for the domain is an unrelated for-sale parking page, giving zero insight into actual business",
+      "No funding, grant, or team detail available"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or credible online presence; incorporated too recently to assess",
+    "unknowns": [],
+    "company_number": "17400183",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MARINE RESEARCH & TECHNICAL SERVICES LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Not observable at this stage — company appears to be a fresh shell with no described product or service beyond its SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points suggesting activity yet",
+    "team_provenance": "Sole director Caroline Bernice Baillie, British national; no ORCID match found (inconclusive, not a signal either way); no other appointments found under this officer record (uninformative, not evidence of first-time-founder status)",
+    "location_signal": "Generic London residential/commercial address (Pimlico) — no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, technology, or market beyond SIC codes",
+      "Company incorporated very recently with no track record",
+      "No funding, grant, or partnership data available"
+    ],
+    "interest_score": "1 — no evidence of technology, team credibility, or funding; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17400305",
+    "sic_codes": [
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MEDELLE TECHNICAL SERVICES UK LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Not observable at this stage — no description of activity beyond broad SIC classifications",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operating history",
+    "team_provenance": "Sole director is a US national with no ORCID match and no other appointments found under this officer record — no evidence of academic or prior founder background",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual-office address, not a specialist incubator; a generic and mildly negative signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (IT consultancy, management consultancy, R&D in social sciences/humanities, other service activities) suggest no clear focus or may be boilerplate",
+      "Registered at a mass-incorporation virtual office address, not a life-sciences cluster or incubator",
+      "No description of product, science, or activity anywhere in the record",
+      "Single director, US national, no track record found"
+    ],
+    "interest_score": "1 — no discernible life-sciences activity, generic virtual address, no team credibility signals, nothing to evaluate",
+    "unknowns": [],
+    "company_number": "17401530",
+    "sic_codes": [
+      "62020",
+      "70229",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SPBIOLABS LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "UK online retailer selling research peptides and lab materials, marketed for research use only.",
+    "science": "No platform or proprietary science — appears to be a reselling/e-commerce operation for third-party peptide products, not an R&D company.",
+    "stage_signal": "Day-one incorporation with an already-live e-commerce website; commercial retail operation, not a research-stage biotech.",
+    "team_provenance": "Single director, no ORCID match, no other appointments found — no evidence of academic or prior biotech founder background.",
+    "location_signal": "Registered address in Hamilton, Scotland — generic residential/commercial address, no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code 72190 (R&D) mismatched against actual business model, which is retail/e-commerce of research chemicals",
+      "No scientific IP, platform, or defensible technology apparent",
+      "Site emphasises free shipping/bac water promos — consumer retail framing, not lab-grade B2B research supply",
+      "No team credentials or institutional links evident",
+      "Sector (unregulated peptide sales) carries reputational and regulatory risk"
+    ],
+    "interest_score": "1 - e-commerce peptide reseller, not a venture-fundable biotech",
+    "unknowns": [],
+    "company_number": "SC899249",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PHITECH LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Unclear — no operational website or descriptive filing detail beyond SIC codes suggesting electronics/software/R&D activity",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, pre-product by all visible signs",
+    "team_provenance": "Single director, Runyi Yang (Chinese nationality). ORCID search returned only unconfirmed possible matches — not treated as a positive or negative signal. No prior directorships found under this officer record.",
+    "location_signal": "20 Wenlock Road, London N1 7GU — this is a well-known mass company-formation/registered-office address (generic, not a specialist incubator)",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Company website domain (phitech.com) is unregistered/parked and for sale — no genuine online presence",
+      "Registered address is a generic mass-incorporation address, not a specialist cluster or incubator",
+      "SIC codes span unrelated domains (electronics manufacturing, computer consultancy, R&D) suggesting a shell or unformed business plan",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or genuine web presence; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17401692",
+    "sic_codes": [
+      "26110",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CHAOS UNLEASHED HOLDINGS LTD",
+    "incorporated": "2026-08-14",
+    "one_liner": "Not observable at this stage — no descriptive data beyond company name and mixed SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation shell, no other activity evidence",
+    "team_provenance": "Sole director Michael Robert Craven, British; no ORCID match; no other appointments found under this officer record",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — a well-known mass company-formation/registered-office address, not a specialist bioscience cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not a life-sciences signal",
+      "SIC codes are a mixed bag (retail, financial holding, R&D, licensing) suggesting a shell or holding structure rather than a focused biotech",
+      "No SIC code specific to biotech/pharma R&D (e.g. 72110)",
+      "No named science, product, or team background",
+      "No funding, grant, or investor data"
+    ],
+    "interest_score": "1 - no life-sciences signal, generic shell registration",
+    "unknowns": [],
+    "company_number": "17400173",
+    "sic_codes": [
+      "47910",
+      "64209",
+      "72190",
+      "77400"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RACESENSE TECHNOLOGIES LIMITED",
+    "incorporated": "2026-08-14",
+    "one_liner": "Not observable at this stage — no website or descriptive material provided beyond SIC codes suggesting machinery/software/R&D activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Sole director Salem Alsaeri, British national. No ORCID match found (inconclusive, not a negative). No other directorships found under this officer record (not evidence of first-time-founder status).",
+    "location_signal": "16 Tresham Crescent, London NW8 — generic residential/serviced address, no incubator affiliation observable",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No public evidence of product, funding, or team background beyond incorporation record",
+      "SIC mix (machinery, software, R&D) is broad and non-specific"
+    ],
+    "interest_score": "1 - pre-formation shell with no verifiable technical, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17401489",
+    "sic_codes": [
+      "28990",
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
