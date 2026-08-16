@@ -1,0 +1,140 @@
+[
+  {
+    "company_name": "MCPHARMA BIOTECH LTD",
+    "incorporated": "2026-08-15",
+    "one_liner": "Not observable at this stage — no product, platform or website description provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or trading history visible",
+    "team_provenance": "Sole director James McCallion — REPEAT FOUNDER CONFIRMED (same sector), also director at MCPharma International Trading Ltd (wholesale/trading + R&D SIC codes), plus one further undisclosed appointment. No ORCID match — not a negative, just unconfirmed academic record.",
+    "location_signal": "66 Paul Street, London EC2A 4NA — this is a well-known mass-registration/virtual office address (generic company-formation hub), not a specialist bioscience cluster or incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director has prior/current company in same SIC-coded space"
+    ],
+    "flags_negative": [
+      "Incorporated same day as this brief — zero operating history",
+      "Registered address is a generic mass-incorporation address, not a lab/incubator signal",
+      "Mixed SIC codes (pharma manufacturing, wholesale trade, computing) suggest possible shell/trading entity rather than focused biotech R&D",
+      "No science, product, or funding detail available",
+      "Sister company (MCPharma International Trading) is trading/wholesale-coded, raising question of whether this is a genuine R&D vehicle or a rebrand/adjacent trading entity"
+    ],
+    "interest_score": "2 - repeat-founder signal noted, but no science, funding, or credible R&D address to assess; looks like a fresh shell alongside an existing trading business",
+    "unknowns": [],
+    "company_number": "17402266",
+    "sic_codes": [
+      "21200",
+      "46460",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 3,
+      "active_count": 3,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "MCPHARMA INTERNATIONAL TRADING LTD",
+          "company_number": "17228864",
+          "company_status": "active",
+          "appointed_on": "2026-05-19",
+          "resigned_on": null,
+          "sic_codes": [
+            "46460",
+            "46900",
+            "47750",
+            "72110"
+          ]
+        },
+        {
+          "company_name": "MCPHARMA WORLDWIDE LTD",
+          "company_number": "17224856",
+          "company_status": "active",
+          "appointed_on": "2026-05-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "32500",
+            "46460",
+            "72110",
+            "82990"
+          ]
+        },
+        {
+          "company_name": "MCCALLION INTERNATIONAL TRADE LIMITED",
+          "company_number": "16663438",
+          "company_status": "active",
+          "appointed_on": "2025-08-20",
+          "resigned_on": null,
+          "sic_codes": [
+            "46900"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "MCPHARMA INTERNATIONAL TRADING LTD",
+          "company_number": "17228864",
+          "company_status": "active",
+          "appointed_on": "2026-05-19",
+          "resigned_on": null,
+          "sic_codes": [
+            "46460",
+            "46900",
+            "47750",
+            "72110"
+          ]
+        },
+        {
+          "company_name": "MCPHARMA WORLDWIDE LTD",
+          "company_number": "17224856",
+          "company_status": "active",
+          "appointed_on": "2026-05-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "32500",
+            "46460",
+            "72110",
+            "82990"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 3
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AR FLUX LTD",
+    "incorporated": "2026-08-15",
+    "one_liner": "Not observable at this stage — no descriptive activity beyond SIC codes for business/software development and other R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Single named director, Insha Arshad; no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "124-128 City Road, London — well-known generic mass-registration/virtual office address, not a specialist incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated in the future/very recently — effectively no operating history",
+      "Generic mass-registration address, not a specialist cluster or incubator",
+      "No description of technology, product, or market beyond SIC classification",
+      "No funding, grant, or team-depth signals present"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; pure shell at this stage",
+    "unknowns": [],
+    "company_number": "17402332",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
