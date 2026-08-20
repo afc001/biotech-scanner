@@ -1,0 +1,596 @@
+[
+  {
+    "company_name": "PHISYNERGY LIMITED",
+    "incorporated": "2026-08-19",
+    "one_liner": "Not observable at this stage — no descriptive or website data provided beyond company registration.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue/pre-trading shell at this point",
+    "team_provenance": "Four directors, all British nationals. Graeme Martin Brown is a REPEAT FOUNDER CONFIRMED in the same sector (director at QIB EXTRA LIMITED, SIC 72190), and also shows an ADVISOR PATTERN (7 other active directorships total) — suggests a well-connected, credible figure likely tied to Quadram Institute commercialisation activity, but probably not hands-on day-to-day here. Other three directors show no other appointments found under their officer records — uninformative, not a negative. No ORCID matches for any director.",
+    "location_signal": "Registered at Quadram Institute Bioscience, Norwich Research Park — CONFIRMED incubator/cluster address, a strong life-sciences research cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Registered at Norwich Research Park / Quadram Institute Bioscience — confirmed life-sciences cluster address",
+      "REPEAT FOUNDER CONFIRMED (same sector) — Graeme Martin Brown, director at QIB EXTRA LIMITED (SIC 72190)"
+    ],
+    "flags_negative": [
+      "Just incorporated — no operating history, funding, or product data",
+      "No science, mechanism, or platform information available",
+      "No ORCID-confirmed academic founder identified"
+    ],
+    "interest_score": "2 - Strong location/cluster and one repeat-founder signal, but otherwise an empty shell with no science or funding data to assess",
+    "unknowns": [],
+    "company_number": "17409575",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 13,
+      "active_count": 6,
+      "resigned_count": 7,
+      "other_companies": [
+        {
+          "company_name": "QIB EXTRA LIMITED",
+          "company_number": "06500711",
+          "company_status": "active",
+          "appointed_on": "2024-04-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "IFR NRP CAPITAL LIMITED",
+          "company_number": "08132483",
+          "company_status": "active",
+          "appointed_on": "2023-11-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "IFR ENTERPRISES LIMITED",
+          "company_number": "03398534",
+          "company_status": "active",
+          "appointed_on": "2023-11-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "BIOSCOPIC LIMITED",
+          "company_number": "15260126",
+          "company_status": "active",
+          "appointed_on": "2023-11-03",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "VAXOME LIMITED",
+          "company_number": "05252137",
+          "company_status": "dissolved",
+          "appointed_on": "2008-08-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "VAXOME LIMITED",
+          "company_number": "05252137",
+          "company_status": "dissolved",
+          "appointed_on": "2004-10-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "RESOLOMICS LIMITED",
+          "company_number": "10956208",
+          "company_status": "dissolved",
+          "appointed_on": "2019-09-23",
+          "resigned_on": "2020-06-30",
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "QUEEN MARY BIOENTERPRISES LIMITED",
+          "company_number": "04324033",
+          "company_status": "active",
+          "appointed_on": "2018-07-02",
+          "resigned_on": "2020-06-05",
+          "sic_codes": [
+            "68209"
+          ]
+        },
+        {
+          "company_name": "BIOMIN TECHNOLOGIES LIMITED",
+          "company_number": "09122826",
+          "company_status": "active",
+          "appointed_on": "2014-07-09",
+          "resigned_on": "2020-05-28",
+          "sic_codes": [
+            "32500"
+          ]
+        },
+        {
+          "company_name": "NEUROTEX LIMITED",
+          "company_number": "05842082",
+          "company_status": "dissolved",
+          "appointed_on": "2010-05-11",
+          "resigned_on": "2014-05-09",
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "ACTIVIOMICS LIMITED",
+          "company_number": "07100402",
+          "company_status": "dissolved",
+          "appointed_on": "2010-03-23",
+          "resigned_on": "2011-11-01",
+          "sic_codes": null
+        },
+        {
+          "company_name": "QUEEN MARY INNOVATION LIMITED",
+          "company_number": "01104598",
+          "company_status": "active",
+          "appointed_on": "2007-08-02",
+          "resigned_on": "2020-06-05",
+          "sic_codes": null
+        },
+        {
+          "company_name": "VAXOME LIMITED",
+          "company_number": "05252137",
+          "company_status": "dissolved",
+          "appointed_on": "2004-10-06",
+          "resigned_on": "2004-11-12",
+          "sic_codes": null
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "QIB EXTRA LIMITED",
+          "company_number": "06500711",
+          "company_status": "active",
+          "appointed_on": "2024-04-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "IFR NRP CAPITAL LIMITED",
+          "company_number": "08132483",
+          "company_status": "active",
+          "appointed_on": "2023-11-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "IFR ENTERPRISES LIMITED",
+          "company_number": "03398534",
+          "company_status": "active",
+          "appointed_on": "2023-11-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "BIOSCOPIC LIMITED",
+          "company_number": "15260126",
+          "company_status": "active",
+          "appointed_on": "2023-11-03",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "VAXOME LIMITED",
+          "company_number": "05252137",
+          "company_status": "dissolved",
+          "appointed_on": "2008-08-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "VAXOME LIMITED",
+          "company_number": "05252137",
+          "company_status": "dissolved",
+          "appointed_on": "2004-10-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "RESOLOMICS LIMITED",
+          "company_number": "10956208",
+          "company_status": "dissolved",
+          "appointed_on": "2019-09-23",
+          "resigned_on": "2020-06-30",
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEUROTEX LIMITED",
+          "company_number": "05842082",
+          "company_status": "dissolved",
+          "appointed_on": "2010-05-11",
+          "resigned_on": "2014-05-09",
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": true,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "UK RETA LTD",
+    "incorporated": "2026-08-19",
+    "one_liner": "Unclear — website is a placeholder page giving no description of what the company does",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-launch — website itself states 'we're working on something amazing, check back soon'",
+    "team_provenance": "Single director, Jonathan Paul Talbot; no ORCID match, no other appointments found under this officer record",
+    "location_signal": "Blackpool residential/generic address — no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code 72110 (biotech R&D) but no scientific content, product, or mechanism disclosed anywhere",
+      "Website is a content-free placeholder/coming-soon page",
+      "No evidence of team credentials, prior track record, or funding"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; pure placeholder shell",
+    "unknowns": [],
+    "company_number": "17409345",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "XGC COMPUTING LABS LIMITED",
+    "incorporated": "2026-08-19",
+    "one_liner": "Unclear — likely a computing/IT services or R&D venture based on SIC mix, no description available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Sole director Xu Yajun (Chinese national); ORCID search returned 19 possible matches, name too common to verify — inconclusive, not treated as signal either way; no other appointments found under this officer record",
+    "location_signal": "167-169 Great Portland Street, London — generic flexible-office/serviced-office address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual scientific or product activity",
+      "Generic serviced-office address, not a life-sciences cluster or incubator",
+      "SIC codes span generic IT/software categories (62090, 63110) alongside R&D codes (72110, 72190), unclear actual focus",
+      "Single director, no team depth visible",
+      "No funding, grant, or traction data of any kind"
+    ],
+    "interest_score": "1 - no discernible life-sciences activity, no funding, no team signal; nothing here to differentiate from a shell company",
+    "unknowns": [],
+    "company_number": "17408765",
+    "sic_codes": [
+      "62090",
+      "63110",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MB CMC CONSULTING LTD",
+    "incorporated": "2026-08-19",
+    "one_liner": "A newly incorporated consultancy, likely offering CMC (Chemistry, Manufacturing and Controls) advisory services, plus management consultancy and R&D-related activity per SIC codes.",
+    "science": "Not observable at this stage — SIC codes suggest CMC/regulatory consultancy rather than a proprietary platform or therapeutic asset.",
+    "stage_signal": "Day-one incorporation — no track record, product, or funding history yet.",
+    "team_provenance": "Single director, Maud Emmanuelle Berthelot (French national). No ORCID match found, no prior directorships found under this officer record — consistent with a genuine first-time founder but not confirmed as such.",
+    "location_signal": "128 City Road, London, EC1V 2NX — this is a well-known generic mass-registration address used by thousands of UK companies, not a specialist biotech incubator or cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "SIC code 72110 suggests intended life-sciences R&D consultancy focus"
+    ],
+    "flags_negative": [
+      "Day-one incorporation with no operating history",
+      "Registered at a generic mass-incorporation address, not a life-sciences cluster",
+      "No funding, grant, or publication evidence provided",
+      "Single-director structure with no verified track record"
+    ],
+    "interest_score": "1 — pre-operational consultancy shell with no verifiable science, funding, or team credentials",
+    "unknowns": [],
+    "company_number": "17408536",
+    "sic_codes": [
+      "70229",
+      "72110",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NEOFELISLABS LTD",
+    "incorporated": "2026-08-19",
+    "one_liner": "Not observable at this stage — no descriptive material provided beyond SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other operational signal",
+    "team_provenance": "Sole director, British national. No ORCID match found. No other appointments found under this officer record — informational only, not evidence of first-time or repeat founder status.",
+    "location_signal": "Registered address is a residential-looking street address in Coventry — no incubator or cluster affiliation evident",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, market, or technology available",
+      "Mixed SIC codes (software development, IT consultancy, other IT services, R&D) suggest a generalist/unclear focus rather than a specialist biotech play",
+      "Extremely early — incorporated with no operating history"
+    ],
+    "interest_score": "1 - no evidence of biotech relevance beyond a single R&D SIC code; essentially a blank-slate shell",
+    "unknowns": [],
+    "company_number": "17408501",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LUNDEN LABS LTD",
+    "incorporated": "2026-08-19",
+    "one_liner": "Consultancy/engineering firm building private cloud, big-data, and air-gapped AI infrastructure for regulated enterprises.",
+    "science": "Not a biotech/life-sciences platform — this is IT infrastructure services (private cloud, data isolation, AI deployment), not a biological or therapeutic mechanism.",
+    "stage_signal": "Day-one incorporation (dated 2026, likely a data/typo artifact) with a live marketing website but no product specifics beyond generic service description.",
+    "team_provenance": "Single director, Jamil Abdullayev; no ORCID match, no repeat-founder record found. No visible academic or biotech background.",
+    "location_signal": "Registered at 2c Asteria House, Fortunes Walk, London E20 — a generic-sounding registered office, not a known biotech/life-sciences cluster or incubator.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes and website indicate IT/cloud infrastructure consultancy, not life sciences — outside fund mandate",
+      "No scientific or biological mechanism of any kind",
+      "No funding, grant, or investor data provided",
+      "Incorporation date appears anomalous (2026)"
+    ],
+    "interest_score": "1 — out-of-sector IT infrastructure consultancy with no life-sciences relevance",
+    "unknowns": [],
+    "company_number": "17409202",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MARINEBRYOLOGY LIMITED",
+    "incorporated": "2026-08-19",
+    "one_liner": "Not observable at this stage — no description of products, services or activity provided beyond company registration.",
+    "science": "Name suggests possible connection to marine bryozoan biology (e.g. natural products, bioactive compound discovery), but this is inferred from the company name only and not confirmed by any provided data.",
+    "stage_signal": "Day-one incorporation — no trading history, product, or funding activity observable.",
+    "team_provenance": "Single director, Dr Bryan Wilson (British). ORCID search returned 7 possible matches on a common name — too many to confirm a unique academic identity, and this is inconclusive by construction. No other directorships found under this officer record.",
+    "location_signal": "Summerhill House, Fakenham, Norfolk — a generic registered-office/serviced-address, not a known biotech incubator or cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of technology, product, or business activity available",
+      "Incorporated too recently to show any track record",
+      "Registered address shows no evidence of specialist life-sciences location"
+    ],
+    "interest_score": "1 - Shell-stage company with no verifiable science, team credibility, or funding signal; name alone is insufficient basis for interest.",
+    "unknowns": [],
+    "company_number": "17409634",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 7
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ASENTAS QUANTUM SYSTEMS LTD",
+    "incorporated": "2026-08-19",
+    "one_liner": "Not observable at this stage — no description of product or activity provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or funding history yet",
+    "team_provenance": "Three directors with academic-sounding titles (Dr, Dr, Professor) and mixed international nationalities, suggesting a possible academic spin-out; none matched to ORCID or prior directorships, so academic links are unverified",
+    "location_signal": "Registered address is a residential flat in Camden, London — generic, not an incubator or recognised cluster address",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "SIC code 72190 (other R&D) suggests intended focus on scientific research"
+    ],
+    "flags_negative": [
+      "Residential registered address, not a lab/incubator/cluster address",
+      "No description of technology, product, or market",
+      "No funding evidence, dilutive or non-dilutive",
+      "Academic titles unverified via ORCID",
+      "No prior company history for any director"
+    ],
+    "interest_score": "2 - Titles suggest possible academic founders but nothing is independently verified or substantive yet; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17408653",
+    "sic_codes": [
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NAYTI LABS LIMITED",
+    "incorporated": "2026-08-19",
+    "one_liner": "Not observable at this stage — no descriptive data beyond mixed SIC codes spanning software, data processing, and R&D",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Single director, Indian national; ORCID search returned 14 possible matches — name too common to verify, inconclusive; no prior directorships found under this officer record",
+    "location_signal": "Wembley residential/generic commercial address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Extremely early stage — incorporated within days of this record",
+      "SIC mix (software, data processing, letting, R&D) is unusually broad and non-specific",
+      "No funding, grant, or product data available",
+      "Single-director company with no verifiable track record"
+    ],
+    "interest_score": "1 - too early and too little verifiable data to assess",
+    "unknowns": [],
+    "company_number": "17409566",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BIMO MATERIALS LTD",
+    "incorporated": "2026-08-19",
+    "one_liner": "Advanced metallic materials producer (refractory metals, high-temperature alloys, HEA/RHEA, nanopowders, PVD targets) for space, nuclear fusion, aerospace and nuclear energy industries.",
+    "science": "Materials science: refractory metals, high-temperature alloys, high-entropy/refractory high-entropy alloys (HEA/RHEA), nanopowders and PVD sputtering targets — specialist metallurgy for extreme-environment applications.",
+    "stage_signal": "Newly incorporated UK entity (Aug 2026) but appears to be a UK vehicle for an established Polish manufacturer (Bimo Tech Sp. z o.o., Wrocław) claiming operation since 1992 — this is likely a UK subsidiary/rebrand, not a de-novo startup.",
+    "team_provenance": "Single director, Izabella Iwona Lawson, British, no ORCID match, no other directorships found under this officer record. No visible link disclosed between her and the Polish parent company beyond the shared branding — unconfirmed.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "location_signal": "Registered address is residential/generic (Oxford) — no incubator or cluster signal. Actual operations described on website are in Wrocław, Poland, not the UK registered address.",
+    "flags_positive": [
+      "Specialist SIC codes (23440, 24450) matching described advanced materials activity",
+      "Website describes a genuinely specialist, deep-tech materials niche (space/fusion/aerospace)",
+      "Claimed 30+ year operating history via Polish parent, if verified, would be a strong maturity signal"
+    ],
+    "flags_negative": [
+      "Discrepancy between UK incorporation date (2026) and website's claimed 1992 operating history — relationship between the UK entity and the Polish company is unexplained",
+      "No evidence provided linking director to the Polish parent company or its technical track record",
+      "Website entirely in Polish with Polish contact details — unclear what the UK entity actually does or owns",
+      "No funding, grant, or financial data provided"
+    ],
+    "interest_score": "2 - Interesting niche but the UK entity's actual role/substance relative to the Polish parent is unclear and unverified",
+    "unknowns": [],
+    "company_number": "17409042",
+    "sic_codes": [
+      "23440",
+      "24450",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WAVEDEFEND LIMITED",
+    "incorporated": "2026-08-19",
+    "one_liner": "Not observable at this stage — no website or product description provided; SIC codes suggest activity spanning electronic component manufacturing, instrument manufacturing, engineering R&D, and scientific R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, no grant or funding data provided",
+    "team_provenance": "Single director, Dr Colin Patrick Tucker (British). 'Dr' title suggests academic or technical background, but no ORCID match found and no other directorships found under this officer record — so neither academic credentials nor repeat-founder status can be verified.",
+    "location_signal": "Residential/rural address in Warwick — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No product, science, or funding detail available",
+      "Single-director company with no verifiable track record",
+      "Generic residential registered address, no cluster/incubator signal"
+    ],
+    "interest_score": "1 - Too early and too thin on data to assess; nothing here beyond incorporation record",
+    "unknowns": [],
+    "company_number": "17408898",
+    "sic_codes": [
+      "26309",
+      "26511",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BPA CLINICAL CONSULTANCY LTD",
+    "incorporated": "2026-08-19",
+    "one_liner": "A clinical consultancy of unspecified scope, per SIC code 72190 (other scientific R&D).",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no trading or product history",
+    "team_provenance": "Sole director Beejal Pravin Athwain, British national. No ORCID match found. One other appointment noted, not confirmed in target sector.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-registration/virtual office address, not a genuine biotech incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic virtual-office registration address, no genuine location signal",
+      "No science, product, or platform detail available",
+      "No funding (grant or dilutive) observable",
+      "Incorporation date is in the future/unverified, suggesting a placeholder or very recent shell filing"
+    ],
+    "interest_score": "1 - shell-stage registration with no science, team credibility signal, or funding evidence",
+    "unknowns": [],
+    "company_number": "17408759",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
