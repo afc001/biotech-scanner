@@ -1,0 +1,65 @@
+[
+  {
+    "company_name": "AI SPIRIT SYSTEMS LTD",
+    "incorporated": "2026-08-22",
+    "one_liner": "Not observable at this stage — SIC codes suggest business/domestic software and other technology R&D, but no description of what the company actually does.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Single director, Latvian national, no ORCID match; 4 other appointments held, none confirmed in target sector (informational only)",
+    "location_signal": "Generic residential/commercial address in Leyton, London — not a known incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, technology, or market",
+      "Just incorporated, no trading history",
+      "No funding evidence, dilutive or non-dilutive",
+      "Generic address with no cluster/incubator signal"
+    ],
+    "interest_score": "1 - no observable evidence of substance beyond incorporation",
+    "unknowns": [],
+    "company_number": "17415105",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KMI VAULT LTD",
+    "incorporated": "2026-08-22",
+    "one_liner": "Not observable at this stage — SIC codes suggest possible activity in chemicals, plastics packaging, electrical components, and R&D, but no description of an actual product or service is provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, residential registered address, no grant or product data available",
+    "team_provenance": "Sole director Kevin Mitchell (British); ORCID search returned 12 possible matches, name too common to verify — inconclusive, not pursued; no other appointments found under this officer record",
+    "location_signal": "Registered address is a residential address in Gosport — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Residential address with no cluster/incubator signal",
+      "Multiple unrelated SIC codes (chemicals, plastics, electrical, R&D) suggesting no clear focus",
+      "No science, product, or funding detail available",
+      "Very recent/forward-dated incorporation with no track record"
+    ],
+    "interest_score": "1 - no substantive data on science, team credibility, or funding; generic shell-like profile",
+    "unknowns": [],
+    "company_number": "17414984",
+    "sic_codes": [
+      "20590",
+      "22210",
+      "27120",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
