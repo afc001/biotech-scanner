@@ -1,0 +1,314 @@
+[
+  {
+    "company_name": "PROBA LABS LTD",
+    "incorporated": "2026-08-23",
+    "one_liner": "Not observable at this stage — no company website or descriptive material provided beyond registration data.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (registered 2026-08-23); no grant or product data available. SIC mix (47910 retail via internet, 72110 biotech R&D) is unusual and inconsistent, suggesting this may be a shell or side-vehicle rather than a focused biotech.",
+    "team_provenance": "Sole director Arjun Singh Rajawat holds 19 other appointments (none confirmed in target sector) and shows an ADVISOR PATTERN with 15 currently active directorships — indicative of a well-connected serial incorporator or portfolio operator, but very unlikely to be hands-on in this specific venture's day-to-day running.",
+    "location_signal": "Residential address in Staines-upon-Thames — generic, no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or website information available",
+      "SIC code combination (retail + biotech R&D) is inconsistent and unexplained",
+      "Director's high volume of concurrent directorships (15 active) suggests minimal operational involvement",
+      "Very recent incorporation with no substantive track record yet"
+    ],
+    "interest_score": "1 - no discernible science, unclear focus, director spread thin across many companies",
+    "unknowns": [],
+    "company_number": "17415255",
+    "sic_codes": [
+      "47910",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 19,
+      "active_count": 15,
+      "resigned_count": 4,
+      "other_companies": [
+        {
+          "company_name": "PROBA ACCESSORIES LTD",
+          "company_number": "17411714",
+          "company_status": "active",
+          "appointed_on": "2026-08-20",
+          "resigned_on": null,
+          "sic_codes": [
+            "47910"
+          ]
+        },
+        {
+          "company_name": "JLA PROPERTY HOLDINGS LTD",
+          "company_number": "16601083",
+          "company_status": "active",
+          "appointed_on": "2025-07-23",
+          "resigned_on": null,
+          "sic_codes": [
+            "41202",
+            "68100"
+          ]
+        },
+        {
+          "company_name": "JLA ESTATES LTD",
+          "company_number": "16601211",
+          "company_status": "active",
+          "appointed_on": "2025-07-23",
+          "resigned_on": null,
+          "sic_codes": [
+            "41202",
+            "68100"
+          ]
+        },
+        {
+          "company_name": "JLA BUILDING CO LTD",
+          "company_number": "16601404",
+          "company_status": "active",
+          "appointed_on": "2025-07-23",
+          "resigned_on": null,
+          "sic_codes": [
+            "41100"
+          ]
+        },
+        {
+          "company_name": "BATTLEKART AR LTD",
+          "company_number": "16503883",
+          "company_status": "active",
+          "appointed_on": "2025-06-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "93290"
+          ]
+        },
+        {
+          "company_name": "ALUPAC LTD",
+          "company_number": "15738863",
+          "company_status": "active",
+          "appointed_on": "2024-05-24",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229"
+          ]
+        },
+        {
+          "company_name": "ACCOUNTANTS YOU CAN TALK WITH LIMITED",
+          "company_number": "06467538",
+          "company_status": "active",
+          "appointed_on": "2024-04-16",
+          "resigned_on": null,
+          "sic_codes": [
+            "69201",
+            "69203"
+          ]
+        },
+        {
+          "company_name": "AJ COMMERCIAL HOLDINGS LTD",
+          "company_number": "15413071",
+          "company_status": "active",
+          "appointed_on": "2024-01-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "68100",
+            "68209"
+          ]
+        },
+        {
+          "company_name": "J2AO DEVELOPMENTS LTD",
+          "company_number": "15413977",
+          "company_status": "active",
+          "appointed_on": "2024-01-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "41202",
+            "68100",
+            "68209"
+          ]
+        },
+        {
+          "company_name": "PRIVILEGE WATCHES LTD",
+          "company_number": "14792453",
+          "company_status": "active",
+          "appointed_on": "2023-04-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "47770"
+          ]
+        },
+        {
+          "company_name": "MYSPORTZ LTD",
+          "company_number": "13933965",
+          "company_status": "dissolved",
+          "appointed_on": "2022-02-22",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "ESCAPE OUT VR LTD",
+          "company_number": "13681280",
+          "company_status": "dissolved",
+          "appointed_on": "2021-10-14",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "PREP4U LTD",
+          "company_number": "13576129",
+          "company_status": "dissolved",
+          "appointed_on": "2021-08-20",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "VISTA DEVELOPERS LTD",
+          "company_number": "11187534",
+          "company_status": "active",
+          "appointed_on": "2019-08-06",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "EXCLUSIVE MARKETING SERVICES LTD",
+          "company_number": "10523882",
+          "company_status": "dissolved",
+          "appointed_on": "2019-07-01",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "APEIRON ENERGY SHOTTS FARM LTD",
+          "company_number": "15824019",
+          "company_status": "active",
+          "appointed_on": "2024-07-08",
+          "resigned_on": "2024-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "APEIRON ENERGY LTD",
+          "company_number": "15819411",
+          "company_status": "active",
+          "appointed_on": "2024-07-04",
+          "resigned_on": "2024-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "360 SPORTS TV LIMITED",
+          "company_number": "13221060",
+          "company_status": "dissolved",
+          "appointed_on": "2021-03-25",
+          "resigned_on": "2022-03-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "GOLDEN GLOW BEAUTY LTD",
+          "company_number": "12663800",
+          "company_status": "dissolved",
+          "appointed_on": "2020-06-11",
+          "resigned_on": "2020-09-21",
+          "sic_codes": null
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": true,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MYOCURVE LTD",
+    "incorporated": "2026-08-23",
+    "one_liner": "Not observable at this stage — no description of product or activity provided beyond registered SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-registration/shell stage — no evidence of operations yet",
+    "team_provenance": "Sole director Ozgur Aydin (Turkish national); ORCID search returned only unverified possible matches, not treated as confirmed; no other directorships found under this officer record",
+    "location_signal": "Kingston Upon Thames residential/commercial address — no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 (scientific R&D) among registered codes, suggesting intended R&D activity"
+    ],
+    "flags_negative": [
+      "No trading history — incorporated only recently",
+      "No funding, grant, or product data available",
+      "No confirmed academic or founder track record",
+      "Mixed SIC codes (sports/medical goods manufacturing, computer consultancy, R&D) suggest unclear or undecided business focus"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17415268",
+    "sic_codes": [
+      "32300",
+      "32500",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BRIVALTA LTD",
+    "incorporated": "2026-08-23",
+    "one_liner": "Not observable at this stage — no description of activity beyond a generic R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Sole director Dariusz Splawski, Polish nationality; no ORCID match found (not evidence of anything); no other appointments found under this officer record (not evidence of anything)",
+    "location_signal": "Residential address in Manchester — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Extremely early — incorporated with no operational history",
+      "SIC code (72190) is generic R&D, gives no indication of specific focus",
+      "Single director, no visible team or advisory structure",
+      "No funding, grant, or partnership data available"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, team credibility signal, or funding; nothing to evaluate yet",
+    "unknowns": [],
+    "company_number": "17415389",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BIOSTATAI LTD",
+    "incorporated": "2026-08-23",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Sole director Maryum Altaf; no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "Residential-looking Manchester address, no evident incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "Freshly incorporated with no track record",
+      "Generic residential address, no cluster signal"
+    ],
+    "interest_score": "1 - no verifiable signals beyond a bare Companies House filing",
+    "unknowns": [],
+    "company_number": "17415214",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
