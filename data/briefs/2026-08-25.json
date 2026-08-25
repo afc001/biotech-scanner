@@ -1,0 +1,161 @@
+[
+  {
+    "company_name": "ONE FLEET TECHNOLOGIES LTD",
+    "incorporated": "2026-08-24",
+    "one_liner": "Not observable at this stage — no product/service description available beyond SIC codes suggesting IT/software and data services.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated), no other activity evidence",
+    "team_provenance": "Sole director Matthew Howard Ford holds 8 other active directorships (ADVISOR PATTERN) — suggests a well-connected, portfolio-style operator, but likely limited day-to-day involvement here; none of the 8 other appointments confirmed in the target sector (72110/72190), so no evidence of relevant prior founding experience.",
+    "location_signal": "Residential-looking address in Frodsham, Cheshire — not a known incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product or business activity available",
+      "Company incorporated with a future date, effectively pre-operational",
+      "Generic/residential registered address",
+      "Director's other appointments show no track record in this sector"
+    ],
+    "interest_score": "1 - no discernible science, product, or funding signal; shell-stage registration only",
+    "unknowns": [],
+    "company_number": "17415787",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 8,
+      "active_count": 8,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "THE VERIFIED GROUP LTD",
+          "company_number": "16775358",
+          "company_status": "active",
+          "appointed_on": "2025-10-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "49410",
+            "62090",
+            "63110",
+            "82990"
+          ]
+        },
+        {
+          "company_name": "ZERO EMISSIONS LOGISTICS LTD",
+          "company_number": "16057173",
+          "company_status": "dissolved",
+          "appointed_on": "2024-11-04",
+          "resigned_on": null,
+          "sic_codes": [
+            "38110",
+            "49410"
+          ]
+        },
+        {
+          "company_name": "CHARGIFY LTD",
+          "company_number": "15689508",
+          "company_status": "dissolved",
+          "appointed_on": "2024-04-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "62012",
+            "63120"
+          ]
+        },
+        {
+          "company_name": "NAVPRO LTD",
+          "company_number": "15692453",
+          "company_status": "dissolved",
+          "appointed_on": "2024-04-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "63120"
+          ]
+        },
+        {
+          "company_name": "THE ELECTRIC DELIVERY GUYS LTD",
+          "company_number": "15586321",
+          "company_status": "dissolved",
+          "appointed_on": "2024-03-23",
+          "resigned_on": null,
+          "sic_codes": [
+            "49410"
+          ]
+        },
+        {
+          "company_name": "MQ TRANSPORT LTD",
+          "company_number": "15196347",
+          "company_status": "dissolved",
+          "appointed_on": "2023-10-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "49410"
+          ]
+        },
+        {
+          "company_name": "URBAN GROUP NW LTD",
+          "company_number": "14440265",
+          "company_status": "dissolved",
+          "appointed_on": "2022-10-25",
+          "resigned_on": null,
+          "sic_codes": [
+            "47640",
+            "47910",
+            "49410",
+            "93199"
+          ]
+        },
+        {
+          "company_name": "URBAN RACKETS LTD",
+          "company_number": "14434816",
+          "company_status": "dissolved",
+          "appointed_on": "2022-10-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "47640"
+          ]
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 8
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GUARDIANX LTD",
+    "incorporated": "2026-08-24",
+    "one_liner": "Not observable at this stage — no description of the business activity is provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no trading, product, or funding history yet",
+    "team_provenance": "Two directors, both Nigerian nationals. No ORCID matches found for either. Neither has other appointments confirmed in target sector (72110/72190).",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine lab or incubator cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered at a generic mass-incorporation virtual address, not a specialist cluster",
+      "No science, product, or market description available",
+      "No non-dilutive or dilutive funding evidence",
+      "Incorporated only very recently — no operating history"
+    ],
+    "interest_score": "1 - no discernible science, team credibility signal, or funding; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17415803",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
