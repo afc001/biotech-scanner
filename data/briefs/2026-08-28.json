@@ -1,0 +1,379 @@
+[
+  {
+    "company_name": "KEYSTRAND THERAPEUTICS LIMITED",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage — no product/technology description provided beyond SIC classification",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, SIC 72110 (biotech R&D) — pre-revenue by definition",
+    "team_provenance": "Sole named director Dr Raghd Rostom, ORCID-confirmed academic with Cambridge/Wellcome Sanger Institute affiliations — strong research pedigree. Confirmed repeat founder in same sector, currently a director at Kesmalea Therapeutics Limited (active, SIC 72110), plus one further appointment — suggests active serial company-building rather than one-off vehicle",
+    "location_signal": "Wyton, Huntingdon — generic address, not a recognised biotech cluster or incubator",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic founder (Cambridge/Wellcome Sanger)",
+      "REPEAT FOUNDER CONFIRMED in same sector (active co-directorship at Kesmalea Therapeutics)"
+    ],
+    "flags_negative": [
+      "No science, product, or funding data available",
+      "Just incorporated — no operating history whatsoever",
+      "Registered address is generic, not a known life-sciences hub"
+    ],
+    "interest_score": "3 - credible repeat academic founder, but zero disclosed substance on what the company actually does",
+    "unknowns": [],
+    "company_number": "17426218",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-4453-3357",
+      "institutions": [
+        "University of Cambridge",
+        "Wellcome Sanger Institute"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 2,
+      "active_count": 1,
+      "resigned_count": 1,
+      "other_companies": [
+        {
+          "company_name": "KESMALEA THERAPEUTICS LIMITED",
+          "company_number": "12961631",
+          "company_status": "active",
+          "appointed_on": "2025-11-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "KESMALEA THERAPEUTICS LIMITED",
+          "company_number": "12961631",
+          "company_status": "active",
+          "appointed_on": "2024-05-30",
+          "resigned_on": "2025-04-01",
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "KESMALEA THERAPEUTICS LIMITED",
+          "company_number": "12961631",
+          "company_status": "active",
+          "appointed_on": "2025-11-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "KESMALEA THERAPEUTICS LIMITED",
+          "company_number": "12961631",
+          "company_status": "active",
+          "appointed_on": "2024-05-30",
+          "resigned_on": "2025-04-01",
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 2
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MILESTONES AI LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage — no product or market description provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points to stage",
+    "team_provenance": "Sole director John Douglas Douglas; no ORCID match found (inconclusive, not negative), no other appointments found under this officer record (informational only, not evidence of first-time founder status)",
+    "location_signal": "Residential-looking address in Aylesbury — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Mixed SIC codes span software (62012, 62090), computer programming/consultancy (72110), and other professional/scientific/technical activities (74909) — suggests possible AI/software-services orientation, but not confirmed"
+    ],
+    "flags_negative": [
+      "No science, product, or team background evidence available",
+      "Generic residential address, no cluster or incubator signal",
+      "No funding data of any kind"
+    ],
+    "interest_score": "1 — no verifiable signal beyond incorporation and SIC codes",
+    "unknowns": [],
+    "company_number": "17426106",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72110",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RENFREW OAK LIMITED",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage — no trading, product, or business description available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no further activity data",
+    "team_provenance": "Sole director Jonathan Ansah Frimpong, British national, ORCID CONFIRMED (0009-0001-6817-3480) with affiliation to Kharkiv Institute of Medicine and Biomedical Sciences — a genuine verified academic identity link. One other appointment held but not in this target sector, so no repeat-founder credit in-sector.",
+    "location_signal": "Residential address in Renfrew, Scotland — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic identity match",
+      "Biotech/biomedical SIC code (72110)"
+    ],
+    "flags_negative": [
+      "No trading history — brand new shell",
+      "No grant or funding data",
+      "Generic residential registered address",
+      "No description of actual science or product"
+    ],
+    "interest_score": "2 - genuine academic credential but nothing else observable; too early to assess",
+    "unknowns": [],
+    "company_number": "SC900691",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0001-6817-3480",
+      "institutions": [
+        "Kharkiv Institute of Medicine and Biomedical Sciences"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VAQQ LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "A holding-style entity for 'independent consumer brands' — no specific product or biotech activity disclosed",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operational detail; website is a placeholder ('coming soon')",
+    "team_provenance": "Sole director Andrew Williams — ORCID and GtR matches both too ambiguous to confirm (common name); no other appointments found under this officer record",
+    "location_signal": "Registered address at The Office, Gothic House, Barker Gate, Nottingham — a generic registered-office/company-formation address, not a known life-sciences cluster or incubator",
+    "funding": "None disclosed — no grant or investment data present",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code 47910 (retail via mail order/internet) suggests consumer e-commerce, not life sciences",
+      "No scientific, technical, or clinical content anywhere in available data",
+      "Website is a placeholder with no product, team, or sector detail",
+      "No funding, grant, or investor activity found"
+    ],
+    "interest_score": "1 — no life-sciences signal of any kind; appears to be a generic consumer-brand shell",
+    "unknowns": [],
+    "company_number": "17427030",
+    "sic_codes": [
+      "47910",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 7
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BS GROUP INTERNATIONAL LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "A football player representation and career management agency, not a life-sciences company.",
+    "science": "Not observable at this stage — no scientific or technical platform of any kind; this is a sports agency business.",
+    "stage_signal": "Day-one incorporation with a live marketing website; SIC codes (wholesale trade, engineering/other services, gambling, IT consultancy) do not match the stated business and do not indicate a biotech or R&D activity.",
+    "team_provenance": "Sole director Shakeal Badurdeen. No ORCID match, no other appointments found — neither is meaningful signal on its own. No academic or life-sciences background evident.",
+    "location_signal": "Registered address is a residential/generic London-suburb address (Morden) — no incubator, cluster, or lab-space signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Business is football talent representation, entirely outside life-sciences remit",
+      "SIC codes mismatched to stated business activity, suggesting sloppy filing or unclear structuring",
+      "No science, technology, or R&D component identifiable"
+    ],
+    "interest_score": "1 — out of scope for a life-sciences fund; not a biotech company",
+    "unknowns": [],
+    "company_number": "17426007",
+    "sic_codes": [
+      "46690",
+      "71122",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HELFORD MARINE RESEARCH CIC",
+    "incorporated": "2026-08-28",
+    "one_liner": "A Community Interest Company purporting to do marine-related R&D; no further detail on activity available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data yet",
+    "team_provenance": "Two directors, shared surname suggesting family connection. Alexander Thornton has no ORCID match and no other appointments found. Jonathan Thornton has 20 other appointments (ADVISOR PATTERN), none confirmed in this sector — signals a well-connected individual but likely limited hands-on involvement here.",
+    "location_signal": "Registered address is a residential property in Mawnan Smith, Cornwall — not a lab, incubator, or science cluster address; consistent with a CIC run from a private house near the Helford estuary.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "CIC structure limits profit distribution and equity upside for investors",
+      "No SIC code, science, or funding detail suggesting a fundable R&D platform",
+      "Registered address is residential, not a research or business setting",
+      "No evidence of grant funding, publications, or commercial traction"
+    ],
+    "interest_score": "1 - CIC legal form, no science disclosed, residential address, no funding evidence; not a fit for equity venture investment",
+    "unknowns": [],
+    "company_number": "17425660",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ZAD INTELLIGENT LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage — no descriptive data beyond registration details",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with future-dated registration; no evidence of trading or product",
+    "team_provenance": "Sole director Ayman Saleh S Alharbi, Saudi Arabian national; no ORCID match; no other directorships found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation address (generic registered office, not a genuine lab/incubator cluster)",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Shelton Street address is a high-volume formation-agent registered office, not a specialist signal",
+      "No science, product, or funding data available",
+      "SIC mix (software/IT plus R&D) is generic and unconfirmed by any other evidence"
+    ],
+    "interest_score": "1 - no verifiable science, funding, or team signal; shell-like registration at a mass-formation address",
+    "unknowns": [],
+    "company_number": "17427364",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CIRCUMIND LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage — no company website or product description provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading shell company",
+    "team_provenance": "Sole director Fatemehsadat Hosseini Asl; no ORCID match found; no other appointments found under this officer record — no evidence either way on prior founding experience",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a specialist biotech incubator; generic signal",
+    "funding": "No grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered address is a generic mass-incorporation service address, not a lab or cluster location",
+      "No funding, grant, or product data available",
+      "Mixed SIC codes (manufacturing, wholesale, IT, R&D) suggest an unclear or undefined business model",
+      "Single director with no verifiable academic or industry track record"
+    ],
+    "interest_score": "1 — no science, team, funding, or location signal to assess; too early to be observable",
+    "unknowns": [],
+    "company_number": "17425654",
+    "sic_codes": [
+      "26511",
+      "46690",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DJP MARINE INNOVATIONS LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage — no trading, product, or activity data available beyond incorporation record.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Two directors, both surnamed Price (likely family connection), British nationals. No ORCID matches for either. One director has one other appointment, unconfirmed sector; the other has none found.",
+    "location_signal": "Registered address appears residential/generic (Rhiwderin, Newport) — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Extremely early stage — incorporated within days, no operational data",
+      "SIC codes span holding company, R&D, and computer consultancy — unclear actual focus",
+      "No evidence of funding, grants, or scientific activity",
+      "Generic/residential registered address, no cluster or incubator signal"
+    ],
+    "interest_score": "1 — no verifiable science, team credibility, or funding signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17426881",
+    "sic_codes": [
+      "64209",
+      "69109",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "P4H LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage — no operational description available beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no other public data yet",
+    "team_provenance": "Sole director Adrian Herron, British; no ORCID match found; no other appointments found under this officer record — no additional background available",
+    "location_signal": "66 Paul Street, London EC2A — a known company-formation/serviced-office address, commonly used by shell and early-stage companies; not a specific biotech incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72190 indicates registered intent for R&D activity"
+    ],
+    "flags_negative": [
+      "No trading history — incorporated same/near-future date",
+      "No science, product, or team background disclosed",
+      "Registered address is a generic formation-agent address, not a biotech cluster or incubator",
+      "No grant or funding data available"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17427453",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
