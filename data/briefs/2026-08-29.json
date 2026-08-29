@@ -1,0 +1,97 @@
+[
+  {
+    "company_name": "NILUS LAB LTD",
+    "incorporated": "2026-08-28",
+    "one_liner": "Claims to work on 'safe cardiac rejuvenation' but the website is an incoherent mix of login screens and jargon with no explained product or mechanism.",
+    "science": "Not observable at this stage — website mentions 'cardiac rejuvenation', 'Folding API', 'Zenith', and a 'Clinical Report v31.0' but gives no coherent explanation of mechanism, modality, or what problem is being solved.",
+    "stage_signal": "Day-one incorporation (note: incorporation date is in the future/likely data artefact) with a live but confusing website — pre-seed, unclear if genuine R&D exists yet.",
+    "team_provenance": "Single director, no ORCID match, no prior directorships found under this officer record — no evidence of academic or company-building background.",
+    "location_signal": "Registered address is a generic Swansea high street address — no evidence of incubator or cluster affiliation.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Website content is disjointed and reads as templated/placeholder (login screens, buzzwords like 'Mainframe', 'Folding API', 'Zenith' with no explanation)",
+      "No coherent statement of science, product, or clinical stage despite claiming a 'Clinical Report'",
+      "No verifiable team credentials (no ORCID match, no confirmed prior directorships)",
+      "Incorporation date appears to be in the future, suggesting a data quality issue or a shell with no operating history",
+      "SIC codes mix software (62012) with company-type codes (72110, 72190) rather than a specific biotech/pharma code"
+    ],
+    "interest_score": "1 - Incoherent web presence, no verifiable science, no credible team signals, nothing to diligence yet",
+    "unknowns": [],
+    "company_number": "17427807",
+    "sic_codes": [
+      "62012",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BLACKWATER R&D LIMITED",
+    "incorporated": "2026-08-28",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no activity or output yet observable",
+    "team_provenance": "Sole director Harrison David Stewart, British; no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "College Business Centre, Derby — a managed/incubator-style business centre, not a generic residential or virtual address, but not a known life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Registered at a managed business centre rather than a residential address",
+      "SIC code 72190 (specialist R&D) aligns with target sector"
+    ],
+    "flags_negative": [
+      "No science, product, or team background disclosed",
+      "No grant or funding data",
+      "No evidence of academic or industry track record",
+      "Too early to assess technical credibility"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17427861",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CLINVERA LTD",
+    "incorporated": "2026-08-29",
+    "one_liner": "Not observable at this stage — no company website or descriptive filing beyond SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading — no funding or product signal yet",
+    "team_provenance": "Single director, Irene Njoki Njoki Mburu; no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "Oxford residential/generic address — not a known biotech incubator or cluster address on record",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (IT/software, education, R&D) suggest unclear or unfocused business model",
+      "No evidence of scientific founder credentials, funding, or product",
+      "Single-director company with no track record"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; SIC mix doesn't clearly indicate a biotech play",
+    "unknowns": [],
+    "company_number": "17427932",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
