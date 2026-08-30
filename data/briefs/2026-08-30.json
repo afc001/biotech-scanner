@@ -1,0 +1,32 @@
+[
+  {
+    "company_name": "ROOTS TO RESEARCH LTD",
+    "incorporated": "2026-08-29",
+    "one_liner": "Not enough data to determine what the company does beyond a mixed agriculture/R&D SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Single director, no confirmed academic (ORCID) record and no prior directorships found under this officer record",
+    "location_signal": "Gyleview House, Edinburgh — a mass company-formation/registered-office address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated date is in the future / inconsistent (2026-08-29), suggesting a data or record error worth verifying",
+      "Combination of SIC 01500 (farming) and 72190 (R&D) is vague and doesn't clarify actual business focus",
+      "Single director with no verifiable track record",
+      "Generic registered office, likely a formation agent address"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or credible signal to assess",
+    "unknowns": [],
+    "company_number": "SC900836",
+    "sic_codes": [
+      "01500",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
