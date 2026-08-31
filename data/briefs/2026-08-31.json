@@ -1,0 +1,97 @@
+[
+  {
+    "company_name": "PROVIUM BIO LTD",
+    "incorporated": "2026-08-30",
+    "one_liner": "Not observable at this stage — no business description available beyond registration details",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Single director, Sudharsan Sridharan, British; no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "66 Paul Street, London, EC2A 4NA — a well-known registered-office/formation-agent address used by large numbers of unrelated companies, not a specialist biotech incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72110 (biotech R&D) declared alongside software SIC 62012, suggesting an intended biotech/software crossover"
+    ],
+    "flags_negative": [
+      "Incorporated very recently with no track record",
+      "No funding, grant, or product information available",
+      "Registered address is a generic mass-registration address, not a recognised life-sciences cluster or incubator",
+      "No verifiable academic or prior-founder credentials for the sole director"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team credibility signals",
+    "unknowns": [],
+    "company_number": "17428551",
+    "sic_codes": [
+      "62012",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "TELCHAR SYSTEMS LTD",
+    "incorporated": "2026-08-31",
+    "one_liner": "Not observable at this stage — no descriptive data beyond registration details.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Sole director James Anthony David Lawson, British; no ORCID match found; 2 other appointments held, none confirmed in the target sector",
+    "location_signal": "Registered address is a Westminster (SW1P) address — generic-looking, no obvious incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No trading or product information available",
+      "SIC codes span disparate fields (electronics manufacture, instrument manufacture, IT consultancy, management consultancy) — unclear focus",
+      "Very recent incorporation with no funding or grant history"
+    ],
+    "interest_score": "2 - too early-stage and undifferentiated to assess; no credibility signals or funding yet",
+    "unknowns": [],
+    "company_number": "17428562",
+    "sic_codes": [
+      "26110",
+      "26511",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CALTON WORKS LTD",
+    "incorporated": "2026-08-30",
+    "one_liner": "Not observable at this stage — SIC mix (software development, computer consultancy, engineering, and R&D on natural sciences/engineering) suggests a tech-adjacent or engineering-services venture, but no descriptive data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue by definition — no grant or trading data yet",
+    "team_provenance": "Sole director Dr Charles Edward Plumley, British. 'Dr' title suggests postgraduate qualification but no ORCID match found (inconclusive, not negative). No other directorships found under this officer record.",
+    "location_signal": "Residential/generic Glasgow street address — no incubator or cluster signal detectable",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, market, or science available",
+      "SIC codes span four disparate categories (software, consultancy, R&D, engineering), suggesting an unformed or generic business plan",
+      "No funding, grant, or trading history yet — nothing to assess traction against",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - Day-old shell company with no discernible focus, science, or funding; nothing here yet to justify attention",
+    "unknowns": [],
+    "company_number": "SC900856",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
