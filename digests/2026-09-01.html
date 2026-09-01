@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner Digest — 2026-09-01</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .pill-search { background:#dce7f7; color:#1a3e6e; }
+  .sources { color:#777; font-size:14px; margin:10px 0 0; }
+  .sources a { color:#555; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .legend summary { cursor:pointer; font-weight:bold; }
+  .legend p { margin:8px 0 0; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+  .archive-summary { color:#777; font-size:15px; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner Digest — 2026-09-01</h1><p class="meta">Generated 2026-09-01 · 9 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><details class="legend"><summary>Badge legend</summary><p>ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check · Repeat Founder ✓ = confirmed prior/current directorship at another company in this sector (hover for detail) · Advisor Pattern = director holds several other active directorships — well-connected, but likely not day-to-day operational here · 🔍 Web-verified = re-checked with a live web search (see Sources on that brief)</p></details><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" id="company-17430156" data-score="2" data-incorporated="2026-09-01">
+<h2>GALVATRACE LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Imperial College London">ORCID &#10003;</span></h2>
+<p class="oneliner">Not observable at this stage — no company description or product information provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 72110</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, SIC 72110 (biotech R&amp;D), no other operational detail</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Cristian Yen Jet NG, British/Italian, ORCID CONFIRMED with an Imperial College London affiliation — a genuine, independently verified academic record. No other directorships found under this officer record.</p>
+<p class="field"><span class="label">Location signal.</span> Residential-looking London address (Sparrows Lane, SE9) — no indication of incubator or cluster affiliation</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic record linked to Imperial College London</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of product, technology, or market</li><li>No funding data</li><li>Generic/residential registered address, not a life-sciences cluster</li><li>Company incorporated very recently with no operating history</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — academic credibility signal present but no discernible science, funding, or activity to assess</p>
+
+</div><div class="company" id="company-17429995" data-score="2" data-incorporated="2026-09-01">
+<h2>RIPPL LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Airbus (United Kingdom)">ORCID &#10003;</span></h2>
+<p class="oneliner">Website suggests a US dementia care-on-demand service (Rippl), but this UK entity&#x27;s link to that business is unclear — appears to now be part of &#x27;Harbor Health&#x27; per site text.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 26400, 26511, 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage — SIC codes (electronic equipment, medical devices, computer programming, engineering R&amp;D) suggest possible hardware/software health-tech angle, but no mechanism described</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (future-dated, 2026) — pre-trading shell</p>
+<p class="field"><span class="label">Team provenance.</span> Three directors, two Spanish, one English. Ballesteros Ruiz has ORCID CONFIRMED academic record and Airbus affiliation — unusual mix for a dementia-care/health-tech play. No repeat-founder signals; no prior appointments found for any director.</p>
+<p class="field"><span class="label">Location signal.</span> 128 City Road, London EC1V 2NX — this is a well-known mass company-formation/virtual office address, not a genuine cluster or incubator signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic record for director Ballesteros Ruiz</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Registered address is a generic mass-incorporation address, not sector-specific</li><li>Website content (US dementia care service, apparently acquired by &#x27;Harbor Health&#x27;) does not obviously match this UK company or its SIC codes</li><li>Incorporation date is future-dated/anomalous</li><li>Airbus affiliation and dementia-care branding are a strange mismatch, suggesting possible name collision rather than a real link between entity and website</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — likely a name coincidence or shell with unclear connection to the branded website; nothing here supports a coherent thesis yet</p>
+
+</div><div class="company" id="company-17429829" data-score="1" data-incorporated="2026-09-01">
+<h2>THE HARB GROUP LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — SIC mix suggests chemical/cosmetic wholesale, online retail, and biotech R&amp;D, but no descriptive information is provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 46750, 47910, 72110</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity data</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Babber Butt, British; no ORCID match found; no other directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden — a well-known company-formation/virtual office address used by thousands of shell companies, not a biotech incubator or cluster</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Generic mass-registration virtual office address, not a biotech-specific location</li><li>SIC code combination (wholesale, online retail, R&amp;D) is incoherent for a focused biotech play</li><li>No science, product, or team background disclosed</li><li>Incorporated with no supporting grant or investor data</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or credible location signal; looks like a generic shell registration</p>
+
+</div><div class="company" id="company-SC900935" data-score="1" data-incorporated="2026-09-01">
+<h2>KNOWLEDGE TREE AND BUTTERFLY LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Unclear — SIC mix spans IT consultancy, business/management consultancy, R&amp;D, and other education, with no descriptive detail provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 62020, 70229, 72190, 85590</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity indicators</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Dr Jonathan William Minton (British). No ORCID match found; no other appointments found under this officer record. Academic title present but unverified.</p>
+<p class="field"><span class="label">Location signal.</span> Residential/generic Edinburgh address — no obvious incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>SIC code mix is broad and generic, giving no clear picture of actual business focus</li><li>No funding, grant, or product information available</li><li>No corroborating evidence of academic or commercial track record</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — No verifiable science, funding, or team signal; too early and too vague to assess</p>
+
+</div><div class="company" id="company-17429893" data-score="1" data-incorporated="2026-09-01">
+<h2>TEE DEE AIDOC LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no business description available beyond SIC classification</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 62090, 72190, 86900</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other data points</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Naveen Kumar Athiraman, British national. No ORCID match found. No other appointments found under this officer record.</p>
+<p class="field"><span class="label">Location signal.</span> Residential address in Newcastle Upon Tyne — generic, no incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No business description or activity detail available</li><li>Single director with no verifiable track record</li><li>Registered address appears residential, not a specialist cluster or incubator</li><li>SIC codes span software (62090), R&amp;D-adjacent (72190), and other health/social work activities (86900) — unclear focus</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no substantive signal of any kind; too early and too thin to assess</p>
+
+</div><div class="company" id="company-17429055" data-score="1" data-incorporated="2026-08-31">
+<h2>TRACKER AI PETS LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no product description provided beyond SIC codes</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-08-31 &middot; <span class="label">SIC:</span> 62012, 62020, 63110, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other data available</p>
+<p class="field"><span class="label">Team provenance.</span> Two British directors; one other appointment each, none confirmed in target sector (SIC 72110/72190). ORCID search inconclusive for both — no meaningful academic signal either way</p>
+<p class="field"><span class="label">Location signal.</span> Residential-style address in Bradford — no evidence of incubator or cluster affiliation</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No product, market, or technology detail available</li><li>Mixed SIC codes (software, data processing, R&amp;D) suggest an undefined or shifting business model</li><li>No funding signal, dilutive or non-dilutive</li><li>No team credibility signals confirmed</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage registration with no substantive information to assess</p>
+
+</div><div class="company" id="company-17429110" data-score="1" data-incorporated="2026-09-01">
+<h2>VERDANT FIELD IQ LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 7 possible matches, unverified">ORCID?</span></h2>
+<p class="oneliner">Not observable at this stage — no website or description provided beyond SIC codes suggesting software/computing and R&amp;D consultancy activity.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no grant or funding data provided</p>
+<p class="field"><span class="label">Team provenance.</span> Single named director, Dr Saleem Mohammed; no other appointments found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Nottingham address — generic serviced office/business centre, no clear incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of product, technology, or market</li><li>No funding (grant or private) evidence</li><li>Very recent incorporation with no track record</li><li>SIC codes (software, R&amp;D consultancy) are broad and non-specific to a life-sciences thesis</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — No verifiable science, team, or funding signal; nothing to differentiate from a shell registration</p>
+
+</div><div class="company" id="company-17429118" data-score="1" data-incorporated="2026-09-01">
+<h2>KERFOX LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
+<p class="oneliner">Not a biotech — Companies House record is for a UK shell company, but the only live website under this name is an unrelated US-based family/commercial photography business.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 62012, 72190, 72200, 85590</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation with generic software/tech-adjacent SIC codes (62012, 72190, 72200, 85590); no evidence of any life-sciences activity</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Eivan Kolchin Rivas, British/Spanish, ORCID CONFIRMED but no institutional affiliation listed; no other directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Residential address in Pinner, England — no incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED for director (0009-0000-6384-1526)</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>SIC codes and company activity show no connection to life sciences</li><li>The only live website matching the company name is an unrelated US photography business, suggesting a name clash or shell entity with no real operations disclosed</li><li>No affiliation, institution, or research link given for the ORCID match</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no discernible life-sciences activity; likely mismatch or dormant shell, not relevant to fund thesis</p>
+
+</div><div class="company" id="company-17430089" data-score="1" data-incorporated="2026-09-01">
+<h2>NITRAM LABS LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span></h2>
+<p class="oneliner">Not observable at this stage — no product or market description provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-01 &middot; <span class="label">SIC:</span> 62012, 62020, 70229, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other operational data available</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Martin Esugo, ORCID CONFIRMED to a real academic publication record though no institution listed; no other directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden — a well-known company-formation/virtual office address used by thousands of shell companies, not a genuine biotech cluster or incubator signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic publication record for director</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Incorporated same year as this record — no trading history</li><li>Generic mass-registration virtual office address</li><li>SIC codes are broad software/IT/consultancy classifications, not a specific life-sciences code</li><li>No description of product, science, or market</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no discernible life-sciences activity, product, or funding; ORCID hit is the only positive data point and insufficient to offset a blank shell</p>
+
+</div></div></body></html>
