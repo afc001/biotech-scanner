@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner Digest — 2026-09-04</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .pill-search { background:#dce7f7; color:#1a3e6e; }
+  .sources { color:#777; font-size:14px; margin:10px 0 0; }
+  .sources a { color:#555; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .legend summary { cursor:pointer; font-weight:bold; }
+  .legend p { margin:8px 0 0; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+  .archive-summary { color:#777; font-size:15px; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner Digest — 2026-09-04</h1><p class="meta">Generated 2026-09-04 · 9 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><details class="legend"><summary>Badge legend</summary><p>ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check · Repeat Founder ✓ = confirmed prior/current directorship at another company in this sector (hover for detail) · Advisor Pattern = director holds several other active directorships — well-connected, but likely not day-to-day operational here · 🔍 Web-verified = re-checked with a live web search (see Sources on that brief)</p></details><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" id="company-17436021" data-score="3" data-incorporated="2026-09-03">
+<h2>SUPERBLOOM BIOSCIENCES LTD <span class="badge">Interest 3 / 5</span><span class="pill pill-confirmed" title="Repeat founder (same sector) — RENEGADE MEDICAL LTD">Repeat Founder &#10003;</span><span class="pill pill-ambiguous" title="Director(s) hold several other active directorships">Advisor Pattern</span></h2>
+<p class="oneliner">Not observable at this stage — no description of product or activity provided</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-03 &middot; <span class="label">SIC:</span> 72110, 86220</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other operational data</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Dr James Macalister Kinross. REPEAT FOUNDER CONFIRMED (same sector) — currently a director at Renegade Medical Ltd, another SIC 72110 company, indicating real prior experience building in this exact sector. ADVISOR PATTERN: holds 5 other active directorships, suggesting a well-connected, in-demand figure but one unlikely to be closely hands-on here day-to-day. No ORCID match found — not a negative, just unconfirmed.</p>
+<p class="field"><span class="label">Location signal.</span> Residential-looking London address (Brondesbury Park) — no obvious incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>REPEAT FOUNDER CONFIRMED (same sector) — active director at another SIC 72110 company</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of business activity or science available</li><li>Registered address shows no cluster/incubator signal</li><li>SIC 86220 (specialist medical practice) paired with 72110 is unexplained — unclear what the company actually does</li></ul>
+<p class="field"><span class="label">Interest score: 3</span> — Repeat-founder signal in-sector is genuinely positive, but zero operational, scientific, or funding detail makes this unscreenable beyond noting the founder&#x27;s track record</p>
+
+</div><div class="company" id="company-17436913" data-score="1" data-incorporated="2026-09-03">
+<h2>INVESTECHKJ LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — company name and SIC codes suggest IT/software services combined with biotech research, but no descriptive data provided</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-03 &middot; <span class="label">SIC:</span> 62090, 72110</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other data points</p>
+<p class="field"><span class="label">Team provenance.</span> Two directors, both Nigerian nationals; no ORCID match for either; no other appointments found under either officer record</p>
+<p class="field"><span class="label">Location signal.</span> Basildon, Essex — generic residential/commercial address, no incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No science, product, or activity detail available</li><li>SIC 72110 (biotech R&amp;D) paired with 62090 (IT services) is an unusual, unexplained combination</li><li>No funding, grant, or website data</li><li>Freshly incorporated with zero trading history</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — No verifiable science, funding, or team signal; nothing to evaluate beyond a shell registration</p>
+
+</div><div class="company" id="company-17436249" data-score="1" data-incorporated="2026-09-03">
+<h2>HOWDY TTRS LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no description of what the company does beyond registration details.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-03 &middot; <span class="label">SIC:</span> 72110</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no further activity data</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director William George Barber, British national. No ORCID match found (inconclusive, not a negative). No other directorships found under this officer record.</p>
+<p class="field"><span class="label">Location signal.</span> 20 Wenlock Road, London, N1 7GU — this is a well-known mass company-formation/registered-office address (Companies Made Simple / similar formation agents), not an incubator or biotech cluster; generic signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>SIC code 72110 indicates registered R&amp;D intent</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No trading, product, or science detail available</li><li>Registered address is a generic mass-incorporation address, not a life sciences location</li><li>No funding data of any kind</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage registration with no observable science, team depth, or funding; nothing to evaluate yet</p>
+
+</div><div class="company" id="company-17436487" data-score="1" data-incorporated="2026-09-03">
+<h2>LIMRA NEXUS LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — SIC codes suggest a mix of software/IT consultancy with some R&amp;D (72190) intent, but no operational detail is given</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-03 &middot; <span class="label">SIC:</span> 62012, 62020, 62090, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other evidence of activity</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Dr Shahzad Yousuf, British; no ORCID match found; no prior directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> 3 Boyd Street, London E1 1FQ — generic residential/commercial address, no known incubator or cluster association</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No evidence of product, science, or team track record</li><li>Mixed SIC codes (IT consultancy plus R&amp;D) suggest unclear focus</li><li>Registered address shows no incubator/cluster signal</li><li>Company incorporated too recently to show any trading or funding history</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable signal beyond a bare incorporation record</p>
+
+</div><div class="company" id="company-17437566" data-score="1" data-incorporated="2026-09-04">
+<h2>DATAGROUSE LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="GtR: 2 possible matches, unverified">GtR?</span></h2>
+<p class="oneliner">Bespoke data analysis, visualisation, and dashboard consultancy for corporate and public-sector clients.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-04 &middot; <span class="label">SIC:</span> 62012, 62020, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage — website describes data analysis/dashboarding services, not a scientific platform or modality.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation; company website is a basic Google Sites page listing past freelance-style consulting projects, not a funded biotech venture.</p>
+<p class="field"><span class="label">Team provenance.</span> Single director/secretary (same person, Dr Simon Smith), British. ORCID and GtR matches both inconclusive due to common name — not verified either way.</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden — a well-known generic mass-registration address used by thousands of companies, not a life-sciences incubator.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided; website references past commercial projects, not funding raised.</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>SIC codes (data processing, software consultancy) indicate an IT/data consultancy, not a life-sciences company</li><li>Website content shows generic data-dashboarding consultancy work with no biotech, pharma, or health science relevance</li><li>Registered at a generic mass-incorporation address</li><li>No funding, grant, or academic research signal of any kind</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — Not a life-sciences company; appears to be a data/dashboard consultancy, outside fund thesis</p>
+
+</div><div class="company" id="company-17437341" data-score="1" data-incorporated="2026-09-04">
+<h2>WEI&#x27;S LAB LTD. <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="ORCID: 6 possible matches, unverified">ORCID?</span></h2>
+<p class="oneliner">Not observable at this stage — no description of activity beyond a generic R&amp;D SIC code.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-04 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other data points yet</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Wei, Zihang; ORCID search returned 6 possible matches, too many to confirm — not treated as a signal either way. No other appointments found under this officer record.</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, London — a well-known mass-registration/virtual office address, not a genuine lab or incubator cluster</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Generic virtual-office registered address (Shelton Street), no indication of physical lab presence</li><li>No description of science, product, or market</li><li>No funding data (grant or equity) observable</li><li>Incorporation date is a future/placeholder date, suggesting the record may be a shell or pre-registration</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility, funding, or location signal; nothing to assess yet</p>
+
+</div><div class="company" id="company-SC901448" data-score="1" data-incorporated="2026-09-03">
+<h2>STRATALOG LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no company website or description provided beyond SIC codes.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-03 &middot; <span class="label">SIC:</span> 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no grant or product data available</p>
+<p class="field"><span class="label">Team provenance.</span> Two directors, both Nigerian nationals; no ORCID matches found for either; no prior directorships found under either officer record</p>
+<p class="field"><span class="label">Location signal.</span> Residential flat address in Aberdeen — generic, not a known biotech/incubator cluster</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No evidence of scientific or product activity</li><li>SIC codes (62012 software, 72190 other R&amp;D) are generic and don&#x27;t confirm a life-sciences focus</li><li>Residential registered address, not a lab or incubator</li><li>Incorporated very recently with no track record</li><li>No funding, grant, or website data to assess</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; nothing here to distinguish from a shell company</p>
+
+</div><div class="company" id="company-17436429" data-score="1" data-incorporated="2026-09-03">
+<h2>THALLUS PROTOCOL LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — SIC codes suggest software/IT services with a research SIC also listed, but no description of activity is provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-03 &middot; <span class="label">SIC:</span> 62012, 62020, 62090, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity data available</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Steve Dillon, British national. No ORCID match found (inconclusive, not a negative). No other appointments found under this officer record.</p>
+<p class="field"><span class="label">Location signal.</span> Residential-style address in St. Leonards-On-Sea — no evidence of incubator or cluster affiliation, appears generic</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of actual business activity beyond SIC codes</li><li>Mixed SIC codes (software/IT plus scientific R&amp;D, 72190) with no clarity on which applies</li><li>Single director, no funding or grant data</li><li>Too early to assess team or technology</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no discernible science, team track record, or funding signal</p>
+
+</div><div class="company" id="company-17437735" data-score="1" data-incorporated="2026-09-04">
+<h2>THE PROBLEM BENCH LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no descriptive detail provided beyond a generic R&amp;D SIC code.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-09-04 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity signals</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Philip Robert Johnson Brownbill (British); no ORCID match found; no other appointments found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Registered address in Whitechapel, London (E1) — generic residential/commercial address, no known incubator or cluster affiliation observable from data</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Incorporated very recently with no operational history</li><li>No science, product, or market detail available</li><li>No funding (grant or equity) observable</li><li>SIC code 72190 is generic &#x27;other research and development&#x27; with no specificity</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable signals of substance</p>
+
+</div></div></body></html>

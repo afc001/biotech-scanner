@@ -1,0 +1,367 @@
+[
+  {
+    "company_name": "INVESTECHKJ LIMITED",
+    "incorporated": "2026-09-03",
+    "one_liner": "Not observable at this stage — company name and SIC codes suggest IT/software services combined with biotech research, but no descriptive data provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points",
+    "team_provenance": "Two directors, both Nigerian nationals; no ORCID match for either; no other appointments found under either officer record",
+    "location_signal": "Basildon, Essex — generic residential/commercial address, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or activity detail available",
+      "SIC 72110 (biotech R&D) paired with 62090 (IT services) is an unusual, unexplained combination",
+      "No funding, grant, or website data",
+      "Freshly incorporated with zero trading history"
+    ],
+    "interest_score": "1 - No verifiable science, funding, or team signal; nothing to evaluate beyond a shell registration",
+    "unknowns": [],
+    "company_number": "17436913",
+    "sic_codes": [
+      "62090",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SUPERBLOOM BIOSCIENCES LTD",
+    "incorporated": "2026-09-03",
+    "one_liner": "Not observable at this stage — no description of product or activity provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other operational data",
+    "team_provenance": "Sole director Dr James Macalister Kinross. REPEAT FOUNDER CONFIRMED (same sector) — currently a director at Renegade Medical Ltd, another SIC 72110 company, indicating real prior experience building in this exact sector. ADVISOR PATTERN: holds 5 other active directorships, suggesting a well-connected, in-demand figure but one unlikely to be closely hands-on here day-to-day. No ORCID match found — not a negative, just unconfirmed.",
+    "location_signal": "Residential-looking London address (Brondesbury Park) — no obvious incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — active director at another SIC 72110 company"
+    ],
+    "flags_negative": [
+      "No description of business activity or science available",
+      "Registered address shows no cluster/incubator signal",
+      "SIC 86220 (specialist medical practice) paired with 72110 is unexplained — unclear what the company actually does"
+    ],
+    "interest_score": "3 - Repeat-founder signal in-sector is genuinely positive, but zero operational, scientific, or funding detail makes this unscreenable beyond noting the founder's track record",
+    "unknowns": [],
+    "company_number": "17436021",
+    "sic_codes": [
+      "72110",
+      "86220"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 6,
+      "active_count": 5,
+      "resigned_count": 1,
+      "other_companies": [
+        {
+          "company_name": "INTELLIGENT PPE SOLUTIONS LTD",
+          "company_number": "12607408",
+          "company_status": "dissolved",
+          "appointed_on": "2020-05-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "74909"
+          ]
+        },
+        {
+          "company_name": "WEST LONDON HOSPITAL MEDICAL TRUST(THE)",
+          "company_number": "00346326",
+          "company_status": "active",
+          "appointed_on": "2018-11-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "86900"
+          ]
+        },
+        {
+          "company_name": "RENEGADE MEDICAL LTD",
+          "company_number": "08445789",
+          "company_status": "dissolved",
+          "appointed_on": "2015-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "PHENOME ANALYTICS LIMITED",
+          "company_number": "09177815",
+          "company_status": "dissolved",
+          "appointed_on": "2014-08-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "86220"
+          ]
+        },
+        {
+          "company_name": "GETWELL MEDIA LTD",
+          "company_number": "07519354",
+          "company_status": "active",
+          "appointed_on": "2011-02-07",
+          "resigned_on": null,
+          "sic_codes": [
+            "59120",
+            "86101",
+            "86220",
+            "86900"
+          ]
+        },
+        {
+          "company_name": "SELPH LTD",
+          "company_number": "12169438",
+          "company_status": "active",
+          "appointed_on": "2020-02-15",
+          "resigned_on": "2022-02-21",
+          "sic_codes": [
+            "86900"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "RENEGADE MEDICAL LTD",
+          "company_number": "08445789",
+          "company_status": "dissolved",
+          "appointed_on": "2015-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 6
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HOWDY TTRS LTD",
+    "incorporated": "2026-09-03",
+    "one_liner": "Not observable at this stage — no description of what the company does beyond registration details.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no further activity data",
+    "team_provenance": "Sole director William George Barber, British national. No ORCID match found (inconclusive, not a negative). No other directorships found under this officer record.",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — this is a well-known mass company-formation/registered-office address (Companies Made Simple / similar formation agents), not an incubator or biotech cluster; generic signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 indicates registered R&D intent"
+    ],
+    "flags_negative": [
+      "No trading, product, or science detail available",
+      "Registered address is a generic mass-incorporation address, not a life sciences location",
+      "No funding data of any kind"
+    ],
+    "interest_score": "1 - shell-stage registration with no observable science, team depth, or funding; nothing to evaluate yet",
+    "unknowns": [],
+    "company_number": "17436249",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIMRA NEXUS LTD",
+    "incorporated": "2026-09-03",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of software/IT consultancy with some R&D (72190) intent, but no operational detail is given",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Sole director Dr Shahzad Yousuf, British; no ORCID match found; no prior directorships found under this officer record",
+    "location_signal": "3 Boyd Street, London E1 1FQ — generic residential/commercial address, no known incubator or cluster association",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of product, science, or team track record",
+      "Mixed SIC codes (IT consultancy plus R&D) suggest unclear focus",
+      "Registered address shows no incubator/cluster signal",
+      "Company incorporated too recently to show any trading or funding history"
+    ],
+    "interest_score": "1 - no verifiable signal beyond a bare incorporation record",
+    "unknowns": [],
+    "company_number": "17436487",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DATAGROUSE LTD",
+    "incorporated": "2026-09-04",
+    "one_liner": "Bespoke data analysis, visualisation, and dashboard consultancy for corporate and public-sector clients.",
+    "science": "Not observable at this stage — website describes data analysis/dashboarding services, not a scientific platform or modality.",
+    "stage_signal": "Day-one incorporation; company website is a basic Google Sites page listing past freelance-style consulting projects, not a funded biotech venture.",
+    "team_provenance": "Single director/secretary (same person, Dr Simon Smith), British. ORCID and GtR matches both inconclusive due to common name — not verified either way.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known generic mass-registration address used by thousands of companies, not a life-sciences incubator.",
+    "funding": "Not observable at this stage — no grant or investment data provided; website references past commercial projects, not funding raised.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (data processing, software consultancy) indicate an IT/data consultancy, not a life-sciences company",
+      "Website content shows generic data-dashboarding consultancy work with no biotech, pharma, or health science relevance",
+      "Registered at a generic mass-incorporation address",
+      "No funding, grant, or academic research signal of any kind"
+    ],
+    "interest_score": "1 - Not a life-sciences company; appears to be a data/dashboard consultancy, outside fund thesis",
+    "unknowns": [],
+    "company_number": "17437566",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WEI'S LAB LTD.",
+    "incorporated": "2026-09-04",
+    "one_liner": "Not observable at this stage — no description of activity beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points yet",
+    "team_provenance": "Sole director Wei, Zihang; ORCID search returned 6 possible matches, too many to confirm — not treated as a signal either way. No other appointments found under this officer record.",
+    "location_signal": "71-75 Shelton Street, London — a well-known mass-registration/virtual office address, not a genuine lab or incubator cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic virtual-office registered address (Shelton Street), no indication of physical lab presence",
+      "No description of science, product, or market",
+      "No funding data (grant or equity) observable",
+      "Incorporation date is a future/placeholder date, suggesting the record may be a shell or pre-registration"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, funding, or location signal; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17437341",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 6
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "STRATALOG LIMITED",
+    "incorporated": "2026-09-03",
+    "one_liner": "Not observable at this stage — no company website or description provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Two directors, both Nigerian nationals; no ORCID matches found for either; no prior directorships found under either officer record",
+    "location_signal": "Residential flat address in Aberdeen — generic, not a known biotech/incubator cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of scientific or product activity",
+      "SIC codes (62012 software, 72190 other R&D) are generic and don't confirm a life-sciences focus",
+      "Residential registered address, not a lab or incubator",
+      "Incorporated very recently with no track record",
+      "No funding, grant, or website data to assess"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; nothing here to distinguish from a shell company",
+    "unknowns": [],
+    "company_number": "SC901448",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THALLUS PROTOCOL LTD",
+    "incorporated": "2026-09-03",
+    "one_liner": "Not observable at this stage — SIC codes suggest software/IT services with a research SIC also listed, but no description of activity is provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data available",
+    "team_provenance": "Sole director Steve Dillon, British national. No ORCID match found (inconclusive, not a negative). No other appointments found under this officer record.",
+    "location_signal": "Residential-style address in St. Leonards-On-Sea — no evidence of incubator or cluster affiliation, appears generic",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual business activity beyond SIC codes",
+      "Mixed SIC codes (software/IT plus scientific R&D, 72190) with no clarity on which applies",
+      "Single director, no funding or grant data",
+      "Too early to assess team or technology"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, team track record, or funding signal",
+    "unknowns": [],
+    "company_number": "17436429",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THE PROBLEM BENCH LTD",
+    "incorporated": "2026-09-04",
+    "one_liner": "Not observable at this stage — no descriptive detail provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Sole director Philip Robert Johnson Brownbill (British); no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "Registered address in Whitechapel, London (E1) — generic residential/commercial address, no known incubator or cluster affiliation observable from data",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated very recently with no operational history",
+      "No science, product, or market detail available",
+      "No funding (grant or equity) observable",
+      "SIC code 72190 is generic 'other research and development' with no specificity"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable signals of substance",
+    "unknowns": [],
+    "company_number": "17437735",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
