@@ -1,0 +1,173 @@
+[
+  {
+    "company_name": "BIOMETALLIX LIMITED",
+    "incorporated": "2026-09-05",
+    "one_liner": "Aims to recover battery-grade critical metals (lithium, cobalt, rare earths) from industrial waste using engineered microbes.",
+    "science": "Described as 'proprietary microbial engineering and real-time, intelligent bio-data analytics' for metal biorecovery — biomining/bioleaching type approach, but no mechanism, strain, or data detail given.",
+    "stage_signal": "Day-one incorporation (note: future-dated), pre-revenue, marketing website live but content is high-level and vague.",
+    "team_provenance": "Sole director Aliyu Muhammed; no confirmed academic record (ORCID unresolved, possible matches only — not treated as signal); no prior directorships found.",
+    "location_signal": "Stoke-on-Trent residential-style address — no evident biotech cluster or incubator affiliation.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live company website with clear industry positioning",
+      "SIC codes span materials recovery, waste treatment, and R&D, suggesting a defined technical focus"
+    ],
+    "flags_negative": [
+      "Incorporation date is future-dated, likely a data/record anomaly requiring clarification",
+      "No named academic or technical credentials confirmed",
+      "No funding, grant, or patent evidence",
+      "Website language is heavy on buzzwords ('smart microbes', 'clean future') with no technical substantiation"
+    ],
+    "interest_score": "2 - Early-stage claim with no verifiable science, team credentials, or funding yet",
+    "unknowns": [],
+    "company_number": "17441587",
+    "sic_codes": [
+      "19201",
+      "36000",
+      "38320",
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "TRACKRAI LIMITED",
+    "incorporated": "2026-09-05",
+    "one_liner": "Not observable at this stage — no operating website or product description found; domain is parked for sale.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, essentially pre-formation with no visible product or public presence",
+    "team_provenance": "Two directors, both Indian nationals; no confirmed ORCID matches (one has unverified possible matches, not treated as signal); no repeat-founder confirmation in target sector for either director",
+    "location_signal": "Registered at Unit 4 Pinnacle House, Old Oak Common Lane, London — a known company-formation/serviced-office address, not a specialist bio/tech cluster or incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Company website domain is parked for sale — no live product, platform, or company information exists publicly",
+      "SIC code 62090 is generic IT services, not a specialist life-sciences code",
+      "Registered address is a generic formation-agent-style office, not a lab or incubator cluster",
+      "Incorporation date is implausible/erroneous (2026), suggesting a data quality issue with this record"
+    ],
+    "interest_score": "1 — no evidence of any life-sciences activity, product, or team credibility; appears pre-formation or dormant",
+    "unknowns": [],
+    "company_number": "17441129",
+    "sic_codes": [
+      "62090",
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "IRONUS SYSTEMS LIMITED",
+    "incorporated": "2026-09-05",
+    "one_liner": "A UK venture exploring resilient systems for autonomous and deployed operations — specifics gated behind controlled access.",
+    "science": "Not observable at this stage — website mentions 'resilient systems' for autonomous/deployed operations but gives no mechanism, platform, or technical detail; SIC codes suggest software/IT (62012), R&D (72190), and IP/engineering-adjacent activity (71129, 71200).",
+    "stage_signal": "Day-one incorporation (barely weeks old); no product, trial, or grant data disclosed; website is a placeholder/teaser page with material behind gated corporate access.",
+    "team_provenance": "Russell Smith appears twice on the register (secretary and director) with GtR CONFIRMED status as a UKRI-funded investigator at Durham University — a genuine academic credibility signal. Edward Smith has a plausible but unconfirmed GtR link. Patrick Broster has no matching records. No repeat-founder signals confirmed for any director.",
+    "location_signal": "Unit 6 Edison Road, Elms Farm Industrial Estate, Bedford — generic industrial estate address, not a known biotech/tech cluster or incubator.",
+    "funding": "Not observable at this stage — no grant amounts, investors, or funding source disclosed.",
+    "flags_positive": [
+      "GtR CONFIRMED UKRI-funded investigator (Russell Smith, Durham University)"
+    ],
+    "flags_negative": [
+      "No science, product, or mechanism disclosed anywhere",
+      "Website is marketing fluff with no technical substance",
+      "Generic industrial estate address, not a specialist cluster",
+      "Duplicate director listing (Russell Smith as both secretary and director) unexplained",
+      "Company only weeks old with no track record"
+    ],
+    "interest_score": "2 - academic credibility signal present but zero technical or commercial substance to assess",
+    "unknowns": [],
+    "company_number": "17441183",
+    "sic_codes": [
+      "62012",
+      "71129",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "646AB732-B5B9-4DDC-9049-879BE89A8A09",
+      "organisation": "DURHAM UNIVERSITY"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GT RESEARCH LAB LIMITED",
+    "incorporated": "2026-09-06",
+    "one_liner": "Not observable at this stage — no description of what the company actually does beyond broad IT/R&D-adjacent SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated registration); no other activity evidence",
+    "team_provenance": "Sole director Shihab Sahoriar; no ORCID match found; one other appointment held but not in target sector",
+    "location_signal": "Flat 18, Killick House, Sutton — residential flat address; flagged as matching a known incubator/cluster list entry ('sutton'), but this is a domestic flat, not a lab or accelerator building",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (software, data processing, holding companies, other IT) suggest no clear specialism or defined business model",
+      "Residential flat address, despite incubator-list match, is not itself evidence of lab or R&D infrastructure",
+      "No science, product, or market description available",
+      "No funding, grant, or non-dilutive support evidence"
+    ],
+    "interest_score": "1 - no discernible science, product, funding, or credible team signal; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17441761",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ADVANCED R&D LIMITED",
+    "incorporated": "2026-09-05",
+    "one_liner": "Not observable at this stage — no description of activity provided beyond generic R&D SIC classification",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operational history",
+    "team_provenance": "Sole director Sumer Faizi (British); no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "Mildenhall, Bury St Edmunds — light industrial/commercial unit address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Extremely early — incorporated within days of this record",
+      "SIC 72190 (other R&D) is generic and gives no indication of actual scientific focus",
+      "No funding, grant, or product information available",
+      "No named platform, mechanism, or modality"
+    ],
+    "interest_score": "1 - no verifiable science, team credentials, or funding signal; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17441710",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
