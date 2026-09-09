@@ -1,0 +1,475 @@
+[
+  {
+    "company_name": "CHIMERA CAR-T LTD",
+    "incorporated": "2026-09-08",
+    "one_liner": "Early-stage company registered against a CAR-T cell therapy SIC code; no further description of the science or product available.",
+    "science": "Name suggests chimeric antigen receptor T-cell (CAR-T) therapy work, but no mechanism, platform, or target indication is disclosed.",
+    "stage_signal": "Day-one incorporation — no grant, trading, or product data yet.",
+    "team_provenance": "Single listed director, Jimmy Lee Beng Ghee, Malaysian national. No ORCID match found (inconclusive on academic background). No prior directorships found under this officer record — no evidence either way of founder experience.",
+    "location_signal": "1 St. Katharines Way, London E1W 1UN — this is a well-known serviced/virtual office address, not a life-sciences incubator or cluster; likely a registration-only address.",
+    "funding": "No grant or funding data provided.",
+    "flags_positive": [
+      "Sector-relevant SIC code (72110 - R&D on biotechnology)"
+    ],
+    "flags_negative": [
+      "Mixed SIC codes (64209 - financial holding company - alongside R&D code, unusual combination)",
+      "Virtual/generic registered office, not a specialist bioscience address",
+      "No named scientific personnel, publications, or platform detail",
+      "Single-director company with no verifiable track record",
+      "No funding, grant, or trading history at all"
+    ],
+    "interest_score": "1 - Shell-stage registration with a biotech-sounding name; nothing yet to substantiate actual R&D activity",
+    "unknowns": [],
+    "company_number": "17446705",
+    "sic_codes": [
+      "64209",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AHMAD BIOTECH LIMITED",
+    "incorporated": "2026-09-08",
+    "one_liner": "Not observable at this stage — no description of activity beyond mixed SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Single director, Muhammad Ahmad; no verifiable academic or prior-company record",
+    "location_signal": "Bolton residential/commercial street address — no evidence of incubator or biotech cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes are a scattered mix (retail via mail order/internet, computer programming, other IT, R&D) rather than a coherent biotech R&D profile",
+      "No SIC code specific to biotech/pharma R&D (e.g. 72190/21100)",
+      "Single director with no corroborated academic or industry background",
+      "Extremely early incorporation with no trading, funding, or grant history"
+    ],
+    "interest_score": "1 - No credible biotech signal; SIC mix and address suggest a generic shell rather than a life-sciences venture",
+    "unknowns": [],
+    "company_number": "17446436",
+    "sic_codes": [
+      "47910",
+      "62012",
+      "62090",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PEPTOVIA SCIENCE LTD",
+    "incorporated": "2026-09-08",
+    "one_liner": "Not observable at this stage — no description of activity beyond a biotech-research SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Sole director, British national, no ORCID match, no other appointments found under this officer record",
+    "location_signal": "27 Old Gloucester Street, London — a well-known company-formation agent/mail-forwarding address, not a lab or incubator; generic signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72110 (biotech R&D) suggests intended sector focus"
+    ],
+    "flags_negative": [
+      "Shell-like formation address commonly used by company-formation agents",
+      "No science, product, or funding detail available",
+      "No team credibility signals (no ORCID match, no verified track record)",
+      "Incorporated too recently to show any traction"
+    ],
+    "interest_score": "1 - Pre-seed shell registration with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17447266",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CRYPTON LIMITED",
+    "incorporated": "2026-09-08",
+    "one_liner": "Sells LightMesh IPAM, a network IP address management SaaS/on-prem tool for tracking subnets, DNS/DHCP and cloud IP allocation.",
+    "science": "Not observable at this stage — this is enterprise network infrastructure software, not a life-sciences or biotech platform.",
+    "stage_signal": "Company incorporated with a future date (2026-09-08, likely a data artefact) but website is live with a functioning product, pricing and demo booking — suggests trading activity predates or is misaligned with the incorporation record.",
+    "team_provenance": "Sole director Naeem Abbas, British. ORCID search returned 16 possible matches — too common to verify, inconclusive. One other directorship found, not in target sector (SIC 72110/72190) — informational only.",
+    "location_signal": "Accrington residential/generic address — no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences company — product is IT network management software, outside fund's stated remit",
+      "Incorporation date is inconsistent with a live, mature-looking commercial product and website",
+      "SIC codes (28210 machinery, 38210 waste treatment, 64205 holding co, 72110 biotech R&D) do not match the actual business (network software) — poor SIC hygiene or shell reuse"
+    ],
+    "interest_score": "1 - Off-thesis (network IT software, not biotech) with mismatched SIC codes and an incoherent incorporation date; no reason for a life-sciences fund to proceed.",
+    "unknowns": [],
+    "company_number": "17448033",
+    "sic_codes": [
+      "28210",
+      "38210",
+      "64205",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CYBERNETIC LIMITED",
+    "incorporated": "2026-09-08",
+    "one_liner": "Not observable at this stage — no company description or website provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no funding or operational history yet",
+    "team_provenance": "Sole director Saurabh Khanna, British national. ORCID search returned only unverified possible matches (common name, unconfirmed). No prior directorships found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address used by thousands of UK companies, not a genuine biotech or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration virtual office address, not a specialist or incubator location",
+      "SIC codes indicate software/publishing/media/consultancy, not a life-sciences classification",
+      "No evidence of scientific platform, mechanism, or R&D activity",
+      "No funding, grant, or non-dilutive support identified"
+    ],
+    "interest_score": "1 - No life-sciences signal at all; SIC codes and address suggest a generic software/consultancy shell, not a biotech worth screening",
+    "unknowns": [],
+    "company_number": "17446648",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WORLDFRAME INTELLIGENCE LIMITED",
+    "incorporated": "2026-09-09",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue/pre-product by definition",
+    "team_provenance": "Sole director Dr Martin Kaae Jensen (Danish); no ORCID match found; one other prior appointment, not in target sector",
+    "location_signal": "Residential flat address in Birmingham — not an incubator or known cluster, generic registration address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No product, science, or market description available",
+      "Residential address, no cluster/incubator signal",
+      "Mixed SIC codes (publishing, computer consultancy, R&D, scientific R&D) suggest unclear or undefined business focus",
+      "No non-dilutive funding or grant history evident",
+      "Single director with no confirmed relevant sector track record"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17448656",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ODYSSEY SPACE TECHNOLOGIES LTD",
+    "incorporated": "2026-09-08",
+    "one_liner": "SIC codes suggest aerospace/space manufacturing or related equipment work, but no other description of activity is available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Sole director Raymond Jones, British national. ORCID search returned 10 possible matches — too common a name to confirm, so treated as inconclusive. No prior directorships found under this officer record.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual registered office address, not a specialist incubator or cluster; generic signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes (30300 aircraft/spacecraft manufacture, 72190 R&D) indicate stated intent in a specialist deep-tech sector"
+    ],
+    "flags_negative": [
+      "Just incorporated — no trading history, funding, or team depth evident",
+      "Registered address is a generic mass-incorporation office, not a sector cluster or incubator",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - Pre-formation shell with only SIC codes as signal; nothing to evaluate yet",
+    "unknowns": [],
+    "company_number": "17446498",
+    "sic_codes": [
+      "30300",
+      "51220",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 10
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CUDIA LABS LTD",
+    "incorporated": "2026-09-09",
+    "one_liner": "Not observable at this stage — no business description available beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data",
+    "team_provenance": "Sole named individual director is Dr Justin Engelmann, ORCID-confirmed academic (University of Edinburgh affiliation), German national. Corporate secretary is a standard formation-agent entity (OHS Secretaries Limited), not a real operating co-founder. One other appointment held by Engelmann, not in target sector.",
+    "location_signal": "107 Cheapside, London EC2V — generic City-of-London registered office, likely a formation-agent address rather than a lab or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic director with University of Edinburgh affiliation"
+    ],
+    "flags_negative": [
+      "No business description, product, or science disclosed",
+      "No funding (grant or equity) evidence",
+      "Registered address appears to be a generic formation-agent office, not a research cluster or incubator",
+      "Company incorporated too recently to show any operational history"
+    ],
+    "interest_score": "2 - academic credibility is real but there is nothing yet to assess commercially",
+    "unknowns": [],
+    "company_number": "17448966",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-5345-6023",
+      "institutions": [
+        "University of Edinburgh"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WRENFORD PUBLISHING LIMITED",
+    "incorporated": "2026-09-08",
+    "one_liner": "A newly incorporated company registered under publishing and software SIC codes, actual activity not yet observable.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or product history available",
+    "team_provenance": "Single director (JI, Bin). No verifiable ORCID match (too common to confirm — inconclusive). No prior directorships found under this officer record.",
+    "location_signal": "Devonshire Street, London W1 — generic serviced-office address, not a known biotech/life-sciences incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (publishing, software, R&D consultancy) suggest no clear life-sciences focus",
+      "No evidence of scientific/biotech activity despite inclusion of a research SIC code",
+      "No funding, product, or team detail available at this stage"
+    ],
+    "interest_score": "1 - no discernible life-sciences angle, day-one shell company with generic registration",
+    "unknowns": [],
+    "company_number": "17446538",
+    "sic_codes": [
+      "58110",
+      "58141",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KURAGE MEDTECH LTD",
+    "incorporated": "2026-09-08",
+    "one_liner": "Not observable at this stage — no description of the company's product or focus provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no other data points to stage",
+    "team_provenance": "Two French directors (Gombauld, Pouplier). No ORCID matches found, no prior directorships found under either officer record. No evidence of academic or prior startup background.",
+    "location_signal": "Templeback, Temple Back, Bristol — a well-known flexible/serviced office building in central Bristol; generic commercial address, not a life-sciences-specific incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, technology, or market",
+      "Extremely early — incorporated with no further public activity",
+      "Generic serviced-office address rather than a specialist biotech/medtech incubator",
+      "No funding (grant or equity) evidence"
+    ],
+    "interest_score": "1 - essentially a shell at this point; nothing here to assess",
+    "unknowns": [],
+    "company_number": "17447820",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CAELEON LTD",
+    "incorporated": "2026-09-09",
+    "one_liner": "Not observable at this stage — no description of product or service provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points",
+    "team_provenance": "Sole director Dr Yasith Chameendra Jayakody Mudiyanselage, Sri Lankan, ORCID CONFIRMED (0000-0002-5757-3454) with academic affiliations at Advance HE, Kingston University, and Tokyo Institute of Technology. No other directorships found under this officer record.",
+    "location_signal": "Residential-looking address in London (Chantry Crescent, NW10) — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic identity with genuine research affiliations"
+    ],
+    "flags_negative": [
+      "No description of business activity beyond mixed SIC codes (engineering consultancy, holding company, computer consultancy)",
+      "No funding data, grant history, or website",
+      "Registered address appears residential, not a specialist cluster or incubator"
+    ],
+    "interest_score": "2 - Verified academic founder is a mild positive, but there is no discernible business, product, or funding signal to assess",
+    "unknowns": [],
+    "company_number": "17448216",
+    "sic_codes": [
+      "71122",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-5757-3454",
+      "institutions": [
+        "Advance HE",
+        "Kingston University",
+        "Tokyo Institute of Technology"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AELO CLINICAL INTELLIGENCE LTD",
+    "incorporated": "2026-09-08",
+    "one_liner": "A newly incorporated company positioned at the intersection of clinical/health software and R&D consultancy — specific product not stated.",
+    "science": "Not observable at this stage — SIC codes suggest computer programming/consultancy plus scientific R&D, but no mechanism, platform or product is described",
+    "stage_signal": "Day-one incorporation, pre-revenue, no grant or product data available",
+    "team_provenance": "Sole director Bridget Nkechi Abiagam, British, academic affiliation with University of the West of Scotland — ORCID CONFIRMED, a genuine verified academic publication record. No prior directorships found under this officer record",
+    "location_signal": "Chesterfield residential/generic address — no incubator or cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic record for sole director"
+    ],
+    "flags_negative": [
+      "Incorporated only days ago — no operating history",
+      "No funding, grant, or product data available",
+      "Generic non-cluster registered address",
+      "Single-director company with no visible team depth"
+    ],
+    "interest_score": "2 - academic credibility signal noted, but nothing yet to assess commercially; too early for a meaningful view",
+    "unknowns": [],
+    "company_number": "17446493",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0006-0433-0105",
+      "institutions": [
+        "University of the West of Scotland"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GUARDING MACHINES LAB LTD",
+    "incorporated": "2026-09-08",
+    "one_liner": "A newly incorporated company describing itself, per SIC codes, as working in software development and other research/technology (R&D-adjacent) — specific product/service not stated.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with future/forward-dated registration; no grant, product, or trading history yet",
+    "team_provenance": "Sole director Navin Kumar Agarwal, Indian nationality. No ORCID match found. No other appointments found under this officer record — first-time founder appearance, but not confirmed either way.",
+    "location_signal": "128 City Road, London, EC1V 2NX — this is a well-known mass-registration/virtual-office address (used by thousands of UK shell companies), not a specialist incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 suggests intended R&D activity"
+    ],
+    "flags_negative": [
+      "Generic mass-registration virtual office address, not a specialist or cluster location",
+      "No science, product, team background, or funding detail available",
+      "Incorporation date is forward-dated/very recent — essentially a shell at this point"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or credible location signal; pure shell-stage registration",
+    "unknowns": [],
+    "company_number": "17447047",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "URQON LTD",
+    "incorporated": "2026-09-09",
+    "one_liner": "Not observable at this stage — no descriptive information beyond SIC codes provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other operational signals",
+    "team_provenance": "Sole director Dr. John Jairo Pantoja Acosta (Colombian national). Use of 'Dr.' suggests academic/research background, but no ORCID match found and no prior directorships identified under this officer record.",
+    "location_signal": "Cambridge address (CB5 8PL) — Cambridge is a recognised biotech/deep-tech cluster, though this specific address cannot be confirmed as an incubator from data given.",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "Cambridge-based registration",
+      "Director holds doctoral title",
+      "SIC mix spans measurement instruments (26511), engineering R&D (71122/71200), and software/IT consultancy (72190), suggesting a hardware-plus-analytics angle"
+    ],
+    "flags_negative": [
+      "No science, product, or market description available",
+      "No funding evidence, dilutive or non-dilutive",
+      "Unusual SIC combination (instrumentation, architecture/engineering, testing, IT) makes actual focus unclear",
+      "Incorporation date is unusually far in the future relative to typical record-keeping, worth double-checking data accuracy"
+    ],
+    "interest_score": "2 - Too early and too little disclosed to assess; Cambridge address and doctoral founder are mild positives but nothing substantive to evaluate",
+    "unknowns": [],
+    "company_number": "17448774",
+    "sic_codes": [
+      "26511",
+      "71122",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
