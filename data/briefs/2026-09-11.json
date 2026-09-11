@@ -1,0 +1,778 @@
+[
+  {
+    "company_name": "ZETARRAY LIMITED",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no substantive description of activity available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated), no operational website — pre-launch or shell",
+    "team_provenance": "Two directors, both Dr titled (suggesting academic/technical background), British nationals. No confirmed ORCID matches, no confirmed repeat-founder history in this sector.",
+    "location_signal": "Residential address in Cambridge — not a known incubator or cluster address, but Cambridge presence noted",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Both directors hold doctorates, suggesting technical/academic grounding",
+      "Cambridge-based registration"
+    ],
+    "flags_negative": [
+      "Company website is an unregistered domain placeholder page (Porkbun default) — no evidence of actual product, science, or activity",
+      "Future-dated incorporation date (2026) is inconsistent or unverifiable",
+      "SIC code 72110 is generic and unconfirmed by any descriptive material",
+      "No ORCID or repeat-founder confirmation for either director",
+      "Residential address, not a lab or incubator"
+    ],
+    "interest_score": "1 - no verifiable activity, science, or funding; website is a domain placeholder",
+    "unknowns": [],
+    "company_number": "17452245",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 4
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ASSAYMERA BIOANALYTICS LTD",
+    "incorporated": "2026-09-10",
+    "one_liner": "Not observable at this stage — no trading detail beyond SIC-coded registration",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Sole named director Sachin Nandkumar Korantak — REPEAT FOUNDER CONFIRMED (same sector), currently a director at Cellantraq Pharma Research Ltd (SIC 72190, active) plus 5 further appointments. Also flagged ADVISOR PATTERN: 8 other active directorships in total — suggests a well-networked figure with genuine sector experience, but this breadth also means he is unlikely to be closely hands-on here day-to-day. No ORCID match found for academic publication record (absence not meaningful on its own).",
+    "location_signal": "Sevenoaks, Kent — generic serviced-office address, not a recognised life-sciences cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director's other appointment is in SIC 72190"
+    ],
+    "flags_negative": [
+      "No science, product, or funding detail available",
+      "Generic registered address, no cluster/incubator signal",
+      "Company only weeks old with no operational trace"
+    ],
+    "interest_score": "2 - repeat-founder signal noted, but nothing else observable to assess; too early and too thin to prioritise",
+    "unknowns": [],
+    "company_number": "17451745",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 8,
+      "active_count": 8,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "CELLANTRAQ PHARMA RESEARCH LTD",
+          "company_number": "17452271",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "TRANSLORYX RESEARCH LTD",
+          "company_number": "17452804",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CONDITOR CAPITAL LTD",
+          "company_number": "12700157",
+          "company_status": "active",
+          "appointed_on": "2020-06-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "NARSING CAPITAL LIMITED",
+          "company_number": "11937811",
+          "company_status": "active",
+          "appointed_on": "2019-04-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "CELLANTRAQ PHARMA RESEARCH LTD",
+          "company_number": "17452271",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "TRANSLORYX RESEARCH LTD",
+          "company_number": "17452804",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 8
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "UK RESEARCH GROUP LTD",
+    "incorporated": "2026-09-10",
+    "one_liner": "Not observable at this stage — name and SIC code give no indication of actual product or service",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points",
+    "team_provenance": "Single director (also acting as secretary), same person listed twice; no ORCID match, no other appointments found",
+    "location_signal": "128 City Road, London EC1V 2NX — this is a well-known mass-registration/formation-agent address, not a specialist bioscience incubator; treat as generic",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic, non-descriptive company name",
+      "Registered address is a high-volume company-formation address, not a lab/incubator cluster",
+      "Sole director doubling as secretary — minimal team depth",
+      "No science, product, or funding data of any kind available",
+      "SIC code 72190 (other R&D) is uninformative on its own"
+    ],
+    "interest_score": "1 — no verifiable science, team, funding, or location signal; nothing here to assess",
+    "unknowns": [],
+    "company_number": "17451832",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KI DYNAMICS PVT LIMITED",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no description of activity beyond mixed SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or trading history",
+    "team_provenance": "Single director, no ORCID match, no other appointments found under this officer record — no verifiable academic or founder track record",
+    "location_signal": "Residential/generic address in Bridgend, Wales — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes are incoherent for a life-sciences thesis (car sales/repair, construction, management consultancy, and computer programming mixed together)",
+      "No R&D, life-sciences, or biotech signal anywhere in the record",
+      "Single director with no verifiable track record",
+      "Pre-incorporation date is unusual/erroneous or simply too new to assess"
+    ],
+    "interest_score": "1 - no life-sciences relevance, no science, no team signal, no funding",
+    "unknowns": [],
+    "company_number": "17452544",
+    "sic_codes": [
+      "45112",
+      "45200",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HEALTHCARETWIN LIMITED",
+    "incorporated": "2026-09-10",
+    "one_liner": "A newly incorporated company positioned around healthcare 'digital twin' technology, based on its name and SIC mix — no further detail provided.",
+    "science": "Not observable at this stage — SIC codes suggest a mix of wholesale/distribution (46690), computer consultancy (62012), scientific R&D (72190) and data processing (63110), but no mechanism, platform or modality is described.",
+    "stage_signal": "Day-one incorporation — no trading history, product, or grant activity yet observable.",
+    "team_provenance": "Two directors, Dr. Weiwei Chen (Hong Konger) and Dr. Jiexun Di (British), both holding doctorates suggesting academic background, but neither has a confirmed ORCID record or verified prior directorship. No evidence of prior company-building experience.",
+    "location_signal": "Birmingham Business Park — a generic serviced-office/registered-agent style address, not a known biotech incubator or cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Both directors hold doctorates, suggesting relevant academic training",
+      "Multi-disciplinary SIC mix (software, R&D, data) consistent with a digital health platform ambition"
+    ],
+    "flags_negative": [
+      "Just incorporated — zero track record",
+      "No verifiable ORCID or GtR match for either director",
+      "Generic business-park registered address, not a specialist cluster",
+      "No funding, grant, or product evidence of any kind",
+      "Company name/SIC codes are the only basis for the one-liner — highly speculative"
+    ],
+    "interest_score": "2 - Pure pre-seed shell; nothing yet to underwrite beyond a name and two unverified directors",
+    "unknowns": [],
+    "company_number": "17451956",
+    "sic_codes": [
+      "46690",
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ARTHUR FOR SPACE SCIENCES LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no description of activities available beyond a space-related name.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Single director, Jad Yassin; no ORCID match found, no other directorships found under this officer record — no verifiable academic or entrepreneurial track record",
+    "location_signal": "Generic serviced-office address in East Ham, London — not a known biotech or life-sciences cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of scientific activity or product",
+      "Generic serviced-office registered address, no cluster/incubator signal",
+      "Incorporation date is in the future relative to typical filing conventions, or a data anomaly worth checking",
+      "No funding, grant, or academic signal of any kind",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - no science, no team signal, no funding; nothing to evaluate yet",
+    "unknowns": [],
+    "company_number": "17452506",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "TRANSLORYX RESEARCH LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no product, platform, or business description provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available yet",
+    "team_provenance": "Sole named director Sachin Nandkumar Korantak — no ORCID match found. REPEAT FOUNDER CONFIRMED (same sector): also a director at Cellantraq Pharma Research Ltd (SIC 72190, active). Holds 8 other active directorships (ADVISOR PATTERN) — suggests a well-networked, experienced operator in this space, but raises doubt about how much hands-on time he can give this specific company.",
+    "location_signal": "Leicester residential/business address — not a known biotech incubator or cluster; generic registered office.",
+    "funding": "No grant or funding data provided.",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director at another active 72190 company"
+    ],
+    "flags_negative": [
+      "No description of science, product, or market",
+      "No funding evidence (grant or equity)",
+      "Director spread thin across 8+ other active directorships"
+    ],
+    "interest_score": "2 - repeat-sector founder is a genuine positive, but there is zero substantive data on what this company actually does, and the director's bandwidth is questionable",
+    "unknowns": [],
+    "company_number": "17452804",
+    "sic_codes": [
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 8,
+      "active_count": 8,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "CELLANTRAQ PHARMA RESEARCH LTD",
+          "company_number": "17452271",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "ASSAYMERA BIOANALYTICS LTD",
+          "company_number": "17451745",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CONDITOR CAPITAL LTD",
+          "company_number": "12700157",
+          "company_status": "active",
+          "appointed_on": "2020-06-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "NARSING CAPITAL LIMITED",
+          "company_number": "11937811",
+          "company_status": "active",
+          "appointed_on": "2019-04-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "CELLANTRAQ PHARMA RESEARCH LTD",
+          "company_number": "17452271",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "ASSAYMERA BIOANALYTICS LTD",
+          "company_number": "17451745",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 8
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CLATHRION LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity signals",
+    "team_provenance": "Sole director Dr. Elumalai Palani; no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "11 Pheasant Drive, Cambridge — residential-looking address, not a known incubator; Cambridge cluster proximity noted but unconfirmed",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of technology, mechanism, or market",
+      "No funding data",
+      "Address appears residential rather than lab/incubator",
+      "SIC 74909 is a generic 'other professional activities' code, not specialist"
+    ],
+    "interest_score": "1 - No verifiable science, funding, or team signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17452674",
+    "sic_codes": [
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CELLANTRAQ PHARMA RESEARCH LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Newly incorporated pharma research company; no further detail on what it actually does.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no evidence of activity, product, or funding yet",
+    "team_provenance": "Sole director Sachin Nandkumar Korantak is a REPEAT FOUNDER CONFIRMED in the same sector (SIC 72190), currently a director at Transloryx Research Ltd. However, he also shows an ADVISOR PATTERN with 8 other active directorships — suggesting a well-connected, serial-incorporator profile but likely limited hands-on involvement in this specific entity.",
+    "location_signal": "Hawthorne House, Leicester — generic business address, no obvious incubator or life-sciences cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — prior directorship at Transloryx Research Ltd, a related SIC 72190/70229 company"
+    ],
+    "flags_negative": [
+      "No science, product, or funding detail available",
+      "Director spread thin across 8+ other active directorships, raising doubts about dedicated time to this venture",
+      "Company only weeks old with no operational evidence"
+    ],
+    "interest_score": "2 - repeat-founder signal noted, but company is pre-operational with no science, funding, or focus visible, and director appears heavily diversified elsewhere",
+    "unknowns": [],
+    "company_number": "17452271",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 8,
+      "active_count": 8,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "TRANSLORYX RESEARCH LTD",
+          "company_number": "17452804",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "ASSAYMERA BIOANALYTICS LTD",
+          "company_number": "17451745",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CONDITOR CAPITAL LTD",
+          "company_number": "12700157",
+          "company_status": "active",
+          "appointed_on": "2020-06-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "NARSING CAPITAL LIMITED",
+          "company_number": "11937811",
+          "company_status": "active",
+          "appointed_on": "2019-04-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "TRANSLORYX RESEARCH LTD",
+          "company_number": "17452804",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "ASSAYMERA BIOANALYTICS LTD",
+          "company_number": "17451745",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 8
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AWVTAD ALARD INVESTMENT COMPANY LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Unclear — SIC codes span mining equipment/metal wholesale and R&D consultancy, suggesting an investment or trading vehicle rather than a focused biotech.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no other activity data",
+    "team_provenance": "Sole director SUN, Junbo (Chinese nationality); ORCID search returned only unverified possible matches, not treated as confirmed; no other appointments found under this officer record",
+    "location_signal": "Mildenhall, Suffolk — generic residential/commercial address, no cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code mix (mining machinery, metal wholesale, R&D, other business support) doesn't cohere into a clear biotech thesis",
+      "No science, product, or team narrative to assess",
+      "No funding data of any kind"
+    ],
+    "interest_score": "1 - No discernible biotech focus, no science, no funding signal; likely miscategorised or a generic holding vehicle",
+    "unknowns": [],
+    "company_number": "17452232",
+    "sic_codes": [
+      "46630",
+      "46720",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
