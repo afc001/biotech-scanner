@@ -1,0 +1,551 @@
+[
+  {
+    "company_name": "EEPP LIMITED",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not a life-sciences company — registered domain resolves to a Portuguese-language online casino/gambling site unrelated to the Companies House filing.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one shell incorporation; the live website is almost certainly an unrelated squatted/repurposed domain, not evidence of this company's actual activity",
+    "team_provenance": "Three British directors, none with ORCID or repeat-founder matches; no discernible academic or life-sciences background from the data provided",
+    "location_signal": "Great Portland Street, London — generic serviced-office address, no biotech cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (72110 R&D, 74990 other business activities) do not match the actual website content found",
+      "Company website is an online gambling platform, not a life-sciences product or service",
+      "No verifiable connection between directors and any scientific or biotech activity",
+      "No funding, grant, or IP signals present"
+    ],
+    "interest_score": "1 - No life-sciences signal whatsoever; website content is entirely inconsistent with the sector this fund targets",
+    "unknowns": [],
+    "company_number": "17454025",
+    "sic_codes": [
+      "72110",
+      "74990"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ASSAYVIAN ANALYTICS LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no trading description, product, or website data provided beyond registration details.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or trading activity visible yet",
+    "team_provenance": "Sole named director Sachin Nandkumar Korantak — REPEAT FOUNDER CONFIRMED in same sector (director at Cellantraq Pharma Research Ltd, SIC 72190, active). Holds 9 other active directorships (ADVISOR PATTERN) — suggests a well-connected, experienced operator across multiple ventures, but likely limited day-to-day involvement here given the breadth of his portfolio.",
+    "location_signal": "Hawthorne House, Leicester — generic serviced/business address, no evident biotech cluster or incubator affiliation",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED in same sector (testing/analysis, SIC 72110/72190)",
+      "Director has broad portfolio experience across multiple active companies"
+    ],
+    "flags_negative": [
+      "No trading history, product, or science description available",
+      "Generic registered address with no cluster signal",
+      "Director's extensive appointments (9 others) raise questions about bandwidth for this venture"
+    ],
+    "interest_score": "3 — repeat-founder credibility is real but company is pre-operational with no science, funding, or product data to assess",
+    "unknowns": [],
+    "company_number": "17454383",
+    "sic_codes": [
+      "71200",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 9,
+      "active_count": 9,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "CELLANTRAQ PHARMA RESEARCH LTD",
+          "company_number": "17452271",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "TRANSLORYX RESEARCH LTD",
+          "company_number": "17452804",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "ASSAYMERA BIOANALYTICS LTD",
+          "company_number": "17451745",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CONDITOR CAPITAL LTD",
+          "company_number": "12700157",
+          "company_status": "active",
+          "appointed_on": "2020-06-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "NARSING CAPITAL LIMITED",
+          "company_number": "11937811",
+          "company_status": "active",
+          "appointed_on": "2019-04-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "CELLANTRAQ PHARMA RESEARCH LTD",
+          "company_number": "17452271",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "TRANSLORYX RESEARCH LTD",
+          "company_number": "17452804",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "APHERIVA BIOSOURCE LTD",
+          "company_number": "17451367",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "ASSAYMERA BIOANALYTICS LTD",
+          "company_number": "17451745",
+          "company_status": "active",
+          "appointed_on": "2026-09-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CYENTIA BIOSOURCE LTD",
+          "company_number": "16849898",
+          "company_status": "active",
+          "appointed_on": "2026-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "CORONADO RESEARCH LTD",
+          "company_number": "15780328",
+          "company_status": "active",
+          "appointed_on": "2024-08-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "NEXUS BIOQUEST LIMITED",
+          "company_number": "14131243",
+          "company_status": "active",
+          "appointed_on": "2022-07-15",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 9
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CYBERFALKEN LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Consumer-facing AI assistant app (\"NOVA\") for text, voice, image and project organisation.",
+    "science": "Not a life-sciences platform — appears to be a general-purpose AI chatbot/app wrapper; no mechanism, model architecture, or technical differentiation disclosed.",
+    "stage_signal": "Very early — incorporated with a forward-dated 2026 date (likely a data/typo artefact to verify), website already live with app store presence, but marketing copy is generic and thin.",
+    "team_provenance": "Single director, Guillermo Baires (Italian national). One other appointment found, not in target sector (SIC 72110/72190) — uninformative on its own. No ORCID match.",
+    "location_signal": "20 Wenlock Road, London N1 7GU — this is a well-known mass-incorporation/registered-office-agent address, not a genuine R&D cluster or incubator signal.",
+    "funding": "No grant or investment data provided. Not observable at this stage.",
+    "flags_positive": [
+      "Live product website with app store listing (Google Play)"
+    ],
+    "flags_negative": [
+      "Not a life-sciences or biotech company — outside fund's stated mandate",
+      "Generic mass-incorporation registered address (Wenlock Road), not a specialist cluster",
+      "Marketing copy is vague, buzzword-driven, with no technical substance",
+      "Single director, no team depth visible",
+      "Incorporation date appears to be in the future (2026), suggesting a data quality issue"
+    ],
+    "interest_score": "1 — off-thesis consumer AI app, no life-sciences relevance, thin evidence base",
+    "unknowns": [],
+    "company_number": "17453105",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MLBRICKS LIMITED",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no website or description provided; SIC codes suggest software development combined with other research/experimental development.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no further evidence of activity",
+    "team_provenance": "Single director, Akhtar Hussain; ORCID search returned 28 possible matches, name too common to verify — inconclusive, not a signal either way; no other appointments found under this officer record",
+    "location_signal": "Registered address in East London (E6) — residential/generic postcode, no obvious incubator or cluster association",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "SIC 72190 (other R&D) combined with 62012 (software) is vague and uninformative without further detail",
+      "No funding, grant, or traction data available"
+    ],
+    "interest_score": "1 - shell-stage company with no substantive data to assess",
+    "unknowns": [],
+    "company_number": "17454258",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SYKES ADVANCED MATERIALS LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "A newly incorporated materials science company with no public description of its actual product or technology yet.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operational or funding history yet",
+    "team_provenance": "Sole director Daniel James Sykes, British; no ORCID match found; one other directorship held, not in target sector",
+    "location_signal": "Residential address in Dymchurch, Kent — generic, no cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Specialist SIC code (72190 - other research and experimental development)"
+    ],
+    "flags_negative": [
+      "Just incorporated, no track record",
+      "No science, product, or team detail available",
+      "Generic residential registered address",
+      "No non-dilutive funding or grant history evident"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team depth",
+    "unknowns": [],
+    "company_number": "17454767",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CONTINGENCY LOGIC SYSTEMS LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no business description available beyond SIC codes suggesting software/computing and R&D activities",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other operational data",
+    "team_provenance": "Single director, Stephen Lucian Orobec, British national; no ORCID match found; one other directorship held, unconfirmed sector",
+    "location_signal": "Great Portland Street, London — a serviced/virtual office address common to many registered companies, not a known biotech incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No business description or science available",
+      "Single-director structure with no visible track record in life sciences",
+      "SIC codes (62012, 72190) indicate general software/R&D, not a life-sciences-specific classification",
+      "Registered address is generic office space, not a specialist cluster"
+    ],
+    "interest_score": "1 — no discernible life-sciences angle, no funding, no team signal; nothing here to screen",
+    "unknowns": [],
+    "company_number": "17453386",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RYOUSHI LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — the only live website under this name is an unrelated Japanese calligraphy paper retailer, not a company communication",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no product, trading, or research activity evidenced",
+    "team_provenance": "Two of three directors (Dutta, Le) have ORCID-confirmed academic records at University of Leeds and University of Sheffield respectively; third director (Iliyasu) has no matching ORCID. No repeat-founder history confirmed for any director under these officer records.",
+    "location_signal": "Residential flat address in Ilford — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED for director Dutta (University of Leeds)",
+      "ORCID CONFIRMED for director Le (University of Sheffield)"
+    ],
+    "flags_negative": [
+      "Residential/generic registered address, no cluster or incubator signal",
+      "SIC codes (software/consultancy) suggest no obvious biotech/life-sciences activity despite fund's remit",
+      "Website found under this exact name is an unrelated Japanese retail site, indicating either a naming collision or no real digital presence yet"
+    ],
+    "interest_score": "2 - academic ORCID links are noted but there is no discernible life-sciences angle, product, or funding evidence at this stage",
+    "unknowns": [],
+    "company_number": "17454836",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0008-0480-9241",
+      "institutions": [
+        "University of Leeds"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "S9E LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — website provides no description of what the company does",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no product or research description available",
+    "team_provenance": "Single named director, Dr Pouya Dehghani Tafti (German nationality); no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "1 Pancras Square, London — a serviced/flexible office address in the King's Cross cluster, not a named biotech incubator",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Website is a placeholder with no description of business activity, product, or science",
+      "Incorporation date is post-dated/very recent, no operating history",
+      "No funding, grant, or investor information available"
+    ],
+    "interest_score": "1 - no discoverable science, product, or funding signal; pure shell registration at this point",
+    "unknowns": [],
+    "company_number": "17454738",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AGRIFLUX BIOSYSTEMS LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no description of activities beyond a generic R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points",
+    "team_provenance": "Single director, no ORCID match, no other appointments found under this officer record — no verifiable academic or company track record",
+    "location_signal": "Stoke-on-Trent address — appears generic, no known biotech cluster or incubator association from data provided",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Extremely early stage — incorporated within days/weeks of this record",
+      "No named science, product, or technology",
+      "No funding data (grant or equity)",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credentials, or funding; nothing here to assess",
+    "unknowns": [],
+    "company_number": "17453799",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CONSULTENSOR LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — company website is an unclaimed parked domain with no description of the business",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, likely pre-incorporation date recorded — no operational footprint yet",
+    "team_provenance": "Three British directors; no ORCID matches found for any; one director (Salimian) has one other directorship, unconfirmed sector — no evidence of academic or repeat-founder track record in this space",
+    "location_signal": "Residential/generic address in Uxbridge — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Website is a parked Hostinger domain with no business content",
+      "No ORCID or confirmed repeat-founder signals for any director",
+      "SIC codes (software/IT consultancy) show no clear health/life-sciences focus despite fund's screening remit",
+      "No funding, grant, or product information available"
+    ],
+    "interest_score": "1 - no operational, scientific, or funding evidence; appears out of sector and pre-operational",
+    "unknowns": [],
+    "company_number": "17453066",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AIMED SIMULATION LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "A consultancy building synthetic environment pipelines (terrain/survey data to real-time simulation) for simulation applications.",
+    "science": "Not biotech/life-sciences — this is a synthetic environment/geospatial simulation consultancy (terrain modelling, real-time rendering pipelines), not a therapeutic, diagnostic, or biological platform.",
+    "stage_signal": "Day-one incorporation, though website claims founder has eighteen years' industry experience — a service consultancy, not a funded R&D venture at this point.",
+    "team_provenance": "Single director, Dominic Sherwood. No ORCID match, no prior directorships found under this officer record. Website positions him as experienced in synthetic environments/simulation, but this is a commercial/defence-adjacent technical discipline, not academic life sciences.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known generic company-formation/registered-office address used by thousands of unrelated companies, not a biotech incubator or cluster.",
+    "funding": "No grant or investment data provided. Website describes a consultancy offering, implying revenue-based operation rather than grant or equity funding.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences company — SIC codes and website confirm this is a simulation/geospatial software consultancy, outside fund mandate",
+      "Generic mass-registration registered address",
+      "Day-one incorporation with no funding or grant history disclosed"
+    ],
+    "interest_score": "1 - out of sector entirely; no biotech/life-sciences relevance to evaluate",
+    "unknowns": [],
+    "company_number": "17453355",
+    "sic_codes": [
+      "62012",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ABILITI TECHNOLOGIES LTD",
+    "incorporated": "2026-09-11",
+    "one_liner": "Not observable at this stage — no descriptive data beyond SIC codes",
+    "science": "SIC codes suggest a mix of irradiation/electromedical equipment (26600), computer consultancy (62012), and R&D in natural sciences/engineering (72190), but no mechanism or platform is described",
+    "stage_signal": "Day-one incorporation, no other operational signals",
+    "team_provenance": "Single director, Arnav Collaco; no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company formation agent address, not a specialist incubator; generic/mass-registration signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No descriptive information on actual business activity",
+      "Registered address is a generic mass-incorporation agent, not a lab, science park, or incubator",
+      "SIC code mix is broad and non-specific to a single technology thesis",
+      "Very recent incorporation with no other evidence of traction"
+    ],
+    "interest_score": "1 — no verifiable science, team, funding, or location signal to justify further attention",
+    "unknowns": [],
+    "company_number": "17453982",
+    "sic_codes": [
+      "26600",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
