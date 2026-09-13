@@ -1,0 +1,31 @@
+[
+  {
+    "company_name": "ABRAXI AI LTD",
+    "incorporated": "2026-09-12",
+    "one_liner": "Not observable at this stage — no descriptive data beyond SIC codes and registration",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other operational signals",
+    "team_provenance": "Sole director Bradley Philip Jewitt, British national; no ORCID match found; no prior directorships found under this officer record",
+    "location_signal": "Cleethorpes residential/generic address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of team, product, or funding beyond incorporation record",
+      "SIC codes (62012 - business software, 72190 - other R&D) are broad and non-specific for a life-sciences thesis",
+      "Sole director with no prior track record found"
+    ],
+    "interest_score": "1 - shell-stage company with no substantive data to assess",
+    "unknowns": [],
+    "company_number": "17455171",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
