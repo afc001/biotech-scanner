@@ -1,0 +1,124 @@
+[
+  {
+    "company_name": "AERVAIL SYSTEMS LIMITED",
+    "incorporated": "2026-09-14",
+    "one_liner": "Not observable at this stage — no business description available beyond SIC codes suggesting engineering consultancy and R&D activity",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points",
+    "team_provenance": "Sole director Kyle Michael Brown, South African national; no ORCID match; no other appointments found under this officer record",
+    "location_signal": "124 City Road, London — a well-known company-formation/virtual-office address (generic registered office, not a specialist incubator)",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No business description or website to assess actual activity",
+      "Generic mass-registration address, not a sector-specific cluster or incubator",
+      "Single director with no verifiable track record (academic or commercial)",
+      "No funding or grant data present"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17456426",
+    "sic_codes": [
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SUNREC LTD",
+    "incorporated": "2026-09-14",
+    "one_liner": "Not observable at this stage — no description of product or activity provided beyond SIC classification",
+    "science": "SIC 38320 suggests materials recovery/recycling; SIC 72190 suggests R&D in natural sciences/engineering, but mechanism is not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant, product, or trading data available",
+    "team_provenance": "Sole director Dr Javier Alejandro Riedemann Aros, Chilean national. No ORCID match found (inconclusive, not a negative). One other directorship held, not confirmed in target sector — informational only",
+    "location_signal": "5 South Charlotte Street, Edinburgh — a serviced/registered office address commonly used by company formation agents; not a known biotech incubator",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of business activity beyond SIC codes",
+      "No funding data (grant or otherwise) available",
+      "Registered address shows no sector-specific cluster or incubator signal",
+      "Company incorporated too recently to assess any track record"
+    ],
+    "interest_score": "1 - shell-stage company with no discernible science, product, or funding signal to assess",
+    "unknowns": [],
+    "company_number": "SC902485",
+    "sic_codes": [
+      "38320",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ONGIN LTD",
+    "incorporated": "2026-09-14",
+    "one_liner": "Not observable at this stage — no description of product, science, or activity provided beyond registration.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points",
+    "team_provenance": "Sole director Professor Andrew Ian Cooper — academic title suggests possible university link, but no ORCID match found and no confirmed prior sector directorships",
+    "location_signal": "Ruislip, London — generic office address, no evident biotech cluster or incubator link",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of technology, product, or business activity",
+      "No funding data",
+      "ORCID search found no matching record for the named director",
+      "No confirmed relevant sector experience for the director"
+    ],
+    "interest_score": "1 — shell-stage registration with no science, funding, or credibility signals to assess",
+    "unknowns": [],
+    "company_number": "17455927",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "QUESQUARED LTD",
+    "incorporated": "2026-09-14",
+    "one_liner": "Not observable at this stage — no company website or description provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or product data yet",
+    "team_provenance": "Single director, Yue Wu; academic-adjacent address suggests possible university link, but no confirmed publication or grant record",
+    "location_signal": "Strathclyde Inspire Hub, University of Strathclyde — genuine incubator address, positive cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Incubator address at University of Strathclyde (Strathclyde Inspire Hub)"
+    ],
+    "flags_negative": [
+      "No description of business activity beyond broad SIC codes (software, data processing, R&D, other human health)",
+      "No funding, product, or team background data available",
+      "Too early to assess — incorporated within days of this record"
+    ],
+    "interest_score": "2 - incubator address is a mild positive but there is no substantive information to assess science, team, or traction",
+    "unknowns": [],
+    "company_number": "SC902520",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
