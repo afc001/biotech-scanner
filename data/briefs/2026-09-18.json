@@ -1,0 +1,640 @@
+[
+  {
+    "company_name": "POINT ONE BIO LIMITED",
+    "incorporated": "2026-09-17",
+    "one_liner": "Not observable at this stage — no trading description available beyond a biotech SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Two directors, both British nationals, neither with an ORCID match. James has 2 other appointments, none confirmed in this sector. Pratt is a confirmed repeat founder in the same sector (active director at Aceae Nutra Limited, SIC 10890/72110) and shows an advisor pattern with 5 other active directorships — suggests a well-networked figure but likely spread thin and not hands-on day-to-day here.",
+    "location_signal": "89 High Street, Hadleigh, Ipswich, Suffolk — generic high-street commercial address, not a known biotech incubator or cluster.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — Pratt has prior directorship at another 72110/10890 company"
+    ],
+    "flags_negative": [
+      "No trading, science, or funding detail available",
+      "Generic non-specialist registered address",
+      "Company only weeks old — no track record yet"
+    ],
+    "interest_score": "2 - Verified sector repeat founder is a real positive, but the company is pre-everything else: no science, funding, or product visible.",
+    "unknowns": [],
+    "company_number": "17465823",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 11,
+      "active_count": 5,
+      "resigned_count": 6,
+      "other_companies": [
+        {
+          "company_name": "HELIXMERE IP HOLDINGS LIMITED",
+          "company_number": "17465815",
+          "company_status": "active",
+          "appointed_on": "2026-09-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "HELIXMERE CAPITAL LIMITED",
+          "company_number": "17465839",
+          "company_status": "active",
+          "appointed_on": "2026-09-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "ACEAE NUTRA LIMITED",
+          "company_number": "11742723",
+          "company_status": "active",
+          "appointed_on": "2026-02-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "10890",
+            "72110"
+          ]
+        },
+        {
+          "company_name": "IEI3 LIMITED",
+          "company_number": "15248857",
+          "company_status": "active",
+          "appointed_on": "2023-10-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "70221",
+            "70229"
+          ]
+        },
+        {
+          "company_name": "IEI3 SERVICES LIMITED",
+          "company_number": "07079361",
+          "company_status": "dissolved",
+          "appointed_on": "2009-11-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229"
+          ]
+        },
+        {
+          "company_name": "SAFELANE GLOBAL (GILLINGHAM) LIMITED",
+          "company_number": "02601923",
+          "company_status": "dissolved",
+          "appointed_on": "2009-12-01",
+          "resigned_on": "2010-11-16",
+          "sic_codes": [
+            "43999"
+          ]
+        },
+        {
+          "company_name": "LIFEBEAT",
+          "company_number": "06632229",
+          "company_status": "active",
+          "appointed_on": "2008-06-27",
+          "resigned_on": "2012-01-17",
+          "sic_codes": [
+            "85590"
+          ]
+        },
+        {
+          "company_name": "ALFORD HOUSE",
+          "company_number": "06521183",
+          "company_status": "active",
+          "appointed_on": "2008-03-26",
+          "resigned_on": "2012-06-22",
+          "sic_codes": [
+            "88990"
+          ]
+        },
+        {
+          "company_name": "ACCSYS TECHNOLOGIES PLC",
+          "company_number": "05534340",
+          "company_status": "active",
+          "appointed_on": "2005-08-11",
+          "resigned_on": "2007-06-22",
+          "sic_codes": [
+            "70100"
+          ]
+        },
+        {
+          "company_name": "TITAN WOOD LIMITED",
+          "company_number": "04738951",
+          "company_status": "active",
+          "appointed_on": "2003-04-17",
+          "resigned_on": "2007-06-26",
+          "sic_codes": [
+            "16290",
+            "71121",
+            "74909",
+            "77400"
+          ]
+        },
+        {
+          "company_name": "ICC PROPERTIES LIMITED",
+          "company_number": "03820256",
+          "company_status": "dissolved",
+          "appointed_on": "2001-11-23",
+          "resigned_on": "2005-04-05",
+          "sic_codes": null
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "ACEAE NUTRA LIMITED",
+          "company_number": "11742723",
+          "company_status": "active",
+          "appointed_on": "2026-02-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "10890",
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": true,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "QOLIPHARM THERAPEUTICS LTD",
+    "incorporated": "2026-09-17",
+    "one_liner": "Not observable at this stage — no description of what the company does beyond an R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Single director, Chris Vijetha Jonnagadda; no ORCID match found; confirmed as a repeat founder via an active directorship at Gracenovo Therapeutics Ltd, a company spanning wholesale/retail SIC codes plus 72110 (R&D)",
+    "location_signal": "Liverpool address (505 Wellington Wharf) — appears to be a managed office/serviced address, not a recognised biotech incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director has prior/current directorship at another company with SIC 72110"
+    ],
+    "flags_negative": [
+      "No description of science, product, or mechanism available",
+      "Sole director's other company (Gracenovo) has a mixed SIC profile (wholesale/retail plus R&D), unclear how closely comparable it is",
+      "No funding, grant, or partnership data",
+      "Very recent incorporation with no trading history"
+    ],
+    "interest_score": "2 - repeat-founder signal noted, but zero substantive information on the science or business itself",
+    "unknowns": [],
+    "company_number": "17466326",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "GRACENOVO THERAPEUTICS LTD",
+          "company_number": "17376686",
+          "company_status": "active",
+          "appointed_on": "2026-08-03",
+          "resigned_on": null,
+          "sic_codes": [
+            "46390",
+            "46460",
+            "47910",
+            "72110"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "GRACENOVO THERAPEUTICS LTD",
+          "company_number": "17376686",
+          "company_status": "active",
+          "appointed_on": "2026-08-03",
+          "resigned_on": null,
+          "sic_codes": [
+            "46390",
+            "46460",
+            "47910",
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MEDTECH INNOVATION LTD",
+    "incorporated": "2026-09-17",
+    "one_liner": "Not observable at this stage — no description of activity beyond SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Sole director (also secretary), Stephen Hammant-Stacey, British; one other appointment held but not in target sector; no ORCID match",
+    "location_signal": "20 Wenlock Road, London, N1 7GU — a well-known company formation agent (Companies Made Simple) mass-registration address, not an incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72110 (biotech R&D) classification"
+    ],
+    "flags_negative": [
+      "Just incorporated, no trading history",
+      "Registered address is a generic formation-agent address, not a lab/incubator/cluster location",
+      "No grant funding, publications, or product information available",
+      "Single director with no confirmed relevant sector experience"
+    ],
+    "interest_score": "1 - shell-stage registration with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17466162",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INNOVATION FRONTIERS LTD",
+    "incorporated": "2026-09-17",
+    "one_liner": "Not observable at this stage — no product or business description available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other operational signal available.",
+    "team_provenance": "Dr Ricardo de Godoi Mattos Ferreira — ORCID CONFIRMED, academic affiliations with Fundação Oswaldo Cruz and Universidade de São Paulo (Brazil); no prior directorships found under this officer record. Co-director Laurens Hoeft Rademacher has no matching ORCID record and no prior directorships found. Neither is a confirmed repeat founder in this sector.",
+    "location_signal": "Unit 2a Dunmore Court, Wootton Road, Abingdon — a known life-sciences/office park in the Oxfordshire cluster, but a generic multi-tenant business unit, not a named incubator.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic founder with credible research affiliations (Fiocruz, USP)",
+      "Oxfordshire cluster address"
+    ],
+    "flags_negative": [
+      "Company website is a placeholder domain-for-sale page, not an active company site",
+      "No description of product, science, or business model anywhere in the data",
+      "Very recently incorporated with no funding or grant history",
+      "Second director has no verifiable academic or professional record"
+    ],
+    "interest_score": "2 - academic founder credential is real but there is zero substantive information on what the company actually does; domain-for-sale page is a negative operational signal",
+    "unknowns": [],
+    "company_number": "17466510",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-2363-1289",
+      "institutions": [
+        "Fundação Oswaldo Cruz",
+        "Universidade de São Paulo"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CVX CORVEN MEDTECH LTD",
+    "incorporated": "2026-09-17",
+    "one_liner": "Not observable at this stage — no description of product, service, or market provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points to assess progress",
+    "team_provenance": "Single director, British national, no ORCID match, no other appointments found under this officer record — no evidence of academic or prior company background",
+    "location_signal": "Residential-looking address in Watford — no indication of incubator or cluster affiliation",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of business activity beyond broad SIC codes (consultancy, R&D, medtech mixed)",
+      "Single director with no verifiable track record",
+      "Extremely early stage — incorporated with no further evidence of traction"
+    ],
+    "interest_score": "1 - no verifiable science, team, funding, or traction signals to assess",
+    "unknowns": [],
+    "company_number": "17466260",
+    "sic_codes": [
+      "70229",
+      "71129",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PURETEX PONDS LIMITED",
+    "incorporated": "2026-09-17",
+    "one_liner": "Not observable at this stage — no description of activity beyond a generic R&D SIC code and a company name suggesting water/pond treatment",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Sole director Martin Richard Archer, British; no ORCID match found; 2 other appointments, none confirmed in target sector — informational only",
+    "location_signal": "Residential-looking London address (Trinity Crescent, SW17) — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "No funding evidence, dilutive or non-dilutive",
+      "Generic residential registered address",
+      "Single director with no confirmed relevant track record"
+    ],
+    "interest_score": "1 - shell-stage registration with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17465537",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "KSE BUILDING CONSTRUCTION LTD",
+    "incorporated": "2026-09-17",
+    "one_liner": "A construction company (development of building projects and general construction) that also lists an R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no other activity data",
+    "team_provenance": "Single director, no ORCID match, no other appointments found under this officer record — no evidence of academic or prior company background",
+    "location_signal": "Residential/generic London address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Primary SIC codes (41100, 41201) are mainstream construction/property development, not biotech or life sciences",
+      "72190 (R&D) appears alongside construction codes, suggesting it may be incidental rather than the core business",
+      "No evidence of scientific, clinical, or research activity",
+      "No funding, grant, or investor data present"
+    ],
+    "interest_score": "1 - This is a construction company with no discernible life-sciences activity; outside fund remit",
+    "unknowns": [],
+    "company_number": "17466437",
+    "sic_codes": [
+      "41100",
+      "41201",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "IMMUNE RESEARCH CIC",
+    "incorporated": "2026-09-18",
+    "one_liner": "A newly incorporated Community Interest Company nominally spanning software, data platforms, R&D, and social care activities, with no stated product or focus yet.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no product, publication, or grant activity evident",
+    "team_provenance": "Sole director Ivan George Martin, British national; no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "Registered address is a residential property in Birmingham — not a lab, incubator, or cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "CIC legal form limits investor returns (asset lock, dividend cap) — unusual vehicle for a venture-backable biotech",
+      "SIC code mix (software, data processing, R&D, social work) is incoherent and suggests no defined business model yet",
+      "Residential registered address",
+      "Sole director with no verifiable track record (no ORCID match, no other appointments found)",
+      "Zero evidence of science, IP, team, or funding"
+    ],
+    "interest_score": "1 - no science, no team signal, wrong corporate structure for equity investment",
+    "unknowns": [],
+    "company_number": "17466830",
+    "sic_codes": [
+      "62012",
+      "63120",
+      "72190",
+      "88990"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CONTINGENT STRATEGIES MANAGEMENT LIMITED",
+    "incorporated": "2026-09-18",
+    "one_liner": "Not observable at this stage — no description of activity beyond registered SIC codes spanning management consultancy, engineering R&D, and IP licensing",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or trading history",
+    "team_provenance": "Two British directors. Chowdhury has no other appointments found under this officer record. Holmes has 7 other appointments (none confirmed in target sector) and shows an ADVISOR PATTERN with 5 currently active directorships — suggests a well-connected figure but unlikely to be closely involved day-to-day here",
+    "location_signal": "Residential-style address in Ilford — no indication of incubator or life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual business activity",
+      "SIC code mix (consultancy, engineering R&D, IP licensing, holding company) is unusually broad and non-specific for a biotech play",
+      "Generic residential address, no cluster or incubator signal",
+      "No grant funding or academic evidence found"
+    ],
+    "interest_score": "1 - shell-like registration with no science, funding, or sector-specific evidence; too early and too vague to assess",
+    "unknowns": [],
+    "company_number": "17467055",
+    "sic_codes": [
+      "70229",
+      "71121",
+      "72190",
+      "77400"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 7,
+      "active_count": 5,
+      "resigned_count": 2,
+      "other_companies": [
+        {
+          "company_name": "AFIN BANK LIMITED",
+          "company_number": "13090556",
+          "company_status": "active",
+          "appointed_on": "2022-07-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "64191"
+          ]
+        },
+        {
+          "company_name": "BIRMINGHAM BANK LIMITED",
+          "company_number": "00555071",
+          "company_status": "active",
+          "appointed_on": "2021-01-08",
+          "resigned_on": null,
+          "sic_codes": [
+            "64191"
+          ]
+        },
+        {
+          "company_name": "GLDNMN LIMITED",
+          "company_number": "11687349",
+          "company_status": "dissolved",
+          "appointed_on": "2018-11-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "62090"
+          ]
+        },
+        {
+          "company_name": "IIT (EMEA) LIMITED",
+          "company_number": "07099474",
+          "company_status": "dissolved",
+          "appointed_on": "2009-12-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "7487"
+          ]
+        },
+        {
+          "company_name": "DREAMING OF GUILDFORD COMMUNITY INTEREST COMPANY",
+          "company_number": "06146100",
+          "company_status": "dissolved",
+          "appointed_on": "2007-03-08",
+          "resigned_on": null,
+          "sic_codes": [
+            "7487"
+          ]
+        },
+        {
+          "company_name": "PARICINT LLP",
+          "company_number": "OC316469",
+          "company_status": "active",
+          "appointed_on": "2007-02-12",
+          "resigned_on": "2020-09-23",
+          "sic_codes": []
+        },
+        {
+          "company_name": "INSTITUTE OF MANAGEMENT CONSULTANCY",
+          "company_number": "00737993",
+          "company_status": "active",
+          "appointed_on": "2003-01-01",
+          "resigned_on": "2004-12-31",
+          "sic_codes": [
+            "94120"
+          ]
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 7
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HEXA-CHARGE LTD",
+    "incorporated": "2026-09-18",
+    "one_liner": "Not observable at this stage — no website or product description provided beyond SIC code inference (other electrical equipment / wholesale of other machinery / R&D).",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, university startup incubator address suggests very early / pre-seed stage",
+    "team_provenance": "Sole director K M Bayazid; no ORCID match found; no prior directorships found under this officer record. No corroborating academic or commercial track record visible.",
+    "location_signal": "University of South Wales startup studio (Pontypridd) — genuine incubator signal, indicates institutional affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "University incubator address (University of South Wales startup studio)"
+    ],
+    "flags_negative": [
+      "No product, technology, or market description available",
+      "No funding data (grant or equity) observable",
+      "Single director with no verifiable track record",
+      "SIC codes are generic/mixed (electrical equipment, wholesale, R&D) — unclear actual focus"
+    ],
+    "interest_score": "2 - incubator affiliation is a mild positive but there is no discernible technology, team pedigree, or funding signal to assess",
+    "unknowns": [],
+    "company_number": "17467267",
+    "sic_codes": [
+      "27900",
+      "46690",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIMNARIS LTD",
+    "incorporated": "2026-09-17",
+    "one_liner": "Not observable at this stage — no company website or descriptive filing detail provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; too early for any operational signal",
+    "team_provenance": "Sole director Luke Thompson, British; GtR CONFIRMED as a UKRI-funded investigator, linked to an organisation called THE PACE CENTRE LIMITED. No other directorships found under this officer record.",
+    "location_signal": "128 City Road, London, EC1V 2NX — a well-known mass-registration/virtual office address used by thousands of companies, not a specialist biotech incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "GtR CONFIRMED — director has verified UKRI grant history"
+    ],
+    "flags_negative": [
+      "Incorporated one day before this record — no operating history",
+      "SIC codes (62012 software, 72190 R&D other) are generic and don't confirm a life-sciences focus",
+      "Registered address is a high-volume generic/virtual office, not a cluster or incubator signal",
+      "No company website, funding, or product description available"
+    ],
+    "interest_score": "2 — GtR-confirmed investigator is a genuine positive, but there is otherwise zero operational, scientific, or funding detail to assess; too early to call",
+    "unknowns": [],
+    "company_number": "17466284",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "AF34F582-684E-4EF8-9779-4FC5832E35CF",
+      "organisation": "THE PACE CENTRE LIMITED"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SOLENEL SCIENTIFIC ADVISORY LTD",
+    "incorporated": "2026-09-18",
+    "one_liner": "Not observable at this stage — no description of the actual business activity beyond broad SIC classification",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data points yet",
+    "team_provenance": "Sole director Dr Adriana Lucja Klyszejko-Kupinska, Polish national, styled 'Dr' (implies doctorate, but no ORCID match found so academic record unverified); no other appointments found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine lab or biotech cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mixed SIC codes (management consultancy, financial management, computer consultancy, other professional activities) — no specific biotech/life-sciences SIC",
+      "Registered at a known mass-incorporation virtual office address, not a lab or life-sciences incubator",
+      "No ORCID match for director despite 'Dr' title — academic credentials unverified",
+      "No science, product, or funding data available"
+    ],
+    "interest_score": "1 - no verifiable science, funding, or credible location/team signal; looks like a shell or consultancy at this stage",
+    "unknowns": [],
+    "company_number": "17466981",
+    "sic_codes": [
+      "70229",
+      "71122",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
