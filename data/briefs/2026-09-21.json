@@ -1,0 +1,521 @@
+[
+  {
+    "company_name": "EUPHEMIA LTD.",
+    "incorporated": "2026-09-20",
+    "one_liner": "Not observable at this stage — no business description available beyond a biotech-adjacent SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading; only signal is registration itself",
+    "team_provenance": "Two directors, one styled 'Dr' (British), one Irish; no ORCID matches found for either, no other directorships found for either",
+    "location_signal": "124-128 City Road, London — a well-known generic mass-registration/virtual-office address, not a specialist life-sciences incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72110 (biotech R&D) suggests intended sector focus"
+    ],
+    "flags_negative": [
+      "Just incorporated, no trading or funding history",
+      "City Road address is a generic registered-office mill, not a lab/incubator cluster",
+      "No verifiable academic or prior-founder track record for either director",
+      "No science, product, or funding detail available"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17469433",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FEDELM LTD",
+    "incorporated": "2026-09-21",
+    "one_liner": "Not observable at this stage — no descriptive activity data beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading",
+    "team_provenance": "Single named individual (Ellen Fianna Marsh) as both director and secretary; no ORCID match, no prior directorships found",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known formation-agent/virtual office address used by thousands of shell companies, not a genuine lab/incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered address is a generic mass-incorporation virtual office, not a bio/tech cluster or incubator",
+      "Sole director doubling as secretary — no team depth",
+      "SIC mix (engineering/architecture consultancy + computer programming) is vague and not clearly life-sciences-specific",
+      "No science, product, or funding data of any kind provided"
+    ],
+    "interest_score": "1 — no verifiable science, team, funding, or credible location signal; effectively a blank shell at this stage",
+    "unknowns": [],
+    "company_number": "17469742",
+    "sic_codes": [
+      "71121",
+      "71122",
+      "71129",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DISCRIVA LTD",
+    "incorporated": "2026-09-21",
+    "one_liner": "Not observable at this stage — no company description, website, or grant data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other operational signals available",
+    "team_provenance": "Two directors hold 'Dr' titles (Dorning, Edwards) suggesting possible academic or clinical background, but no ORCID matches confirmed. Jones has no additional signals. Pike shows an ADVISOR PATTERN (13 other active directorships, 34 total appointments, none confirmed in target sector) — suggests a well-connected non-executive/portfolio figure rather than a hands-on operator.",
+    "location_signal": "Residential/rural address in Frome, Somerset — no indication of incubator, cluster, or lab space",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Two directors carry 'Dr' titles, hinting at technical/academic background (unverified)"
+    ],
+    "flags_negative": [
+      "No description of business activity beyond generic SIC codes (62012 software, 72190 R&D)",
+      "No website, grant, or funding data provided",
+      "Registered address appears residential, not a lab or incubator",
+      "No ORCID or GtR confirmations for any director",
+      "Pike's high appointment count with no sector match dilutes his relevance as a sector-specific credibility signal"
+    ],
+    "interest_score": "2 - Pre-revenue shell with no verifiable science, funding, or team credibility signals; too early to assess",
+    "unknowns": [],
+    "company_number": "17469999",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 34,
+      "active_count": 13,
+      "resigned_count": 21,
+      "other_companies": [
+        {
+          "company_name": "TOCHOL CONSULTANCY LTD",
+          "company_number": "17468380",
+          "company_status": "active",
+          "appointed_on": "2026-09-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "70221",
+            "70229"
+          ]
+        },
+        {
+          "company_name": "OCR RIGHTS COMPANY LIMITED",
+          "company_number": "09757297",
+          "company_status": "dissolved",
+          "appointed_on": "2015-09-02",
+          "resigned_on": null,
+          "sic_codes": []
+        },
+        {
+          "company_name": "CHANTWOOD CONSULTANCY LIMITED",
+          "company_number": "06637050",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "TPVP FINANCE LTD.",
+          "company_number": "08345057",
+          "company_status": "dissolved",
+          "appointed_on": "2013-01-02",
+          "resigned_on": null,
+          "sic_codes": [
+            "69201"
+          ]
+        },
+        {
+          "company_name": "CUE SONGS LIMITED",
+          "company_number": "07517577",
+          "company_status": "dissolved",
+          "appointed_on": "2012-01-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "59200"
+          ]
+        },
+        {
+          "company_name": "CHANTWOOD MV LIMITED",
+          "company_number": "07685498",
+          "company_status": "dissolved",
+          "appointed_on": "2011-06-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "77110"
+          ]
+        },
+        {
+          "company_name": "PRO SPORT APPS TRADING LIMITED",
+          "company_number": "07665111",
+          "company_status": "dissolved",
+          "appointed_on": "2011-06-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "74100"
+          ]
+        },
+        {
+          "company_name": "PRO SPORT APPS LIMITED",
+          "company_number": "07631178",
+          "company_status": "dissolved",
+          "appointed_on": "2011-05-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "62012"
+          ]
+        },
+        {
+          "company_name": "GF VENTURES LIMITED",
+          "company_number": "07526795",
+          "company_status": "dissolved",
+          "appointed_on": "2011-02-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "62090"
+          ]
+        },
+        {
+          "company_name": "MELLS SPORTS AND RECREATION COMPANY LIMITED",
+          "company_number": "07492293",
+          "company_status": "active",
+          "appointed_on": "2011-01-13",
+          "resigned_on": null,
+          "sic_codes": [
+            "93110"
+          ]
+        },
+        {
+          "company_name": "CHANTWOOD INVESTMENTS LIMITED",
+          "company_number": "06215583",
+          "company_status": "active",
+          "appointed_on": "2007-04-17",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "CHANTWOOD INVESTMENTS LIMITED",
+          "company_number": "06215583",
+          "company_status": "active",
+          "appointed_on": "2007-04-17",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "AZURE (AE FOND KISS) LLP",
+          "company_number": "OC304843",
+          "company_status": "active",
+          "appointed_on": "2003-07-23",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "EPIC GAMES SMI UK LTD",
+          "company_number": "12987929",
+          "company_status": "active",
+          "appointed_on": "2020-11-02",
+          "resigned_on": "2026-06-05",
+          "sic_codes": null
+        },
+        {
+          "company_name": "TRON BIDCO LIMITED",
+          "company_number": "10911897",
+          "company_status": "active",
+          "appointed_on": "2017-09-01",
+          "resigned_on": "2020-03-10",
+          "sic_codes": null
+        },
+        {
+          "company_name": "TRON TOPCO LIMITED",
+          "company_number": "10907566",
+          "company_status": "dissolved",
+          "appointed_on": "2017-09-01",
+          "resigned_on": "2020-03-10",
+          "sic_codes": null
+        },
+        {
+          "company_name": "EPIC GAMES ANIMATION UK LTD",
+          "company_number": "06823136",
+          "company_status": "active",
+          "appointed_on": "2015-10-01",
+          "resigned_on": "2020-03-10",
+          "sic_codes": null
+        },
+        {
+          "company_name": "DESIGN ADVOCATES LTD",
+          "company_number": "09055452",
+          "company_status": "dissolved",
+          "appointed_on": "2014-05-23",
+          "resigned_on": "2014-10-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "REAL WORLD PRODUCTIONS LIMITED",
+          "company_number": "01236592",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "REAL WORLD STUDIOS LIMITED",
+          "company_number": "01965882",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "WOMAD INTERNATIONAL LIMITED",
+          "company_number": "07555460",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "REAL WORLD TRADING LIMITED",
+          "company_number": "02197933",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "REAL WORLD RECORDS LIMITED",
+          "company_number": "02257027",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "WOMAD FESTIVALS LIMITED",
+          "company_number": "06816897",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "WOMAD LIMITED",
+          "company_number": "02734599",
+          "company_status": "active",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "RED LION 83 LIMITED",
+          "company_number": "06066277",
+          "company_status": "dissolved",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "WORLD IN THE PARK LIMITED",
+          "company_number": "03833065",
+          "company_status": "liquidation",
+          "appointed_on": "2013-10-01",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "PG PRODUCTIONS LIMITED",
+          "company_number": "07471607",
+          "company_status": "active",
+          "appointed_on": "2011-03-11",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "REAL WORLD OPERATIONS LIMITED",
+          "company_number": "07467673",
+          "company_status": "active",
+          "appointed_on": "2011-03-11",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "PUBLISHING TOPCO LIMITED",
+          "company_number": "07477918",
+          "company_status": "active",
+          "appointed_on": "2010-12-23",
+          "resigned_on": "2020-07-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "GREAT FRIDAYS LIMITED",
+          "company_number": "06672706",
+          "company_status": "dissolved",
+          "appointed_on": "2008-11-27",
+          "resigned_on": "2014-10-31",
+          "sic_codes": null
+        },
+        {
+          "company_name": "CHANTWOOD CONSULTANCY LIMITED",
+          "company_number": "06637050",
+          "company_status": "active",
+          "appointed_on": "2008-07-03",
+          "resigned_on": "2013-10-01",
+          "sic_codes": null
+        },
+        {
+          "company_name": "SUNDERLAND PLACE MANAGEMENT LIMITED",
+          "company_number": "06423504",
+          "company_status": "active",
+          "appointed_on": "2008-02-08",
+          "resigned_on": "2008-08-26",
+          "sic_codes": null
+        },
+        {
+          "company_name": "SUNDERLAND PLACE MANAGEMENT (NO.2) LIMITED",
+          "company_number": "06423518",
+          "company_status": "active",
+          "appointed_on": "2008-02-08",
+          "resigned_on": "2008-08-26",
+          "sic_codes": null
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": true,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FUTURISTEK LTD",
+    "incorporated": "2026-09-21",
+    "one_liner": "Unclear — SIC mix suggests some combination of online retail, software/web development, and other R&D services",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other supporting data",
+    "team_provenance": "Single director, no ORCID match, no other appointments found under this officer record — no evidence of academic or prior founder background",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation address (registered-agent/virtual office), not a genuine incubator or R&D cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not a lab/incubator location",
+      "SIC code mix (retail, software, other R&D) is scattered and doesn't indicate a coherent life-sciences focus",
+      "No science, product, or team background disclosed",
+      "No funding, grant, or non-dilutive signal of any kind",
+      "Company incorporated with future-dated timestamp inconsistency (2026) — verify record accuracy"
+    ],
+    "interest_score": "1 - No discernible life-sciences relevance, no team or funding signal; nothing here to screen further",
+    "unknowns": [],
+    "company_number": "17470480",
+    "sic_codes": [
+      "47910",
+      "62012",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DECCOM INTELLIGENCE LTD",
+    "incorporated": "2026-09-21",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other operational data available",
+    "team_provenance": "Sole director Barry Gamble, British national. No ORCID match found. No other appointments found under this officer record.",
+    "location_signal": "66 Paul Street, London EC2A — a well-known serviced-office/co-working address used by many startups; not a specialist lab or incubator signal on its own.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72190 (R&D other natural sciences/engineering) indicates intended R&D focus"
+    ],
+    "flags_negative": [
+      "No website, grant, or product data provided",
+      "Single director with no prior track record found",
+      "Very recent incorporation with no operational history"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team track record, or funding signal",
+    "unknowns": [],
+    "company_number": "17469903",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AIRGATE NETWORKS LIMITED",
+    "incorporated": "2026-09-21",
+    "one_liner": "Not observable at this stage — no description of product or service provided beyond SIC code mix (communications equipment, software, R&D consultancy).",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant, product, or trading data available",
+    "team_provenance": "Sole director Leigh John Glover, British national. Has 2 other appointments, none confirmed in target sector (SIC 72110/72190) — informational only, not a signal either way.",
+    "location_signal": "Barry, South Wales — generic business centre address, no known biotech/tech cluster or incubator association",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual business activity",
+      "SIC codes span hardware, software, and R&D consultancy — unclear focus",
+      "No funding, product, or team credibility signals",
+      "Just incorporated, no operating history"
+    ],
+    "interest_score": "1 - no verifiable signal of relevance, technology, or traction; pure shell-stage record",
+    "unknowns": [],
+    "company_number": "17470029",
+    "sic_codes": [
+      "26309",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PARALLAX DYNAMICS LTD",
+    "incorporated": "2026-09-21",
+    "one_liner": "Not observable at this stage — no descriptive data beyond SIC code provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Sole director Yoav Zingher, British national; no ORCID match found; holds 1 other appointment, not confirmed in this sector",
+    "location_signal": "Residential-looking address in Hampstead Garden Suburb, London — not an incubator or known cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of scientific activity, product, or funding",
+      "Single director with no confirmed sector track record",
+      "Registered address appears residential, not a lab/incubator/cluster signal"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17470219",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
