@@ -1,0 +1,745 @@
+[
+  {
+    "company_name": "RAPHELION BIO LIMITED",
+    "incorporated": "2026-09-22",
+    "one_liner": "Not observable at this stage — no activity description available beyond generic R&D SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no operational history, no funding, no website",
+    "team_provenance": "Sole director Natalia Sikora (Polish national). ORCID search returned only unverified possible matches — not treated as confirmed. No other appointments found under this officer record, which is not evidence either way.",
+    "location_signal": "167-169 Great Portland Street, London W1W 5PF — a well-known company-formation/registered-office address used by large numbers of unrelated companies; not a genuine biotech cluster or incubator signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Specialist SIC codes (72110, 72190) indicate stated R&D focus"
+    ],
+    "flags_negative": [
+      "Day-one incorporation with no operational, scientific, or funding detail",
+      "Generic mass-registration address, not a specialist life-sciences location",
+      "Single director, no team depth visible",
+      "No science, product, or market description of any kind"
+    ],
+    "interest_score": "1 - essentially a shell registration; nothing here to assess yet",
+    "unknowns": [],
+    "company_number": "17473764",
+    "sic_codes": [
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NANOFORMIX LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "Sells a microfluidic instrument for parallel, scalable lipid nanoparticle formulation aimed at LNP drug/vaccine developers.",
+    "science": "Microfluidic cartridge-based system (MiNano Form) running 8 parallel formulations from 80µL to 10+mL, positioned to eliminate cleaning/carry-over/dead volume in LNP formulation — a tools/platform play rather than a therapeutic.",
+    "stage_signal": "Website and product (MiNano Form) already live with defined specs at incorporation stage — suggests spin-out of pre-existing work rather than a pure idea-stage start.",
+    "team_provenance": "Sole director Dr Darren Paul Andrews, REPEAT FOUNDER CONFIRMED (same sector) — previously director at Cobalt Light Systems Limited (analytical instrumentation, SIC overlaps incl. 26511/72190), resigned 2017. No ORCID match found.",
+    "location_signal": "Residential-looking address in Liverpool (Cumberland Avenue) — not a known incubator or science park; generic registration address.",
+    "funding": "No grant or investment data provided. Not observable at this stage.",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — prior directorship at Cobalt Light Systems, an instrumentation company",
+      "Live commercial website with a defined, specific product (not vapourware-sounding) ahead of/at incorporation",
+      "SIC codes span instrumentation manufacture (26511) and software (72110/72190), consistent with a hardware+software toolmaker"
+    ],
+    "flags_negative": [
+      "Registered address is generic/residential, no cluster or incubator signal",
+      "No funding, customer, or revenue data provided",
+      "Company incorporated very recently — no operating history to assess execution",
+      "No ORCID match for the director"
+    ],
+    "interest_score": "4 - Repeat founder in an adjacent instrumentation sector plus an already-live, specific commercial product is more substantive than typical day-one shells.",
+    "unknowns": [
+      "What is Cobalt Light Systems' outcome/exit history and Andrews' role/seniority there?",
+      "Is MiNano Form already sold/piloted with any customers, or still pre-revenue?",
+      "Who else is on the team — is this genuinely a one-person operation?",
+      "What IP protects the cartridge/microfluidic design?",
+      "Any funding raised or grants secured to date, given no data provided here?"
+    ],
+    "company_number": "17475056",
+    "sic_codes": [
+      "26511",
+      "32500",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 4,
+      "active_count": 2,
+      "resigned_count": 2,
+      "other_companies": [
+        {
+          "company_name": "CAMPBELL ANDREWS CONSULTING LTD",
+          "company_number": "14540225",
+          "company_status": "active",
+          "appointed_on": "2022-12-14",
+          "resigned_on": null,
+          "sic_codes": [
+            "71122"
+          ]
+        },
+        {
+          "company_name": "OXFORD HIGHQ LTD",
+          "company_number": "11002764",
+          "company_status": "dissolved",
+          "appointed_on": "2021-11-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "74909"
+          ]
+        },
+        {
+          "company_name": "PROXISENSE LIMITED",
+          "company_number": "09219890",
+          "company_status": "active",
+          "appointed_on": "2021-03-08",
+          "resigned_on": "2024-04-17",
+          "sic_codes": [
+            "28990"
+          ]
+        },
+        {
+          "company_name": "COBALT LIGHT SYSTEMS LIMITED",
+          "company_number": "05856979",
+          "company_status": "dissolved",
+          "appointed_on": "2007-04-19",
+          "resigned_on": "2017-07-07",
+          "sic_codes": [
+            "26511",
+            "26512",
+            "26701",
+            "72190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "COBALT LIGHT SYSTEMS LIMITED",
+          "company_number": "05856979",
+          "company_status": "dissolved",
+          "appointed_on": "2007-04-19",
+          "resigned_on": "2017-07-07",
+          "sic_codes": [
+            "26511",
+            "26512",
+            "26701",
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 4
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MASAR ALEBTIKAR FOR GENERAL SUPPLIES AND GENERAL TRADING LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "Not observable at this stage — no description of activity beyond broad SIC codes covering wholesale trade, IT, data hosting, and R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other activity evidence",
+    "team_provenance": "Single director, Egyptian national; no ORCID match; no other appointments found under this officer record",
+    "location_signal": "Generic managed office/business centre address (Piccadilly Business Centre, Manchester) — not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes are a scattershot mix (general trading, IT, data hosting, R&D) suggesting no defined business focus",
+      "No evidence of life-sciences-specific activity despite R&D SIC code",
+      "Generic serviced-office address, not a specialist cluster",
+      "No funding, grant, or product information available",
+      "Note: incorporation date (2026-09-22) is in the future relative to today, suggesting a data or record anomaly worth flagging"
+    ],
+    "interest_score": "1 - no verifiable life-sciences activity, generic trading company profile, nothing to assess",
+    "unknowns": [],
+    "company_number": "17473286",
+    "sic_codes": [
+      "46900",
+      "62012",
+      "63110",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THE SATELLITE SHEEP COMPANY LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "Not observable at this stage — SIC codes suggest satellite communications and/or R&D activity, but no descriptive material provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with a future/forward-dated date in the record; pre-operational shell at this point.",
+    "team_provenance": "Sole director Simon Lloyd, British; no other appointments found under this officer record; possible ORCID matches unverified and not treated as confirmed.",
+    "location_signal": "Registered address in Feltham, London — residential/generic address, no evidence of incubator or cluster affiliation.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Dual SIC codes (61300 satellite telecoms + 72110 biotech R&D) suggest a specific cross-disciplinary thesis, worth understanding"
+    ],
+    "flags_negative": [
+      "No trading history or public description of activity",
+      "Generic residential registered address",
+      "No funding, grant, or product information available",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "2 - Pre-formation shell with an intriguing SIC combination but no verifiable substance yet",
+    "unknowns": [],
+    "company_number": "17473512",
+    "sic_codes": [
+      "61300",
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 7
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PLASTIGEN LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "Unclear — Companies House record suggests an agri/bio venture, but the only live website under this name is an unrelated Mexican industrial plastics distributor.",
+    "science": "Not observable at this stage — SIC codes (crop/animal farming, computer programming) give no coherent scientific thesis, and no matching company science content found",
+    "stage_signal": "Day-one incorporation (Sept 2026), pre-revenue, no company-specific content found",
+    "team_provenance": "Sole director Dr Ravendran Vasudevan, ORCID CONFIRMED (0000-0001-9195-1116), affiliated with University of Cambridge — genuine academic credibility signal. No other directorships found under this officer record.",
+    "location_signal": "283 Arbury Road, Cambridge — residential/generic address, not a known incubator or cluster address",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Director ORCID CONFIRMED academic record (University of Cambridge)"
+    ],
+    "flags_negative": [
+      "Website found under this name (plastigen.com) is an unrelated Spanish-language Mexican industrial plastics/rubber distributor — likely name collision, not evidence of this company's activity",
+      "SIC codes (crop farming, animal farming, computer programming) are incoherent and give no clear business model",
+      "No science, product, or funding detail observable anywhere"
+    ],
+    "interest_score": "2 - academic founder with verified credentials is a mild positive, but there is zero substantive information on what this company actually does; website evidence found is a false lead",
+    "unknowns": [],
+    "company_number": "17474634",
+    "sic_codes": [
+      "01280",
+      "01500",
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-9195-1116",
+      "institutions": [
+        "University of Cambridge"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SENSORY EARTH INTELLIGENCE SYSTEMS LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "A newly incorporated company positioned at the intersection of sensor hardware, software, R&D and engineering consultancy — specific product not stated.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, no grant or product data available",
+    "team_provenance": "Sole director Hüseyin Tamer (Turkish nationality). ORCID search returned 4 possible matches — too common a name to confirm, treated as inconclusive. No other appointments found under this officer record.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine incubator or R&D cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC codes span hardware, software and R&D, suggesting a technical/engineering focus"
+    ],
+    "flags_negative": [
+      "Generic formation-agent registered address, not an R&D or incubator signal",
+      "No funding, product, or team detail available",
+      "Single director with no verifiable track record",
+      "Company incorporated with no other observable substance"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17473383",
+    "sic_codes": [
+      "26511",
+      "62012",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 4
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LEADING ORDER TECHNOLOGIES LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "Unclear — registered with a mix of software/business consultancy and R&D-adjacent SIC codes, no other public detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or funding history",
+    "team_provenance": "Two directors, both 'Dr' titled, British, no ORCID match found for either, no prior directorships found under either officer record — suggests possibly first-time company but not confirmed",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address used by thousands of shell and early-stage companies; not a genuine incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address (Shelton Street), not a genuine biotech/incubator signal",
+      "SIC codes (62012 software, 72190 other R&D) do not clearly indicate life-sciences focus",
+      "No science, product, or mechanism disclosed",
+      "No funding, grant, or traction data",
+      "Both directors carry 'Dr' title but no ORCID match found for either — academic claim unverified"
+    ],
+    "interest_score": "1 — no verifiable science, sector fit, funding, or credibility signals; pure shell-stage registration",
+    "unknowns": [],
+    "company_number": "17473908",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "TRADE MIND RESEARCH LIMITED",
+    "incorporated": "2026-09-22",
+    "one_liner": "Newly incorporated company registered under management consultancy and other R&D SIC codes; no further activity detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or grant history observable",
+    "team_provenance": "Sole director Wang, Ka Wai (Hong Konger); no ORCID match found; no other directorships found under this officer record — neither is evidence for or against credibility",
+    "location_signal": "Unit 1 Castle End, Ruscombe, Reading — a rural/commercial unit address, not a recognised biotech incubator or cluster; no signal either way",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or platform detail provided",
+      "SIC codes (70229 management consultancy, 72190 other R&D) are generic and do not confirm life-sciences focus",
+      "No funding, grant, or investor activity observable",
+      "Company incorporated too recently to assess"
+    ],
+    "interest_score": "1 - no verifiable science, team credentials, or funding signal; nothing to differentiate from a shell filing",
+    "unknowns": [],
+    "company_number": "17473742",
+    "sic_codes": [
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ZIGGURAT TECHNOLOGY LTD",
+    "incorporated": "2026-09-23",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC classifications spanning instrumentation, IT services, engineering, and R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "No directors listed or fetched — cannot assess founder background",
+    "location_signal": "Scrubs Lane, London — mixed commercial/light-industrial area, not a known biotech incubator or cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available",
+      "No funding or grant data",
+      "No evidence of scientific activity beyond generic SIC codes",
+      "Company incorporated very recently with no track record"
+    ],
+    "interest_score": "1 - essentially no verifiable data; nothing to assess",
+    "unknowns": [],
+    "company_number": "17475722",
+    "sic_codes": [
+      "26512",
+      "62090",
+      "71121",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ORBGNOST LIMITED",
+    "incorporated": "2026-09-23",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no further activity visible",
+    "team_provenance": "Not observable at this stage",
+    "location_signal": "Registered address is a residential-looking flat in Glasgow — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No directors listed / not fetched — cannot assess team",
+      "SIC 74901 is a generic 'management consultancy' code, diluting the R&D signal from 72190",
+      "Incorporation date is in the future relative to typical record timestamps, suggesting this is a very early or placeholder record",
+      "No science, product, or funding data available"
+    ],
+    "interest_score": "1 - no verifiable data to assess; nothing to act on yet",
+    "unknowns": [],
+    "company_number": "SC903591",
+    "sic_codes": [
+      "72190",
+      "74901"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MUPHY CIRCUITS LTD",
+    "incorporated": "2026-09-23",
+    "one_liner": "Not observable at this stage — no description of the business beyond SIC codes",
+    "science": "SIC codes suggest semiconductor/electronic component manufacture (26110), engineering consultancy (71122), and R&D in natural sciences/engineering (72190), but no actual technology or mechanism is described",
+    "stage_signal": "Day-one incorporation — no trading history, no other signals of progress",
+    "team_provenance": "Not observable at this stage — no directors listed or fetched",
+    "location_signal": "Residential-style address in Shinfield, Reading — not a known incubator or cluster address; appears generic",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available at all",
+      "No business description beyond SIC codes",
+      "Incorporation date is in the future / data may be provisional or erroneous",
+      "No funding, grant, or trading signal of any kind"
+    ],
+    "interest_score": "1 - essentially a blank shell registration with no verifiable substance",
+    "unknowns": [],
+    "company_number": "17476175",
+    "sic_codes": [
+      "26110",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GOPNIK LABS LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of film/video, computer programming, and R&D activity but no descriptive data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Sole director Natalija Rjumina, British national; no ORCID match found; 1 other directorship held, not confirmed in target sector",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address, not a genuine biotech or R&D cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated too recently to show any track record",
+      "Registered address is a generic virtual-office formation address, not an incubator or lab cluster",
+      "SIC codes (film/video, computer programming) do not clearly indicate a life-sciences focus",
+      "No ORCID match for director",
+      "No grant funding or other external validation present"
+    ],
+    "interest_score": "1 - No verifiable life-sciences signal, generic address, brand-new shell company",
+    "unknowns": [],
+    "company_number": "17474683",
+    "sic_codes": [
+      "59111",
+      "62012",
+      "72190",
+      "72200"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THEONIC LABS LTD",
+    "incorporated": "2026-09-23",
+    "one_liner": "Pre-seed stealth company developing autonomous drones that map RF/electromagnetic spectra for GPS-denied indoor navigation.",
+    "science": "Airborne RF spatial intelligence combined with small-UAV autonomy for perception and navigation without GPS — described only in marketing terms, no technical detail on sensors, algorithms, or hardware given.",
+    "stage_signal": "Day-one incorporation (future-dated), pre-seed stealth, website mentions SEIS Advance Assurance pipeline (not yet confirmed) — no product, customers, or grant funding evidenced.",
+    "team_provenance": "No directors listed or fetched — cannot assess founder background, academic links, or prior companies.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company-formation/virtual office address used by thousands of shell companies, not a genuine lab or incubator signal.",
+    "funding": "No grant or investment data present. Website references SEIS Advance Assurance as pending/pipeline, not confirmed — no funding secured as far as this record shows.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available at all",
+      "Generic mass-registration virtual office address, not a specialist cluster",
+      "Website is heavy on buzzwords ('Physical AI', 'CONFIDENTIAL R&D HARDENED') with no technical substance",
+      "Future/implausible incorporation date (2026-09-23) suggests placeholder or data error",
+      "No evidence of team, funding, or product beyond a landing page"
+    ],
+    "interest_score": "1 - no team data, no funding, no technical substance beyond marketing language; nothing to diligence yet",
+    "unknowns": [],
+    "company_number": "17475863",
+    "sic_codes": [
+      "62012",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EQX POWER LTD",
+    "incorporated": "2026-09-22",
+    "one_liner": "Early-stage venture developing a power electronics component ('a gearbox for electric fields') aimed at improving energy density and delivery for grids, EV charging, and electrification infrastructure.",
+    "science": "Described as a 'power primitive' manipulating electric field/charge/exergy factor, patent pending — but no technical mechanism detail given beyond marketing language.",
+    "stage_signal": "Day-one incorporation (Sept 2026); pre-product marketing site with vague physics claims, no results/technical data disclosed despite a 'Results' page existing in nav.",
+    "team_provenance": "Sole director Dequincy Carmel Prescott is a REPEAT FOUNDER CONFIRMED in same sector (director at QTPEX LTD, SIC 72110/72190). Also shows ADVISOR PATTERN with 10 other active directorships — suggests a well-networked, portfolio-style operator, but raises doubt over hands-on involvement in this specific venture.",
+    "location_signal": "Residential London address (Harold Road, N8) — generic, no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided; website has an 'Invest' page but no figures given in excerpt.",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — prior directorship at QTPEX LTD",
+      "Patent-pending claim on core technology",
+      "Live company website with articulated problem statement"
+    ],
+    "flags_negative": [
+      "No technical substantiation of claims — heavy marketing language, no data",
+      "Residential registered address",
+      "Director's 10 concurrent directorships (ADVISOR PATTERN) raise doubt on operational focus",
+      "Very early stage — incorporated within the year, no financials or grants"
+    ],
+    "interest_score": "3 - repeat founder in-sector is a genuine positive, but claims are unsubstantiated and founder's bandwidth is questionable",
+    "unknowns": [],
+    "company_number": "17474644",
+    "sic_codes": [
+      "26110",
+      "27900",
+      "71121",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 10,
+      "active_count": 10,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "FUTURE NOW PARTNERS LTD",
+          "company_number": "16555932",
+          "company_status": "active",
+          "appointed_on": "2025-07-02",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209",
+            "70100",
+            "70229",
+            "82990"
+          ]
+        },
+        {
+          "company_name": "PORTFOLIOS XP LTD",
+          "company_number": "15260783",
+          "company_status": "dissolved",
+          "appointed_on": "2023-11-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "41100",
+            "68100",
+            "68310",
+            "68320"
+          ]
+        },
+        {
+          "company_name": "QTPEX LTD",
+          "company_number": "14216875",
+          "company_status": "dissolved",
+          "appointed_on": "2022-07-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "21100",
+            "21200",
+            "46460"
+          ]
+        },
+        {
+          "company_name": "DEQUINCY LTD",
+          "company_number": "13651538",
+          "company_status": "dissolved",
+          "appointed_on": "2021-09-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "68310"
+          ]
+        },
+        {
+          "company_name": "QTPEX LTD",
+          "company_number": "11645541",
+          "company_status": "dissolved",
+          "appointed_on": "2018-10-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "QTPEX LTD",
+          "company_number": "08076406",
+          "company_status": "dissolved",
+          "appointed_on": "2012-05-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "21100",
+            "72110",
+            "72190",
+            "74909"
+          ]
+        },
+        {
+          "company_name": "MASS JAM LIMITED",
+          "company_number": "07510105",
+          "company_status": "dissolved",
+          "appointed_on": "2011-01-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "59200"
+          ]
+        },
+        {
+          "company_name": "LONDON UKULELE (UKE) FESTIVAL LTD",
+          "company_number": "07133086",
+          "company_status": "dissolved",
+          "appointed_on": "2010-01-22",
+          "resigned_on": null,
+          "sic_codes": [
+            "9231"
+          ]
+        },
+        {
+          "company_name": "UKEYLOVE LIMITED",
+          "company_number": "06883824",
+          "company_status": "dissolved",
+          "appointed_on": "2009-04-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "9211",
+            "9231",
+            "9234"
+          ]
+        },
+        {
+          "company_name": "QNCTV.COM LIMITED",
+          "company_number": "04529833",
+          "company_status": "dissolved",
+          "appointed_on": "2002-09-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "7032",
+            "9211",
+            "9234"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "QTPEX LTD",
+          "company_number": "08076406",
+          "company_status": "dissolved",
+          "appointed_on": "2012-05-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "21100",
+            "72110",
+            "72190",
+            "74909"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AFAGH HORIZONS LTD",
+    "incorporated": "2026-09-23",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Not observable at this stage — no directors listed or fetched",
+    "location_signal": "Edinburgh city-centre address; no obvious incubator/cluster marker in the raw string given",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available at all",
+      "SIC mix (software publishing, business/domestic software, other R&D) is broad and non-specific, not a clear biotech signal",
+      "Company only weeks old with nothing else to assess"
+    ],
+    "interest_score": "1 - no team, no science, no funding data; nothing to evaluate yet",
+    "unknowns": [],
+    "company_number": "SC903572",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GLOBAL GROUP OF HOSPITALITY & INNOVATION LIMITED",
+    "incorporated": "2026-09-23",
+    "one_liner": "Unclear — SIC mix suggests a blend of hospitality, education/training, and other research activities, but no description available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Not observable at this stage — no directors listed or fetched",
+    "location_signal": "Residential-looking Blackpool seafront address — no incubator, cluster, or lab signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available at all",
+      "SIC code mix (hospitality, education, other research) is incoherent for a life-sciences thesis",
+      "Company name and codes suggest a generic multi-purpose shell rather than a focused R&D venture",
+      "No evidence of scientific, academic, or clinical activity"
+    ],
+    "interest_score": "1 - no discernible life-sciences relevance, no team data, incoherent SIC mix",
+    "unknowns": [],
+    "company_number": "17475840",
+    "sic_codes": [
+      "72190",
+      "82990",
+      "85421",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
