@@ -1,0 +1,504 @@
+[
+  {
+    "company_name": "HOTCHKISS CLINICAL SOLUTIONS LTD",
+    "incorporated": "2026-09-24",
+    "one_liner": "Not observable at this stage — no descriptive data beyond registration and SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other supporting data (note: incorporation date is in the future/erroneous relative to typical filing, worth verifying)",
+    "team_provenance": "Sole director Michelle Natasha Maryam Hotchkiss, British national; one other appointment held, not confirmed in target sector (biomedical/scientific R&D); no ORCID match found",
+    "location_signal": "Residential-looking address in Grateley, Andover — generic, no indication of incubator or life-sciences cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "Single-director structure with no confirmed sector experience",
+      "Generic/residential registered address, no cluster or incubator signal",
+      "No funding or grant data disclosed",
+      "SIC 72110 (biotech R&D) paired with vague 74909 (other professional activities) gives little clarity on actual activity"
+    ],
+    "interest_score": "1 - No verifiable science, team credibility, funding, or location signal; nothing to differentiate from a shell registration",
+    "unknowns": [],
+    "company_number": "17479839",
+    "sic_codes": [
+      "72110",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ALOSENTA LTD",
+    "incorporated": "2026-09-25",
+    "one_liner": "Not observable at this stage — no business description provided beyond a generic R&D SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or trading data yet",
+    "team_provenance": "Two directors, both linked to PROSEMBLE GROUP LTD (SIC 72190, active) — this appears to be a related/spinout entity rather than a standalone new venture. Dr Ludovico Pipito: ORCID CONFIRMED, academic affiliations (Coventry University, University of Derby, Università degli Studi di Messina, Papardo Hospital), REPEAT FOUNDER CONFIRMED in same sector. Inna Zhuranskaya: ORCID CONFIRMED, GtR CONFIRMED (UKRI-funded investigator), REPEAT FOUNDER CONFIRMED in same sector, and shows an ADVISOR PATTERN (4 other active directorships) — suggests well-networked but likely limited day-to-day bandwidth on this company",
+    "location_signal": "Residential address in Chiswick, London — generic, not a lab or incubator address",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED for both directors",
+      "GtR CONFIRMED (UKRI-funded investigator) for Zhuranskaya",
+      "REPEAT FOUNDER CONFIRMED (same sector) for both directors, linked to PROSEMBLE GROUP LTD",
+      "Genuine academic/clinical affiliations for Pipito across multiple institutions"
+    ],
+    "flags_negative": [
+      "No business description, science, or product information available",
+      "Registered address is residential, not lab/incubator",
+      "No funding or grant data yet",
+      "Company brand-new (incorporated within days), so no trading history"
+    ],
+    "interest_score": "3 - credible, verified team with real academic and repeat-founder signals, but zero substantive company information to assess yet",
+    "unknowns": [],
+    "company_number": "17480569",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-1824-7541",
+      "institutions": [
+        "Coventry University",
+        "Ideo Studio Lab",
+        "Papardo Hospital",
+        "University of Derby",
+        "Università degli Studi di Messina"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "01481C2A-1369-4D58-8838-D44E4D19831D",
+      "organisation": "PROSEMBLE GROUP LTD"
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "PROSEMBLE GROUP LTD",
+          "company_number": "15721303",
+          "company_status": "active",
+          "appointed_on": "2026-03-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "PROSEMBLE GROUP LTD",
+          "company_number": "15721303",
+          "company_status": "active",
+          "appointed_on": "2026-03-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AMAZING GLOBAL GROUP LIMITED",
+    "incorporated": "2026-09-24",
+    "one_liner": "A newly incorporated company with an unclear business focus spanning bread/bakery production, financial holding activities, and R&D-related activity codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no other trading or funding history visible",
+    "team_provenance": "Single director, Dora Bertoluzzi (Italian nationality); no ORCID match found; one other directorship noted but not in the target sector",
+    "location_signal": "Manchester registered address — generic commercial building, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed and incoherent SIC codes (bakery production, financial holding, R&D) suggesting unclear or opportunistic business purpose",
+      "No science, product, or platform description available",
+      "No funding, grant, or non-dilutive support evidence",
+      "Single-director structure with no sector-relevant track record confirmed"
+    ],
+    "interest_score": "1 - no discernible life-sciences activity, mechanism, or credible team signal",
+    "unknowns": [],
+    "company_number": "17480137",
+    "sic_codes": [
+      "10710",
+      "64209",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VERCANDA LIMITED",
+    "incorporated": "2026-09-24",
+    "one_liner": "Not observable at this stage — no website or description provided beyond SIC codes suggesting computer programming/software combined with R&D activity",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other public activity yet",
+    "team_provenance": "Sole director Thomas James Li; REPEAT FOUNDER CONFIRMED via active directorship at Chassis Autonomy Limited (SIC 72190) — genuine prior experience building a company in this sector. No ORCID match found (not meaningful either way).",
+    "location_signal": "Residential address in London (Gumleigh Road, W5) — generic, not an incubator or cluster address",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director at Chassis Autonomy Limited, active, SIC 72190"
+    ],
+    "flags_negative": [
+      "No description of business activity beyond SIC codes",
+      "Residential registered address",
+      "No funding data",
+      "Pre-incorporation stage with no operating history"
+    ],
+    "interest_score": "2 - repeat founder in-sector is a genuine positive, but company is brand-new with zero other observable signal",
+    "unknowns": [],
+    "company_number": "17480322",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 3,
+      "active_count": 3,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "CHASSIS AUTONOMY LIMITED",
+          "company_number": "14019486",
+          "company_status": "liquidation",
+          "appointed_on": "2022-04-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "CARBON SIX ENGINEERING LIMITED",
+          "company_number": "08593466",
+          "company_status": "dissolved",
+          "appointed_on": "2013-07-02",
+          "resigned_on": null,
+          "sic_codes": [
+            "71122"
+          ]
+        },
+        {
+          "company_name": "CARBON SIX ENGINEERING LIMITED",
+          "company_number": "08539832",
+          "company_status": "active",
+          "appointed_on": "2013-05-22",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "71122"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "CHASSIS AUTONOMY LIMITED",
+          "company_number": "14019486",
+          "company_status": "liquidation",
+          "appointed_on": "2022-04-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 3
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LAZULI LIMITED",
+    "incorporated": "2026-09-24",
+    "one_liner": "Unclear — no evidence of a life-sciences product or service; the domain lazuli.com is an unrelated personal family website, not this company's site.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operational or funding history",
+    "team_provenance": "Sole director Jorge Augusto Servert de Tejada, Spanish national, ORCID CONFIRMED (0009-0006-6673-5116) with University of Manchester affiliation — a genuine verified academic record. No other directorships found under this officer record.",
+    "location_signal": "Registered at a residential flat (Clubhouse Apartments, London E14) — generic residential address, not a lab, incubator, or cluster.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic affiliation (University of Manchester)"
+    ],
+    "flags_negative": [
+      "Website found for the company name (lazuli.com) is an unrelated personal/family site with no connection to the business — no genuine web presence identified",
+      "SIC codes span unrelated fields (electronic components, weapon/ammunition manufacture, business software, R&D) with no coherent narrative",
+      "Residential registered address",
+      "Incorporated only days ago — no track record whatsoever"
+    ],
+    "interest_score": "1 - a single verified academic credential does not offset a pre-operational shell with no coherent business description and no genuine web presence",
+    "unknowns": [],
+    "company_number": "17480013",
+    "sic_codes": [
+      "26511",
+      "26600",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0006-6673-5116",
+      "institutions": [
+        "University of Manchester"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PRX LTD",
+    "incorporated": "2026-09-24",
+    "one_liner": "Early-stage company combining medical device/software and R&D activity — precise product not observable from data provided.",
+    "science": "SIC codes span manufacture of irradiation/electromedical equipment (26600), computer consultancy (62012), and R&D in natural sciences/engineering (72190), suggesting a medtech/software diagnostic or imaging tool; no mechanism detail available.",
+    "stage_signal": "Day-one incorporation (2026-09-24) — pre-operational shell at this point.",
+    "team_provenance": "Sole director Sajid Sayed, British, ORCID CONFIRMED with a genuine academic publication record; affiliated with Royal Hobart Hospital, indicating a clinical/academic background. Holds 1 other appointment, not confirmed in this sector — informational only.",
+    "location_signal": "86-90 Paul Street, London EC2A 4NE — this is a well-known company-formation/virtual-office address used by thousands of shell companies, not a specialist incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic identity (Sajid Sayed) — verified genuine publication record",
+      "Clinical hospital affiliation (Royal Hobart Hospital) suggesting domain credibility",
+      "SIC codes indicate specialist medtech/software R&D intent rather than generic activity"
+    ],
+    "flags_negative": [
+      "Day-one incorporation — no operational history whatsoever",
+      "Registered address is a generic mass-registration office, not a biotech/medtech cluster or incubator",
+      "No funding data (grant or equity) at all",
+      "Single director — no visible team or co-founder"
+    ],
+    "interest_score": "2 - ORCID-confirmed academic founder is a genuine positive, but this is a same-day shell with no funding, team, or product detail to assess",
+    "unknowns": [],
+    "company_number": "17479329",
+    "sic_codes": [
+      "26600",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0003-8826-3891",
+      "institutions": [
+        "Royal Hobart Hospital"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SANE SYSTEMS LIMITED",
+    "incorporated": "2026-09-24",
+    "one_liner": "Not observable at this stage — Companies House record indicates a software/IT and R&D-adjacent SIC mix but no description of activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or funding data provided",
+    "team_provenance": "Single director, Alisdair Eli Brown, British. No ORCID match found (inconclusive, not a negative). No other directorships found under this officer record (informational only, not evidence of first-time-founder status).",
+    "location_signal": "Residential-looking address in Inverness — no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of actual product, technology, or market",
+      "Mixed SIC codes (software, computing, R&D) suggest activity not yet defined",
+      "Single-director structure with no track record or evidence of traction",
+      "Incorporated very recently — essentially pre-operational"
+    ],
+    "interest_score": "1 - No verifiable science, team, funding, or traction signals; nothing here to differentiate from a shell filing",
+    "unknowns": [],
+    "company_number": "SC903892",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AURORA KINETIC LTD",
+    "incorporated": "2026-09-24",
+    "one_liner": "Not observable at this stage — no product, science, or activity description provided beyond SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Sole director Jeffrey George Birchall, British national. No ORCID match found. One other appointment noted, not in target sector — not indicative of prior relevant experience.",
+    "location_signal": "Residential-looking address in Sheffield, no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or activity detail available",
+      "Single director with no confirmed relevant sector experience",
+      "Generic residential registered address",
+      "Engineering/R&D SIC code (71129) alongside software (72190) with no supporting detail on which applies"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17480393",
+    "sic_codes": [
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SURGICAL PRECISION TECHNOLOGIES LIMITED",
+    "incorporated": "2026-09-24",
+    "one_liner": "Unclear from data provided — likely surgical software/technology venture based on SIC codes and name.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no other evidence of activity",
+    "team_provenance": "Sole director Dr Andrew Philip Mishreki, British. No ORCID record found. One other directorship held, not in target sector — informational only, not a signal either way.",
+    "location_signal": "Chester Le Street, County Durham — generic registered address, no evident incubator/cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of funding, product, or activity beyond incorporation",
+      "SIC codes (62012 software, 72190 R&D) are broad and don't confirm a specific surgical technology focus"
+    ],
+    "interest_score": "1 - Shell-stage company with no verifiable activity, funding, or team credibility signals",
+    "unknowns": [],
+    "company_number": "17479016",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VORTIQ-X AI LABS LTD",
+    "incorporated": "2026-09-25",
+    "one_liner": "Not observable at this stage — no product, service, or business description provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue and pre-product by definition",
+    "team_provenance": "Sole director Raymond Steen (Swedish); ORCID CONFIRMED with genuine academic record affiliated with Radboud Universiteit and Saxion Hogescholen — a real, verified academic identity. No other appointments found under this officer record, which is uninformative on its own.",
+    "location_signal": "Residential address in Aylesbury — no incubator, university, or cluster affiliation evident",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID CONFIRMED academic identity (Radboud Universiteit, Saxion Hogescholen)"
+    ],
+    "flags_negative": [
+      "No business description or product detail available",
+      "SIC codes span software, R&D, and management consultancy — unfocused positioning",
+      "Registered at a residential address, not a specialist location",
+      "No funding or grant history observable",
+      "Company incorporated very recently with no operating history"
+    ],
+    "interest_score": "2 — a verified academic founder is a positive signal, but there is nothing else to assess: no product, no funding, no traction, and mixed SIC codes suggest an unformed business plan.",
+    "unknowns": [],
+    "company_number": "17480429",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-3245-7075",
+      "institutions": [
+        "Radboud Universiteit",
+        "Saxion Hogescholen"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ORE ENERGY LTD",
+    "incorporated": "2026-09-24",
+    "one_liner": "Early-stage developer of long-duration energy storage batteries intended to replace fossil-fuel backup for renewables.",
+    "science": "Website references 'better batteries' that are cheaper to produce and without environmental side effects, implying a novel battery chemistry/manufacturing approach — but no specific mechanism, chemistry, or technical detail is given.",
+    "stage_signal": "Day-one incorporation (future-dated per record); pre-product marketing website with no technical or funding detail.",
+    "team_provenance": "Two directors (Turkish and Dutch nationality); no ORCID matches, no repeat-founder history found under these officer records. No academic or prior-company links observable.",
+    "location_signal": "66 Paul Street, London EC2A 4NA — this is a well-known generic registered-office/incubator-style address used by many startups (often associated with company formation agents), not sector-specific.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Dedicated, live company website with clear mission statement",
+      "SIC codes indicate genuine hardware/manufacturing intent (27200 - batteries) alongside R&D and IT codes"
+    ],
+    "flags_negative": [
+      "No technical detail on the battery technology itself — website is pure marketing framing",
+      "No funding, grant, or investment data",
+      "No verifiable academic or industry credentials for either director",
+      "Generic registered address, not a specialist deep-tech cluster or incubator"
+    ],
+    "interest_score": "2 - Pre-technical energy storage startup with a marketing-only website and no verifiable team or funding signals",
+    "unknowns": [],
+    "company_number": "17479468",
+    "sic_codes": [
+      "27200",
+      "71121",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ENANTIX LTD",
+    "incorporated": "2026-09-24",
+    "one_liner": "Not observable at this stage — no description of the company's product or activity is provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or trading history",
+    "team_provenance": "Two directors, Bricha and Ghaisas. No ORCID matches found for either. Each holds one other appointment, not confirmed in target sector — uninformative.",
+    "location_signal": "Residential flat in London (Churchyard Row) — generic address, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of business activity available",
+      "SIC codes (62012 software, 72190 R&D) give no specific life-sciences signal",
+      "Residential registered address",
+      "No funding or grant data"
+    ],
+    "interest_score": "1 - essentially no data to assess; generic tech/R&D SIC codes with no life-sciences specificity",
+    "unknowns": [],
+    "company_number": "17479854",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
