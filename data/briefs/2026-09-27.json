@@ -1,0 +1,263 @@
+[
+  {
+    "company_name": "OXIN CULINARY SCIENCE & GASTRONOMY LTD",
+    "incorporated": "2026-09-27",
+    "one_liner": "A newly incorporated company positioned somewhere between food service and R&D/software, purpose unclear from filing alone.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with mixed SIC codes (restaurant/catering, software, and R&D) suggesting an undefined or pivoting business model",
+    "team_provenance": "Sole director Mahdi Dih Dashti; no ORCID match found; no other directorships found under this officer record — no evidence of academic or repeat-founder background",
+    "location_signal": "Generic serviced/virtual office address in East Ham, London — no incubator or life-sciences cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporation date is in the future / not yet effective, data may be provisional or erroneous",
+      "SIC codes are incoherent for a life-sciences thesis (catering, software, R&D mixed together)",
+      "No named science, product, or mechanism",
+      "Single director with no verifiable academic or industry credentials",
+      "Generic office address, no cluster or incubator signal"
+    ],
+    "interest_score": "1 - no discernible science, no team credibility signal, no funding, incoherent SIC mix",
+    "unknowns": [],
+    "company_number": "17484000",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "Cerberus Biotechnology Ltd",
+    "incorporated": "2026-09-26",
+    "one_liner": "A life-science consultancy offering antibody discovery, protein engineering, and education services rather than developing its own drug pipeline.",
+    "science": "Consultancy expertise spans antibody discovery (phage display panning through to developable lead), protein engineering, and computational modelling — but this is service delivery, not proprietary IP or a platform asset.",
+    "stage_signal": "Day-one incorporation; website live but describes a consulting practice, not a funded R&D programme or product pipeline.",
+    "team_provenance": "Single named director profile (Dr Aalam Mohammed, listed as Ameerul Moominin on the record) — ORCID CONFIRMED, indicating a genuine verified academic publication record. No institutional affiliation listed. No other appointments found under this officer record.",
+    "location_signal": "Generic residential/commercial Leicester address — no evident biotech cluster or incubator affiliation.",
+    "funding": "Not observable at this stage — no grant or investment data provided; website describes fee-for-service consulting, implying revenue-based (non-equity) model rather than dilutive/non-dilutive R&D funding.",
+    "flags_positive": [
+      "ORCID CONFIRMED director with verified academic publication record",
+      "Live company website with specific technical detail (phage display, protein engineering) suggesting genuine domain expertise"
+    ],
+    "flags_negative": [
+      "Business model is consultancy/services, not a scalable drug or platform asset — limited venture upside",
+      "No pipeline, IP, or proprietary technology described",
+      "No funding (grant or equity) evidenced",
+      "Single-director structure with no institutional backing named"
+    ],
+    "interest_score": "2 - genuine scientific credibility (ORCID-confirmed) but a consulting business model is a poor fit for equity venture investment",
+    "unknowns": [],
+    "company_number": "17483044",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-5613-2457",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AQUATECH4 LTD",
+    "incorporated": "2026-09-27",
+    "one_liner": "Not observable at this stage — no description of activities provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, no grant or product data available",
+    "team_provenance": "Two British directors, neither with confirmed ORCID record. Noble holds one other appointment, not confirmed in target sector; Sullivan has no other appointments found. No evidence of academic or prior biotech founder background.",
+    "location_signal": "Registered at an accountancy services office in Middlesbrough — generic formation-agent address, not a lab, incubator, or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of science, product, or market",
+      "Generic accountancy-service registered address, not a specialist location",
+      "No funding, grant, or traction data",
+      "Incorporation date appears to be in the future relative to typical filing conventions — verify accuracy"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; essentially a blank shell at this stage",
+    "unknowns": [],
+    "company_number": "17483804",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SPACEREL LTD",
+    "incorporated": "2026-09-27",
+    "one_liner": "Provides specialist failure analysis, reliability engineering and qualification support for high-reliability electronic components and systems.",
+    "science": "Engineering services around semiconductor/component reliability testing and qualification — appears to be a technical consultancy/testing service rather than a novel platform or IP-driven product.",
+    "stage_signal": "Day-one incorporation (future-dated, likely a data artefact or very recent shell); website already live with defined service offering, suggesting some pre-incorporation build-out.",
+    "team_provenance": "Two directors, both British. Mohammadian has 2 possible ORCID matches but unresolved/unconfirmed. Neither director has confirmed prior directorships in the target sector. No academic or repeat-founder credentials verified.",
+    "location_signal": "Manchester registered address (Blackett Street) — generic, no evidence of incubator or cluster affiliation.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live, professionally presented website with clearly defined technical service offering"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future/anomalous (2026), raising data-quality concern",
+      "No confirmed academic or repeat-founder credentials",
+      "Services-led business model (not obviously IP-defensible or venture-scale)",
+      "No funding data of any kind"
+    ],
+    "interest_score": "2 - generic reliability-testing services company with unverified team credentials and no funding signal",
+    "unknowns": [],
+    "company_number": "17484203",
+    "sic_codes": [
+      "71122",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "JURIXOM FOUNDRY LIMITED",
+    "incorporated": "2026-09-27",
+    "one_liner": "Unclear from data provided; SIC mix suggests a mix of business/domain-specific software development, R&D, and IP licensing/leasing activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading or product history yet",
+    "team_provenance": "Sole director Salvador Sebastian Enrique Moscuzza, Italian national; no ORCID match found; no other appointments found under this officer record — no evidence of academic or prior founder background",
+    "location_signal": "124-128 City Road, London, EC1V 2NX — this is a well-known mass-registration/virtual office address (used by thousands of shell companies), not a genuine biotech incubator or cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated very recently with no operational history",
+      "Generic mass-registration virtual office address, not a specialist life-sciences location",
+      "SIC codes indicate software/IP/R&D mix, not a clearly biotech-specific profile",
+      "No funding, grant, or academic evidence provided",
+      "Sole director with no verifiable track record"
+    ],
+    "interest_score": "1 — shell-stage company, generic address, no science, funding, or credible team signal",
+    "unknowns": [],
+    "company_number": "17484129",
+    "sic_codes": [
+      "62012",
+      "72190",
+      "77400"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AI CADMEY LTD",
+    "incorporated": "2026-09-27",
+    "one_liner": "A volunteer-run organisation recruiting people (e.g. graphic designers) across unspecified 'research areas' and projects — not evidently a life-sciences company.",
+    "science": "Not observable at this stage — no mechanism, platform, or modality described anywhere in the record or website.",
+    "stage_signal": "Day-one incorporation; website framed around volunteer recruitment rather than product, funding, or R&D output.",
+    "team_provenance": "Single director, Syed Kumail Haider. No ORCID match, no prior directorships found under this officer record.",
+    "location_signal": "Stoke-on-Trent residential/generic address — no evidence of incubator or life-sciences cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (software, management consultancy, education) do not indicate a life-sciences or biotech business",
+      "Website describes a volunteer network, not a company with a product, science base, or commercial model",
+      "No funding, grant, or investment signal of any kind",
+      "No team credentials (academic, clinical, or commercial) evident"
+    ],
+    "interest_score": "1 — no biotech relevance, no science, no funding signal; likely outside fund's mandate",
+    "unknowns": [],
+    "company_number": "17483574",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HALIPHRON LIMITED",
+    "incorporated": "2026-09-26",
+    "one_liner": "Not observable at this stage — no description of business activity provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other supporting data",
+    "team_provenance": "Sole director Calum George Maney, British national. No ORCID match found. No other appointments found under this officer record.",
+    "location_signal": "Registered address in Ely, Cambridgeshire — residential-looking address, not a known incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No trading history — company incorporated same day as this record",
+      "No science, product, or market description available",
+      "No funding (grant or equity) evidence",
+      "No team credentials or track record confirmed",
+      "Generic residential-style registered address, not a specialist cluster or incubator"
+    ],
+    "interest_score": "1 — shell-stage company with no verifiable science, team credentials, or funding signal",
+    "unknowns": [],
+    "company_number": "17483241",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RHOSTONE LTD",
+    "incorporated": "2026-09-27",
+    "one_liner": "Not observable at this stage — no company website or description provided; SIC codes suggest software/IT consultancy and R&D activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with future/forward-dated registration; no other operational signals",
+    "team_provenance": "Sole director Oliver Samuel Walker, British; no ORCID match; no other appointments found under this officer record — no prior track record evident",
+    "location_signal": "128 City Road, London, EC1V 2NX — this is a well-known mass-incorporation/virtual office address (commonly used by formation agents), not a specialist biotech or academic cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration virtual address, not a life-sciences or research cluster",
+      "No science, product, or technology detail provided anywhere in the record",
+      "Mixed SIC codes (software, consultancy, R&D) suggest an unformed or generalist business, not a focused biotech play",
+      "No funding, grant, or academic linkage evidence",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - no evidence of biotech relevance, science, team credibility, or funding; nothing to distinguish this from a generic shelf company",
+    "unknowns": [],
+    "company_number": "17483669",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
