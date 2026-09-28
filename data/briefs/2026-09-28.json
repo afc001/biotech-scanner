@@ -1,0 +1,240 @@
+[
+  {
+    "company_name": "AMINOGENIX LTD",
+    "incorporated": "2026-09-28",
+    "one_liner": "Appears to be a Research-Use-Only peptide products supplier operating behind a login-gated e-commerce site.",
+    "science": "Website references 'Pioneering Peptide Science & Research' but gives no mechanism, platform, or therapeutic area detail — reads as a peptide sales/distribution site, not a drug discovery platform.",
+    "stage_signal": "Day-one incorporation (future-dated, notable in itself) with a live but gated commercial website — suggests pre-revenue or early trading rather than R&D-stage biotech.",
+    "team_provenance": "Two British directors, neither with confirmed ORCID or same-sector repeat-founder history; one has one unrelated prior appointment. No visible academic or industry pedigree.",
+    "location_signal": "Registered address is a farm in Hebden Bridge — residential/rural, not a lab, incubator, or cluster address.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporation date is in the future (2026), which is either a data error or an unusual signal in itself",
+      "Website is consumer/researcher e-commerce style (login wall, 'Your Bag') rather than platform or pipeline-focused, suggesting a products reseller rather than a biotech innovator",
+      "No mechanism, IP, or pipeline disclosed anywhere",
+      "Registered address is a residential farm, not a lab or R&D-appropriate location",
+      "No ORCID or repeat-founder confirmation for either director"
+    ],
+    "interest_score": "1 - No credible R&D signal; looks like a Research-Use-Only peptide sales site with no platform, IP, or team pedigree evident",
+    "unknowns": [],
+    "company_number": "17485460",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PEPTIDES2U.COM LTD",
+    "incorporated": "2026-09-28",
+    "one_liner": "Early-stage entity with SIC codes suggesting biotech R&D and software activity, name implies peptide sales/supply — no further detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history, no product or pipeline evidence",
+    "team_provenance": "Sole director Dr Nicholas Leach-Jackson holds the 'Dr' title but has no confirmed ORCID record and no other appointments found under this officer record; academic background unverified.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address, not a lab or incubator cluster. Generic and low-signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Virtual office / mass-registration address (Shelton Street) — no evidence of physical R&D presence",
+      "No ORCID match despite 'Dr' title — academic credentials unverified",
+      "Company name suggests a peptide retail/supply operation rather than a differentiated R&D platform",
+      "No funding, grant, or trading history observable",
+      "Incorporated with future/forward date, consistent with a shell awaiting activity"
+    ],
+    "interest_score": "1 — no verifiable science, team credibility, funding, or location signal; reads as a shell or commodity peptide vendor",
+    "unknowns": [],
+    "company_number": "17484694",
+    "sic_codes": [
+      "72110",
+      "72190",
+      "72200"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PROBABLE INTELLIGENCE LTD",
+    "incorporated": "2026-09-27",
+    "one_liner": "Not observable at this stage — no description of the company's product or activity is available",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Two directors, one German and one English national. No ORCID matches found for either, and no other appointments found under either officer record — no evidence of prior founding experience or academic publication history",
+    "location_signal": "195 Wood Street, London, E17 3NU — generic registered address, no obvious incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Company incorporated very recently with no track record",
+      "SIC 72190 is broad R&D code, not specific enough to infer science",
+      "No named science, product, or business model in the data provided",
+      "No funding, grant, or non-dilutive capital signal present"
+    ],
+    "interest_score": "1 - no verifiable science, team background, funding, or product signal; nothing to differentiate from a shell filing",
+    "unknowns": [],
+    "company_number": "17484393",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THERMO SIG TECHNOGIES LTD",
+    "incorporated": "2026-09-28",
+    "one_liner": "Not observable at this stage — SIC code indicates R&D on natural sciences/engineering but no description of activity is available",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data available",
+    "team_provenance": "Sole director Fiona Jane Riley, British national. No ORCID record found. Has 3 other appointments, none confirmed in the target sector (72110/72190) — informational only",
+    "location_signal": "Residential-looking address in Carmarthen, Wales — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "Extremely early — incorporated with no further track record",
+      "Generic residential address, no cluster/incubator signal"
+    ],
+    "interest_score": "1 - no substantive information beyond bare incorporation record; nothing to differentiate from a shell filing",
+    "unknowns": [],
+    "company_number": "17484947",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CV TECH LIMITED",
+    "incorporated": "2026-09-28",
+    "one_liner": "Not observable at this stage — no operational information found; company website is an unrelated domain-sales parking page",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no evidence of activity yet",
+    "team_provenance": "Two academic co-founders with University of Bristol links. Dr Carazo Salas is a GtR-confirmed UKRI-funded investigator and a confirmed repeat founder in the same SIC 72190 sector (director at Cellvoyant Technologies Limited, active). Dr Piddini has an ORCID-confirmed publication record and broad cell biology/stem cell research affiliations (EMBL, ISSCR, Cambridge, Bristol); no other directorships found under her officer record.",
+    "location_signal": "Residential apartment address in Bristol — not an incubator or lab cluster, generic flat registration",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "GtR CONFIRMED UKRI-funded investigator (Carazo Salas)",
+      "REPEAT FOUNDER CONFIRMED in same sector (Carazo Salas, active director at Cellvoyant Technologies)",
+      "ORCID CONFIRMED academic publication record (Piddini)",
+      "Strong academic pedigree across both founders (Bristol, Cambridge, EMBL)"
+    ],
+    "flags_negative": [
+      "No science, product, or funding detail available anywhere",
+      "Company website is unrelated — a domain resale parking page, not a real company site",
+      "Residential registered address, no lab/incubator signal",
+      "Extremely early — incorporated with no visible operations yet"
+    ],
+    "interest_score": "4 - strong founder credibility (GtR + repeat founder + ORCID) but zero visibility into the actual science or plan",
+    "unknowns": [
+      "What is the actual scientific platform or product CV Tech is building?",
+      "What is the relationship/overlap with Carazo Salas's other company, Cellvoyant Technologies?",
+      "Is there any funding (grant or private) already in place or being sought?",
+      "What lab or institutional resources, if any, back this company beyond the residential registered address?"
+    ],
+    "company_number": "17484654",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-3901-076X",
+      "institutions": [
+        "British Society for Cell Biology",
+        "European Molecular Biology Laboratory",
+        "International Society for Stem Cell Research",
+        "National Institute for Medical Research",
+        "University of Bristol",
+        "University of Cambridge",
+        "University of Palermo"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "45947F33-3004-4E94-B411-B1A6161DF766",
+      "organisation": "University of Bristol"
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "CELLVOYANT TECHNOLOGIES LIMITED",
+          "company_number": "13594965",
+          "company_status": "active",
+          "appointed_on": "2021-08-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "CELLVOYANT TECHNOLOGIES LIMITED",
+          "company_number": "13594965",
+          "company_status": "active",
+          "appointed_on": "2021-08-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ROBACCEL LTD",
+    "incorporated": "2026-09-28",
+    "one_liner": "Not observable at this stage — no first-party description of what the company does.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Sole director Dr Binglei Lou; ORCID shows only unverified possible matches (not confirmed, not treated as signal); no other appointments found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a known mass-registration/virtual office address, not a genuine biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic virtual-office registered address commonly used by shell/formation-agent companies",
+      "No description of technology, product, or market",
+      "No funding, grant, or partnership data",
+      "SIC codes (research/software) give minimal indication of actual activity"
+    ],
+    "interest_score": "1 - shell-stage registration with no discernible science, funding, or credibility signals",
+    "unknowns": [],
+    "company_number": "17485150",
+    "sic_codes": [
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
