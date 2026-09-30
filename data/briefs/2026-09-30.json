@@ -1,0 +1,605 @@
+[
+  {
+    "company_name": "SABLE PEPTIDES LIMITED",
+    "incorporated": "2026-09-29",
+    "one_liner": "An early-stage company positioned as a biotech R&D venture, likely peptide-focused based on name; no further detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Sole director Joshua Thomas Elgram, British national. No ORCID match found. No other directorships found under this officer record — not evidence of anything either way.",
+    "location_signal": "Serviced office suite at Colmore Row, Birmingham — generic managed-office address, not a known life-sciences incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 (R&D on natural sciences/engineering) suggests genuine intended focus rather than shell/holding activity"
+    ],
+    "flags_negative": [
+      "No evidence of team's scientific background or prior track record",
+      "Generic serviced-office address, not a specialist bioscience location",
+      "No funding, grant, or partnership data available",
+      "Single director, very recent incorporation — essentially no operating history"
+    ],
+    "interest_score": "2 - Too early and too thin on evidence to assess; pure pre-seed shell at this point",
+    "unknowns": [],
+    "company_number": "17488610",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SFOTIKX LTD",
+    "incorporated": "2026-09-29",
+    "one_liner": "A UK-based outsourced R&D and consultancy provider for pharmaceutical science, formulation and materials science.",
+    "science": "Not a proprietary platform — website describes generic outsourced research and technical consultancy services across pharmaceutical formulation and materials science, no specific mechanism or IP disclosed",
+    "stage_signal": "Day-one incorporation with an already-live marketing website; presents as a services/consultancy business rather than a asset-developing biotech",
+    "team_provenance": "Single director (Sathi Roy); no confirmed academic or repeat-founder record — ORCID possible matches only, unverified, not treated as signal",
+    "location_signal": "66 Paul Street, London EC2A — known generic company-formation/registered-office address, not a life-sciences cluster or incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Live, professionally presented company website with clear service description",
+      "SIC codes indicate genuine sector targeting (pharma/scientific R&D + software)"
+    ],
+    "flags_negative": [
+      "Consultancy/services model, not a proprietary drug or platform company — limited venture-scale upside typical of a services business",
+      "No funding, grant, or IP evidence",
+      "No verifiable academic or repeat-founder credentials",
+      "Generic registered address typical of company-formation agents",
+      "Extremely early — incorporated same period as this review"
+    ],
+    "interest_score": "2 - generic outsourced R&D services company with no proprietary science, funding, or verified team credentials",
+    "unknowns": [],
+    "company_number": "17489122",
+    "sic_codes": [
+      "70229",
+      "72110",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RYZA BIOTECHNOLOGIES LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no description of activities provided beyond generic biotech SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or operational data yet",
+    "team_provenance": "Sole director Dr Selin Nisa Olenik, Canadian national. No ORCID match found and no other appointments found under this officer record — no additional context on background",
+    "location_signal": "Residential flat address in London (Upper Richmond Road) — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "R&D-relevant SIC codes (72110, 72190) suggest intended research focus"
+    ],
+    "flags_negative": [
+      "No description of science, product, or market",
+      "Residential registered address, not a lab or incubator",
+      "No funding, grant, or trading history",
+      "Just incorporated — no track record to assess"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17490096",
+    "sic_codes": [
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "COMMON THREAD STUDIOS LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "A creative agency producing visual books and gifts — per its own website, not a life-sciences company.",
+    "science": "Not observable at this stage — no scientific mechanism, platform, or modality indicated anywhere in the data.",
+    "stage_signal": "Day-one incorporation; website presents as a live commercial creative/design studio, not R&D-stage.",
+    "team_provenance": "Three directors. Dr. Piotr Hapeta — ORCID confirmed, Imperial College London affiliation, and a confirmed repeat director at UBLII LTD (SIC 72110, active) — a genuine same-sector track record. Giovanni Maresca di Serracapriola — ORCID confirmed, also Imperial affiliation, no other appointments found. Dr. Alicia Graham — no ORCID match, no other appointments found. Notably, the credentialed founders' academic/software-sector backgrounds do not match the company's stated creative-agency business.",
+    "location_signal": "Residential flat address in London (SW9) — generic, not an incubator or cluster address.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED — Piotr Hapeta",
+      "ORCID CONFIRMED — Giovanni Maresca di Serracapriola",
+      "REPEAT FOUNDER CONFIRMED (same sector) — Piotr Hapeta, active director at UBLII LTD (SIC 72110)"
+    ],
+    "flags_negative": [
+      "SIC codes (20120 - printing/publishing support, 72110 - biotech R&D) and director academic credentials do not match the company's own stated business as a visual books/gifts creative agency",
+      "No science, platform, or biotech rationale anywhere in the record or website",
+      "Residential registered address",
+      "No funding data of any kind"
+    ],
+    "interest_score": "1 - Self-described creative agency with no biotech activity; mismatched SIC codes and credentials are a curiosity, not a thesis",
+    "unknowns": [],
+    "company_number": "17490135",
+    "sic_codes": [
+      "20120",
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-0777-0986",
+      "institutions": [
+        "Imperial College London"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "UBLII LTD",
+          "company_number": "14009760",
+          "company_status": "active",
+          "appointed_on": "2022-03-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "UBLII LTD",
+          "company_number": "14009760",
+          "company_status": "active",
+          "appointed_on": "2022-03-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CEVANTA LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no website or descriptive material provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Single director (Karl Maxwell Hamer) acting as both director and secretary; no ORCID match; no other appointments found under this officer record",
+    "location_signal": "128 City Road, London, EC1V 2NX — this is a well-known mass-registration/virtual office address (used by thousands of shell companies), not a genuine biotech incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address (128 City Road) commonly used by shell/virtual-office companies, not a biotech-specific location",
+      "No science, product, or platform description available",
+      "Single-director structure with no track record found",
+      "SIC mix (management consultancy, R&D, other business support) is generic and non-specific to a clear biotech thesis"
+    ],
+    "interest_score": "1 - day-one shell registration at a generic mass-incorporation address with no discernible science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17489830",
+    "sic_codes": [
+      "70229",
+      "72110",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "POSTERIORI LTD",
+    "incorporated": "2026-09-29",
+    "one_liner": "Not observable at this stage — no website, product, or activity description provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other trading signals",
+    "team_provenance": "Sole director Dr Nicholas Maclachlan Steyn (New Zealander); 'Dr' suggests academic or clinical background but no ORCID match found to confirm; no prior directorships found under this officer record",
+    "location_signal": "149 Woodseer Street, London E1 5HG — residential/generic East London address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "SIC 72190 (specialist R&D code)",
+      "Director holds a doctorate (unverified field/relevance)"
+    ],
+    "flags_negative": [
+      "Incorporated on a future/unusual date (2026-09-29) — check record accuracy",
+      "No ORCID match despite 'Dr' title",
+      "No science, product, or funding data available",
+      "Generic address, no incubator signal",
+      "Sole director with no other appointments found"
+    ],
+    "interest_score": "2 - Pre-any-signal shell company; nothing yet to evaluate",
+    "unknowns": [],
+    "company_number": "17488243",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "POLYVIR LTD",
+    "incorporated": "2026-09-29",
+    "one_liner": "Not observable at this stage — no product, market or platform description provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other indicators of progress yet",
+    "team_provenance": "Sole director Dr. Samuel Thomas Jones, GtR CONFIRMED as a UKRI-funded investigator affiliated with University of Manchester — genuine academic research credibility. No ORCID match found (inconclusive, not a negative). No prior directorships found under this officer record.",
+    "location_signal": "Aldridge, Walsall — generic residential/commercial address, no cluster or incubator signal",
+    "funding": "Not observable at this stage — no grant or equity data provided",
+    "flags_positive": [
+      "GtR CONFIRMED UKRI-funded investigator (University of Manchester)"
+    ],
+    "flags_negative": [
+      "Just incorporated, no operational history",
+      "No funding data provided",
+      "No science or product description available",
+      "Generic registered address, not a known biotech cluster"
+    ],
+    "interest_score": "2 - Single credible academic founder but otherwise a shell company with no disclosed science, funding or traction",
+    "unknowns": [],
+    "company_number": "17489225",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "927B8742-21C4-45C1-971D-EC50B37E16FD",
+      "organisation": "UNIVERSITY OF MANCHESTER"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RHINOLAB LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no company website or description available beyond registration filing.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity or funding data yet",
+    "team_provenance": "Sole director Issa Beegun, British national, ORCID CONFIRMED — a genuine verified academic publication record, though no institutional affiliation is listed. No other directorships found under this officer record.",
+    "location_signal": "Residential-looking address in Harrow — not a known biotech cluster or incubator, generic domestic location",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Director has ORCID CONFIRMED academic record",
+      "SIC code 86220 suggests specialist medical/surgical practice activity, consistent with a clinical or diagnostics angle"
+    ],
+    "flags_negative": [
+      "No affiliation listed for the ORCID-confirmed director",
+      "Registered address appears residential, not a research or business cluster",
+      "No funding, grant, or product information available",
+      "Company incorporated very recently with no operating history"
+    ],
+    "interest_score": "2 - academic credibility signal present but nothing else to assess; too early to evaluate",
+    "unknowns": [],
+    "company_number": "17489698",
+    "sic_codes": [
+      "72190",
+      "86220"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-9420-114X",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LOOPTIC LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no descriptive data provided beyond SIC codes suggesting IT/software services with an R&D component",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no operational history",
+    "team_provenance": "Not observable at this stage — no directors listed or fetched",
+    "location_signal": "128 City Road, London, EC1V 2NX — this is a well-known mass-registration/virtual office address used by thousands of shell and early-stage companies, not a specific biotech incubator or cluster signal",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No directors listed — cannot assess team background",
+      "Generic mass-registration address, not a specialist life-sciences location",
+      "SIC codes indicate general IT/software services (62012, 62090, 63110) plus R&D (72190), not a clear biotech-specific classification",
+      "Incorporated with essentially no public record to assess",
+      "Future-dated incorporation date raises data-quality concerns"
+    ],
+    "interest_score": "1 — no verifiable team, science, funding, or location signal; nothing to assess",
+    "unknowns": [],
+    "company_number": "17490435",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "XIONIA LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "A Greek-language weather station/webcam and forecast site for Agios Stefanos, Athens — not a life-sciences or biotech company.",
+    "science": "Not observable at this stage — no biotech, pharma, or platform science indicated; website content is consumer weather monitoring (station data, cameras, satellite, radar, lightning).",
+    "stage_signal": "Day-one incorporation (future-dated: 2026-09-30) with a website already live showing years of historical data (archive from 2008) — suggests either a pre-existing hobby/media site being wrapped into a new corporate shell, or a data anomaly in the incorporation date.",
+    "team_provenance": "No directors listed or fetched — cannot assess founder background.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual-office address, not a genuine incubator or life-sciences cluster. Generic registration signal, not a positive.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (publishing, computer consultancy, other IT) and website content show no connection to life sciences",
+      "Generic mass-registration address (Shelton Street) rather than a specialist or lab cluster location",
+      "No directors listed, preventing any founder due diligence",
+      "Incorporation date (2026-09-30) is in the future relative to a live, content-rich website — data inconsistency worth flagging"
+    ],
+    "interest_score": "1 - Out of sector: this is a Greek weather-monitoring website, not a biotech investment target",
+    "unknowns": [],
+    "company_number": "17490446",
+    "sic_codes": [
+      "58290",
+      "62011",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BIOIMAGENET FOUNDATION LBG",
+    "incorporated": "2026-09-30",
+    "one_liner": "A newly incorporated entity related to bioimaging/informatics research; specifics not disclosed.",
+    "science": "Not observable at this stage — SIC code (72190, other R&D) and ORCID affiliations suggest bioinformatics/imaging research but no described mechanism, platform, or product.",
+    "stage_signal": "Day-one incorporation — no trading history, no grant or product data yet.",
+    "team_provenance": "Sole director Dr Janos Kriston-Vizi — ORCID CONFIRMED, with genuine academic affiliations (UCL, Bioinformatics Institute, MRC, Kyoto University, Springer Nature, Frontiers Media). No other directorships found under this officer record.",
+    "location_signal": "124 City Road, London — this is a well-known generic company-formation/registered-office address (used by thousands of shell and early-stage companies), not a genuine lab or incubator address.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic identity with credible, verifiable research affiliations (UCL, MRC, Kyoto University)"
+    ],
+    "flags_negative": [
+      "Day-one incorporation with no operational history",
+      "Generic mass-registration address, not a research/incubator location",
+      "'LBG' (company limited by guarantee) suggests non-profit/foundation structure, atypical for a venture-backable biotech",
+      "No science, product, or funding detail available"
+    ],
+    "interest_score": "2 — credible academic founder, but non-profit legal form, no science disclosed, and no funding signal makes this pre-screenable only",
+    "unknowns": [],
+    "company_number": "17489541",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-0149-145X",
+      "institutions": [
+        "Bioinformatics Institute",
+        "Frontiers Media SA",
+        "Kyoto Daigaku",
+        "Medical Research Council",
+        "Springer Nature Limited",
+        "University College London"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WARRAICH TECH LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other data available",
+    "team_provenance": "Sole director, Usama Zahid; no other appointments found under this officer record; no confirmed academic or prior-founder links",
+    "location_signal": "Residential flat address in Sutton — no genuine incubator/cluster affiliation confirmed, only a coincidental keyword match",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or team detail available beyond company registration",
+      "Very recent/day-one incorporation with nothing else to assess",
+      "Location flagged as incubator match is a residential address, not a verified cluster signal"
+    ],
+    "interest_score": "1 - no verifiable science, funding, or team signal; nothing here to act on",
+    "unknowns": [],
+    "company_number": "17489562",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 8
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "M29 OFFSHORE LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no description of activities beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with a future-dated registration; no operating history.",
+    "team_provenance": "No directors listed or not fetched — cannot assess founder background.",
+    "location_signal": "Registered address in Kirk Hammerton, North Yorkshire — generic residential/rural address, not a known biotech cluster or incubator.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available",
+      "Incorporation date appears to be in the future, suggesting a data anomaly or placeholder filing",
+      "SIC codes (72190 - other R&D, 73120 - media representation) are non-specific and not a clear biotech/life-sciences signal",
+      "No description of product, science, or team"
+    ],
+    "interest_score": "1 - essentially no verifiable data; nothing here indicates a life-sciences company at all",
+    "unknowns": [],
+    "company_number": "17490482",
+    "sic_codes": [
+      "72190",
+      "73120"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SRLK EV LIMITED",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no descriptive data beyond registration and SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Directors not listed or not fetched — no basis to assess",
+    "location_signal": "Residential/rural Scottish address (Udny, Ellon) — not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available",
+      "SIC mix (IT consultancy, other business support, other engineering research, R&D) is unusual and diffuse for a life-sciences play",
+      "No science, product, or funding data of any kind",
+      "Generic/residential address, no cluster or incubator signal"
+    ],
+    "interest_score": "1 - no verifiable data supporting a life-sciences thesis; SIC codes don't even clearly indicate biotech",
+    "unknowns": [],
+    "company_number": "SC904399",
+    "sic_codes": [
+      "62012",
+      "70229",
+      "71129",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LETHAL CODE LIMITED",
+    "incorporated": "2026-09-30",
+    "one_liner": "Unclear — SIC codes suggest a mix of software development and other scientific R&D, but no descriptive detail is available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no further activity data",
+    "team_provenance": "Not observable at this stage — no directors listed",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company formation address (registered office for thousands of shell companies), not a lab or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available — cannot assess team credibility",
+      "Registered address is a generic company-formation agent address, not indicative of any real operational presence",
+      "SIC code combination (software + other R&D) is vague and non-specific",
+      "Incorporation date is in the future relative to typical filing conventions, suggesting this record may be a placeholder or pre-registration entry"
+    ],
+    "interest_score": "1 - no verifiable team, science, location, or funding signal; essentially a blank shell record",
+    "unknowns": [],
+    "company_number": "17490698",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HORIZON BRIDGE HOLDINGS LTD",
+    "incorporated": "2026-09-29",
+    "one_liner": "Not observable at this stage — no description of activity beyond SIC codes for holding companies and other R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Sole director/secretary is the same individual (Ivan Cotugno, Italian national); no ORCID match found, no other appointments found under this officer record",
+    "location_signal": "International House, Cornhill, London — a generic registered-office/formation-agent address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Single-person company with dual director/secretary role — no team depth",
+      "SIC 64205 (financial holding company) alongside 72190 (R&D) is an unusual combination for a life-sciences operating company",
+      "Generic formation-agent registered address, not a lab or incubator location",
+      "No science, product, or funding data of any kind provided",
+      "Very recent incorporation with no track record"
+    ],
+    "interest_score": "1 — no verifiable science, team, funding, or location signal; reads as a shell or holding vehicle at this stage",
+    "unknowns": [],
+    "company_number": "17488328",
+    "sic_codes": [
+      "64205",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VENSESHA LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no description of product or service provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue by definition",
+    "team_provenance": "Single director, Sri Harsha Pula. No ORCID match found. No other appointments found under this officer record.",
+    "location_signal": "Residential-style address in Leicester — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Single-director company with no evidence of team depth",
+      "No product, market, or technology description available",
+      "SIC codes span software/computing and R&D (72190) but are generic and non-specific to any life-sciences platform",
+      "No funding, grant, or non-dilutive support evidence",
+      "No academic or industry provenance confirmed for the director"
+    ],
+    "interest_score": "1 — no substantive data beyond a bare incorporation record; nothing here indicates a life-sciences platform or credible team",
+    "unknowns": [],
+    "company_number": "17489388",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
