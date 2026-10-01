@@ -1,0 +1,457 @@
+[
+  {
+    "company_name": "AONNE WAVE LTD.",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — no business description available beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record); no operational evidence yet",
+    "team_provenance": "Single director/secretary (Petra Lohmeier, German national); no ORCID match, no prior directorships found under this officer record — no evidence of academic or prior company background",
+    "location_signal": "27 Old Gloucester Street, London — a well-known mass company-formation address (generic registered office, not an incubator or cluster)",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not a life-sciences cluster or incubator",
+      "Single director with no independently verified academic or sector track record",
+      "SIC codes (72110 R&D natural sciences/engineering plus general business/consultancy codes) are broad and uninformative on actual focus",
+      "No description of science, product, or stage"
+    ],
+    "interest_score": "1 - no verifiable signal on team, science, or funding; shell-like registration",
+    "unknowns": [],
+    "company_number": "17493137",
+    "sic_codes": [
+      "72110",
+      "72200",
+      "74901",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LEAP EVOLUTION LTD",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — no business description or website provided beyond SIC classification for biotech R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated at time of record); no further progress indicators",
+    "team_provenance": "Single director, Lee, Ting An (Malaysian national). ORCID shows only possible unverified matches — inconclusive. No confirmed prior directorships found under this officer record.",
+    "location_signal": "Registered address is a residential/generic street address in Ashton-Under-Lyne — no indication of incubator, university cluster, or life-sciences hub.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 indicates stated R&D focus in natural sciences/engineering"
+    ],
+    "flags_negative": [
+      "No business description, website, or product/science information available",
+      "Generic non-specialist registered address",
+      "Single director with no verifiable track record",
+      "Incorporation date is unusually far in the future, suggesting a placeholder or pre-registration filing"
+    ],
+    "interest_score": "1 - essentially no verifiable information beyond a shell registration; nothing to assess",
+    "unknowns": [],
+    "company_number": "17492813",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WITH EACH OTHER CIC",
+    "incorporated": "2026-10-01",
+    "one_liner": "A Community Interest Company registered under R&D, computing, market research and artistic-creation SIC codes; actual activity is not described in the data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record) — no operating history",
+    "team_provenance": "Single director, Elma Marcia Glasgow, British. No ORCID match found. Holds 3 other appointments, none confirmed in the target sector (SIC 72110/72190) — informational only, not a signal either way.",
+    "location_signal": "Felixstowe residential/generic address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "CIC structure (asset-locked, non-profit distribution) unusual fit for a venture-fund equity thesis",
+      "SIC codes are broad and unfocused (R&D, computing, market research, arts) — no clear specialism",
+      "No science, product, or funding data provided",
+      "Future/forward incorporation date suggests record is not yet active"
+    ],
+    "interest_score": "1 - no verifiable life-sciences R&D, no team or funding signal, CIC structure misaligned with equity investment",
+    "unknowns": [],
+    "company_number": "17493664",
+    "sic_codes": [
+      "72190",
+      "72200",
+      "73200",
+      "90030"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INSTAL SYSTEMS LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — registered activities span plumbing/heating installation, property management, scientific R&D, and facilities management, with no description of an actual product or service.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other evidence of activity",
+    "team_provenance": "Single director, Rafal Elwertowski (Polish nationality); no ORCID match found (inconclusive, not a negative); no other directorships found under this officer record (uninformative, not a negative)",
+    "location_signal": "128 City Road, London — a well-known mass company-formation/virtual office address, not a specialist biotech or life-sciences cluster; weak generic signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code mix (construction, real estate, R&D, facilities management) is incoherent for a life-sciences thesis and does not point to a specific biotech focus",
+      "Registered address is a generic mass-incorporation address, not an incubator or life-sciences hub",
+      "No funding, team, or product information available",
+      "Day-one incorporation with no track record"
+    ],
+    "interest_score": "1 - no discernible life-sciences angle, generic registration, no funding or team signal",
+    "unknowns": [],
+    "company_number": "17491637",
+    "sic_codes": [
+      "43220",
+      "68209",
+      "72190",
+      "81100"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THERMO SIG TECHNOLOGIES LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading or grant history yet",
+    "team_provenance": "Sole director Fiona Jane Riley, British. Repeat founder confirmed (same sector, SIC 72190) — holds a directorship at a near-identically named entity, THERMO SIG TECHNOGIES LTD, which may indicate a renamed/restructured venture or a parallel entity rather than fully independent repeat-founder experience. Also shows an advisor pattern (4 other active directorships), suggesting broad network but limited bandwidth for hands-on involvement here. No ORCID match found — not a negative, simply absent.",
+    "location_signal": "Residential-looking address in Carmarthen — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Repeat founder confirmed (same sector, SIC 72190)"
+    ],
+    "flags_negative": [
+      "No trading history — incorporated same year as this brief",
+      "No science, product, or funding data provided",
+      "Near-identical name to another active company under same director raises questions about which entity is the real operating vehicle",
+      "Generic residential address, no cluster/incubator signal"
+    ],
+    "interest_score": "2 - Repeat founder signal noted, but zero operational, scientific, or funding data and a confusing near-duplicate company name make this unscreenable yet",
+    "unknowns": [],
+    "company_number": "17492486",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 4,
+      "active_count": 4,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "THERMO SIG TECHNOGIES LTD",
+          "company_number": "17484947",
+          "company_status": "active",
+          "appointed_on": "2026-09-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "EXCELSIUS COMMUNITY HEALTHCARE LIMITED",
+          "company_number": "15500836",
+          "company_status": "active",
+          "appointed_on": "2024-02-18",
+          "resigned_on": null,
+          "sic_codes": [
+            "86101"
+          ]
+        },
+        {
+          "company_name": "DARK KNIGHT INC LTD",
+          "company_number": "13781771",
+          "company_status": "dissolved",
+          "appointed_on": "2021-12-03",
+          "resigned_on": null,
+          "sic_codes": [
+            "64301"
+          ]
+        },
+        {
+          "company_name": "EXCELSIUS HEALTHCARE LTD",
+          "company_number": "12686902",
+          "company_status": "dissolved",
+          "appointed_on": "2020-06-20",
+          "resigned_on": null,
+          "sic_codes": [
+            "86900"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "THERMO SIG TECHNOGIES LTD",
+          "company_number": "17484947",
+          "company_status": "active",
+          "appointed_on": "2026-09-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 4
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SANHANG TECHNOLOGIES LTD",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — no business description beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or trading history",
+    "team_provenance": "Single director (Li, Zhuoneng); ORCID matches inconclusive (unverified, common name); no prior directorships found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine biotech/science cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (wholesale trade 46900, IT consultancy 62012, R&D 72190) suggest no clear specialist focus",
+      "Registered at a generic mass-incorporation virtual office address",
+      "No evidence of funding, product, or scientific activity",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; shell-like formation at a generic address",
+    "unknowns": [],
+    "company_number": "17493750",
+    "sic_codes": [
+      "46900",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "INFINITY LAB CREATIONS LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no description of activity beyond SIC code available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity visible",
+    "team_provenance": "Single director, Rick Adams. ORCID and GtR searches returned only unresolved possible matches (common name, not confirmed) — treated as neutral. No prior directorships found under this officer record.",
+    "location_signal": "Residential-style address in Petersfield, England — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of business activity beyond generic R&D SIC code",
+      "Extremely recent/forward-dated incorporation with no track record",
+      "No funding, grant, or product information available"
+    ],
+    "interest_score": "1 - no verifiable signal of science, team credibility, or traction; nothing to distinguish from a shell",
+    "unknowns": [],
+    "company_number": "17491845",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ERIS PHYSICORE LTD",
+    "incorporated": "2026-10-01",
+    "one_liner": "Early-stage company spanning measuring/testing instruments, machinery manufacture, and R&D — specific product/focus not disclosed.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record) — no trading or product history yet",
+    "team_provenance": "Single director (Ivan Cotugno, Italian, also acting as secretary) — confirmed via Companies House officer records to also hold a directorship at Horizon Bridge Holdings Ltd, a company in the same target sector (SIC 72190), active",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a specialist incubator; generic signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director has prior/current directorship at another SIC 72190 company"
+    ],
+    "flags_negative": [
+      "Registered at a high-volume generic formation address, not a known biotech/R&D cluster",
+      "No science, product, or funding detail available",
+      "Single-director structure with no team depth disclosed",
+      "SIC mix (instruments, machinery, R&D) is broad and non-specific, giving no clear sense of actual focus"
+    ],
+    "interest_score": "2 - too early and too little disclosed to assess; only the repeat-founder link offers any credibility signal",
+    "unknowns": [],
+    "company_number": "17493667",
+    "sic_codes": [
+      "26511",
+      "28290",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "HORIZON BRIDGE HOLDINGS LTD",
+          "company_number": "17488328",
+          "company_status": "active",
+          "appointed_on": "2026-09-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "64205",
+            "72190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "HORIZON BRIDGE HOLDINGS LTD",
+          "company_number": "17488328",
+          "company_status": "active",
+          "appointed_on": "2026-09-29",
+          "resigned_on": null,
+          "sic_codes": [
+            "64205",
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "3E MEXH LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Unclear — SIC mix suggests a holding company spanning e-commerce, software, holding/investment activity and R&D, but no actual product or activity is described.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated / shell stage) with no further activity evidence",
+    "team_provenance": "Sole director Ehab Eltayeb, British national. No ORCID match. No other appointments found under this officer record — uninformative on its own.",
+    "location_signal": "Suite address, Wood Street, London E17 — generic serviced-office/mailbox style address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporation date is in the future/implausible, suggesting a data anomaly or very low reliability of the record",
+      "SIC code mix (retail, software, holding, R&D) is incoherent and does not clearly indicate a life-sciences focus",
+      "No evidence of funding, product, team depth, or scientific activity",
+      "Generic registered office address with no sector signal"
+    ],
+    "interest_score": "1 - no verifiable life-sciences activity, incoherent SIC profile, and an anomalous incorporation date",
+    "unknowns": [],
+    "company_number": "17491220",
+    "sic_codes": [
+      "47910",
+      "62012",
+      "64209",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BUTTER LABS LTD",
+    "incorporated": "2026-09-30",
+    "one_liner": "Not observable at this stage — no website or product description provided; SIC mix spans software, engineering design and R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (dated in the future relative to typical records, worth verifying) with no funding or product data yet",
+    "team_provenance": "Single director (Chinonyerem Juliet Obidegwu); no ORCID match found; no other appointments found under this officer record — no evidence of prior company-building or academic track record",
+    "location_signal": "202 Ladbroke Grove, London — generic residential/commercial address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No product, science, or market description available",
+      "Single director with no corroborating track record (no ORCID, no other appointments found)",
+      "SIC codes are broad/generic (software, engineering, R&D) rather than a specific biotech or life-sciences code",
+      "No funding (grant or equity) evidence",
+      "Registered address has no biotech cluster/incubator signal"
+    ],
+    "interest_score": "1 - essentially no verifiable information beyond a bare incorporation record",
+    "unknowns": [],
+    "company_number": "17492283",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NIYATI PVT LTD",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — registered activity spans miscellaneous manufacturing, wholesale trade, and R&D, with no stated product or focus.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record) with no other activity evidence",
+    "team_provenance": "Single individual (Sneh Bhooshan Bagade) holds both director and secretary roles; no ORCID match, no other directorships found under this officer record — no prior track record visible",
+    "location_signal": "128 City Road, London, EC1V 2NX — this is a well-known mass company-formation/registered-office address (widely used by formation agents), not a genuine lab, incubator, or cluster address",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not a genuine operating or cluster location",
+      "SIC codes are broad and inconsistent (manufacturing, wholesale, R&D) suggesting no defined business focus",
+      "Single-person director/secretary structure with no biotech-specific signal",
+      "No science, product, or mechanism disclosed",
+      "No funding evidence of any kind"
+    ],
+    "interest_score": "1 — shell-like registration with no discernible biotech activity, generic address, and no credibility signals",
+    "unknowns": [],
+    "company_number": "17493662",
+    "sic_codes": [
+      "16290",
+      "32990",
+      "46900",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
