@@ -1,0 +1,417 @@
+[
+  {
+    "company_name": "WHOLOMICS UK LTD",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — no company description, website, or grant data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history or evidence of activity yet",
+    "team_provenance": "Two Austrian directors. Maximilian Christoph Schneider has an ORCID-confirmed academic publication record (no institution listed), though no prior directorships found under this officer record. Patrick Strasser has possible ORCID matches, unverified due to common name — not treated as signal either way.",
+    "location_signal": "1 London Road, Southampton — generic registered office, not a recognised biotech incubator or cluster address",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "ORCID-confirmed academic publication record for director Schneider",
+      "Specialist SIC code 72110 (biotech R&D)"
+    ],
+    "flags_negative": [
+      "Day-one incorporation with zero trading history",
+      "No institution affiliation listed for the ORCID-confirmed director",
+      "No website, product, or science description available",
+      "Generic registered address with no cluster/incubator signal"
+    ],
+    "interest_score": "2 — real academic credential on one founder, but company is pre-everything with no discernible science, funding, or traction",
+    "unknowns": [],
+    "company_number": "17494258",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-2220-9158",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VERVE PEPS LTD",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — no business description provided beyond SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record, no operating history)",
+    "team_provenance": "Single director, Luke William Barraclough, British national. No ORCID match found. No other directorships found under this officer record — not evidence of first-time-founder status, just nothing confirmed either way.",
+    "location_signal": "Residential-looking address in Sheffield (High Hazel Close) — no incubator or cluster signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72110 (biotech R&D) suggests intended life-sciences focus"
+    ],
+    "flags_negative": [
+      "No business description, science, or product detail available",
+      "No funding data",
+      "Single-director shell with no track record",
+      "Address shows no cluster/incubator signal"
+    ],
+    "interest_score": "1 — bare shell incorporation with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17495177",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AIDA FINANCE LIMITED",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — no product, market, or business description provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record) — pre-trading shell with no operational history.",
+    "team_provenance": "Danilo Mandic is a confirmed repeat founder in the same sector (active director at DANOISE LIMITED, SIC 71121/71129/71200/72110). Parisa Yazdanparast has one other appointment, not confirmed in target sector. No ORCID/GtR confirmations for either director.",
+    "location_signal": "Regency House, Barnet — generic registered-office address, not a known biotech/tech cluster or incubator.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — Danilo Mandic"
+    ],
+    "flags_negative": [
+      "No business description, product, or science inferable from available data",
+      "Mixed SIC codes (62012, 62020, 72190) suggest IT/software/R&D consultancy rather than a clear biotech thesis",
+      "No funding data of any kind",
+      "Generic registered address with no cluster signal"
+    ],
+    "interest_score": "2 — repeat founder in sector is a mild positive, but there is zero substantive information on what this company does; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17494403",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "DANOISE LIMITED",
+          "company_number": "11142547",
+          "company_status": "dissolved",
+          "appointed_on": "2018-01-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "71121",
+            "71129",
+            "71200",
+            "72110"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "DANOISE LIMITED",
+          "company_number": "11142547",
+          "company_status": "dissolved",
+          "appointed_on": "2018-01-10",
+          "resigned_on": null,
+          "sic_codes": [
+            "71121",
+            "71129",
+            "71200",
+            "72110"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WEYRAD LTD",
+    "incorporated": "2026-10-02",
+    "one_liner": "Not observable at this stage — no business description provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (incorporation date is in the future/very recent relative to data) with no further activity signals yet",
+    "team_provenance": "Single director, Dr Gregory John Durnan, American national. No ORCID match found. No other directorships found under this officer record — not evidence of prior experience either way.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address used by thousands of companies, not a genuine biotech incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 indicates R&D intent",
+      "Director holds a doctorate (Dr title)"
+    ],
+    "flags_negative": [
+      "Generic mass-registration virtual office address, not a specialist cluster or incubator",
+      "No grant funding or Innovate UK data found",
+      "No ORCID or GtR confirmation",
+      "No website or further company detail provided",
+      "Single-director company with no track record visible"
+    ],
+    "interest_score": "2 - Too early and too thin on data to assess; generic registered address and no verifiable team or science signal",
+    "unknowns": [],
+    "company_number": "17495243",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "UNITED BIONICS LTD",
+    "incorporated": "2026-10-02",
+    "one_liner": "Not observable at this stage — no product or business description provided beyond SIC classification",
+    "science": "Not observable at this stage, though director's academic/institutional affiliations suggest a neuroscience or bionics/prosthetics research background",
+    "stage_signal": "Day-one incorporation, pre-revenue shell with no trading history",
+    "team_provenance": "Sole director Kourosh Sam Kamali — ORCID CONFIRMED (verified academic publication record), GtR CONFIRMED as UKRI-funded investigator, and REPEAT FOUNDER CONFIRMED in same sector (active director at Myonerv Ltd, SIC 72190). Affiliations listed: Cambridge NeuroWorks, Cambridge University, Imperial College London, University of Aberdeen — strong academic cluster, though unverified which role/output ties to this company specifically",
+    "location_signal": "569 Finchley Road, London — generic commercial address, not a known biotech incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided for this entity",
+    "flags_positive": [
+      "ORCID CONFIRMED — verified genuine academic publication record",
+      "GtR CONFIRMED — verified UKRI-funded investigator",
+      "REPEAT FOUNDER CONFIRMED (same sector) — active director at Myonerv Ltd, SIC 72190",
+      "Multiple credible academic affiliations (Cambridge, Imperial College London, Aberdeen)"
+    ],
+    "flags_negative": [
+      "No business description, product, or science detail available",
+      "Just incorporated — zero trading or funding history",
+      "SIC codes (information services, market research, other scientific R&D) are broad and don't confirm a specific therapeutic or device focus",
+      "Relationship between this company and Myonerv Ltd (same director, same sector) unclear — could be overlapping or competing ventures"
+    ],
+    "interest_score": "4 — credible, verified repeat academic founder in the same sector, but entity itself has no disclosed science or funding yet",
+    "unknowns": [
+      "What does United Bionics actually build, and how does it differ from or relate to Myonerv Ltd?",
+      "Is this a spin-out, rebrand, or separate venture from the director's other company?",
+      "What IP, if any, is being transferred or licensed into this entity?",
+      "Is there a funding round or grant application in progress?"
+    ],
+    "company_number": "17495900",
+    "sic_codes": [
+      "70229",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0001-9235-9242",
+      "institutions": [
+        "Cambridge NeuroWorks",
+        "Cambridge University",
+        "Imperial College London",
+        "Myonerv",
+        "University of Aberdeen",
+        "University of Cambridge"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "869919BB-63DA-4CDC-A139-EEDF0D7969C1",
+      "organisation": "MYONERV LTD"
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 2,
+      "active_count": 2,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "MYONERV LTD",
+          "company_number": "15809466",
+          "company_status": "active",
+          "appointed_on": "2024-06-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "STRATA VALLEY LTD",
+          "company_number": "15119778",
+          "company_status": "dissolved",
+          "appointed_on": "2023-09-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "46190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "MYONERV LTD",
+          "company_number": "15809466",
+          "company_status": "active",
+          "appointed_on": "2024-06-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 2
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HALQYON LIMITED",
+    "incorporated": "2026-10-01",
+    "one_liner": "Not observable at this stage — no business description or product details provided beyond registered SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (dated 2026-10-01), pre-revenue, no grant or product data available",
+    "team_provenance": "Single named director, Ryan Browne (British). ORCID search returned 6 possible matches, too ambiguous to confirm — not treated as a signal either way. No other directorships found under this officer record.",
+    "location_signal": "Great Portland Street, London W1W — a well-known serviced-office/flexible-workspace district commonly used as a registered address; not a specialist biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC mix (58210 publishing/games, 62012 IT consultancy, 72190 R&D) is inconsistent and does not clearly signal a biotech/life-sciences focus",
+      "No science, product, or funding data available",
+      "Generic central London office address, not a life-sciences cluster",
+      "Incorporation date is in the future relative to typical filings, suggesting this is a very early or placeholder record"
+    ],
+    "interest_score": "1 — essentially no verifiable data; SIC codes don't even confirm a life-sciences business",
+    "unknowns": [],
+    "company_number": "17494830",
+    "sic_codes": [
+      "58210",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 6
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BEYOND BRUTE FORCE SYSTEMS LIMITED",
+    "incorporated": "2026-10-02",
+    "one_liner": "Not observable at this stage — no website or business description provided beyond SIC codes suggesting software/publishing and R&D activity",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated record) with no further activity on file",
+    "team_provenance": "Single director, Ben Edward Vivian, British national; no ORCID match found; no other appointments found under this officer record — no evidence either way of academic or prior founder background",
+    "location_signal": "Registered address in Mildenhall, Bury St. Edmunds — generic commercial address, no known biotech/incubator cluster signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No business description or science detail available",
+      "No funding (grant or equity) on record",
+      "Single-director company with no verifiable track record",
+      "SIC codes (58290/62012/62020/72190) suggest software/IT consultancy rather than a clear biotech/life-sciences focus"
+    ],
+    "interest_score": "1 — essentially no data beyond incorporation; SIC mix doesn't clearly indicate a life-sciences company at all",
+    "unknowns": [],
+    "company_number": "17495620",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PROMPTLY HEALTH UK LIMITED",
+    "incorporated": "2026-10-01",
+    "one_liner": "A newly incorporated UK entity spanning software, data processing and R&D consultancy, likely a UK subsidiary of a digital health business.",
+    "science": "Not observable at this stage — SIC codes suggest software/data/R&D activity but no technical or platform detail is provided.",
+    "stage_signal": "Day-one incorporation — no operating history, no product or trading evidence yet.",
+    "team_provenance": "Two directors: Pedro Jorge Saldanha Ramos (Portuguese, no ORCID match, no other appointments found) and Michelle Waddell (British, ORCID CONFIRMED, academic affiliations with Hamptin University, Purdue University and University of Delaware, no other appointments found under this officer record). Academic credibility present but no prior company-building track record visible.",
+    "location_signal": "30 Old Bailey, London EC4M 7AU — a generic central London registered office, commonly used for formation agents/virtual registration rather than an operating address or known incubator.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic director (Michelle Waddell) with multiple university affiliations",
+      "SIC codes indicate specialist software/R&D focus (62012, 72190)"
+    ],
+    "flags_negative": [
+      "Day-one incorporation — zero trading or operational history",
+      "Generic registered address, not a known life-sciences cluster or incubator",
+      "No funding data (grant or equity) disclosed",
+      "No evidence yet connecting the science/mechanism to a specific health problem or product"
+    ],
+    "interest_score": "2 — academic credibility is a mild positive, but this is a brand-new shell with no funding, product, or operational evidence to assess",
+    "unknowns": [],
+    "company_number": "17494525",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-1779-9675",
+      "institutions": [
+        "Hamptin University",
+        "Purdue University",
+        "University of Delaware"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GRAPHYWEAVE LTD",
+    "incorporated": "2026-10-01",
+    "one_liner": "Builds a semantic/knowledge-layer platform that lets enterprises query fragmented internal systems without moving the underlying data.",
+    "science": "Not a life-sciences company — this appears to be an enterprise data/knowledge-graph software platform (SIC codes confirm: software publishing, IT consultancy, data processing, scientific R&D). No biotech science observable.",
+    "stage_signal": "Day-one incorporation (Oct 2026) with a live marketing website already built — suggests pre-formation product/positioning work, but no evidence of customers, revenue, or funding.",
+    "team_provenance": "Two directors, both British. Berker: no ORCID match, no other directorships found. Rai: ORCID search inconclusive (name too common, correctly not treated as signal), no other directorships found. No academic or repeat-founder signals either way.",
+    "location_signal": "Tiller Road, London E14 — generic London address, not a known biotech incubator or cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live, professionally built product website pre/at incorporation suggesting prior development work"
+    ],
+    "flags_negative": [
+      "Not a life-sciences business — outside fund mandate",
+      "No funding data",
+      "No team credibility signals (ORCID/GtR/repeat-founder) confirmed"
+    ],
+    "interest_score": "1 — out-of-sector enterprise software company, not a life-sciences investment candidate",
+    "unknowns": [],
+    "company_number": "17495180",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
