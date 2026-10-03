@@ -1,0 +1,194 @@
+[
+  {
+    "company_name": "RICHARD STACK BIO CONSULTING LTD",
+    "incorporated": "2026-10-02",
+    "one_liner": "A biotech consulting company registered under a biotechnology R&D SIC code; no detail on services offered.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history, product, or funding evidence yet",
+    "team_provenance": "Sole director Dr Richard James Stack, British. No ORCID match found. No other directorships found under this officer record — first-time founder status plausible but unconfirmed.",
+    "location_signal": "Residential-looking address in Bridge, Canterbury — not a known incubator or biotech cluster; likely a home/registered-office address rather than a lab or office signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 indicates stated biotech R&D focus",
+      "Director holds a doctorate (Dr title), suggesting technical background"
+    ],
+    "flags_negative": [
+      "No science, product, or service detail provided",
+      "No funding (grant or equity) evidence",
+      "Generic/residential registered address, not a research cluster",
+      "Consulting model suggests services business rather than a scalable platform/IP play — may not fit venture thesis"
+    ],
+    "interest_score": "1 - Brand-new consulting shell with no discernible science, funding, or team track record; not a venture-fit company as described",
+    "unknowns": [],
+    "company_number": "17496049",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PEPTAIDES LTD",
+    "incorporated": "2026-10-02",
+    "one_liner": "Early-stage biotech developing peptide therapeutics for autoimmune and inflammatory diseases.",
+    "science": "Bioactive peptide drug candidates targeting receptors with high affinity/selectivity; company explicitly positions peptides as an alternative to small molecules, citing lower toxicity from rapid clearance. Website text is cut off before describing their specific translational approach or technology to overcome peptide drug-development challenges.",
+    "stage_signal": "Day-one incorporation (future-dated per record); website already live with team/news/jobs pages suggesting some pre-incorporation groundwork or rebrand.",
+    "team_provenance": "Single named director, Dr Nuno Francisco Vilhena Fernandes Madeira (Portuguese), likely academic given title. No ORCID match found. One other prior appointment, not in target sector — not meaningful either way.",
+    "location_signal": "167-169 Great Portland Street, London — a known registered-office/virtual-address hub, not a wet-lab or biotech cluster address. Generic signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Live, professionally framed company website with clear scientific thesis",
+      "Website indicates active team-building (job opportunities page)"
+    ],
+    "flags_negative": [
+      "Incorporation date is implausible/future-dated, needs verification",
+      "Single director with no confirmed academic credentials (ORCID)",
+      "Registered address is a generic company-formation address, not a lab or incubator",
+      "No funding, grant, or partnership data available",
+      "Website text excerpt is vague marketing copy, no specifics on platform, pipeline, or IP"
+    ],
+    "interest_score": "2 - Interesting therapeutic thesis but no verifiable team credentials, funding, or substantive technical detail yet",
+    "unknowns": [],
+    "company_number": "17496260",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ML4P LTD",
+    "incorporated": "2026-10-02",
+    "one_liner": "Not observable at this stage — no website or further data describing the company's actual product or service.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated registration — note date is in 2026, likely a shelf/pre-registration filing or data anomaly)",
+    "team_provenance": "Single director, Abdul Hamid Merii, British national. No ORCID match. No other directorships found under this officer record — first-time founder status not confirmed either way.",
+    "location_signal": "71-75 Shelton Street, Covent Garden, London — a well-known mass company-formation/virtual office address, not an incubator or life-sciences cluster. Generic registered office signal.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporation date is in the future (2026), suggesting this record may be a placeholder, formation-agent shelf company, or data error",
+      "Single director with no verifiable track record",
+      "Generic mass-registration address, not sector-specific",
+      "SIC codes (software/data processing/management consultancy) are generic and do not confirm a life-sciences or biotech focus",
+      "No science, product, or funding data of any kind provided"
+    ],
+    "interest_score": "1 — no verifiable life-sciences activity, no funding, no team signal, and a registration anomaly",
+    "unknowns": [],
+    "company_number": "17496702",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LABFLOW SCOUT LTD",
+    "incorporated": "2026-10-02",
+    "one_liner": "Not observable at this stage — no website or description provided, but SIC mix suggests lab instrumentation and/or software development, with some R&D activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or funding data available",
+    "team_provenance": "Single director, Benjamin Luke Shackell — no ORCID match found, no other directorships found under this officer record",
+    "location_signal": "Crawley Innovation Centre — incubator address, a positive cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Registered at a named innovation centre (incubator signal)"
+    ],
+    "flags_negative": [
+      "No funding data",
+      "No science/product description available",
+      "Single director with no verifiable track record",
+      "Pre-incorporation stage — essentially no operating history"
+    ],
+    "interest_score": "2 — incubator address is mildly promising but there is no other substantive information to assess",
+    "unknowns": [],
+    "company_number": "17496761",
+    "sic_codes": [
+      "26511",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SURVIVAL SOLIDARITY LAB CIC",
+    "incorporated": "2026-10-03",
+    "one_liner": "A Community Interest Company registered under a mix of R&D, design, and arts/wellbeing SIC codes — purpose not clear from available data.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no activity history",
+    "team_provenance": "Single director, Su Hyun Kim (South Korean); ORCID search returned 19 possible matches, too common to verify, not pursued; no other directorships found under this officer record",
+    "location_signal": "Suite-style address in Walthamstow, London (E17) — generic serviced-office/mailbox style address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "CIC structure (non-profit, asset-locked) is unusual for a venture-backable biotech play",
+      "SIC code mix (R&D, design, social work, creative arts) suggests broad or unfocused scope rather than a specific scientific platform",
+      "No funding, grant, or scientific detail available",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - CIC legal form, unfocused SIC mix, and zero verifiable scientific or funding signal make this a non-starter for VC screening",
+    "unknowns": [],
+    "company_number": "17497636",
+    "sic_codes": [
+      "72190",
+      "74100",
+      "85520",
+      "90030"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "RECOVERI HEALTH LTD",
+    "incorporated": "2026-10-03",
+    "one_liner": "Not observable at this stage — no business description beyond registration data.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or trading history visible",
+    "team_provenance": "Two directors (American, Irish nationalities); no ORCID match for either; no confirmed repeat-founder history in target sector for either",
+    "location_signal": "Registered address appears to be a rugby club premises in Llanharan, Wales — generic, non-specialist, not a recognised biotech/incubator cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No discernible business description or science despite SIC codes spanning health IT (62012) and R&D-adjacent software (72190)",
+      "Registered address is a rugby club, not a lab, incubator, or office — unusual for a life-sciences venture",
+      "No funding, grant, or trading history",
+      "No verified academic or repeat-founder credentials for either director"
+    ],
+    "interest_score": "1 - no verifiable science, team credentials, funding, or credible location signal; nothing here to warrant further attention yet",
+    "unknowns": [],
+    "company_number": "17497226",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
