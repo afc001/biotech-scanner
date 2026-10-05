@@ -1,0 +1,558 @@
+[
+  {
+    "company_name": "ASHAVAN LTD",
+    "incorporated": "2026-10-05",
+    "one_liner": "A beauty salon in Petworth, West Sussex offering massage, facials, manicures/pedicures and waxing.",
+    "science": "Not observable at this stage — no science or technology platform; this is a beauty salon",
+    "stage_signal": "Day-one incorporation of what the website shows is an operating high-street beauty salon",
+    "team_provenance": "Sole director Vanshita Gaurangbhai Panchal, no ORCID match, no prior directorships found — no indication of academic or biotech background",
+    "location_signal": "Registered address is a residential flat in Harrow; actual trading business (per website) is a High Street salon in Petworth, West Sussex — mismatch between registered address and operations, generic/non-cluster",
+    "funding": "Not observable at this stage — no grant or investment data present",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC code 72110 (biotech R&D) is present but entirely inconsistent with actual business activity (beauty salon)",
+      "No science, technology, or life-sciences substance of any kind",
+      "Registered address does not match trading location shown on website",
+      "Not a credible life-sciences investment target"
+    ],
+    "interest_score": "1 - This is a beauty salon, not a biotech company; SIC code appears miscategorised",
+    "unknowns": [],
+    "company_number": "17498785",
+    "sic_codes": [
+      "42990",
+      "47910",
+      "71122",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EPIGENETIX LTD",
+    "incorporated": "2026-10-05",
+    "one_liner": "Developer of EP31670 (NEO2734), an oral dual BRD4/p300-CBP inhibitor in late-stage Phase 1 trials for myelofibrosis and other cancers.",
+    "science": "Epigenetic small-molecule drug — dual bromodomain (BRD4) and p300/CBP inhibitor, oral once-daily dosing, being tested in combination with JAK inhibitors (momelotinib/ruxolitinib) in myelofibrosis patients per company website.",
+    "stage_signal": "Website describes an asset already in late-stage Phase 1 clinical trials with reported patient responses — but the company itself was only incorporated 2026-10-05, so this UK entity is likely a newly formed vehicle around a pre-existing drug programme, not the originator of first-in-human data.",
+    "team_provenance": "Single director, Dr Dilihan Gumus (Turkish). No ORCID match found. No other directorships found under this officer record. No further biographical detail provided.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual-office address, not a lab or incubator signal. Generic/red flag for substance.",
+    "funding": "No grant or investment figures provided. Not observable at this stage.",
+    "flags_positive": [
+      "Website claims an asset already in late-stage Phase 1 clinical trials with reported efficacy signal",
+      "Specific, named drug (EP31670/NEO2734) and mechanism described, not vague marketing"
+    ],
+    "flags_negative": [
+      "Registered address is a generic mass-incorporation virtual office (Shelton Street), inconsistent with a company running real clinical trials",
+      "Mismatch between company incorporation date (2026-10-05) and website claims of advanced clinical progress — unclear if this UK entity actually owns/runs the trial or is a newly spun-off shell referencing another firm's asset",
+      "Single director with no verifiable track record (no ORCID match, no other appointments found)",
+      "No funding, pipeline ownership, or IP details provided to substantiate claims"
+    ],
+    "interest_score": "2 - interesting asset description but a brand-new shell at a virtual office claiming someone else's late-stage clinical data; provenance unclear",
+    "unknowns": [],
+    "company_number": "17500140",
+    "sic_codes": [
+      "47910",
+      "72110",
+      "79120",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BLUE FERN BIO LIMITED",
+    "incorporated": "2026-10-05",
+    "one_liner": "Early-stage biotech developing a platform for precision genetic medicines that target therapeutic activity to specific disease-driving cells.",
+    "science": "Genetic medicine platform aiming for cell-selective targeting to reprogramme dysfunctional cells and avoid off-target/whole-body effects; no mechanistic or modality specifics (vector, payload, delivery method) given.",
+    "stage_signal": "Day-one incorporation (note: date appears forward-dated/anomalous) with a live, built-out company website already articulating platform positioning — ahead of typical shell-company presentation.",
+    "team_provenance": "Sole director Dr Mark Preston, British. GtR CONFIRMED as a UKRI-funded investigator — genuine academic/research credibility signal. ORCID shows 5 possible matches, unresolved, not treated as confirmed. Listed organisation 'Preston Motorsport Limited' is unrelated to biotech, which is odd context but not disqualifying. No other appointments found under this officer record.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a lab or biotech cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment figures provided.",
+    "flags_positive": [
+      "GtR CONFIRMED UKRI-funded investigator",
+      "Live, substantive company website with clear platform thesis"
+    ],
+    "flags_negative": [
+      "Generic virtual-office registered address",
+      "Incorporation date appears anomalous (2026)",
+      "No funding, patent, or technical detail disclosed",
+      "Director's listed organisation (motorsport) unrelated to stated field"
+    ],
+    "interest_score": "3 - academic credibility signal is real but company is pre-seed with no funding evidence and a generic address",
+    "unknowns": [],
+    "company_number": "17498693",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 5
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "B9075D60-3880-4FEA-A845-A8F74CE73D46",
+      "organisation": "PRESTON MOTORSPORT LIMITED"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MERSENNOVA TECHNOLOGIES LTD",
+    "incorporated": "2026-10-05",
+    "one_liner": "Not observable at this stage — no business description provided beyond SIC codes suggesting software/IT, R&D consultancy, and education activities",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evident",
+    "team_provenance": "Sole director Dr Moustafa Ibrahim Moustafa Mohamed, Egyptian national, 'Dr' title suggests academic or clinical background but no ORCID match found and no other directorships found under this officer record",
+    "location_signal": "128 City Road, London, EC1V 2NX — a well-known mass-registration/virtual office address (used by thousands of companies), not a specialist biotech incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (software, R&D consultancy, education) with no biotech-specific code, unclear if this is a life-sciences company at all",
+      "Generic mass-registration virtual office address, not a cluster/incubator signal",
+      "No science, product, or funding information available",
+      "No ORCID match for director despite 'Dr' title",
+      "Incorporation date appears to be in the future (2026), suggesting speculative or placeholder record"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, funding, or location signal; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17498624",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190",
+      "85600"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DERMR HEALTH UK LTD",
+    "incorporated": "2026-10-05",
+    "one_liner": "Not observable at this stage — no business description beyond SIC code 72190 (other research and experimental development on natural sciences and engineering)",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data",
+    "team_provenance": "Single director, Stefan Jerry Mazy, Australian national. No ORCID match found. No other directorships found under this officer record",
+    "location_signal": "128 City Road, London, EC1V 2NX — a well-known mass-registration/virtual office address, not a specialist incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Single director, no track record visible",
+      "No business description or evidence of operations",
+      "Generic mass-registration address, not a genuine lab/incubator cluster signal",
+      "Too early to assess — no grant, website, or product data"
+    ],
+    "interest_score": "1 — shell-stage registration with no substantive signal to assess",
+    "unknowns": [],
+    "company_number": "17499830",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HEGETOR LABORATORIES LTD",
+    "incorporated": "2026-10-04",
+    "one_liner": "Not observable at this stage — Companies House record alone gives no description of what the company actually does.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (dated 2026-10-04, future-dated or newly filed); no other activity evidence yet",
+    "team_provenance": "Single listed director, Dr William Stephen Jones. No ORCID match found — not evidence of anything either way. No other appointments found under this officer record.",
+    "location_signal": "Residential-looking address in Kirk Ella, Hull — no indication of incubator or life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC mix (62012/62020 software, 72190 other R&D) is odd and non-specific for a life-sciences play",
+      "No description, product, or science detail available",
+      "Single-director shell with no funding, grant, or trading history",
+      "Generic/residential registered address, no cluster or incubator signal"
+    ],
+    "interest_score": "1 - no verifiable science, product, funding, or team signal; indistinguishable from an empty shell at this stage",
+    "unknowns": [],
+    "company_number": "17498300",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MDBCONSULTING LTD",
+    "incorporated": "2026-10-05",
+    "one_liner": "A newly incorporated consultancy with a secondary R&D-services SIC code; no further detail available on what it actually does.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history, grants, or product evidence yet",
+    "team_provenance": "Two directors sharing a surname (likely family/husband-wife team). No ORCID matches for either. One director has one other appointment, not in the target sector; the other has none found. No evidence of prior biotech or life-sciences company-building experience.",
+    "location_signal": "Bishop's Stortford address — generic commercial/residential-style registration, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Primary SIC code (70229) is generic management consultancy, not a life-sciences or R&D classification",
+      "No grant funding, publications, or academic affiliation evidence",
+      "No trading history — incorporated too recently to assess",
+      "No evidence this is a life-sciences company at all rather than a general consultancy"
+    ],
+    "interest_score": "1 - generic consultancy shell with no science, funding, or team signal; does not merit further attention at this stage",
+    "unknowns": [],
+    "company_number": "17499062",
+    "sic_codes": [
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HARTORA LIMITED",
+    "incorporated": "2026-10-04",
+    "one_liner": "A newly incorporated British engineering company aiming to develop next-generation propulsion, power and aerospace systems with UK-controlled IP and manufacturing.",
+    "science": "Not observable at this stage — website describes aerospace/propulsion focus in marketing terms only, no technical detail on mechanism, modality or TRL.",
+    "stage_signal": "Day-one incorporation (future-dated at time of record); no evidence yet of product, funding round, or grant activity.",
+    "team_provenance": "Sole director Daniel Charles Hayes has 19 other appointments, none confirmed in the target sector (not all checked due to high count), and an ADVISOR PATTERN (13 other active directorships) — suggests a well-connected, possibly portfolio-style director unlikely to be hands-on day-to-day. No ORCID match. No prior aerospace-specific track record confirmed.",
+    "location_signal": "Northgate House, Nottingham — generic registered office address, though website claims operational base in the Nottingham/Derby aerospace corridor (a genuine UK aerospace cluster).",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Claimed location in Nottingham/Derby aerospace corridor",
+      "Director is well-connected (13 other active directorships)"
+    ],
+    "flags_negative": [
+      "Pre-incorporation/shell-stage company with no technical or funding substance yet",
+      "Website content is high-level marketing language with no specifics on technology, team expertise, or traction",
+      "Director's high appointment count (19 total, advisor pattern) suggests limited hands-on involvement",
+      "SIC codes span unrelated areas (manufacturing, holding companies, management consultancy) rather than a focused aerospace classification"
+    ],
+    "interest_score": "2 - Sovereign-aerospace positioning is interesting but this is a bare-shell company with no team depth, funding, or technical evidence yet.",
+    "unknowns": [],
+    "company_number": "17498244",
+    "sic_codes": [
+      "30300",
+      "71129",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 19,
+      "active_count": 13,
+      "resigned_count": 6,
+      "other_companies": [
+        {
+          "company_name": "ALVOLT ENERGY LTD",
+          "company_number": "12385292",
+          "company_status": "active",
+          "appointed_on": "2026-02-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "35110",
+            "43210",
+            "71129",
+            "74901"
+          ]
+        },
+        {
+          "company_name": "ADVANCED BLAST & BALLISTIC SYSTEMS LIMITED",
+          "company_number": "07025669",
+          "company_status": "active",
+          "appointed_on": "2025-01-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "74909"
+          ]
+        },
+        {
+          "company_name": "UCR INTEGRATIONS LTD",
+          "company_number": "12451841",
+          "company_status": "active",
+          "appointed_on": "2024-07-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "74909"
+          ]
+        },
+        {
+          "company_name": "UCR HOLDINGS LTD",
+          "company_number": "12336363",
+          "company_status": "active",
+          "appointed_on": "2024-02-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "REVAMP SOLUTIONS LTD",
+          "company_number": "13001625",
+          "company_status": "dissolved",
+          "appointed_on": "2020-11-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "27900",
+            "28290",
+            "63110"
+          ]
+        },
+        {
+          "company_name": "CROFT TECHNOLOGIES LIMITED",
+          "company_number": "09758954",
+          "company_status": "dissolved",
+          "appointed_on": "2015-09-02",
+          "resigned_on": null,
+          "sic_codes": [
+            "62012"
+          ]
+        },
+        {
+          "company_name": "ULTRA PRIME 1 LIMITED",
+          "company_number": "08669738",
+          "company_status": "dissolved",
+          "appointed_on": "2013-08-30",
+          "resigned_on": null,
+          "sic_codes": [
+            "68100"
+          ]
+        },
+        {
+          "company_name": "ULTRA PRIME LTD",
+          "company_number": "08598513",
+          "company_status": "dissolved",
+          "appointed_on": "2013-07-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "68100"
+          ]
+        },
+        {
+          "company_name": "EFFICIENT TECHNOLOGIES PLC",
+          "company_number": "08559640",
+          "company_status": "dissolved",
+          "appointed_on": "2013-06-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "47990"
+          ]
+        },
+        {
+          "company_name": "KINIBOW VENTURE CAPITAL LIMITED",
+          "company_number": "08553982",
+          "company_status": "dissolved",
+          "appointed_on": "2013-06-03",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "CROWD BUILD CAPITAL LTD",
+          "company_number": "08134261",
+          "company_status": "dissolved",
+          "appointed_on": "2012-07-09",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "AGILITY NUTRITION LIMITED",
+          "company_number": "08021469",
+          "company_status": "dissolved",
+          "appointed_on": "2012-04-05",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "TRENTROCK LIMITED",
+          "company_number": "07897510",
+          "company_status": "active",
+          "appointed_on": "2012-01-04",
+          "resigned_on": null,
+          "sic_codes": null
+        },
+        {
+          "company_name": "ADVANCED BLAST & BALLISTIC SYSTEMS LIMITED",
+          "company_number": "07025669",
+          "company_status": "active",
+          "appointed_on": "2022-07-29",
+          "resigned_on": "2023-08-23",
+          "sic_codes": null
+        },
+        {
+          "company_name": "KINITAS SIA LIMITED",
+          "company_number": "08678028",
+          "company_status": "dissolved",
+          "appointed_on": "2013-09-05",
+          "resigned_on": "2021-06-28",
+          "sic_codes": null
+        },
+        {
+          "company_name": "VST ENTERPRISES LIMITED",
+          "company_number": "08292184",
+          "company_status": "dissolved",
+          "appointed_on": "2013-07-05",
+          "resigned_on": "2013-11-27",
+          "sic_codes": null
+        },
+        {
+          "company_name": "KMS SOLUTIONS LIMITED",
+          "company_number": "08181237",
+          "company_status": "dissolved",
+          "appointed_on": "2013-03-01",
+          "resigned_on": "2013-11-12",
+          "sic_codes": null
+        },
+        {
+          "company_name": "ORIGEN CAPITAL PARTNERS LTD",
+          "company_number": "07500184",
+          "company_status": "active",
+          "appointed_on": "2011-01-20",
+          "resigned_on": "2012-07-01",
+          "sic_codes": null
+        },
+        {
+          "company_name": "PELHAM COURT MANAGEMENT COMPANY LIMITED",
+          "company_number": "02325374",
+          "company_status": "active",
+          "appointed_on": "2010-06-18",
+          "resigned_on": "2014-01-03",
+          "sic_codes": null
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": true,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "JORJAR LABS LTD",
+    "incorporated": "2026-10-04",
+    "one_liner": "Not observable at this stage — no website or product description provided.",
+    "science": "Not observable at this stage; SIC codes (62012 — business/domestic software, 72190 — other R&D on natural sciences/engineering) suggest a software-plus-research hybrid, but mechanism is unstated.",
+    "stage_signal": "Day-one incorporation (Oct 2026); pre-revenue, pre-product shell at this point.",
+    "team_provenance": "Sole director Dr Jiahua Xu, GtR CONFIRMED as a UKRI-funded investigator at UCL — a genuine, verified academic/research credibility signal. ORCID match inconclusive (name too common). No other directorships found under this officer record, so no evidence either way on prior founder experience.",
+    "location_signal": "Registered address is a residential/generic flat in Bloomsbury, London — not a recognised incubator or lab cluster. Proximity to UCL is plausible but not itself a verified signal.",
+    "funding": "No grant or investment data provided. Not observable at this stage.",
+    "flags_positive": [
+      "GtR CONFIRMED UKRI-funded investigator at UCL"
+    ],
+    "flags_negative": [
+      "No product, science detail, or funding data disclosed",
+      "Generic residential registered address",
+      "Company only days old — no operating history"
+    ],
+    "interest_score": "2 - verified academic credential is encouraging but there is no science, product, or funding detail to assess yet",
+    "unknowns": [],
+    "company_number": "17498357",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "5E66BC1A-0D46-40DD-A581-47D2F9771E2A",
+      "organisation": "UNIVERSITY COLLEGE LONDON"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIGHT LINKS EUROPE LTD",
+    "incorporated": "2026-10-05",
+    "one_liner": "Not observable at this stage — no business description or website data provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or funding data available",
+    "team_provenance": "Sole director Firouz Vafadari, ORCID CONFIRMED — genuine, verified academic record linked to University of California, Santa Cruz. No other appointments found under this officer record",
+    "location_signal": "Clyde Offices, Glasgow — a serviced/managed office address, not a recognised life-sciences incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic affiliation (University of California, Santa Cruz)",
+      "Specialist SIC code 72190 (other research and experimental development on natural sciences and engineering)"
+    ],
+    "flags_negative": [
+      "No business description, website, or product information available",
+      "No funding or grant data",
+      "Serviced office address, not a specialist cluster",
+      "Incorporated very recently — essentially a shell at this point"
+    ],
+    "interest_score": "2 - academic credibility is real but there is nothing yet to evaluate scientifically or commercially",
+    "unknowns": [],
+    "company_number": "SC904878",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0007-7639-8624",
+      "institutions": [
+        "University of California, Santa Cruz"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MEMLAB LTD",
+    "incorporated": "2026-10-05",
+    "one_liner": "Not observable at this stage — no business description available beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue by definition",
+    "team_provenance": "Sole director Andrew Richard Fox. No ORCID match found. No other directorships found under this officer record.",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation address (registered-agent/virtual office), not a genuine lab or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 indicates intended R&D activity"
+    ],
+    "flags_negative": [
+      "Shelton Street mass-registration address — no real locational signal",
+      "No science, product, or market description available",
+      "No funding data",
+      "Single director with no corroborating academic or industry background found",
+      "Incorporated too recently to show any traction"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17500064",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
