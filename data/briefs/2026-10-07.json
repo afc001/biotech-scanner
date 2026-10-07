@@ -1,0 +1,488 @@
+[
+  {
+    "company_name": "DD THERAPEUTICS LTD",
+    "incorporated": "2026-10-06",
+    "one_liner": "Not observable at this stage — no description of product, platform, or therapeutic focus provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no further activity, grant, or product evidence yet",
+    "team_provenance": "Sole director Dr Peter Terfa Adura, British, no ORCID match found. Confirmed repeat founder in same sector — currently a director at DOOSE DYNASTY LTD (SIC 70229/72110/86220, active), indicating prior experience in R&D/consultancy-type company formation.",
+    "location_signal": "Residential-style address in Milton Keynes — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director at DOOSE DYNASTY LTD, an active company in the same SIC sector"
+    ],
+    "flags_negative": [
+      "No description of science, product, or market",
+      "No funding (grant or equity) evidence",
+      "Generic residential registered address",
+      "Company only days old, essentially no track record"
+    ],
+    "interest_score": "2 — repeat-founder signal noted, but no substantive data on science, funding, or traction to justify closer look yet",
+    "unknowns": [],
+    "company_number": "17503842",
+    "sic_codes": [
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 3,
+      "active_count": 3,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "DOOSE DYNASTY LTD",
+          "company_number": "17478506",
+          "company_status": "active",
+          "appointed_on": "2026-09-24",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72110",
+            "86220"
+          ]
+        },
+        {
+          "company_name": "SUPAFINE LTD",
+          "company_number": "15325420",
+          "company_status": "dissolved",
+          "appointed_on": "2023-12-04",
+          "resigned_on": null,
+          "sic_codes": [
+            "46420",
+            "46450",
+            "46480",
+            "47910"
+          ]
+        },
+        {
+          "company_name": "SAVED BY GRACE FOUNDATION",
+          "company_number": "13117654",
+          "company_status": "dissolved",
+          "appointed_on": "2021-01-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "69109",
+            "85590",
+            "86220",
+            "88990"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "DOOSE DYNASTY LTD",
+          "company_number": "17478506",
+          "company_status": "active",
+          "appointed_on": "2026-09-24",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229",
+            "72110",
+            "86220"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 3
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NOVISTAI LIMITED",
+    "incorporated": "2026-10-06",
+    "one_liner": "Not observable at this stage — no website or descriptive data provided beyond registration details.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (note: date given is in the future, possibly a data entry issue) with no further activity evidence",
+    "team_provenance": "Single director, Diego Luis Madronero, British national; no ORCID match found; no other appointments found under this officer record — no evidence of prior founder or academic track record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine lab or incubator signal",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address commonly used by shell/formation agents",
+      "Mixed SIC codes (engineering, R&D, computing, management consultancy) suggest no clear specialism",
+      "No funding, grant, or product data available",
+      "No verifiable academic or founder track record"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; registered address is a red flag for shell-company formation",
+    "unknowns": [],
+    "company_number": "17504005",
+    "sic_codes": [
+      "71121",
+      "71129",
+      "72110",
+      "74100"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SAPLING DIAGNOSTICS LIMITED",
+    "incorporated": "2026-10-07",
+    "one_liner": "A newly incorporated diagnostics company; no further detail on what it actually does is available yet.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — pre-revenue, pre-product shell at this point",
+    "team_provenance": "No directors listed or fetched — cannot assess founder background",
+    "location_signal": "Lincoln's Inn Fields, London — a legal/professional services address, not a known biotech incubator or cluster; may be a registered agent address rather than an operating site",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 (R&D on biotechnology) suggests genuine life-sciences intent",
+      "Dual SIC coding (72110 + 86900 human health) hints at a diagnostics/clinical crossover model"
+    ],
+    "flags_negative": [
+      "Incorporated only recently — essentially no operating history",
+      "No director information available to assess credibility",
+      "No funding, grant, or science detail provided",
+      "Registered address gives no cluster/incubator signal"
+    ],
+    "interest_score": "1 - essentially a blank shell company with no verifiable substance yet",
+    "unknowns": [],
+    "company_number": "17505414",
+    "sic_codes": [
+      "72110",
+      "86900"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "UNITZERO LTD",
+    "incorporated": "2026-10-06",
+    "one_liner": "Adult/glamour content production company casting models for photo and video shoots — not a life-sciences business.",
+    "science": "Not observable at this stage — no scientific or technical platform of any kind",
+    "stage_signal": "Day-one incorporation; website already live with content casting calls, suggesting operations predate or coincide with incorporation",
+    "team_provenance": "Corporate secretary (OHS Secretaries Limited) plus two individual directors; no evident academic or scientific background; no ORCID matches",
+    "location_signal": "Generic City of London office address (Cheapside) — likely a registered-office/formation-agent address, not a lab or incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (33200, 62012, 72190) misleadingly suggest engineering/IT/R&D activity but actual business is adult content production",
+      "No connection whatsoever to life sciences, biotech, or any relevant scientific domain",
+      "No ORCID matches for either director",
+      "Website content is explicit adult/glamour modelling, entirely unrelated to stated SIC codes"
+    ],
+    "interest_score": "1 - Not a life-sciences company; mismatched SIC codes and adult content business model make this entirely outside fund scope",
+    "unknowns": [],
+    "company_number": "17503135",
+    "sic_codes": [
+      "33200",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DIGITAL TWIN VIRTUAL LABORATORY LIMITED",
+    "incorporated": "2026-10-06",
+    "one_liner": "A newly incorporated company proposing some form of digital-twin/virtual-laboratory simulation offering, exact application unclear.",
+    "science": "Not observable at this stage — SIC codes suggest software/computational modelling (62012) combined with engineering (71122) and research (72190) activity, but no description of method or domain is provided",
+    "stage_signal": "Day-one incorporation — no trading history, no product or funding evidence yet",
+    "team_provenance": "Single director, Peter Polak (Slovak nationality). ORCID check returned only unverified possible matches — not treated as confirmed. No prior directorships found under this officer record, which is uninformative rather than a red flag",
+    "location_signal": "5 Brayford Square, London E1 — residential-looking address, no indication of incubator or cluster affiliation",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Multi-disciplinary SIC mix (software, engineering, R&D) suggests a genuine technical concept rather than a shell"
+    ],
+    "flags_negative": [
+      "No team track record observable",
+      "No funding, product, or traction evidence",
+      "Generic residential registered address",
+      "Name/SIC combination is vague — unclear what the company actually does"
+    ],
+    "interest_score": "1 - pre-revenue shell-stage company with no verifiable technical, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17503353",
+    "sic_codes": [
+      "62012",
+      "63110",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 4
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BISTON LIMITED",
+    "incorporated": "2026-10-07",
+    "one_liner": "Not observable at this stage — no business description provided beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no further activity evidence",
+    "team_provenance": "Single director, Niall Jennings (British/Irish). No ORCID match found. No other appointments found under this officer record — not evidence of prior track record either way",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine lab or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic formation-agent registered address (Shelton Street)",
+      "SIC 35110 (electricity generation) paired with 72190 (R&D) is an unusual combination with no explanatory detail",
+      "No science, product, or team background available",
+      "Incorporated with no supporting grant, website, or trading data"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17505128",
+    "sic_codes": [
+      "35110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "APIS HEALTH INNOVATION LTD",
+    "incorporated": "2026-10-07",
+    "one_liner": "Not observable at this stage — no business description provided beyond SIC codes suggesting computer/health software and R&D consultancy.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or product data available",
+    "team_provenance": "Two directors, Dr. Duvnjak (Bosnia and Herzegovina) and Dr. Kamala Kannan (British), both hold doctorates; no ORCID matches found for either, and no other appointments in the target sector — no evidence of academic publication history or prior sector-specific company building",
+    "location_signal": "71-75 Shelton Street, Covent Garden, London — a well-known company formation/registered-office address used by thousands of shell companies, not a genuine lab or incubator address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address (Shelton Street), not a verifiable operational or R&D location",
+      "No business description, science, or product information available",
+      "No non-dilutive or dilutive funding observable",
+      "Incorporated with future/forward date, unusually recent — essentially pre-operational"
+    ],
+    "interest_score": "1 - no verifiable science, funding, or credible location signal; too early to assess",
+    "unknowns": [],
+    "company_number": "17504481",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIVING WORLDS LAB LTD",
+    "incorporated": "2026-10-07",
+    "one_liner": "Building a simulation engine that generates persistent synthetic populations and environments running through simulated time, for unspecified downstream applications.",
+    "science": "Described as a 'simulation engine' creating simulated people, places and environments, running them through time and logging changes — framed around language models ('lived, not learned'), suggesting synthetic data/training-environment generation rather than wet-lab or clinical science. Not biotech/life-sciences in any conventional sense.",
+    "stage_signal": "Pre-launch/waitlist stage — website offers 'Request access' only, no product, customers, or technical detail beyond marketing copy.",
+    "team_provenance": "No directors listed or fetched — cannot assess founder background, academic links, or prior company history.",
+    "location_signal": "66 Paul Street, London EC2A 4NA — this is a well-known generic company-formation/virtual-office address (serviced office hub), not a specialist incubator or lab cluster.",
+    "funding": "No grant or funding data provided. Not observable at this stage.",
+    "flags_positive": [],
+    "flags_negative": [
+      "No directors listed, so zero team credibility signals available",
+      "Registered address is a generic mass-registration virtual office, not a life-sciences cluster",
+      "SIC codes (software/IT consultancy) indicate this is a software company, not a life-sciences business",
+      "Website copy is abstract/conceptual marketing language with no concrete technical, clinical, or commercial specifics",
+      "Pre-access, pre-product stage with no evidence of traction"
+    ],
+    "interest_score": "1 — Not a life-sciences company; appears to be an AI/simulation software venture, outside fund scope, with no team or funding data to assess regardless.",
+    "unknowns": [],
+    "company_number": "17505373",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190",
+      "77400"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "OFACTO LABS LTD",
+    "incorporated": "2026-10-07",
+    "one_liner": "Battery-powered IoT sensor that predicts mould risk in rental properties before it becomes visible, flagging landlords for compliance purposes.",
+    "science": "Hardware sensor (temperature, humidity, gas sensing) feeding an on-device risk model to predict mould-favourable conditions; not a novel scientific platform, more applied sensor/firmware engineering plus a prediction algorithm. No technical detail on the model itself.",
+    "stage_signal": "Pre-seed, pre-launch — website explicitly states 'RAISING' and 'VEX LOADING 3D MODEL' (product not yet real/built). Very early, day-one incorporation.",
+    "team_provenance": "No directors listed or fetched at Companies House — cannot assess founder background, academic links, or prior companies.",
+    "location_signal": "Mildenhall, Bury St Edmunds — generic industrial/commercial unit address, not a known biotech or hardware incubator or cluster.",
+    "funding": "£3,000 development grant (source unspecified, likely small non-dilutive award) plus acceptance to Y Combinator Startup School 2026 (a free online programme, not funding or equity investment). No institutional grant (e.g. Innovate UK) evidenced.",
+    "flags_positive": [
+      "Y Combinator Startup School invitation (signals founder effort/ambition, though it is a free educational programme, not a funding or selection signal of consequence)",
+      "Clear, specific commercial use case (UK landlord mould compliance) articulated on website",
+      "Claims early commercial conversations ('in talks with property owners & managers')"
+    ],
+    "flags_negative": [
+      "No directors listed — cannot verify who is behind the company",
+      "Product explicitly not yet built ('loading 3D model', pre-seed raising stage)",
+      "£3,000 grant is trivial and funding source unstated",
+      "SIC codes (recorded tech, retail, business software, computer consultancy) don't clearly map to a hardware/sensor company — vague registration",
+      "Not a life-sciences company in any meaningful sense — this is proptech/hardware, outside core thesis"
+    ],
+    "interest_score": "1 - Pre-product hardware/proptech startup with no verifiable team, trivial funding, and no life-sciences relevance",
+    "unknowns": [],
+    "company_number": "17505386",
+    "sic_codes": [
+      "26511",
+      "47910",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "B SHARP DESIGN LTD",
+    "incorporated": "2026-10-06",
+    "one_liner": "Unclear — SIC mix suggests some combination of software development, engineering design, and R&D consultancy.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity data available",
+    "team_provenance": "Single director, Benjamin John Sharp, British; one other appointment found, not in target sector — informational only",
+    "location_signal": "66 Paul Street, London EC2A — a well-known serviced/co-working office address (WeWork-style), not a specialist biotech or research cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or sector detail observable",
+      "SIC mix (software, engineering, R&D) gives no clear signal of life-sciences relevance",
+      "Generic flexible-office registered address",
+      "No grant, patent, or publication data provided"
+    ],
+    "interest_score": "1 - No evidence of life-sciences relevance or credible team signal; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17503411",
+    "sic_codes": [
+      "62012",
+      "71121",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HEALTH SPECTRUM DIGITAL LIMITED",
+    "incorporated": "2026-10-06",
+    "one_liner": "Not observable at this stage — no website or further data supplied beyond basic registration",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading",
+    "team_provenance": "Single director, Francesco Axel Librale (Italian national); no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "71-75 Shelton Street, London — a known mass-registration/virtual office address (WeWork-style formation agent hub), not a genuine lab or cluster address",
+    "funding": "Not observable at this stage — no grant or investment data supplied",
+    "flags_positive": [],
+    "flags_negative": [
+      "Registered at a generic mass-incorporation address, not a specialist cluster or incubator",
+      "No evidence yet of product, science, or team depth beyond one director",
+      "SIC 62012 (business software) alongside 72190 (R&D) suggests unclear positioning — software house or research entity?",
+      "No funding, grant, or publication data to support any technical claim"
+    ],
+    "interest_score": "1 — shell-stage company, no verifiable signals of science, team strength, or funding",
+    "unknowns": [],
+    "company_number": "17503590",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MPS SCOTLAND LTD",
+    "incorporated": "2026-10-06",
+    "one_liner": "Designs tailored modular pumped-hydro storage schemes to absorb curtailed wind energy in Scotland/UK.",
+    "science": "Engineering/infrastructure play, not biotech: pumps water uphill using surplus energy, releases through turbine to generate power on demand — conventional pumped-hydro principle applied at smaller/modular scale.",
+    "stage_signal": "Day-one incorporation (dated 2026, likely a data/forward-date anomaly) with a live marketing website already describing scope and rationale — further along in positioning than a typical shell co.",
+    "team_provenance": "Five British directors, none with confirmed prior directorships in target sector. One director (Bouchard) has an ORCID-confirmed record, though no institutional affiliation listed — of uncertain relevance given this is an engineering/energy venture, not an academic research spinout.",
+    "location_signal": "Registered address in Musselburgh, Scotland — generic, no identifiable incubator or cluster signal.",
+    "funding": "Not observable at this stage.",
+    "flags_positive": [
+      "ORCID CONFIRMED for director Bouchard (0009-0003-4053-9035)",
+      "Live, substantive company website with clear technical rationale and scope"
+    ],
+    "flags_negative": [
+      "Not a life-sciences/biotech company — outside fund mandate (energy storage infrastructure)",
+      "Incorporation date (2026) is inconsistent/anomalous and needs verification",
+      "No funding, grant, or financial data provided",
+      "Five-director team with no sector-specific track record"
+    ],
+    "interest_score": "1 - Off-thesis energy infrastructure company, not a life-sciences investment",
+    "unknowns": [],
+    "company_number": "SC905092",
+    "sic_codes": [
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0003-4053-9035",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "IQ LOGIC LTD",
+    "incorporated": "2026-10-06",
+    "one_liner": "Not observable at this stage — Companies House record shows a mix of software/IT SIC codes, but no actual business activity is described.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no operational detail; the associated domain (iqlogic.com) is a third-party domain-resale listing (via Grails.com), unrelated to any company activity — this is not a company website in any substantive sense.",
+    "team_provenance": "Single director, Daniel Marc Sanderson — no ORCID match, no prior directorships found under this officer record. No academic or repeat-founder signal either way.",
+    "location_signal": "Residential-looking address in Quorn, Loughborough — generic, no incubator or cluster signal.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No business activity, product, or science observable anywhere",
+      "Website found for the company name is an unrelated domain-sales parking page, not a real company site",
+      "SIC codes are broad/generic (general software, IT consultancy) with no specialism indicated",
+      "Day-one incorporation with no supporting data of substance"
+    ],
+    "interest_score": "1 — no verifiable business activity, science, or team signal; nothing here to assess",
+    "unknowns": [],
+    "company_number": "17504027",
+    "sic_codes": [
+      "62011",
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
