@@ -1,0 +1,535 @@
+[
+  {
+    "company_name": "PROBIOSOOTH LIMITED",
+    "incorporated": "2026-10-08",
+    "one_liner": "Not observable at this stage — no activity description beyond SIC code and registered address.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data provided",
+    "team_provenance": "Sole director is Professor Andrew Tobias Aveling Jenkins, based at University of Bath Department of Chemistry — GtR CONFIRMED as a UKRI-funded investigator. No prior directorships found under this officer record.",
+    "location_signal": "Registered at University of Bath Department of Chemistry — academic cluster address, consistent with a university spin-out",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "GtR CONFIRMED academic founder with verified UKRI grant history",
+      "University of Bath departmental address — spin-out signal",
+      "SIC 72110 (R&D in biotechnology) — specialist, sector-relevant code"
+    ],
+    "flags_negative": [
+      "No description of technology, product, or market",
+      "Just incorporated — no operating history",
+      "No funding (grant or equity) disclosed"
+    ],
+    "interest_score": "2 - credible academic founder but zero substantive data on the science or commercial plan to assess",
+    "unknowns": [],
+    "company_number": "17507722",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "ECCC260A-6604-4709-A10A-5136A9E24B19",
+      "organisation": "UNIVERSITY OF BATH"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PEDARAI LTD",
+    "incorporated": "2026-10-07",
+    "one_liner": "Not observable at this stage — no website or product description provided.",
+    "science": "Not observable at this stage; SIC codes suggest software/computing (62012), R&D (72190), and other services (85590) but no technical detail given.",
+    "stage_signal": "Day-one incorporation, very recently formed — no trading or product history yet.",
+    "team_provenance": "Three directors. HE Yulan and LI Jiazheng have unverified/common-name ORCID and GtR matches, not treated as confirmed. ZHAO Runcong has an ORCID-CONFIRMED record and GtR-CONFIRMED UKRI grant history, with affiliations at King's College London, University of Cambridge, and University of Warwick — a genuine, verified academic credential. No directors show confirmed repeat-founder history in this sector.",
+    "location_signal": "Great Portland Street, London W1W — central London business address, commonly used by serviced-office/registered-agent providers; not a known biotech incubator cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Director ZHAO Runcong has ORCID CONFIRMED academic record",
+      "Director ZHAO Runcong has GtR CONFIRMED UKRI grant history",
+      "Affiliations with King's College London, Cambridge, and Warwick"
+    ],
+    "flags_negative": [
+      "Company incorporated very recently with no operating history",
+      "No product, science, or funding detail available",
+      "SIC codes are generic/software-oriented rather than specialist life-sciences codes",
+      "Registered address appears to be generic serviced office, not a known life-sciences cluster"
+    ],
+    "interest_score": "2 - one credible academic founder, but no science, product, or funding detail to assess; too early to evaluate",
+    "unknowns": [],
+    "company_number": "17506619",
+    "sic_codes": [
+      "62012",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0008-2939-6631",
+      "institutions": [
+        "King's College London",
+        "University of Cambridge",
+        "University of Warwick"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "413D6F61-C7BB-4646-80E3-07478C2B8C9E",
+      "organisation": "University of Warwick"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CLARVEX LTD",
+    "incorporated": "2026-10-07",
+    "one_liner": "A pre-launch e-commerce site suggesting AI-powered outfit recommendations combining items from fashion brands.",
+    "science": "No scientific or biotech mechanism involved — this is a consumer fashion/retail tech concept, not a life-sciences company.",
+    "stage_signal": "Day-one incorporation (future-dated); website is a 'coming soon' placeholder with no working product.",
+    "team_provenance": "Single director (Mehdizade, Rizvan), no ORCID match, no prior directorships found. No academic or biotech background evident.",
+    "location_signal": "London registered address, generic serviced-office style suite — no incubator or life-sciences cluster signal.",
+    "funding": "Not observable at this stage.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences or biotech company — outside fund mandate",
+      "Website describes a generic fashion e-commerce/styling concept, not scientific IP",
+      "SIC codes (software, management consultancy) do not indicate biotech activity",
+      "No product live, placeholder site only",
+      "Future-dated incorporation date (2026) — data inconsistency or scan artefact worth noting"
+    ],
+    "interest_score": "1 — Not a life-sciences company; irrelevant to fund mandate regardless of other signals.",
+    "unknowns": [],
+    "company_number": "17506851",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NOVORAIQ LIMITED",
+    "incorporated": "2026-10-08",
+    "one_liner": "Not observable at this stage — no business description available beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evident",
+    "team_provenance": "Sole director/secretary Luke Player (British). No ORCID match, no prior directorships found under this officer record — consistent with a first-time founder but not confirmed either way.",
+    "location_signal": "Generic business centre address in Swansea — not a known biotech/incubator cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No business description or science beyond SIC codes",
+      "Single-director company, same person as both director and secretary",
+      "No funding, grants, or external validation found",
+      "Registered address is a generic business centre, not a life-sciences cluster"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17507519",
+    "sic_codes": [
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "OIRIN LTD",
+    "incorporated": "2026-10-08",
+    "one_liner": "Early-stage company spanning consumer electronics/gaming hardware, software, and R&D consultancy — exact product not observable from data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data found",
+    "team_provenance": "Three Italian directors. Caramia has an ORCID-confirmed academic publication record (no institution listed). Boccarusso and Mura show no confirmed repeat-founder history in this sector; Mura has one other appointment, unconfirmed sector.",
+    "location_signal": "Residential/generic London address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic record for director Caramia"
+    ],
+    "flags_negative": [
+      "Very recent/future incorporation date with no trading history",
+      "SIC codes span unrelated domains (consumer electronics, software, consultancy), suggesting an unclear or unformed business model",
+      "No grant funding or product information available"
+    ],
+    "interest_score": "2 - academic credibility signal present but no clear product, market, or funding evidence yet",
+    "unknowns": [],
+    "company_number": "17508507",
+    "sic_codes": [
+      "26400",
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-1869-2696",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PRESENCE TECHNOLOGIES LIMITED",
+    "incorporated": "2026-10-07",
+    "one_liner": "Not observable at this stage — no credible evidence of what this company does",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no operational or scientific evidence found",
+    "team_provenance": "Single director, Dylan Singh Bassi, British, no ORCID match, no other appointments found under this officer record — no academic or repeat-founder signal either way",
+    "location_signal": "Residential address in Chigwell, Essex — generic, not a lab/incubator cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "SIC codes (62012 software, 72190 R&D) do not match the provided website content, which is an unrelated Indian jewellery e-commerce site",
+      "Company website evidence provided is irrelevant to the registered entity — likely wrong/mismatched domain, raising data-quality concerns",
+      "No science, product, or team background observable",
+      "Generic residential registered address"
+    ],
+    "interest_score": "1 - no verifiable link between company registration and any real business activity; website evidence is unrelated",
+    "unknowns": [],
+    "company_number": "17506063",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "COHERENCE LOOP LTD",
+    "incorporated": "2026-10-08",
+    "one_liner": "A wearable device in development that senses breathing and heartbeat to show moments of physiological coherence between the two.",
+    "science": "Direct sensing of breathing rate/rhythm from the chest and beat-to-beat cardiac timing from the heart's electrical signal (not pulse-inferred), combined to display breath-heart coherence. No further technical detail on sensors, hardware, or algorithms provided.",
+    "stage_signal": "Pre-launch/waitlist stage — website describes product as 'in development', no indication of prototype, trial, or manufacturing readiness.",
+    "team_provenance": "Single director, Flavius Mester, British. One other directorship held, not confirmed in target sector. No ORCID match found — not a negative signal, just unconfirmed academic record.",
+    "location_signal": "Great Portland Street, London — a serviced/flexible office address common for early-stage startups; not a known biotech or hardware incubator.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live product website with clear value proposition",
+      "Hardware/software/consultancy SIC mix (26400, 62012, 72190) consistent with a wearable device company"
+    ],
+    "flags_negative": [
+      "Very early stage — incorporated October 2026, product still pre-launch with only a waitlist",
+      "No funding, grant, or trial data to assess traction",
+      "No evidence of clinical or scientific validation of the 'coherence' concept",
+      "Single director with no confirmed sector-relevant track record"
+    ],
+    "interest_score": "2 - too early and unverified to merit more than a watch-list entry",
+    "unknowns": [],
+    "company_number": "17507283",
+    "sic_codes": [
+      "26400",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GASKIN DEVELOPMENTS LTD",
+    "incorporated": "2026-10-08",
+    "one_liner": "Not observable at this stage — engineering/manufacturing SIC mix (metal treatment, misc manufacturing, instruments, R&D) with no stated product or service",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Two directors, both British, no ORCID matches. Morgan Eloise Gaskin holds 6 other appointments with an ADVISOR PATTERN flag (4+ active directorships) — suggests a well-connected individual but likely limited day-to-day involvement here. Ethan Clint Gaskin holds 2 other appointments, none in target sector. No confirmed repeat-founder experience in SIC 72110/72190.",
+    "location_signal": "Registered at a farm address (The Barn, North Frith Farm, Hadlow, Kent) — generic rural/residential, not a known incubator or life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No discernible product, science, or sector focus from SIC codes alone",
+      "Registered address shows no cluster or incubator signal",
+      "No funding (grant or equity) data available",
+      "Mixed, non-specific SIC codes spanning metal treatment, general manufacturing, and instruments"
+    ],
+    "interest_score": "1 - no identifiable science, product, or credible biotech signal; appears mis-scoped for this fund's thesis",
+    "unknowns": [],
+    "company_number": "17507373",
+    "sic_codes": [
+      "25620",
+      "25990",
+      "30990",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 6,
+      "active_count": 4,
+      "resigned_count": 2,
+      "other_companies": [
+        {
+          "company_name": "BRANDS HATCH PRECISION LIMITED",
+          "company_number": "15192048",
+          "company_status": "dissolved",
+          "appointed_on": "2023-10-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "45310"
+          ]
+        },
+        {
+          "company_name": "CLIMOR HOLDINGS LIMITED",
+          "company_number": "14773879",
+          "company_status": "dissolved",
+          "appointed_on": "2023-04-01",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "BRANDS HATCH PERFORMANCE GARAGE LIMITED",
+          "company_number": "11501653",
+          "company_status": "dissolved",
+          "appointed_on": "2018-08-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "45320"
+          ]
+        },
+        {
+          "company_name": "DISTY LTD",
+          "company_number": "10950430",
+          "company_status": "active",
+          "appointed_on": "2017-09-07",
+          "resigned_on": null,
+          "sic_codes": [
+            "45320"
+          ]
+        },
+        {
+          "company_name": "BRANDS HATCH PERFORMANCE LIMITED",
+          "company_number": "08520040",
+          "company_status": "liquidation",
+          "appointed_on": "2019-03-18",
+          "resigned_on": "2024-04-03",
+          "sic_codes": [
+            "45310"
+          ]
+        },
+        {
+          "company_name": "BRANDS HATCH PERFORMANCE LIMITED",
+          "company_number": "08520040",
+          "company_status": "liquidation",
+          "appointed_on": "2014-04-18",
+          "resigned_on": "2018-08-09",
+          "sic_codes": [
+            "45310"
+          ]
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 6
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "G-NOSIS INTELLIGENCE LIMITED",
+    "incorporated": "2026-10-07",
+    "one_liner": "Not observable at this stage — no website or descriptive material provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated); no evidence of product, grant, or operational activity yet",
+    "team_provenance": "Two directors (one British, one American); no ORCID match for either; no prior directorships found under either officer record",
+    "location_signal": "Residential address in Putney, London — generic, not an incubator or recognised cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of product, science, or traction",
+      "Residential registered address",
+      "Neither director has a confirmed academic or repeat-founder track record",
+      "SIC codes (62012 software, 72190 R&D) are broad and uninformative without further detail"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable signal of substance",
+    "unknowns": [],
+    "company_number": "17506125",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "WHISKR SENSE LIMITED",
+    "incorporated": "2026-10-07",
+    "one_liner": "Not observable at this stage — no description of product or activity provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue by default",
+    "team_provenance": "Three directors: Robyn Hampson, Dr Stephen Hampson, Dr Hasitha Wegiriya. 'Dr' titles suggest possible academic/technical background, but no ORCID match confirmed for either. Wegiriya has one other directorship, not in target sector — informational only, not a signal either way.",
+    "location_signal": "Residential flat address in London (E2) — generic, not an incubator or cluster address",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of business activity, product, or science",
+      "Residential registered address, no cluster/incubator signal",
+      "No funding (grant or equity) data available",
+      "No verified academic or repeat-founder credentials"
+    ],
+    "interest_score": "1 — no verifiable science, funding, or founder credentials; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17506233",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ASASE LABS LTD",
+    "incorporated": "2026-10-07",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of bespoke software development and R&D in natural sciences/engineering, but no further detail is available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or trading history visible",
+    "team_provenance": "Single director, Selase Akabuo, British national; no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "15 Potier Street, London SE1 — generic registered address, no obvious incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No funding data (grant or private) observable",
+      "No science or product detail available",
+      "Single-director company with no track record visible",
+      "Dual SIC code (software + R&D) makes positioning unclear"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team credibility, or funding signal",
+    "unknowns": [],
+    "company_number": "17506304",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PANIZ INTELLIGENCE LTD",
+    "incorporated": "2026-10-08",
+    "one_liner": "Not observable at this stage — no business description or website provided beyond SIC codes suggesting software/data services with an R&D component.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no further activity, product, or funding evidence yet",
+    "team_provenance": "Single director, Majid Ebrahimi Borna (Iranian nationality noted); no ORCID match found; no other directorships found under this officer record — no evidence of prior company-building experience",
+    "location_signal": "Suite 23, 105 London Street, Reading — generic serviced-office/virtual-address style suite, not a known biotech or life-sciences cluster",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated very recently (2026-10-08) with essentially no operating history",
+      "No description of actual business activity beyond broad SIC codes (software, data processing, scientific R&D)",
+      "Single-director structure with no verifiable track record",
+      "Generic suite address, not a specialist life-sciences or incubator location",
+      "SIC mix (software/data + R&D) is vague and not clearly life-sciences specific"
+    ],
+    "interest_score": "1 — shell-stage company with no verifiable science, team track record, or funding; nothing here differentiates it as a life-sciences opportunity",
+    "unknowns": [],
+    "company_number": "17507937",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "STARTUP DEVELOPMENT STUDIO LTD",
+    "incorporated": "2026-10-08",
+    "one_liner": "Unclear — SIC codes span software publishing, business/domestic software, computer consultancy and R&D on social sciences/humanities, with no further detail on what the company actually builds or sells.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Two Turkish directors (Coskun, Tosun); no ORCID matches, no prior directorships found under either officer record",
+    "location_signal": "Suite-style virtual office address (Brayford Square, London E1) — consistent with a registered-agent/formation-service address rather than a lab, incubator, or cluster location",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Virtual/suite office address typical of shell or newly-formed shelf companies",
+      "Mixed, generic SIC code spread suggesting no defined product focus",
+      "No evidence of academic founder credentials, prior startup experience, or non-dilutive funding",
+      "Company incorporated with future date, no operating history"
+    ],
+    "interest_score": "1 - no verifiable science, team track record, funding, or product signal; indistinguishable from a shell filing at this stage",
+    "unknowns": [],
+    "company_number": "17508108",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "62020",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ITHRYN LTD",
+    "incorporated": "2026-10-08",
+    "one_liner": "A mobile app and website to help parents and caregivers of children with special needs coordinate care.",
+    "science": "Not observable at this stage — this is a software/care-coordination product, not a life-sciences R&D platform.",
+    "stage_signal": "Pre-launch; website is a free WordPress placeholder with generic marketing text and no product, traction, or evidence of build progress.",
+    "team_provenance": "Two directors, no ORCID matches, no repeat-founder confirmation in target sector. One director has one unrelated prior appointment.",
+    "location_signal": "128 City Road, London — known generic mass-incorporation/virtual-office address, not a specialist biotech cluster or incubator.",
+    "funding": "No grant or investment data provided. Not observable at this stage.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences company — consumer care-coordination app, outside fund thesis",
+      "Website refers to a different entity name (Ithryn, LLC / ithryn.com), suggesting copy-paste or unrelated template content",
+      "No non-dilutive funding, grants, or academic links evident",
+      "Generic registered address commonly used for shell/mass incorporations",
+      "No founder credibility signals (no ORCID, no confirmed repeat-founder in sector)"
+    ],
+    "interest_score": "1 - Consumer app, no biotech/science angle, no credible signals; not fund-relevant",
+    "unknowns": [],
+    "company_number": "17508220",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
