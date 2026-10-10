@@ -1,0 +1,372 @@
+[
+  {
+    "company_name": "NEOVENOMICS LTD",
+    "incorporated": "2026-10-09",
+    "one_liner": "Not observable at this stage — no description of products or services provided.",
+    "science": "Name suggests venom-based biologics or antivenom research, but not confirmed by any data provided.",
+    "stage_signal": "Day-one incorporation; no further stage evidence.",
+    "team_provenance": "Single director, Austin Symons (South African national). No ORCID match found. No other appointments found under this officer record.",
+    "location_signal": "124 City Road, London EC1V 2NX — a known mass-registration/virtual-office address used by thousands of UK companies, not a biotech-specific incubator.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Generic mass-registration address, not a specialist biotech cluster or incubator",
+      "No science, product, or funding detail available",
+      "Single director with no verifiable track record",
+      "Company only just incorporated — no operating history"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, funding, or team credentials",
+    "unknowns": [],
+    "company_number": "17511424",
+    "sic_codes": [
+      "72110",
+      "72190",
+      "74909"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "CAUSEWAY THERAPEUTICS HOLDINGS LTD",
+    "incorporated": "2026-10-09",
+    "one_liner": "Not observable at this stage — no business description or website provided beyond a registered entity name suggesting a therapeutics venture.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated registration), no trading or product data available",
+    "team_provenance": "Six-director board including Dr Iain McInnes (ORCID CONFIRMED, University of Glasgow affiliation — a credible academic immunology/rheumatology figure) and Christopher Jones (ORCID CONFIRMED, no institution listed). Other directors (Caldow, Doogan, Gibson, Pickett) show no verified academic or repeat-founder record. Mixed US/UK/Irish nationalities suggest an international syndicate, possibly spinout-style structure.",
+    "location_signal": "Registered at the Imaging Centre of Excellence, Queen Elizabeth University Hospital, Glasgow — a genuine clinical/research cluster address, notable positive signal of academic/NHS proximity.",
+    "funding": "Not observable at this stage — no grant or dilutive funding data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED academic director (Iain McInnes, University of Glasgow)",
+      "ORCID CONFIRMED director (Christopher Jones)",
+      "Registered address at a recognised clinical imaging research centre (Queen Elizabeth University Hospital, Glasgow)"
+    ],
+    "flags_negative": [
+      "No business description, science, or website data available",
+      "No funding data (grant or equity) provided",
+      "Company incorporated with future date — essentially pre-operational, nothing yet to diligence"
+    ],
+    "interest_score": "3 - credible academic signal (McInnes) and research-cluster address, but zero operational, scientific, or funding detail to assess substance",
+    "unknowns": [],
+    "company_number": "SC905493",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-4359-1184",
+      "institutions": []
+    },
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LAMB INTELLIGENCE UK LTD",
+    "incorporated": "2026-10-09",
+    "one_liner": "Not observable at this stage — no company website or product description provided",
+    "science": "Not observable at this stage; SIC codes suggest software/IT services (62012, 62090), data processing (63110) and possibly R&D-adjacent activity (72190)",
+    "stage_signal": "Day-one incorporation; no grant or funding activity observable",
+    "team_provenance": "Two directors: Niki Kotecha, Portuguese, ORCID CONFIRMED with Imperial College London affiliation — a genuine academic credibility signal; Thomas Sebastiaan Lanning, Dutch, no ORCID match found. Neither shows prior directorships under these officer records",
+    "location_signal": "66 Paul Street, London EC2A 4NA — a well-known London tech/startup hub address (shared registered office commonly used by many early-stage companies), not a specialist life-sciences incubator",
+    "funding": "Not observable at this stage — no grant or investment data provided",
+    "flags_positive": [
+      "Director Niki Kotecha ORCID CONFIRMED with Imperial College London affiliation"
+    ],
+    "flags_negative": [
+      "No website, product, or science description available",
+      "Incorporated very recently with no funding or grant history yet",
+      "Registered address is a generic London business hub, not a specialist cluster"
+    ],
+    "interest_score": "2 - single academic credibility signal only; everything else is unobservable at this ultra-early stage",
+    "unknowns": [],
+    "company_number": "17511418",
+    "sic_codes": [
+      "62012",
+      "62090",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0000-4178-4831",
+      "institutions": [
+        "Imperial College London"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FOVERE INTELLIGENCE LTD",
+    "incorporated": "2026-10-09",
+    "one_liner": "Unclear from available data — registered under software/IT and R&D SIC codes, no further description provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated, likely a filing/data artefact or shelf company) — no activity visible yet",
+    "team_provenance": "Sole director Sam Patrick Grimsley, British national; no ORCID match found; holds 2 other appointments, none confirmed in the target sector",
+    "location_signal": "Residential address in Bexleyheath — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "Future/implausible incorporation date suggests data quality issue",
+      "Generic residential registered address",
+      "No funding or grant activity observable",
+      "Single director with no sector-confirmed track record"
+    ],
+    "interest_score": "1 — no substantive information to assess; appears to be a shell or very early administrative filing",
+    "unknowns": [],
+    "company_number": "17510986",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NORTHBEAM TECHNOLOGIES LTD",
+    "incorporated": "2026-10-09",
+    "one_liner": "Not observable at this stage — no activity description, website, or product information provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (registered 2026-10-09); no grant or trading data yet attached to this entity",
+    "team_provenance": "Sole director Betul Karakuzu — ORCID CONFIRMED (0000-0001-6517-7251), with academic affiliations at City St George's University of London, Ege University, Izmir Institute of Technology, and Ohio State University. GtR CONFIRMED as a UKRI-funded investigator, linked to SPECTROSENSE LTD. REPEAT FOUNDER CONFIRMED (same sector, SIC 72190) via active directorship at QUANTEON LTD, plus one further appointment",
+    "location_signal": "Belfast serviced-office suite address — generic registered-office style, not a known biotech incubator cluster",
+    "funding": "No dilutive or non-dilutive funding disclosed for this entity specifically; director's GtR confirmation evidences prior UKRI grant history at a different organisation (SPECTROSENSE LTD), not Northbeam",
+    "flags_positive": [
+      "ORCID CONFIRMED academic investigator",
+      "GtR CONFIRMED UKRI-funded researcher",
+      "REPEAT FOUNDER CONFIRMED (same sector, SIC 72190) via QUANTEON LTD"
+    ],
+    "flags_negative": [
+      "No science, product, or activity description available for this entity",
+      "No funding data tied to Northbeam itself",
+      "Very new shell with no trading history"
+    ],
+    "interest_score": "4 - strong academic and repeat-founder credentials, but entity itself is an unproven, days-old shell with no disclosed activity or funding",
+    "unknowns": [
+      "What is Northbeam's actual product/technology, and how does it relate to SPECTROSENSE LTD and QUANTEON LTD?",
+      "Is this a spin-out or continuation of prior UKRI-funded work, or a genuinely new venture?",
+      "What is the relationship/overlap between Northbeam, Spectrosense, and Quanteon — shared IP, shared team, or fully separate?",
+      "Has any funding (grant or equity) been raised or applied for under this entity?"
+    ],
+    "company_number": "NI744412",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0001-6517-7251",
+      "institutions": [
+        "City St George's University of London",
+        "Ege University",
+        "Izmir Institute of Technology",
+        "The Ohio State University"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "847E8CC1-EA94-4321-8287-A4F1FAB29819",
+      "organisation": "SPECTROSENSE LTD"
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 2,
+      "active_count": 2,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "QUANTEON LTD",
+          "company_number": "16618507",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "COGNICHIP LTD",
+          "company_number": "16603533",
+          "company_status": "active",
+          "appointed_on": "2026-09-07",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "QUANTEON LTD",
+          "company_number": "16618507",
+          "company_status": "active",
+          "appointed_on": "2026-09-11",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "COGNICHIP LTD",
+          "company_number": "16603533",
+          "company_status": "active",
+          "appointed_on": "2026-09-07",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 2
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "2B-FLY LTD",
+    "incorporated": "2026-10-10",
+    "one_liner": "Not observable at this stage — Companies House record shows a generic multi-sector SIC combination (aerospace, computing, engineering, R&D), but the only live web presence is an unrelated redirect/verification page, not a company site.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no coherent operating evidence",
+    "team_provenance": "Sole director Mykola Ivanovich Bodnar, Ukrainian national. No ORCID match. No other directorships found under this officer record.",
+    "location_signal": "Residential flat address in London (Mark Mansions, W12) — generic, not an incubator or cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Website domain resolves to an unrelated anti-blocking/DNS-circumvention redirect page in Chinese/English, inconsistent with any stated business activity",
+      "SIC code combination (aerospace manufacturing, computer consultancy, engineering R&D, other R&D) is incoherent and gives no clear single business focus",
+      "No evidence of product, team depth, or funding of any kind"
+    ],
+    "interest_score": "1 — no credible evidence of a genuine life-sciences or deep-tech operation; website mismatch is a serious red flag",
+    "unknowns": [],
+    "company_number": "17512055",
+    "sic_codes": [
+      "30300",
+      "62012",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AMFRESH TECH (UK) LIMITED",
+    "incorporated": "2026-10-09",
+    "one_liner": "Not observable at this stage — no business description beyond SIC classification for R&D in natural sciences/engineering.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or operational data available",
+    "team_provenance": "Two Spanish directors; no ORCID matches found for either (not evidence of absence of academic credentials); appointment counts noted but none confirmed in target sector",
+    "location_signal": "York Way, London N1 — generic commercial address, not a known biotech incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No business description or science detail available",
+      "No funding (grant or equity) disclosed",
+      "Incorporated too recently to show any track record"
+    ],
+    "interest_score": "1 - shell-stage registration with no discernible science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17511481",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GROUNDSUIT LTD",
+    "incorporated": "2026-10-09",
+    "one_liner": "Not observable at this stage — likely involves industrial/commercial cooling or refrigeration equipment (per SIC 28250) combined with software/computing services (SIC 72190), but no first-party description provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or product data available",
+    "team_provenance": "Sole director Benjamin Kott, German national, ORCID CONFIRMED with affiliation to University of Colorado Boulder — a genuine verified academic record. One other directorship noted, not in target sector (informational only)",
+    "location_signal": "Macclesfield registered address — generic, no evident incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "ORCID CONFIRMED academic credential (University of Colorado Boulder)"
+    ],
+    "flags_negative": [
+      "No description of business activity beyond SIC codes",
+      "SIC code combination (refrigeration equipment + software) is unusual and unexplained",
+      "No funding, product, or traction data"
+    ],
+    "interest_score": "2 - verified academic founder is a mild positive, but no discernible business model, science, or funding to assess",
+    "unknowns": [],
+    "company_number": "17511000",
+    "sic_codes": [
+      "28250",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0008-5435-9269",
+      "institutions": [
+        "University of Colorado Boulder"
+      ]
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "VALORIS LABS LTD",
+    "incorporated": "2026-10-10",
+    "one_liner": "Online retailer selling 'research compounds' (lab chemicals, age-gated, not for human/animal use) direct to customers.",
+    "science": "Not a platform or mechanism — appears to be a reseller of third-party research chemicals, with vague product framing ('tissue repair' teaser) rather than any described proprietary science.",
+    "stage_signal": "Day-one incorporation (future-dated, likely data artefact) with a live e-commerce website already operational — suggests a trading/retail start rather than an R&D company.",
+    "team_provenance": "Single director, Wasim Alaoui, British. No ORCID match, no other appointments found — no academic or repeat-founder signal either way.",
+    "location_signal": "Registered address is a residential flat in London (Ash House, Heather Walk) — generic, not an incubator or life-sciences cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live, functioning commercial website with checkout/dispatch infrastructure"
+    ],
+    "flags_negative": [
+      "SIC code (72190, R&D) mismatched with actual activity, which reads as consumer e-commerce",
+      "No scientific mechanism, IP, or platform described anywhere in available material",
+      "Research-chemical retail model carries regulatory/reputational risk (explicit 'not for human use' disclaimers)",
+      "Residential registered address",
+      "No funding, grant, or institutional backing evident"
+    ],
+    "interest_score": "1 - retail/dropship-style research chemical shop with no R&D substance; not a venture-investable biotech",
+    "unknowns": [],
+    "company_number": "17511985",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
