@@ -1,0 +1,34 @@
+[
+  {
+    "company_name": "ROBOKIDZ EDUCATION LTD",
+    "incorporated": "2026-10-11",
+    "one_liner": "Appears to be an education/robotics-training venture, per SIC codes; no further detail available",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data",
+    "team_provenance": "Single named director, no ORCID match, no other appointments found — no evidence of prior company-building or academic background",
+    "location_signal": "Residential flat address, London — not an incubator or cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (engineering consultancy, other professional/scientific activities, computer programming, other education) suggest an unfocused or generic shell rather than a defined scientific venture",
+      "Residential registered address",
+      "No funding, grant, or product evidence",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - generic early-stage shell with no life-sciences relevance, no funding, no verifiable team signal",
+    "unknowns": [],
+    "company_number": "17512361",
+    "sic_codes": [
+      "71122",
+      "71129",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
