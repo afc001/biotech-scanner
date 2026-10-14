@@ -1,0 +1,422 @@
+[
+  {
+    "company_name": "REGENERMT UK LIMITED",
+    "incorporated": "2026-10-14",
+    "one_liner": "Not observable at this stage — no business description or website provided beyond SIC classification.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no further evidence of progress or funding",
+    "team_provenance": "Single director, Tony Raoul Henry (British). No ORCID match found, no other directorships found under this officer record — neither fact is informative on its own.",
+    "location_signal": "Residential/generic address in Woking — no evidence of incubator or life-sciences cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC code 72110 indicates registration as biotechnology R&D, consistent with sector focus"
+    ],
+    "flags_negative": [
+      "Incorporation date is in the future (2026-10-14), suggesting either a data/record anomaly or a shell registration with no operational history yet",
+      "No science, product, or team background disclosed",
+      "Single-director structure with no visible track record"
+    ],
+    "interest_score": "1 - no verifiable science, team history, funding, or credible operational signal; essentially a blank shell at this stage",
+    "unknowns": [],
+    "company_number": "17519992",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DOVETAIL ELECTRIC AVIATION UK LIMITED",
+    "incorporated": "2026-10-13",
+    "one_liner": "Not observable at this stage — name suggests electric aviation technology but no descriptive data provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated, likely a data artefact or shell registered ahead of operations)",
+    "team_provenance": "Single director, David Doral De La Pena (Australian/Spanish national); no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "Cambridge address (Dales Brewery) — known creative/office cluster, not a dedicated biotech or deeptech incubator; plausible UK subsidiary of a foreign parent given company name and nationality of director",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Cambridge-area registration"
+    ],
+    "flags_negative": [
+      "Incorporation date is implausible/future-dated, raising data-quality concerns",
+      "No SIC code specificity beyond generic 72190 (other R&D)",
+      "Single director with no verifiable track record",
+      "No evidence of funding, grants, or product/technology detail",
+      "Name implies this is a UK subsidiary of an overseas entity — parent company context entirely missing"
+    ],
+    "interest_score": "1 — essentially no verifiable data; record quality itself is questionable",
+    "unknowns": [],
+    "company_number": "17518919",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "GYRE WORKS LTD",
+    "incorporated": "2026-10-13",
+    "one_liner": "An independent game studio developing a physics-based co-op space-survival and automation video game called Oberth.",
+    "science": "Not a life-sciences company — this is a video game studio building a physics-simulation game engine (real orbital mechanics, voxel-based worlds). No biotech science applicable.",
+    "stage_signal": "Day-one incorporation (note: incorporation date is in the future relative to typical filing, suggesting a data artefact or pre-registration); website shows an active, in-development product with a dedicated game site.",
+    "team_provenance": "Single director, Damian Obernikowicz (Polish nationality). No ORCID match, no prior directorships found under this officer record — consistent with a genuine first-time founder, not a red flag.",
+    "location_signal": "Registered address in Kington, Herefordshire — generic residential/small-town address, not a biotech or tech cluster or incubator.",
+    "funding": "No grant or investment data provided. Not observable at this stage.",
+    "flags_positive": [
+      "Live, substantive product website with a specific, coherent product (Oberth) rather than vague marketing"
+    ],
+    "flags_negative": [
+      "Not a life-sciences or biotech company — SIC codes (62012 software, 72190 R&D) and website confirm this is a video game studio, entirely outside fund mandate",
+      "No funding, grant, or financial data of any kind",
+      "Single-director company with no team depth disclosed"
+    ],
+    "interest_score": "1 - Out of sector: this is a video game studio, not a biotech/life-sciences company, and does not merit further life-sciences screening",
+    "unknowns": [],
+    "company_number": "17518170",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THERMALODE ENERGY LTD",
+    "incorporated": "2026-10-13",
+    "one_liner": "An early-stage company apparently combining electricity generation/supply activity with R&D in natural sciences/engineering, likely energy-tech related.",
+    "science": "Not observable at this stage — SIC codes suggest electric power generation (35110) and scientific R&D (72190), but no technical detail provided",
+    "stage_signal": "Day-one incorporation, no grant or product data available",
+    "team_provenance": "Single director, Mark Nigel Bates, British national; no ORCID match found; no other appointments found under this officer record",
+    "location_signal": "Unit 2 Argyle Commercial Centre, Swindon — generic commercial/office address, no known incubator or cluster association",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Dual SIC codes (35110 + 72190) suggest intended R&D activity in energy sector"
+    ],
+    "flags_negative": [
+      "No science, team background, or funding data available",
+      "Single untested director with no verifiable track record",
+      "Generic registered address, no cluster or incubator signal",
+      "Pre-revenue, pre-grant, no public footprint"
+    ],
+    "interest_score": "1 - day-one shell company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17518517",
+    "sic_codes": [
+      "35110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LUMENVELA LIMITED",
+    "incorporated": "2026-10-13",
+    "one_liner": "Not observable at this stage — no website, product, or activity description available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no activity or funding visible yet",
+    "team_provenance": "Single named director, Portuguese national; no ORCID match found; no prior directorships found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a specialist cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Formation-agent registered address (generic, high-volume virtual office)",
+      "Mixed SIC codes (software, data processing, management consultancy, R&D) suggest no clear specialism yet",
+      "No evidence of funding, product, or team track record",
+      "No ORCID or repeat-founder confirmation"
+    ],
+    "interest_score": "1 - No verifiable signals of science, funding, or team credibility; too early to assess",
+    "unknowns": [],
+    "company_number": "17518787",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "70229",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LIACARE AI LTD",
+    "incorporated": "2026-10-14",
+    "one_liner": "Not observable at this stage — no business description provided beyond SIC codes suggesting software development and other R&D.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading or product history yet",
+    "team_provenance": "Not observable at this stage — no directors listed or fetched",
+    "location_signal": "128 City Road, London — a well-known mass-registration/virtual office address (used by thousands of UK shell companies), not a verified incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available for due diligence",
+      "No description of actual product or science",
+      "Registered address is a generic high-volume formation-agent address, not a verifiable R&D cluster or incubator",
+      "Incorporation date appears to be in the future, suggesting a data/record anomaly"
+    ],
+    "interest_score": "1 - no verifiable information on team, science, or funding; nothing to assess yet",
+    "unknowns": [],
+    "company_number": "17520232",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PHARMILTON CLINICALS LTD",
+    "incorporated": "2026-10-14",
+    "one_liner": "Not observable at this stage — no description of activity beyond SIC classification for other research/experimental development on natural sciences and engineering.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (shell stage, if date is accurate) — no activity or funding evidence yet",
+    "team_provenance": "No directors listed or fetched — cannot assess founder background",
+    "location_signal": "Registered address is a residential/generic Milton Keynes address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No director information available",
+      "No evidence of funding, grants, or activity",
+      "Generic registered address with no cluster/incubator signal",
+      "Incorporation date appears to be in the future, suggesting a data/record anomaly worth checking"
+    ],
+    "interest_score": "1 - shell company with no verifiable team, science, or funding signal",
+    "unknowns": [],
+    "company_number": "17520313",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "FORTIGUARDIAN CONSULTING LTD",
+    "incorporated": "2026-10-13",
+    "one_liner": "Not observable at this stage — likely an IT/consulting services firm based on SIC codes, no further detail available",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other signals of R&D activity",
+    "team_provenance": "Single director, no ORCID match found, one other appointment (not in target sector)",
+    "location_signal": "Residential/generic Belfast address — no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science/technology detail provided despite one SIC code (72190) suggesting R&D",
+      "Majority of SIC codes (62012, 62020, 62090) indicate general IT consultancy, not a life-sciences or deep-tech venture",
+      "No funding, grant, or academic signal of any kind",
+      "Generic residential registered address"
+    ],
+    "interest_score": "1 — Looks like a generic IT consultancy, not a life-sciences venture; no scientific or funding signal",
+    "unknowns": [],
+    "company_number": "NI744497",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HIDRA VISION LIMITED",
+    "incorporated": "2026-10-13",
+    "one_liner": "Early-stage company combining optical/imaging instrumentation (SIC 26701) with R&D services (72190) — exact product not observable from data provided.",
+    "science": "Not observable at this stage — SIC codes suggest photonic/optical instrumentation plus scientific R&D, but no mechanism or platform detail given.",
+    "stage_signal": "Day-one incorporation (future-dated record) — pre-operational, no trading history possible yet.",
+    "team_provenance": "Three British directors, all styled 'Dr' suggesting academic backgrounds. ORCID searches inconclusive for all three (too common or no match — not treated as positive or negative). No repeat-founder pattern confirmed in target sector for any director.",
+    "location_signal": "Registered at NPL Management Limited, Teddington — this is the National Physical Laboratory's address, a serious scientific/metrology institution. Notable cluster signal, though likely a registered-office/formation-agent arrangement rather than confirmed lab occupancy.",
+    "funding": "Not observable at this stage — no grant or funding data provided.",
+    "flags_positive": [
+      "All three directors hold doctorates, suggesting technical/academic depth",
+      "Registered address at NPL (National Physical Laboratory) site — a credible scientific institution association"
+    ],
+    "flags_negative": [
+      "Company incorporated with a future date — record appears pre-formation or data artefact, cannot verify current existence",
+      "No science, product, or funding detail available",
+      "No confirmed ORCID or GtR record for any director",
+      "No confirmed repeat-founder history in target sector"
+    ],
+    "interest_score": "2 - academic-looking team and NPL address are mildly interesting, but there is zero verifiable detail on science, funding, or traction; too early to assess.",
+    "unknowns": [],
+    "company_number": "17518705",
+    "sic_codes": [
+      "26701",
+      "71200",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LAZARUS CYBERNETICS LTD",
+    "incorporated": "2026-10-13",
+    "one_liner": "Not observable at this stage — no business description beyond SIC codes available",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading shell",
+    "team_provenance": "Single director, Anthony Shaun Cannon, British. No ORCID match found. No other directorships found under this officer record — first-time founder status unconfirmed either way",
+    "location_signal": "124-128 City Road, London, EC1V 2NX — this is a well-known generic mass-registration address used by thousands of companies, not a genuine incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed, incoherent SIC codes (electromedical equipment repair, retail via mail order/internet, financial intermediation NEC, computer services) suggesting a shelf company or unclear business model",
+      "Generic mass-registration address, no R&D cluster or incubator signal",
+      "No ORCID or GtR record for sole director",
+      "No funding, product, or team data of any kind"
+    ],
+    "interest_score": "1 — no verifiable science, team credibility, funding, or coherent business model; nothing to assess",
+    "unknowns": [],
+    "company_number": "17518281",
+    "sic_codes": [
+      "33140",
+      "47910",
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ARXIGEN LTD",
+    "incorporated": "2026-10-13",
+    "one_liner": "A newly incorporated deeptech company positioning itself around AI and advanced computing research, with no life-sciences focus evident.",
+    "science": "Not observable at this stage — website describes 'frontier AI' and 'advanced computing' in generic, marketing-led terms with no specific mechanism, platform, or application stated.",
+    "stage_signal": "Day-one incorporation (future-dated/very recent), pre-product, website exists but content is abstract/placeholder-like.",
+    "team_provenance": "Sole director Bhuvaneswari Babu — ORCID CONFIRMED, though no institutional affiliation listed and no other appointments found under this officer record (first-time founder signal, not a concern).",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known company-formation/virtual-office address, not a lab or incubator cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED director"
+    ],
+    "flags_negative": [
+      "No life-sciences relevance evident — appears to be an AI/computing company, outside fund's apparent scope",
+      "Generic virtual-office registered address",
+      "Website content is vague marketing language with no technical specifics",
+      "SIC codes (software/consultancy) do not indicate biotech activity",
+      "No funding, grant, or product evidence"
+    ],
+    "interest_score": "1 — outside sector focus, pre-formation stage, no verifiable science or traction",
+    "unknowns": [],
+    "company_number": "17518725",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0003-4518-9396",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "NEWFORM MATERIALS LTD",
+    "incorporated": "2026-10-14",
+    "one_liner": "Not observable at this stage — no description of product or market provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no further activity evidence",
+    "team_provenance": "Sole director Claire Joanne Pearson, British; no ORCID match found; one other appointment found, not confirmed in target sector",
+    "location_signal": "Caerphilly Business Park, Wales — generic business park address, not a known life-sciences cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Specialist SIC code (72190 - other research and experimental development)"
+    ],
+    "flags_negative": [
+      "Very recent incorporation with no operational history",
+      "No funding data",
+      "No science/product description available",
+      "Single director with no confirmed sector-relevant track record"
+    ],
+    "interest_score": "1 — shell-stage company with no verifiable science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "17519723",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PREMONTO LTD",
+    "incorporated": "2026-10-14",
+    "one_liner": "Unknown — no description of what the company does is available from any source.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (note: future-dated per record), no operational footprint yet",
+    "team_provenance": "No directors listed or fetched — cannot assess founder background",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual-office address used by thousands of UK shell companies, not a genuine lab or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "SIC 72190 (R&D other natural sciences/engineering) suggests possible science/tech intent"
+    ],
+    "flags_negative": [
+      "Website is a placeholder (OVHcloud default 'under construction' page) with no content",
+      "No directors listed, preventing any credibility or provenance check",
+      "Registered address is a generic mass-incorporation virtual office, not a specialist cluster",
+      "Incorporation date is future-dated or data is inconsistent",
+      "SIC 62012 (business software) alongside 72190 gives no clear picture of actual focus"
+    ],
+    "interest_score": "1 - no verifiable information on team, science, or funding; essentially a blank shell at this point",
+    "unknowns": [],
+    "company_number": "17520324",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
