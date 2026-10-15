@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner Digest — 2026-10-15</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .pill-search { background:#dce7f7; color:#1a3e6e; }
+  .sources { color:#777; font-size:14px; margin:10px 0 0; }
+  .sources a { color:#555; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .legend summary { cursor:pointer; font-weight:bold; }
+  .legend p { margin:8px 0 0; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+  .archive-summary { color:#777; font-size:15px; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner Digest — 2026-10-15</h1><p class="meta">Generated 2026-10-15 · 15 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><details class="legend"><summary>Badge legend</summary><p>ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check · Repeat Founder ✓ = confirmed prior/current directorship at another company in this sector (hover for detail) · Advisor Pattern = director holds several other active directorships — well-connected, but likely not day-to-day operational here · 🔍 Web-verified = re-checked with a live web search (see Sources on that brief)</p></details><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" id="company-17522535" data-score="3" data-incorporated="2026-10-15">
+<h2>MIIKA TECHNOLOGIES LTD <span class="badge">Interest 3 / 5</span></h2>
+<p class="oneliner">Developing non-invasive wearable technology to help people sense and control hard-to-feel muscles, starting with the pelvic floor.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Wearable sensing of &#x27;hidden&#x27; muscle activity (biofeedback-type approach), developed within University of Cambridge in collaboration with the Plasticity Lab; no mechanism detail (sensor type, modality) given beyond marketing language.</p>
+<p class="field"><span class="label">Stage.</span> Pre-revenue, research-stage — running &#x27;Yoga Labs&#x27; as a recruitment/validation activity rather than a product launch; incorporation date is day-one/very recent.</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Alexandra Edith Williams (British/American). No ORCID match found, no prior directorships found — neither is evidence of anything either way. Website claims Cambridge University and Plasticity Lab collaboration, but this is not independently verified via the Companies House data provided.</p>
+<p class="field"><span class="label">Location signal.</span> Registered at Babraham Hall, Babraham, Cambridge — confirmed match to the Babraham biotech incubator/cluster list, a genuine positive cluster signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul><li>Registered at Babraham Research Campus, a recognised life-sciences incubator cluster</li><li>Website claims active collaboration with University of Cambridge&#x27;s Plasticity Lab, suggesting academic grounding</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No funding data (grant or equity) observable</li><li>No independently verified academic/publication record (ORCID) for the director</li><li>Company is extremely early — essentially pre-product, running early user research (&#x27;Yoga Labs&#x27;)</li><li>Website text is high-level and marketing-oriented with no technical or data specifics</li></ul>
+<p class="field"><span class="label">Interest score: 3</span> — promising cluster location and plausible academic tie-in, but no funding, no verified credentials, and very early stage</p>
+
+</div><div class="company" id="company-17521051" data-score="2" data-incorporated="2026-10-14">
+<h2>VANTAGE CLINICAL RESEARCH SERVICES LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of Richmond">ORCID &#10003;</span></h2>
+<p class="oneliner">A newly incorporated clinical research services company; no further detail on commercial focus is available.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 72110</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation — no trading history, product, or grant activity visible yet</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Carol Parish, British, ORCID-confirmed (0000-0003-2878-3070) with an academic affiliation to University of Richmond. No other appointments found under this officer record, so no evidence either way on prior founding experience.</p>
+<p class="field"><span class="label">Location signal.</span> Registered address &#x27;The American Barns, Banbury Road, Warwick&#x27; — appears to be a rural/converted office address rather than a known biotech incubator or cluster; not obviously generic but no cluster signal either.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic identity for sole director</li><li>Specialist SIC code 72110 (R&amp;D on natural sciences/engineering)</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Day-one incorporation with no operational history</li><li>Single director, no co-founder or team visible</li><li>No funding, grant, or revenue data</li><li>No evidence of clinical research infrastructure or clients yet</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — credible academic founder but no substance yet beyond incorporation</p>
+
+</div><div class="company" id="company-17521499" data-score="2" data-incorporated="2026-10-14">
+<h2>ARAIMATE BIOSCIENCE LIMITED <span class="badge">Interest 2 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no business description provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 72110, 74909</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation; no grant or product data available</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Dr Cameron Stanford Field (New Zealander); no ORCID match found; no other appointments found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Residential-looking address in Hemel Hempstead — no evident incubator or cluster affiliation</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>SIC 72110 indicates intended biotech R&amp;D focus</li><li>Director holds a doctoral title, suggesting academic background</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No business description, website, or funding data available</li><li>Residential/generic registered address, no cluster signal</li><li>No corroborating academic or publication record (ORCID) found</li><li>Pre-revenue, pre-everything shell at this stage</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — too early to assess; essentially a blank-slate incorporation with a possibly academic solo founder</p>
+
+</div><div class="company" id="company-17522824" data-score="2" data-incorporated="2026-10-15">
+<h2>BIOSTRUCX LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of East London">ORCID &#10003;</span></h2>
+<p class="oneliner">Early-stage company spanning instrumentation, software/data, and R&amp;D services — exact product not stated in the data provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 26511, 62012, 63110, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage — SIC codes suggest measuring/testing instruments (26511) combined with information services (62012), data processing (63110), and R&amp;D (72190), but no mechanism, platform, or modality is described.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (future-dated, Oct 2026) — pre-revenue, pre-trading shell at this point.</p>
+<p class="field"><span class="label">Team provenance.</span> Three directors: Patrick Charles Aling (British, 1 other appointment, not in target sector), Jeimie Steve Bobadilla Verano (Peruvian, ORCID CONFIRMED, affiliated with University of East London — academic link), Per Roger Zetterberg (Swedish, no other appointments found). Mixed nationalities and an academic-linked co-founder.</p>
+<p class="field"><span class="label">Location signal.</span> 128 City Road, London, EC1V 2NX — a known mass-registration/virtual office address (used by thousands of UK companies), not a genuine biotech cluster or incubator signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic link (Bobadilla Verano, University of East London)</li><li>Multi-disciplinary SIC mix suggesting hardware + data/software ambitions</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Generic mass-registration virtual office address</li><li>No science, product, or mechanism described anywhere in the record</li><li>No funding (grant or equity) evidenced</li><li>Company not yet trading (future incorporation date) — zero operating history</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — academic link is a mild positive but there is no discernible science, funding, or traction to assess</p>
+
+</div><div class="company" id="company-17520776" data-score="2" data-incorporated="2026-10-14">
+<h2>SIRA SYSTEMS LIMITED <span class="badge">Interest 2 / 5</span></h2>
+<p class="oneliner">Unclear — SIC mix suggests instrumentation/aerospace-adjacent hardware combined with software/R&amp;D activity, but no public description available.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 26511, 30300, 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no funding or product data yet</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Junaid Abdulsamad Rabiu holds 3 other appointments, none confirmed in the target sector (72110/72190) — informational only, not a positive or negative signal. No ORCID match found, which is not meaningful either way.</p>
+<p class="field"><span class="label">Location signal.</span> 44 Avenue Road, London NW8 — residential/generic London address, not a known incubator or cluster</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of actual business activity beyond SIC codes</li><li>Extremely early — incorporated with no operating history</li><li>SIC code mix (measuring instruments, aircraft/spacecraft, business/domestic software, R&amp;D) is unusually broad and hard to interpret as a coherent thesis</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — too early and too little verifiable detail to assess; nothing distinguishes this from a shell filing</p>
+
+</div><div class="company" id="company-17520480" data-score="1" data-incorporated="2026-10-14">
+<h2>PROJECT E.C.H.O TECHNOLOGIES LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no website or product description provided; SIC codes suggest a mix of instrumentation and software/IT consultancy work.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 26511, 62012, 62090, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (future-dated in record), no grant or product evidence yet — pre-seed/shell stage</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Portuguese national, no ORCID match, no prior directorships found under this officer record — no verifiable academic or entrepreneurial track record</p>
+<p class="field"><span class="label">Location signal.</span> Registered address is a residential property in Epsom, Surrey — not an incubator or recognised life-sciences cluster</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No product, science, or market description available</li><li>Single director with no verifiable track record</li><li>Generic residential registered address, not a specialist cluster or incubator</li><li>No funding (grant or equity) on record</li><li>SIC code mix (electronics manufacturing + IT consultancy) is unusual and unclear for a life-sciences thesis</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or location signal; nothing here to assess</p>
+
+</div><div class="company" id="company-17520463" data-score="1" data-incorporated="2026-10-14">
+<h2>ARE INNOVATION LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — Companies House record gives no description of what the company does.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 42990, 70229, 71122, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity evidence</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Dr. Ali Riza Erson, Turkish national. &#x27;Dr&#x27; title suggests academic or clinical background, but no ORCID match found and no other directorships found under this officer record — no verifiable track record either way.</p>
+<p class="field"><span class="label">Location signal.</span> Residential-style address in Exeter (York Cottages) — generic, no incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No business description available</li><li>Mixed, generic SIC codes (construction-related 42990, management consultancy 70229, engineering 71122, R&amp;D 72190) suggesting unclear or undefined focus</li><li>Single director, no funding evidence, no verifiable academic credential</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility, or funding signal; too early and too thin to assess</p>
+
+</div><div class="company" id="company-SC906035" data-score="1" data-incorporated="2026-10-15">
+<h2>HUXLEY FORGE LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no business description beyond registered SIC codes</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 62012, 70229, 72190, 74909</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other evidence of activity</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Paul Calaby Mitchell, British; no ORCID match; no prior appointments found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Residential address in Stirling, Scotland — no incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No business description or evidence of activity beyond SIC codes</li><li>Mixed, generic SIC codes (IT consultancy, management consultancy, scientific R&amp;D, other business support) suggesting unclear focus</li><li>Residential registered address</li><li>Single director with no track record evident</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no discernible science, team pedigree, or funding signal</p>
+
+</div><div class="company" id="company-NI744521" data-score="1" data-incorporated="2026-10-14">
+<h2>OPTOLABS LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Unclear — no description of a product or service is observable from available data.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation; no evidence of operations or product</p>
+<p class="field"><span class="label">Team provenance.</span> Single director (Chellappa, Judah Ruham); no ORCID match; no other directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Forsyth House, Cromac Square, Belfast — a serviced/virtual office address, not a known biotech cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Company website domain (optolabs.com) is listed for sale, not in use — suggests no live web presence or product</li><li>No evidence of any product, science, or team background</li><li>Generic serviced-office registered address</li><li>SIC code 72190 is non-specific (general R&amp;D), no life-sciences-specific classification</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, product, funding, or team signal; website domain is for sale</p>
+
+</div><div class="company" id="company-17522210" data-score="1" data-incorporated="2026-10-15">
+<h2>EVOTTA LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — Companies House record alone does not describe what the company does.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 62012, 62020, 71121, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no grant or trading history yet</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Dr. Yi Dong; ORCID search returned 143 possible matches, name too common to verify — treated as inconclusive, not a signal either way; no other appointments found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Registered address in Manchester — residential-looking address, no indication of incubator or cluster affiliation</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or funding data provided</p>
+<p class="flags-title">Positive flags</p><ul><li>Mixed SIC codes spanning software (62012, 62020), IP/engineering R&amp;D (71121) and R&amp;D-adjacent activity (72190) suggest a tech/IP-driven proposition, though this is inference not confirmation</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of product, market, or science available</li><li>No funding (grant or equity) on record</li><li>Single director, no team depth visible</li><li>Too early to assess credibility beyond incorporation filing</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; pure shell-stage filing</p>
+
+</div><div class="company" id="company-17522885" data-score="1" data-incorporated="2026-10-15">
+<h2>INCBURY LTD <span class="badge">Interest 1 / 5</span><span class="pill pill-ambiguous" title="GtR: 8 possible matches, unverified">GtR?</span></h2>
+<p class="oneliner">An AI company building its own family of language models (Atom) and offering chat, code and API products built on them.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> In-house large language model development (Atom family) with published evaluation reports; no technical architecture details given.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (SIC 62012 software/72190 R&amp;D) with an already-live product website and a research publication — unusually advanced public presence for incorporation date.</p>
+<p class="field"><span class="label">Team provenance.</span> Single named director, James Brown; ORCID and GtR checks inconclusive (name too common to verify); one other directorship held, not in target sector — not a repeat founder in this sector.</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden — a well-known mass-registration/virtual office address, not a genuine lab or office signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided; this is a generic AI company, not a life-sciences target.</p>
+<p class="flags-title">Positive flags</p><ul><li>Live product and website with published evaluation report, suggesting real technical output ahead of typical day-one shell companies</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Registered address is a known virtual-office/formation-agent address, not a genuine R&amp;D site</li><li>No verifiable founder credentials (ORCID/GtR inconclusive)</li><li>Not a life-sciences company — general AI/LLM product, outside fund mandate</li><li>No funding, grant, or investor data provided</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — out of sector (general AI, not biotech/life sciences) and address/founder signals are weak regardless</p>
+
+</div><div class="company" id="company-17521497" data-score="1" data-incorporated="2026-10-14">
+<h2>INTERIU LAB LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no public product or activity description available.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 62012, 62020, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (future-dated record, effectively pre-trading shell)</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Yan Serebryakov (Russian nationality). No ORCID match found, no prior directorships found under this officer record — no evidence either way of academic or entrepreneurial track record.</p>
+<p class="field"><span class="label">Location signal.</span> Great Portland Street, London W1 — generic central London business address, not a known biotech/life-sciences cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>SIC codes (62012, 62020, 72190) indicate software/IT consultancy, not life sciences — questionable fit for a biotech screening pipeline</li><li>No grant funding, publications, or product information available</li><li>Single-director company with no verifiable track record</li><li>Registered address has no biotech cluster or incubator signal</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — software-coded shell company with no life-sciences signal, no funding, no team credibility markers</p>
+
+</div><div class="company" id="company-17520818" data-score="1" data-incorporated="2026-10-14">
+<h2>SENSE &amp; REASON LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no company website or descriptive filings beyond SIC codes suggesting a mix of business/domestic software development and other research and experimental development on natural sciences and engineering.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation — no trading history or further detail available</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Hannah Marie Kane (Irish). No ORCID match found. No other appointments found under this officer record — not evidence of prior track record either way.</p>
+<p class="field"><span class="label">Location signal.</span> Great Portland Street, London W1W — a well-known serviced-office/flexible-workspace district commonly used by early-stage companies; generic rather than a named biotech incubator or cluster.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No science, product, or technology detail available</li><li>Single director with no verifiable academic or sector track record</li><li>Incorporated too recently to show any execution evidence</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, funding, or team signal; nothing to assess yet</p>
+
+</div><div class="company" id="company-17521199" data-score="1" data-incorporated="2026-10-14">
+<h2>SCOP ENERGY LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no business description beyond SIC codes spanning IT services, engineering, and R&amp;D</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-14 &middot; <span class="label">SIC:</span> 62012, 62020, 71122, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (future-dated / shell stage)</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Mehwish Irfan; no ORCID match found; 3 other appointments held but none confirmed in target sector (SIC 72110/72190) — informational only, not a signal either way</p>
+<p class="field"><span class="label">Location signal.</span> Registered via Aczone Consultants Ltd, Croydon — third-party company formation/accountancy address, not a lab, cluster, or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or dilutive funding data provided</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No business description or evidence of actual activity</li><li>Generic formation-agent registered address, not a specialist or cluster location</li><li>Mixed, non-specific SIC codes spanning IT, engineering and R&amp;D — unclear core focus</li><li>No funding (grant or equity) on record</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility, funding, or location signal; too early and too thin to assess</p>
+
+</div><div class="company" id="company-17522562" data-score="1" data-incorporated="2026-10-15">
+<h2>IO-EARTH TECHNOLOGIES LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no website or descriptive data provided beyond SIC codes suggesting engineering/consultancy and R&amp;D activity.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 71121, 71122, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one shell incorporation; no grant, product, or trading data available</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Robert William Lindsay Gordon, British national; no ORCID match; no other appointments found under this officer record — no evidence of academic or prior company background</p>
+<p class="field"><span class="label">Location signal.</span> 128 City Road, London, EC1V 2NX — this is a well-known mass company-formation/registered-office address (generic, high-volume registration agent), not an incubator or sector cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Single-director shell with no founder track record evidence</li><li>Generic mass-registration address, not a specialist cluster or incubator</li><li>No funding, grant, or product information available</li><li>SIC codes (engineering, R&amp;D, computer consultancy) too broad to infer actual science or focus</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or location signal; indistinguishable from a blank-slate shell company</p>
+
+</div></div></body></html>
