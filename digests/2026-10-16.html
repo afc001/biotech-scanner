@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner Digest — 2026-10-16</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .pill-search { background:#dce7f7; color:#1a3e6e; }
+  .sources { color:#777; font-size:14px; margin:10px 0 0; }
+  .sources a { color:#555; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .legend summary { cursor:pointer; font-weight:bold; }
+  .legend p { margin:8px 0 0; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+  .archive-summary { color:#777; font-size:15px; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner Digest — 2026-10-16</h1><p class="meta">Generated 2026-10-16 · 12 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><details class="legend"><summary>Badge legend</summary><p>ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check · Repeat Founder ✓ = confirmed prior/current directorship at another company in this sector (hover for detail) · Advisor Pattern = director holds several other active directorships — well-connected, but likely not day-to-day operational here · 🔍 Web-verified = re-checked with a live web search (see Sources on that brief)</p></details><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" id="company-17525138" data-score="4" data-incorporated="2026-10-16">
+<h2>PREVALIS DIAGNOSTICS LTD <span class="badge">Interest 4 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span><span class="pill pill-confirmed" title="GtR confirmed — University of Sheffield">GtR &#10003;</span></h2>
+<p class="oneliner">Early-stage diagnostics company, likely developing a medical devices/IVD product (SIC 32500) with some software/IT component (SIC 72190).</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 32500, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage — no technical description provided beyond SIC classification.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, pre-revenue, no funding or product data disclosed.</p>
+<p class="field"><span class="label">Team provenance.</span> Two directors: Luisa Maria Bautista De Deus Ponces De Carvalho (Portuguese, one other directorship, not in target sector) and Carl Smythe (Irish, GtR CONFIRMED as UKRI-funded investigator at University of Sheffield, one other directorship not in target sector). Academic link via Smythe&#x27;s confirmed research grant history is a genuine credibility signal.</p>
+<p class="field"><span class="label">Location signal.</span> Cooper Buildings, Sheffield Science Park — a known incubator/innovation cluster address, positive signal for serious early-stage science ventures.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment figures provided.</p>
+<p class="flags-title">Positive flags</p><ul><li>GtR CONFIRMED academic founder (Carl Smythe, University of Sheffield)</li><li>Registered at Sheffield Science Park incubator address</li><li>Diagnostics-relevant SIC code (32500)</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No funding data disclosed</li><li>No product/science detail available</li><li>Extremely early stage — incorporated with no operating history</li></ul>
+<p class="field"><span class="label">Interest score: 4</span> — GtR-confirmed academic founder plus incubator address makes this worth a first call, despite near-total absence of other data.</p>
+<p class="flags-title">Open questions for a first call</p><ul><li>What specific diagnostic technology or indication is being developed?</li><li>What is Carl Smythe&#x27;s UKRI grant history and does it relate to this company&#x27;s technology?</li><li>Is there any funding (grant or equity) in place or being raised?</li><li>What is the commercial/IP relationship with University of Sheffield, if any?</li></ul>
+
+</div><div class="company" id="company-17524933" data-score="2" data-incorporated="2026-10-16">
+<h2>ABYA GENOMICS LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — Gennefront INC, Jaypee University of Information Technology, University of Nebraska at Omaha, University of Nebraska-Lincoln, University of Nebraska–Lincoln">ORCID &#10003;</span></h2>
+<p class="oneliner">Early-stage biotech aiming to accelerate drug discovery and development, per vague mission-driven website language.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 72110</p>
+<p class="field"><span class="label">Science.</span> Not clearly specified — website references &#x27;hypothesis to manufactured drug&#x27; and framing around speed/cost of drug development, possibly implying an AI or platform approach, but no mechanism, modality or technology is named.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (note: date appears to be in the future/likely a record error) with a live marketing website but no product, pipeline or technical detail disclosed.</p>
+<p class="field"><span class="label">Team provenance.</span> Three directors. CHANUMOLU, Sree Krishna has ORCID CONFIRMED academic identity with affiliations across Jaypee University and University of Nebraska campuses, plus a prior venture (Gennefront INC) — a genuine credibility signal. GRECH and SZALAY (both Slovak) have no confirmed academic or founder record. No repeat-founder confirmation for any director in this sector.</p>
+<p class="field"><span class="label">Location signal.</span> Registered address is a residential street in Lincoln, England — not a known biotech cluster or incubator. Generic signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul><li>ORCID CONFIRMED academic identity for director Chanumolu</li><li>Live, professionally presented company website signalling active intent beyond shell registration</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Website is heavy on mission/vision rhetoric and light on any concrete science, technology, or mechanism</li><li>No funding (grant or equity) disclosed</li><li>Registered address is residential, not a lab or cluster setting</li><li>Incorporation date appears anomalous (future-dated), worth verifying data integrity</li><li>Two of three directors have no verifiable academic or founder track record</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — Academic credibility signal on one director is offset by an entirely non-specific scientific proposition and no funding evidence</p>
+
+</div><div class="company" id="company-17525069" data-score="2" data-incorporated="2026-10-16">
+<h2>SARBORG LIMITED <span class="badge">Interest 2 / 5</span></h2>
+<p class="oneliner">An agentic AI business claiming to decode biological, chemical, and industrial &#x27;signatures&#x27; into a universal data language to surface drug, disease, and chemical opportunities.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 62012, 62090, 72110, 72190</p>
+<p class="field"><span class="label">Science.</span> Website describes an &#x27;agentic intelligence&#x27; / &#x27;Signature Agent&#x27; pipeline running against proprietary &#x27;signature libraries&#x27;, but no mechanism, data sources, or validation are given — marketing language without technical substance.</p>
+<p class="field"><span class="label">Stage.</span> Pre-incorporation-date company (incorporation date given as 2026-10-16, which is in the future relative to typical filings — worth verifying) with a live but content-light marketing website; no product, trial, or deployment evidence.</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Dr Jihan Shanabli, British, no ORCID match found. One other directorship noted, not confirmed in target sector (SIC 72110/72190) — not a meaningful signal either way.</p>
+<p class="field"><span class="label">Location signal.</span> Residential address in Edgware, Middlesex — generic, no incubator or cluster affiliation.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Incorporation date appears to be in the future (2026-10-16) — possible data error requiring verification</li><li>Website is heavy on buzzwords (&#x27;agentic AI&#x27;, &#x27;signature intelligence&#x27;) with no concrete scientific or technical detail</li><li>No funding, grant, or investor data available</li><li>Residential registered address with no evident lab, cluster, or R&amp;D signal</li><li>Single director, no verified academic credentials</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — Unsubstantiated AI/biotech marketing claims with no team pedigree, funding, or technical detail to assess.</p>
+
+</div><div class="company" id="company-17524053" data-score="2" data-incorporated="2026-10-15">
+<h2>TRANSFORMING TEXTILES UK LTD <span class="badge">Interest 2 / 5</span></h2>
+<p class="oneliner">Early-stage company positioned at the intersection of textile manufacturing and R&amp;D, exact product/service not stated.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 13100, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, pre-revenue, no public activity yet</p>
+<p class="field"><span class="label">Team provenance.</span> Single director (Rosberg), Swedish nationality; no ORCID match found; no other directorships found under this officer record — no evidence either way of prior track record</p>
+<p class="field"><span class="label">Location signal.</span> Sustainable Ventures incubator, Manchester — a known cleantech/sustainability-focused incubator, a mild positive signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided</p>
+<p class="flags-title">Positive flags</p><ul><li>Incubator address (Sustainable Ventures, Manchester) suggests some vetting/support structure</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No science, product, or funding detail available</li><li>SIC codes (textiles + R&amp;D) are broad and uninformative on actual activity</li><li>Incorporated too recently to show any traction</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — too early and too thin on data to assess; incubator location is the only mild positive</p>
+
+</div><div class="company" id="company-17523625" data-score="2" data-incorporated="2026-10-15">
+<h2>SINDRI PROPULSION LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="GtR confirmed — Moffitt Cancer Center">GtR &#10003;</span></h2>
+<p class="oneliner">Unclear — name and SIC codes suggest aerospace/spacecraft propulsion, but no operational detail is available.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 30300, 70100, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage — SIC 30300 (air/spacecraft manufacturing) implies a propulsion hardware focus, but no mechanism or technical detail is given.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (not yet one month old); website is a placeholder with no content.</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Alexander Anderson, British. GtR CONFIRMED as a UKRI-funded investigator, organisation listed as Moffitt Cancer Center — a cancer research centre, which is an odd fit against a propulsion SIC code and warrants direct questioning. No prior directorships found under this officer record.</p>
+<p class="field"><span class="label">Location signal.</span> 20 Wenlock Road, London, N1 7GU — this is a known mass company-formation/registered-office address (generic, not an incubator or cluster signal).</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment figures provided.</p>
+<p class="flags-title">Positive flags</p><ul><li>GtR CONFIRMED UKRI-funded investigator</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Generic mass-registration address, not a specialist cluster or incubator</li><li>Website is an empty placeholder with no substantive content</li><li>Director&#x27;s confirmed research background (cancer research institute) does not obviously align with stated propulsion/aerospace SIC codes</li><li>No funding, product, or technical information disclosed anywhere</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — GtR-confirmed investigator is a mild positive, but there is a mismatch between the director&#x27;s known field and the company&#x27;s apparent focus, plus zero substantive information to assess.</p>
+
+</div><div class="company" id="company-17523673" data-score="2" data-incorporated="2026-10-15">
+<h2>WEBRIGHT LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed — University of Verona">ORCID &#10003;</span></h2>
+<p class="oneliner">Not observable at this stage — Companies House record gives no description of what the company actually does.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 62020, 66120, 70229, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (registered October 2026); no grant, product, or trading history yet</p>
+<p class="field"><span class="label">Team provenance.</span> Two Italian directors. Dr Paola Cecchini — ORCID CONFIRMED (0000-0002-3583-000X), affiliated with University of Verona, an academic credibility signal. Svetlin Manavski — no ORCID match found (not a negative, just unconfirmed). Neither director shows prior directorships under these officer records.</p>
+<p class="field"><span class="label">Location signal.</span> Residential-looking address in Stapleford, near Cambridge — not a known incubator address, but within the Cambridge biotech/tech cluster geography.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or funding data supplied.</p>
+<p class="flags-title">Positive flags</p><ul><li>Director Dr Paola Cecchini — ORCID CONFIRMED, linked to University of Verona</li><li>Cambridge-area location, adjacent to a strong life-sciences cluster</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>SIC codes (62020, 66120, 70229, 72190) point to general IT consultancy/management/financial services, not a clear biotech or life-sciences activity</li><li>No description, product, or science observable from the record</li><li>Day-one company with no operating or funding history</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — academic founder signal present, but SIC codes and lack of any stated activity suggest this is not clearly a life-sciences play; too early and too vague to assess</p>
+
+</div><div class="company" id="company-17524990" data-score="1" data-incorporated="2026-10-16">
+<h2>YTTO LTD. <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no website or activity description provided beyond registration.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 62012, 72110, 72190, 86900</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, pre-trading</p>
+<p class="field"><span class="label">Team provenance.</span> Single director (Alia Zniber, Moroccan nationality); no ORCID match found; no other directorships found under this officer record — no evidence either way of prior founding experience</p>
+<p class="field"><span class="label">Location signal.</span> Great Portland Street, London W1W — generic central London business address, not a known biotech/life-sciences cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or funding data provided</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No science, product, or activity detail available</li><li>SIC codes span unrelated areas (software/62012, management consultancy/72190, residential care/86900, R&amp;D/72110), suggesting an undefined or opportunistic business scope</li><li>No funding data of any kind</li><li>Registered address is generic serviced-office style, not a specialist cluster</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility signal, funding, or location signal; too early and too thin to assess</p>
+
+</div><div class="company" id="company-17523374" data-score="1" data-incorporated="2026-10-15">
+<h2>INSIDA HEALTH LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no description of product or service provided</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 62012, 71200, 72110, 86900</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity evidence</p>
+<p class="field"><span class="label">Team provenance.</span> Single director (Insaidoo, Georgina Naa Ayele); no ORCID match found; no prior directorships found under this officer record — no evidence of academic or repeat-founder background</p>
+<p class="field"><span class="label">Location signal.</span> Mildenhall, Suffolk — generic residential/commercial address, no known biotech or incubator cluster</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of business activity beyond SIC codes</li><li>Mixed SIC codes (software, research, computer programming, human health) suggest unclear focus</li><li>No funding data</li><li>No team credentials verifiable</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable signals of science, team strength, or funding; too early to assess</p>
+
+</div><div class="company" id="company-17524205" data-score="1" data-incorporated="2026-10-15">
+<h2>NEXT BRAIN LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no description of product or activity provided beyond SIC classification.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation — no further activity evident</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Li Xinjun; no confirmed ORCID match (too common to verify); no other directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual-office address, not a genuine lab or incubator signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Shelton Street address is a generic company-formation mill address, not indicative of real R&amp;D presence</li><li>No scientific, product, or market description available</li><li>No funding (grant or equity) evidence</li><li>SIC code 72190 (other R&amp;D) is non-specific</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, funding, or location signal; indistinguishable from a shelf company</p>
+
+</div><div class="company" id="company-17523024" data-score="1" data-incorporated="2026-10-15">
+<h2>KERN-VOSS INDUSTRIES LIMITED <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no business description beyond SIC classification</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity visible</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Ihor Ivanilov (Ukrainian nationality). No ORCID match found. No other appointments found under this officer record — not evidence of first-time or repeat founder status either way</p>
+<p class="field"><span class="label">Location signal.</span> Mildenhall, Suffolk — generic industrial unit address, not a recognised life-sciences cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of actual activity beyond generic &#x27;other research and experimental development&#x27; SIC code</li><li>Single director, no team visible</li><li>No funding, grant, or partnership data</li><li>No website or other corroborating material provided</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, team depth, or funding signal</p>
+
+</div><div class="company" id="company-17523345" data-score="1" data-incorporated="2026-10-15">
+<h2>AIMEE BRYAN CONSULTING LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">A newly incorporated consultancy spanning IT, management consulting, R&amp;D, and market research — exact focus unclear.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 62012, 70229, 72190, 73200</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation; no other evidence of activity or product</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director, Aimee Charlotte Bryan, British. No ORCID match found. No other directorships found under this officer record.</p>
+<p class="field"><span class="label">Location signal.</span> Woodstock, Oxfordshire — generic residential/commercial address, not an identifiable incubator or cluster</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No evidence of product, science, or team beyond a single director</li><li>SIC codes are broad and generic (consulting/R&amp;D/market research mix), not specific to a defensible niche</li><li>Too early to assess — effectively a shell at this point</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — pre-formation consultancy shell with no discernible science, team depth, or funding signal</p>
+
+</div><div class="company" id="company-17523361" data-score="1" data-incorporated="2026-10-15">
+<h2>ATEOVA LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Unclear — website describes an &#x27;agent research&#x27; product for products/buyers but gives no concrete description of what it does.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-15 &middot; <span class="label">SIC:</span> 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage — SIC 72190 (R&amp;D) and 62012 (software) suggest some software/AI angle, but no mechanism, platform or methodology is stated anywhere.</p>
+<p class="field"><span class="label">Stage.</span> Pre-launch/pre-product — website explicitly states &#x27;You&#x27;re early. We&#x27;re still cooking.&#x27;</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Nero Nabaz Aziz, British. No ORCID match, no other appointments found — no prior track record visible.</p>
+<p class="field"><span class="label">Location signal.</span> 124 City Road, London, EC1V 2NX — this is a well-known generic mass-registration address (used by thousands of shell/early-stage companies), not a verified incubator or cluster signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Company is one month old with no product, no team depth, and no funding evidence</li><li>Website is placeholder-level with no substantive detail on technology or market</li><li>Generic mass-registration address, not a genuine sector signal</li><li>Single first-time director with no verifiable credentials or track record</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — essentially a pre-idea shell with a placeholder website; nothing to assess yet</p>
+
+</div></div></body></html>
