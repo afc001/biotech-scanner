@@ -1,0 +1,194 @@
+[
+  {
+    "company_name": "SENTIVOXEL LTD",
+    "incorporated": "2026-10-16",
+    "one_liner": "Not observable at this stage — no website or grant data describing what the company does",
+    "science": "SIC codes suggest hardware/manufacturing (machine tools, metal products) crossed with R&D (72190), but no technical description is given — not observable",
+    "stage_signal": "Day-one incorporation, no other activity data available",
+    "team_provenance": "Sole director Deepak Kumar; ORCID search returned too many possible matches to verify (not a positive or negative signal); no other directorships found under this officer record",
+    "location_signal": "Southampton residential/generic address — no evidence of incubator or cluster affiliation",
+    "funding": "Not observable at this stage — no grant or funding data provided",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, technology, or market",
+      "Unusual SIC mix (metal/machine manufacturing plus R&D) with no explanation",
+      "Single director, no funding evidence, no track record data"
+    ],
+    "interest_score": "1 - shell-stage company with no verifiable science, team, or funding signal",
+    "unknowns": [],
+    "company_number": "17525356",
+    "sic_codes": [
+      "25990",
+      "28410",
+      "32990",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EARTH OFFSHORE LTD",
+    "incorporated": "2026-10-16",
+    "one_liner": "Unclear — registered activity spans metal product manufacturing and scientific R&D, with no further detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no other activity evidence",
+    "team_provenance": "Single director, Godspower Erusiafe; no ORCID match found; no other directorships found under this officer record",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a known generic mass-incorporation/virtual-office address used by thousands of companies, not a biotech or science cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed/unclear SIC codes (25990 metal products + 72190 R&D) suggest no defined scientific focus",
+      "Shelton Street is a high-volume generic registration address, not an incubator or cluster signal",
+      "No evidence of team background, funding, or product",
+      "Incorporated very recently with no track record"
+    ],
+    "interest_score": "1 - no discernible science, team, or funding signal; generic registration address; nothing to differentiate from a shell",
+    "unknowns": [],
+    "company_number": "17525724",
+    "sic_codes": [
+      "25990",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AGENARC LTD",
+    "incorporated": "2026-10-16",
+    "one_liner": "Not observable at this stage — SIC codes suggest a mix of software/IT services (62012) and R&D in natural sciences/engineering (72190), but no descriptive data provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation (future-dated), no grant or product data available",
+    "team_provenance": "Single director, Michael Sujdovic (British). No ORCID match found. One other appointment on record, not in target sector.",
+    "location_signal": "Industrial estate unit in Liverpool — generic light-industrial address, not a recognised biotech/life-sciences cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No descriptive data on actual activity beyond SIC codes",
+      "Single-director company with no visible academic or sector-specific credentials",
+      "Generic industrial address, not a specialist cluster",
+      "Incorporation date appears to be in the future, suggesting a placeholder or very recent/erroneous filing"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; essentially a shell record at this point",
+    "unknowns": [],
+    "company_number": "17526438",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SIGNATURE ADVANCED SURFACE TECHNOLOGIES LTD",
+    "incorporated": "2026-10-16",
+    "one_liner": "Not observable at this stage — no description of product or technology provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no funding or product data yet",
+    "team_provenance": "Sole named director Dr Philip James Agg, British; no ORCID match found; REPEAT FOUNDER CONFIRMED (same sector) — currently a director at STS Medical Ltd, also SIC 72190",
+    "location_signal": "Thame, Oxfordshire — generic registered address, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Repeat founder confirmed in same sector (SIC 72190), via active directorship at STS Medical Ltd"
+    ],
+    "flags_negative": [
+      "No description of science, product, or market available",
+      "Incorporated too recently to show any traction or funding"
+    ],
+    "interest_score": "2 - repeat-founder signal is real but there is no other data to assess; too early to form a view",
+    "unknowns": [],
+    "company_number": "17526207",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 2,
+      "active_count": 2,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "STS MEDICAL LTD",
+          "company_number": "15605924",
+          "company_status": "active",
+          "appointed_on": "2025-02-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        },
+        {
+          "company_name": "CAMBRIDGE IMPLANTS LIMITED",
+          "company_number": "12797920",
+          "company_status": "active",
+          "appointed_on": "2020-08-06",
+          "resigned_on": null,
+          "sic_codes": [
+            "32500"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "STS MEDICAL LTD",
+          "company_number": "15605924",
+          "company_status": "active",
+          "appointed_on": "2025-02-17",
+          "resigned_on": null,
+          "sic_codes": [
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 2
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SENSORIST LTD",
+    "incorporated": "2026-10-16",
+    "one_liner": "Makes wireless IoT sensors (temperature, humidity, CO2, water level) with cloud connectivity and REST API for consumer and professional markets.",
+    "science": "Not a life-sciences/biotech platform — this is consumer/industrial IoT hardware plus SaaS, not a drug, diagnostic, or biological modality.",
+    "stage_signal": "Company incorporated with future date (2026-10-16, likely a data artefact or re-registration); website is live and describes an existing, apparently trading product line (Sensorist PRO, shop, blog), suggesting this entity may be a re-incorporation or holding vehicle for an already-operating product rather than a day-one startup.",
+    "team_provenance": "Two directors, Clements and Groome. Clements has one other directorship, not in the target sector (SIC 72110/72190). Groome has no other appointments found under this officer record. No ORCID matches for either — uninformative, not a gap.",
+    "location_signal": "Unit 13 Freeland Park, Poole — a business park address, not a known biotech incubator or cluster.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences company — outside fund mandate (consumer/industrial hardware and software)",
+      "No scientific/biological mechanism or platform of any kind",
+      "Generic business park address, no sector-relevant cluster signal"
+    ],
+    "interest_score": "1 - out-of-mandate IoT hardware company, no biotech relevance",
+    "unknowns": [],
+    "company_number": "17526421",
+    "sic_codes": [
+      "58290",
+      "62012",
+      "63110",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner Digest — 2026-10-17</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .pill-search { background:#dce7f7; color:#1a3e6e; }
+  .sources { color:#777; font-size:14px; margin:10px 0 0; }
+  .sources a { color:#555; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .legend summary { cursor:pointer; font-weight:bold; }
+  .legend p { margin:8px 0 0; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+  .archive-summary { color:#777; font-size:15px; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner Digest — 2026-10-17</h1><p class="meta">Generated 2026-10-17 · 5 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><details class="legend"><summary>Badge legend</summary><p>ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check · Repeat Founder ✓ = confirmed prior/current directorship at another company in this sector (hover for detail) · Advisor Pattern = director holds several other active directorships — well-connected, but likely not day-to-day operational here · 🔍 Web-verified = re-checked with a live web search (see Sources on that brief)</p></details><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" id="company-17526207" data-score="2" data-incorporated="2026-10-16">
+<h2>SIGNATURE ADVANCED SURFACE TECHNOLOGIES LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="Repeat founder (same sector) — STS MEDICAL LTD">Repeat Founder &#10003;</span></h2>
+<p class="oneliner">Not observable at this stage — no description of product or technology provided</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no funding or product data yet</p>
+<p class="field"><span class="label">Team provenance.</span> Sole named director Dr Philip James Agg, British; no ORCID match found; REPEAT FOUNDER CONFIRMED (same sector) — currently a director at STS Medical Ltd, also SIC 72190</p>
+<p class="field"><span class="label">Location signal.</span> Thame, Oxfordshire — generic registered address, no incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>Repeat founder confirmed in same sector (SIC 72190), via active directorship at STS Medical Ltd</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of science, product, or market available</li><li>Incorporated too recently to show any traction or funding</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — repeat-founder signal is real but there is no other data to assess; too early to form a view</p>
+
+</div><div class="company" id="company-17525356" data-score="1" data-incorporated="2026-10-16">
+<h2>SENTIVOXEL LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no website or grant data describing what the company does</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 25990, 28410, 32990, 72190</p>
+<p class="field"><span class="label">Science.</span> SIC codes suggest hardware/manufacturing (machine tools, metal products) crossed with R&amp;D (72190), but no technical description is given — not observable</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity data available</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Deepak Kumar; ORCID search returned too many possible matches to verify (not a positive or negative signal); no other directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> Southampton residential/generic address — no evidence of incubator or cluster affiliation</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or funding data provided</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of product, technology, or market</li><li>Unusual SIC mix (metal/machine manufacturing plus R&amp;D) with no explanation</li><li>Single director, no funding evidence, no track record data</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — shell-stage company with no verifiable science, team, or funding signal</p>
+
+</div><div class="company" id="company-17525724" data-score="1" data-incorporated="2026-10-16">
+<h2>EARTH OFFSHORE LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Unclear — registered activity spans metal product manufacturing and scientific R&amp;D, with no further detail available.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 25990, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no other activity evidence</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Godspower Erusiafe; no ORCID match found; no other directorships found under this officer record</p>
+<p class="field"><span class="label">Location signal.</span> 71-75 Shelton Street, Covent Garden — a known generic mass-incorporation/virtual-office address used by thousands of companies, not a biotech or science cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Mixed/unclear SIC codes (25990 metal products + 72190 R&amp;D) suggest no defined scientific focus</li><li>Shelton Street is a high-volume generic registration address, not an incubator or cluster signal</li><li>No evidence of team background, funding, or product</li><li>Incorporated very recently with no track record</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no discernible science, team, or funding signal; generic registration address; nothing to differentiate from a shell</p>
+
+</div><div class="company" id="company-17526438" data-score="1" data-incorporated="2026-10-16">
+<h2>AGENARC LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — SIC codes suggest a mix of software/IT services (62012) and R&amp;D in natural sciences/engineering (72190), but no descriptive data provided.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (future-dated), no grant or product data available</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Michael Sujdovic (British). No ORCID match found. One other appointment on record, not in target sector.</p>
+<p class="field"><span class="label">Location signal.</span> Industrial estate unit in Liverpool — generic light-industrial address, not a recognised biotech/life-sciences cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No descriptive data on actual activity beyond SIC codes</li><li>Single-director company with no visible academic or sector-specific credentials</li><li>Generic industrial address, not a specialist cluster</li><li>Incorporation date appears to be in the future, suggesting a placeholder or very recent/erroneous filing</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team, or funding signal; essentially a shell record at this point</p>
+
+</div><div class="company" id="company-17526421" data-score="1" data-incorporated="2026-10-16">
+<h2>SENSORIST LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Makes wireless IoT sensors (temperature, humidity, CO2, water level) with cloud connectivity and REST API for consumer and professional markets.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-16 &middot; <span class="label">SIC:</span> 58290, 62012, 63110, 72190</p>
+<p class="field"><span class="label">Science.</span> Not a life-sciences/biotech platform — this is consumer/industrial IoT hardware plus SaaS, not a drug, diagnostic, or biological modality.</p>
+<p class="field"><span class="label">Stage.</span> Company incorporated with future date (2026-10-16, likely a data artefact or re-registration); website is live and describes an existing, apparently trading product line (Sensorist PRO, shop, blog), suggesting this entity may be a re-incorporation or holding vehicle for an already-operating product rather than a day-one startup.</p>
+<p class="field"><span class="label">Team provenance.</span> Two directors, Clements and Groome. Clements has one other directorship, not in the target sector (SIC 72110/72190). Groome has no other appointments found under this officer record. No ORCID matches for either — uninformative, not a gap.</p>
+<p class="field"><span class="label">Location signal.</span> Unit 13 Freeland Park, Poole — a business park address, not a known biotech incubator or cluster.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Not a life-sciences company — outside fund mandate (consumer/industrial hardware and software)</li><li>No scientific/biological mechanism or platform of any kind</li><li>Generic business park address, no sector-relevant cluster signal</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — out-of-mandate IoT hardware company, no biotech relevance</p>
+
+</div></div></body></html>
