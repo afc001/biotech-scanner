@@ -1,0 +1,94 @@
+[
+  {
+    "company_name": "ELECTROMOTIVE WORKS LTD",
+    "incorporated": "2026-10-17",
+    "one_liner": "Not observable at this stage — no activity description beyond registered SIC codes",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-revenue, no public activity yet",
+    "team_provenance": "Sole director Hristo Atanasov (British/Bulgarian); no ORCID match found; no other directorships found under this officer record — no evidence of prior company-building or academic track record",
+    "location_signal": "Residential address in Warwick — generic, no cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or market description available",
+      "Mixed SIC codes (engineering, R&D, residential care) suggest unclear or undefined business focus",
+      "Residential registered address, not a specialist or cluster location",
+      "No funding, grant, or traction data"
+    ],
+    "interest_score": "1 - no verifiable signal of science, team strength, or funding; too early and too thin to assess",
+    "unknowns": [],
+    "company_number": "17526888",
+    "sic_codes": [
+      "71122",
+      "72190",
+      "85590"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PRECISION DATA CONSULTING LTD",
+    "incorporated": "2026-10-17",
+    "one_liner": "A solo data consultancy offering analysis of EEG, behavioural and clinical data for research and clinical clients.",
+    "science": "Signal processing and statistical analysis of EEG time-series and pre-clinical/clinical behavioural data — a service offering, not a drug/device platform.",
+    "stage_signal": "Day-one incorporation of what appears to be a sole-practitioner consultancy built around one person's analytical expertise, not a scalable biotech venture.",
+    "team_provenance": "Single director, Dr Çiğdem Gelegen — website positions her as a neuroscience data specialist (EEG/signal processing). No ORCID match found, no prior directorships found.",
+    "location_signal": "Residential London address (SE22) — no incubator or cluster signal.",
+    "funding": "No grant or investment funding disclosed. Not observable at this stage.",
+    "flags_positive": [
+      "Founder has domain-specific technical positioning (EEG/signal processing) per own website",
+      "Live, coherent company website with described service offering"
+    ],
+    "flags_negative": [
+      "SIC 72190 but business model is a personal consultancy, not an IP-generating biotech",
+      "No funding, no team beyond solo founder, no evidence of scalability",
+      "No ORCID or grant-history confirmation of academic credentials",
+      "Residential registered address"
+    ],
+    "interest_score": "1 - solo consultancy service business, not a venture-investable biotech",
+    "unknowns": [],
+    "company_number": "17526870",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SAN INNOVATION LTD",
+    "incorporated": "2026-10-18",
+    "one_liner": "Not observable at this stage — no activity description, website, or grant data provided beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation with no further operational signals",
+    "team_provenance": "Single director, Sudharsan Balakrishnan; no ORCID match found and no other appointments found under this officer record — no evidence of academic or prior company background either way",
+    "location_signal": "Registered address is a residential house in Bedford — not an incubator or recognised cluster address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No description of product, science, or market",
+      "Residential registered address with no cluster/incubator signal",
+      "Single-director company with no verifiable track record",
+      "Very recent/future incorporation date, no operating history"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; nothing to differentiate from a shell filing",
+    "unknowns": [],
+    "company_number": "17526957",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
