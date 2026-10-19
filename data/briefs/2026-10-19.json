@@ -1,0 +1,419 @@
+[
+  {
+    "company_name": "QUESTA HEALTHCARE LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "A very early-stage company, likely spun out to commercialise academic research in epigenetics or related biology, though no specific product or programme is stated.",
+    "science": "Not observable at this stage — no mechanism, platform, or modality disclosed in the record. Director backgrounds (chromatin biology, epigenetics) suggest a possible therapeutic or diagnostic angle, but this is inference, not stated fact.",
+    "stage_signal": "Day-one incorporation (future-dated record), pre-trading, no grant or product data yet.",
+    "team_provenance": "Two academic founders with strong credentials: Prof Francois Fuks (ORCID confirmed, Université libre de Bruxelles) and Prof Sir Tony Kouzaridis (ORCID and GtR confirmed, UKRI-funded investigator, University of Cambridge). Kouzaridis shows an advisor pattern (4 other active directorships) — signals strong external reputation and network but likely limited day-to-day involvement.",
+    "location_signal": "Cambridge residential-style address (Cavendish Avenue) — not a known incubator or lab cluster address; appears generic/residential rather than a signal of institutional backing.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "ORCID CONFIRMED for both directors",
+      "GtR CONFIRMED UKRI-funded investigator (Kouzaridis)",
+      "High-profile academic founders in a specialist biology field",
+      "SIC codes consistent with software/IT (72110, 72190) — odd pairing with biotech-sounding founders, worth clarifying"
+    ],
+    "flags_negative": [
+      "No science, product, or programme disclosed",
+      "No funding (grant or equity) on record",
+      "SIC codes do not match typical biotech classification",
+      "Kouzaridis's advisor pattern suggests limited hands-on time"
+    ],
+    "interest_score": "4 — strong academic pedigree (dual ORCID/GtR confirmation) justifies a closer look despite a blank-slate filing with no science or funding yet disclosed",
+    "unknowns": [
+      "What is the actual scientific programme or IP being commercialised?",
+      "Why do SIC codes indicate software/IT rather than biotech/pharma?",
+      "What is Kouzaridis's expected time commitment given 4 other directorships?",
+      "Is there a licensing agreement with ULB or Cambridge underpinning the company?",
+      "Any funding round or grant application in progress?"
+    ],
+    "company_number": "17527373",
+    "sic_codes": [
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0003-4637-7287",
+      "institutions": [
+        "Université libre de Bruxelles"
+      ]
+    },
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "01A3F7C8-F96D-46E0-ADB0-E59C1EAB49FA",
+      "organisation": "UNIVERSITY OF CAMBRIDGE"
+    },
+    "repeat_founder_badge": {
+      "status": "other_sector_only",
+      "total_results": 4,
+      "active_count": 4,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "CURE FORCE HOLDINGS LTD",
+          "company_number": "17524946",
+          "company_status": "active",
+          "appointed_on": "2026-10-16",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "VELLOS INNOVATION LTD",
+          "company_number": "16067119",
+          "company_status": "active",
+          "appointed_on": "2024-11-07",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "VELLOS GROUP LTD",
+          "company_number": "15641004",
+          "company_status": "active",
+          "appointed_on": "2024-04-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "74909"
+          ]
+        },
+        {
+          "company_name": "TITOKIKO LIMITED",
+          "company_number": "07717050",
+          "company_status": "active",
+          "appointed_on": "2018-05-31",
+          "resigned_on": null,
+          "sic_codes": [
+            "56101"
+          ]
+        }
+      ],
+      "same_sector_matches": [],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 4
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ZYNTRA LABS LTD",
+    "incorporated": "2026-10-18",
+    "one_liner": "Not observable at this stage — no activity description beyond registration available",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no further activity evidence",
+    "team_provenance": "Sole director Arunas Vaitkevicius, Lithuanian national, ORCID CONFIRMED to a genuine academic publication record but no institution listed; no prior directorships found under this officer record",
+    "location_signal": "Birkenhead residential-looking address — no evidence of incubator or life-sciences cluster",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Director ORCID CONFIRMED — verified genuine academic publication record"
+    ],
+    "flags_negative": [
+      "Mixed SIC codes (retail 47910 alongside software 72110/72190) suggest unclear or unsettled business focus",
+      "No science, product, or funding detail available",
+      "Very recent incorporation with no operating history"
+    ],
+    "interest_score": "2 - ORCID confirmation is a genuine positive but there is no other substance to assess yet",
+    "unknowns": [],
+    "company_number": "17527189",
+    "sic_codes": [
+      "47910",
+      "72110",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0009-0009-5415-6282",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "Numab Therapeutics UK Limited",
+    "incorporated": "2026-10-19",
+    "one_liner": "UK subsidiary entity, SIC-coded to biotech R&D; no description of activities provided.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — likely a newly registered UK subsidiary of an overseas group (name suggests link to Swiss biotech Numab Therapeutics, but this is not confirmed by the data provided)",
+    "team_provenance": "Two directors (Irish, Canadian nationality listed). No confirmed ORCID or repeat-founder signals for either — one director has unverified possible ORCID matches, treated as inconclusive.",
+    "location_signal": "Cromwell Road, South Kensington, London — generic registered office, not a known biotech incubator address",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Just incorporated, no operating history",
+      "No science, product, or activity description available",
+      "No confirmed academic or repeat-founder credentials for either director",
+      "Generic registered address, no cluster/incubator signal"
+    ],
+    "interest_score": "2 — shell-stage registration with no verifiable substance yet; possible overseas subsidiary but unconfirmed",
+    "unknowns": [],
+    "company_number": "17528058",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 5
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "EFFERENT THERAPEUTICS LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage — SIC code indicates biotech/R&D classification but no further detail provided",
+    "stage_signal": "Day-one incorporation (future-dated record), no operational history",
+    "team_provenance": "Sole named director Eric Kohlmann (Swiss national, no ORCID match found); corporate secretary is a formation-agent entity (Oakwood Corporate Secretary Limited), suggesting use of a company formation service rather than bespoke governance",
+    "location_signal": "Altrincham, Cheshire — generic serviced-office address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporation date is in the future / anomalous, raising data-quality questions",
+      "No science, product, or platform detail available",
+      "Corporate secretary is a generic formation-agent entity, suggesting shell/off-the-shelf setup",
+      "No grant funding, academic affiliation, or ORCID/GtR confirmation evident",
+      "Single director with no verifiable track record"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, or funding signal; essentially a blank shell at this stage",
+    "unknowns": [],
+    "company_number": "17528142",
+    "sic_codes": [
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "AXORYNTH LABS LTD",
+    "incorporated": "2026-10-18",
+    "one_liner": "An early-stage research venture describing itself as exploring AI and engineering ideas, with no defined product or application stated.",
+    "science": "Not observable at this stage — website references 'artificial intelligence', 'engineering research' and 'scientific curiosity' but gives no mechanism, platform, or application area.",
+    "stage_signal": "Day-one incorporation (future-dated, Oct 2026); website explicitly states 'early-stage research venture' and 'exploration in progress' — pre-product, pre-thesis.",
+    "team_provenance": "Single director, Swathi Maddineni. No ORCID match found, no prior directorships found under this officer record — neither is informative on its own.",
+    "location_signal": "Residential-style address in Stoke-on-Trent; no incubator, university, or cluster affiliation evident.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live, professionally designed company website (unusual at this stage of incorporation)",
+      "SIC codes include software/IT consultancy and scientific R&D (72190), consistent with stated deep-tech focus"
+    ],
+    "flags_negative": [
+      "Website is pure vision/mission language with no concrete science, product, or market described",
+      "Single director, no team visible",
+      "Incorporation date is forward-dated / anomalous, raising basic data-quality questions",
+      "No funding, grant, or partnership evidence"
+    ],
+    "interest_score": "1 — vague mission-statement website, no science, no team depth, no funding; nothing here to evaluate yet",
+    "unknowns": [],
+    "company_number": "17527240",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ALEXANDER MODELL CONSULTING LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no activity history",
+    "team_provenance": "Sole director Dr Alexander Donald Modell, British; no ORCID match found; no prior directorships found under this officer record",
+    "location_signal": "Residential-style address in Nutbourne, Chichester — generic, no cluster or incubator signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or market detail available",
+      "Generic SIC code (72190) with no further specificity",
+      "No funding, grant, or traction data",
+      "Single-director shell with no verifiable track record"
+    ],
+    "interest_score": "1 - no verifiable data beyond incorporation; too early to assess",
+    "unknowns": [],
+    "company_number": "17527713",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "SACRALTEC LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage — the company name and SIC codes suggest some combination of e-commerce/retail and R&D, but nothing is stated.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data available",
+    "team_provenance": "Single director, Karan Kumar Rana; no ORCID match found (inconclusive, not a negative); no other appointments found under this officer record (not evidence of anything)",
+    "location_signal": "71-75 Shelton Street, Covent Garden — a well-known mass company-formation/virtual office address, not a genuine lab or incubator cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (47910 retail, 72190 R&D) suggest unclear business model",
+      "Registered at a high-volume generic formation address, not a specialist biotech hub",
+      "No science, product, or funding data available",
+      "Pre-incorporation/day-one record with essentially no evidence base"
+    ],
+    "interest_score": "1 - no verifiable science, team, or funding signal; generic formation address",
+    "unknowns": [],
+    "company_number": "17527674",
+    "sic_codes": [
+      "47910",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PAN MOMENT LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage — no business description provided beyond SIC codes suggesting software/IT and R&D activity.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no trading history",
+    "team_provenance": "Sole director Dr Min Pan, GtR CONFIRMED as a UKRI-funded investigator at University of Bath — genuine academic research credential. ORCID search returned 67 possible matches (name too common to verify) — inconclusive, not treated as signal. No other appointments found under this officer record.",
+    "location_signal": "128 City Road, London EC1V 2NX — a well-known generic mass-registration address used by thousands of companies, not a specialist incubator signal",
+    "funding": "Not observable at this stage — no grant or investment figures provided",
+    "flags_positive": [
+      "GtR CONFIRMED UKRI-funded investigator (University of Bath)",
+      "SIC code 72190 indicates R&D intent"
+    ],
+    "flags_negative": [
+      "No business description or product detail available",
+      "Generic mass-registration registered address",
+      "No funding data disclosed",
+      "Pre-trading, day-one incorporation"
+    ],
+    "interest_score": "2 - academic credential is real but there is no visible company substance yet to assess",
+    "unknowns": [],
+    "company_number": "17527547",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": {
+      "status": "confirmed",
+      "gtr_person_id": "8DCC4656-B3AD-4E57-AF3D-7A766BABBAE8",
+      "organisation": "UNIVERSITY OF BATH"
+    },
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "DTLAP LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage — no business description provided beyond SIC codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation",
+    "team_provenance": "Sole director Rowland Miles Jowett, British. No ORCID match found (inconclusive, not a negative). No other appointments found under this officer record (informational only).",
+    "location_signal": "Registered at an accountancy firm's office in Pickering — generic registered-agent address, not a biotech/tech cluster or incubator.",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No company activity, product, or science detail available",
+      "Generic accountant's-office registered address, not a sector cluster",
+      "Just incorporated, no track record"
+    ],
+    "interest_score": "1 - no information beyond incorporation and SIC codes; nothing to assess",
+    "unknowns": [],
+    "company_number": "17527495",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "JASOLA ENVIRONMENTAL TECHNOLOGIES & ENGINEERING CONSULTING LIMITED",
+    "incorporated": "2026-10-19",
+    "one_liner": "Early-stage consultancy positioned at environmental/engineering consulting and R&D (SIC codes), no further detail available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, pre-trading",
+    "team_provenance": "Single director, Dr Oluwasola Olumayowa Ademulegun (Nigerian national); no ORCID match found; no other appointments found under this officer record — first-time founder signal is inconclusive, not negative",
+    "location_signal": "Generic residential/commercial address in Belfast; no incubator or cluster affiliation evident",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No science, product, or market detail provided",
+      "No funding (grant or equity) on record",
+      "No team track record evidence beyond director title"
+    ],
+    "interest_score": "1 - shell-stage registration with no verifiable science, funding, or team signal",
+    "unknowns": [],
+    "company_number": "NI744607",
+    "sic_codes": [
+      "71122",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PERITUS IP LIMITED",
+    "incorporated": "2026-10-19",
+    "one_liner": "A patent services firm offering PCT national phase entry and patent prosecution support in India for foreign applicants and associates.",
+    "science": "Not applicable — this is an IP/legal services business, not a science or biotech platform company",
+    "stage_signal": "Day-one incorporation (future-dated); website already live with full service menu, suggesting a pre-existing practice being formalised into this entity",
+    "team_provenance": "Two British directors, both named Richards (likely family connection). No ORCID matches (not meaningful either way). One director has one other appointment, not in target sector; the other has none found. No academic or scientific credentials evident.",
+    "location_signal": "Priory Business Park, Bedford — generic business park address, not a known life-sciences cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences or biotech company — this is a patent prosecution/IP services business",
+      "No scientific platform, mechanism, or technology of relevance to a life-sciences fund",
+      "SIC codes (62012 software, 72190 R&D other) do not reflect actual business activity (legal/IP services)"
+    ],
+    "interest_score": "1 — out of scope for a life-sciences fund; this is an IP law services firm, not a biotech",
+    "unknowns": [],
+    "company_number": "17528333",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]
