@@ -1,0 +1,704 @@
+[
+  {
+    "company_name": "ALBION PEPTIDES LTD",
+    "incorporated": "2026-10-20",
+    "one_liner": "Not observable at this stage — registration gives no description of product or service.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history or evidence of a developed product.",
+    "team_provenance": "Sole director Aaron Alexander Hall, British. No ORCID match found (no academic record identified). No other directorships found under this officer record — no evidence of prior company-building experience.",
+    "location_signal": "Registered address in Thurcroft, Rotherham — a generic residential/commercial address, no evidence of incubator or life-sciences cluster affiliation.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Mixed SIC codes (47910 retail via mail order/internet, alongside 72110 R&D) — unclear whether this is genuinely a life-sciences R&D company or a retail operation",
+      "No evidence of scientific platform, mechanism, or product",
+      "No funding data, academic links, or prior track record",
+      "Generic registered address with no cluster/incubator signal"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, funding, or location signal; SIC mix suggests possible non-R&D retail business",
+    "unknowns": [],
+    "company_number": "17529938",
+    "sic_codes": [
+      "47910",
+      "72110"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "YARELY LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage — no website or descriptive data provided beyond SIC codes suggesting electronic component manufacturing and R&D in other natural sciences/engineering.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one shell incorporation; no grant, product, or trading evidence yet",
+    "team_provenance": "Single director, Michael David Yare, British national; no ORCID match found (not a negative — most founders have none); no other appointments found under this officer record (not evidence of first-time-founder status, only that none were found)",
+    "location_signal": "Residential-looking address in Washington, Tyne and Wear — no sign of incubator or cluster affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "No evidence of product, science, or funding at this stage",
+      "Single-director shell with no trading history",
+      "Generic residential registered address"
+    ],
+    "interest_score": "1 - pre-formation shell company with no verifiable science, team depth, or funding signal",
+    "unknowns": [],
+    "company_number": "17529206",
+    "sic_codes": [
+      "26120",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "JOYCE PARRY CARE CIC",
+    "incorporated": "2026-10-20",
+    "one_liner": "A Community Interest Company likely offering social care and/or education-related support services, based on registered activity codes.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history or activity evident",
+    "team_provenance": "Three directors (Maycox, McGrath, Roberts), no ORCID matches, no other directorships found under these officer records — appears to be first-time founders",
+    "location_signal": "Residential address in Rugby — generic, no incubator or cluster signal",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "CIC structure (non-profit, asset-locked) is not a venture-investable vehicle — no equity upside for shareholders",
+      "Mixed SIC codes (publishing, IT consultancy, social work, residential care) suggest unclear or unfocused business activity",
+      "No funding, grant, or trading evidence",
+      "No life-sciences, biotech, or R&D signal of any kind in SIC codes or available data"
+    ],
+    "interest_score": "1 — not a biotech/life-sciences company and not an equity-investable structure; outside fund mandate",
+    "unknowns": [],
+    "company_number": "17530140",
+    "sic_codes": [
+      "58110",
+      "72190",
+      "85590",
+      "88100"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "BENCHEVAL LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Physician-led evaluation and red-teaming of healthcare AI systems, selling benchmarking/audit services to AI labs and healthcare AI teams.",
+    "science": "Not a drug/device platform — service model built on physician-authored adversarial evaluations and benchmarks of clinical AI outputs (e.g. triage scenarios run through ChatGPT, Claude, Gemini), plus post-training data generation for AI labs.",
+    "stage_signal": "Day-one incorporation (Oct 2026) with a live, already-published website and a public audit (ED Triage Audit) — unusually fast for a brand-new entity, suggesting pre-incorporation work or a fast-moving founder team.",
+    "team_provenance": "Two directors, both Dr title, same surname (likely related), Turkish nationality. ORCID checks inconclusive (possible matches unverified; one no match). No prior directorships found under either officer record.",
+    "location_signal": "71 Windsor Court, London N14 5HT — residential-looking address, not a known incubator or biotech cluster. Generic signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [
+      "Live, professionally presented website with a specific published product (ED Triage Audit)",
+      "Physician-led positioning (both directors hold Dr title) relevant to clinical AI evaluation niche",
+      "Clear, differentiated service niche (AI red-teaming for medicine) rather than vague healthtech positioning"
+    ],
+    "flags_negative": [
+      "Service/consulting business model (benchmarking, audits, data) rather than a defensible technology or IP platform",
+      "No funding, grant, or investment data provided",
+      "Generic residential registered address",
+      "SIC codes are broad software/IT consultancy codes, not a specialist biotech code"
+    ],
+    "interest_score": "2 - early-stage services business with a credible niche but no IP moat, funding, or verified team credentials visible yet",
+    "unknowns": [],
+    "company_number": "17529303",
+    "sic_codes": [
+      "62012",
+      "62020",
+      "62090",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "THYEN DYNAMICS & ROBOTICS LTD",
+    "incorporated": "2026-10-19",
+    "one_liner": "Early-stage company positioned at the intersection of software/computer services and R&D, likely robotics or dynamics-related given the name — specifics not stated.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grants or further activity on record yet",
+    "team_provenance": "Sole director Andras Bela Biro (Hungarian) is a confirmed repeat founder in the same sector, currently also a director at Hypercell Energy Ltd (energy/power generation plus R&D SIC codes, active). No ORCID record found — not meaningful either way.",
+    "location_signal": "Burnham-On-Crouch business park address — generic small business park, not a known biotech/tech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director has prior/current directorship at another SIC 72190 company"
+    ],
+    "flags_negative": [
+      "No trading history, grants, or science detail available",
+      "SIC codes (software + R&D) are broad and don't confirm a life-sciences angle",
+      "Generic business park address, not a specialist cluster"
+    ],
+    "interest_score": "2 - Too early to assess; only signal is a repeat director, no science or funding evidence",
+    "unknowns": [],
+    "company_number": "17529569",
+    "sic_codes": [
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 3,
+      "active_count": 3,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "HYPERCELL ENERGY LTD",
+          "company_number": "16283699",
+          "company_status": "active",
+          "appointed_on": "2025-02-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "27200",
+            "35110",
+            "72190",
+            "96090"
+          ]
+        },
+        {
+          "company_name": "PILLE BRICK LTD",
+          "company_number": "13934008",
+          "company_status": "active",
+          "appointed_on": "2022-02-22",
+          "resigned_on": null,
+          "sic_codes": [
+            "23320",
+            "32990"
+          ]
+        },
+        {
+          "company_name": "CLEARING AGENT LTD",
+          "company_number": "11074965",
+          "company_status": "active",
+          "appointed_on": "2017-11-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "41100",
+            "46140",
+            "66220"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "HYPERCELL ENERGY LTD",
+          "company_number": "16283699",
+          "company_status": "active",
+          "appointed_on": "2025-02-28",
+          "resigned_on": null,
+          "sic_codes": [
+            "27200",
+            "35110",
+            "72190",
+            "96090"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 3
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "ERIVAA LTD",
+    "incorporated": "2026-10-20",
+    "one_liner": "A consumer hardware startup developing a 'smart bag' that senses and alerts the user if usual items are missing before they leave home.",
+    "science": "Not a life-sciences platform — appears to be IoT/sensor-based consumer hardware (possibly RFID or weight-sensing) embedded in a bag; no technical mechanism disclosed.",
+    "stage_signal": "Pre-launch concept stage — website describes product as 'in development' with an unreleased 'Alpha' and an early-access waitlist; no product shipped.",
+    "team_provenance": "Single director, no other appointments found under this officer record, no ORCID match — no academic or prior-founder track record evident.",
+    "location_signal": "Registered address is a residential-looking street address in Reading — no incubator or cluster signal.",
+    "funding": "Not observable at this stage — no grant or investment data provided.",
+    "flags_positive": [],
+    "flags_negative": [
+      "Not a life-sciences or biotech company — out of fund thesis entirely",
+      "SIC codes (consumer electronics, retail, software) confirm non-bio focus",
+      "Pre-product, waitlist-stage consumer gadget with no technical or IP detail",
+      "Single first-time director with no verifiable track record"
+    ],
+    "interest_score": "1 - Out of sector; consumer hardware/IoT concept, not a biotech or life-sciences opportunity",
+    "unknowns": [],
+    "company_number": "17530489",
+    "sic_codes": [
+      "26400",
+      "47722",
+      "62012",
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "MOXION TECH LTD",
+    "incorporated": "2026-10-20",
+    "one_liner": "Not observable at this stage — no business description provided beyond SIC code",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation — no trading history, no grant data, no website provided",
+    "team_provenance": "Sole director Dr Benjamin Michael Dyer, British. No ORCID match found. No other appointments found under this officer record — not evidence of first-time-founder status, just nothing matched.",
+    "location_signal": "Marlow residential/generic address — no incubator or cluster signal evident",
+    "funding": "Not observable at this stage",
+    "flags_positive": [],
+    "flags_negative": [
+      "Incorporated too recently to show any trading or product signal",
+      "No science, product, or market description available",
+      "No funding (grant or equity) data available"
+    ],
+    "interest_score": "1 - no verifiable science, team credibility, or funding signal; pure shell at this point",
+    "unknowns": [],
+    "company_number": "17530606",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": null,
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "PROJECT TYPHOON LIMITED",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage — no business description beyond a generic R&D SIC code.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; no grant or product data yet",
+    "team_provenance": "Sole director Guy Davies — REPEAT FOUNDER CONFIRMED (same sector), currently also director at ARMG Group Limited (active, SIC includes 72190 plus construction/property/management activities). ORCID and GtR matches unverified (common name, not confirmed).",
+    "location_signal": "Spalding, Lincolnshire — generic registered address, not a known biotech cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) — director has prior/current appointment at another SIC 72190 company"
+    ],
+    "flags_negative": [
+      "No business description, science, or funding data available",
+      "Generic non-cluster registered address",
+      "Very recent incorporation with no track record",
+      "ARMG Group's SIC mix (construction/property) suggests a diversified holding vehicle rather than a focused biotech operator"
+    ],
+    "interest_score": "2 - repeat-founder signal noted, but no science, no funding, and no evidence this is a genuine life-sciences R&D venture",
+    "unknowns": [],
+    "company_number": "17528414",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "ambiguous",
+      "candidate_count": 3
+    },
+    "gtr_badge": {
+      "status": "ambiguous",
+      "candidate_count": 2
+    },
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 1,
+      "active_count": 1,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "ARMG GROUP LIMITED",
+          "company_number": "13873599",
+          "company_status": "active",
+          "appointed_on": "2022-01-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "45200",
+            "59113",
+            "72190",
+            "82990"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "ARMG GROUP LIMITED",
+          "company_number": "13873599",
+          "company_status": "active",
+          "appointed_on": "2022-01-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "45200",
+            "59113",
+            "72190",
+            "82990"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 1
+    },
+    "advisor_pattern": false,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "LFO-2A LIMITED",
+    "incorporated": "2026-10-19",
+    "one_liner": "Not observable at this stage — no business description beyond SIC classification available.",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation; shell/newco with no trading or product evidence yet",
+    "team_provenance": "Two British directors, both confirmed via Companies House records to hold other directorships in the same sector (SIC 72110), including a shared prior/current role at LFO-5A LIMITED. Both show extreme advisor patterns (8 and 34 other active directorships respectively), suggesting serial company-formation or portfolio/incubator roles rather than hands-on operational founders. No ORCID matches for either.",
+    "location_signal": "Quadrant House, Thomas More Square, London — generic serviced-office address, no evident biotech cluster or incubator affiliation",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "REPEAT FOUNDER CONFIRMED (same sector) for both directors",
+      "Shared prior directorship (LFO-5A LIMITED) suggesting an established pattern of company formation in this sector"
+    ],
+    "flags_negative": [
+      "Extremely high directorship counts (8 and 34) imply minimal day-to-day involvement",
+      "No business description, product, or science disclosed",
+      "Generic office address with no sector signal",
+      "Naming pattern (LFO-2A, LFO-5A) suggests a templated/serial shell-company structure rather than a distinct operating business"
+    ],
+    "interest_score": "2 - Likely a shell or vehicle within a serial company-formation structure; repeat-founder signal is real but context (naming pattern, extreme advisor counts) undercuts credibility as a standalone operating biotech",
+    "unknowns": [],
+    "company_number": "17528470",
+    "sic_codes": [
+      "72190"
+    ],
+    "orcid_badge": null,
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 8,
+      "active_count": 8,
+      "resigned_count": 0,
+      "other_companies": [
+        {
+          "company_name": "LFO-5A LIMITED",
+          "company_number": "17514885",
+          "company_status": "active",
+          "appointed_on": "2026-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "LFO-1A LIMITED",
+          "company_number": "17514889",
+          "company_status": "active",
+          "appointed_on": "2026-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "71122"
+          ]
+        },
+        {
+          "company_name": "LFO-3A LIMITED",
+          "company_number": "17514896",
+          "company_status": "active",
+          "appointed_on": "2026-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "LFO-4A LIMITED",
+          "company_number": "17514926",
+          "company_status": "active",
+          "appointed_on": "2026-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "LFO CAPITAL ONE LIMITED",
+          "company_number": "17496099",
+          "company_status": "active",
+          "appointed_on": "2026-10-02",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "LANESBOROUGH FAMILY OFFICE LTD",
+          "company_number": "17422818",
+          "company_status": "active",
+          "appointed_on": "2026-08-26",
+          "resigned_on": null,
+          "sic_codes": [
+            "64209"
+          ]
+        },
+        {
+          "company_name": "SYNC NEURAL (UK) LTD",
+          "company_number": "17413346",
+          "company_status": "active",
+          "appointed_on": "2026-08-21",
+          "resigned_on": null,
+          "sic_codes": [
+            "70229"
+          ]
+        },
+        {
+          "company_name": "SYNCNOVA LIMITED",
+          "company_number": "15447093",
+          "company_status": "dissolved",
+          "appointed_on": "2024-01-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "64999",
+            "72190"
+          ]
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "LFO-5A LIMITED",
+          "company_number": "17514885",
+          "company_status": "active",
+          "appointed_on": "2026-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "LFO-3A LIMITED",
+          "company_number": "17514896",
+          "company_status": "active",
+          "appointed_on": "2026-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "LFO-4A LIMITED",
+          "company_number": "17514926",
+          "company_status": "active",
+          "appointed_on": "2026-10-12",
+          "resigned_on": null,
+          "sic_codes": [
+            "72110"
+          ]
+        },
+        {
+          "company_name": "SYNCNOVA LIMITED",
+          "company_number": "15447093",
+          "company_status": "dissolved",
+          "appointed_on": "2024-01-27",
+          "resigned_on": null,
+          "sic_codes": [
+            "64999",
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": false,
+      "sic_lookups_performed": 8
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  },
+  {
+    "company_name": "HDL GLOBAL LIMITED",
+    "incorporated": "2026-10-20",
+    "one_liner": "Unclear — SIC mix suggests manufacturing of equipment, installation/repair, and R&D activity, but no descriptive data provided",
+    "science": "Not observable at this stage",
+    "stage_signal": "Day-one incorporation, no grant or product data yet",
+    "team_provenance": "Five-director board. Mark Richard Brown and Dr Jihan Shanabli are both REPEAT FOUNDER CONFIRMED in-sector (prior directorships at companies with 72190/72110 SIC codes). Brown also shows an ADVISOR PATTERN (6 other active directorships) — signals strong network ties but likely limited day-to-day involvement. Timothy Hartley has ORCID CONFIRMED, though no institutional affiliation listed. Ellacott and Harrison show no other appointments found, which is uninformative either way.",
+    "location_signal": "Residential address in Coalville, Leicestershire — generic, not a known cluster or incubator",
+    "funding": "Not observable at this stage",
+    "flags_positive": [
+      "Mark Richard Brown — REPEAT FOUNDER CONFIRMED (same sector)",
+      "Dr Jihan Shanabli — REPEAT FOUNDER CONFIRMED (same sector)",
+      "Timothy Hartley — ORCID CONFIRMED"
+    ],
+    "flags_negative": [
+      "No description of actual product, technology, or market",
+      "Broad, mixed SIC codes (manufacturing, repair, R&D) suggest an unfocused or placeholder registration",
+      "Residential registered address, no cluster/incubator signal",
+      "No funding or grant data provided",
+      "Brown's heavy advisor-pattern portfolio raises doubts about operational bandwidth"
+    ],
+    "interest_score": "4 - Two independently confirmed in-sector repeat founders plus an ORCID-confirmed academic director is a real credibility signal, but complete absence of a stated business purpose or funding keeps this at a 'worth a call, not yet a thesis' level",
+    "unknowns": [
+      "What does HDL Global actually build or sell — the SIC mix spans hardware manufacturing, installation, and R&D",
+      "What is the relationship between this entity and Brown's and Shanabli's other active companies (Atmos-Clear, Sarborg) — spin-out, related venture, or shared resourcing?",
+      "Is Brown expected to be an active operator here or primarily a name/advisor given his 6 other directorships?",
+      "Is there any funding, IP, or product roadmap in place pre-incorporation?"
+    ],
+    "company_number": "17530352",
+    "sic_codes": [
+      "29320",
+      "33200",
+      "71121",
+      "72190"
+    ],
+    "orcid_badge": {
+      "status": "confirmed",
+      "orcid_id": "0000-0002-6992-2746",
+      "institutions": []
+    },
+    "gtr_badge": null,
+    "repeat_founder_badge": {
+      "status": "same_sector_confirmed",
+      "total_results": 11,
+      "active_count": 6,
+      "resigned_count": 5,
+      "other_companies": [
+        {
+          "company_name": "EX-FLOW LTD",
+          "company_number": "13325675",
+          "company_status": "dissolved",
+          "appointed_on": "2021-04-09",
+          "resigned_on": null,
+          "sic_codes": [
+            "29320"
+          ]
+        },
+        {
+          "company_name": "WNKA WEAR LTD",
+          "company_number": "12852085",
+          "company_status": "dissolved",
+          "appointed_on": "2020-09-02",
+          "resigned_on": null,
+          "sic_codes": [
+            "46420"
+          ]
+        },
+        {
+          "company_name": "ATMOS-CLEAR GLOBAL HOLDINGS LTD",
+          "company_number": "12036820",
+          "company_status": "dissolved",
+          "appointed_on": "2020-02-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "46180",
+            "72190"
+          ]
+        },
+        {
+          "company_name": "ATMOS-CLEAR LIMITED",
+          "company_number": "10411366",
+          "company_status": "dissolved",
+          "appointed_on": "2016-10-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "82990"
+          ]
+        },
+        {
+          "company_name": "ATMOSFEAR LIMITED",
+          "company_number": "10179091",
+          "company_status": "dissolved",
+          "appointed_on": "2016-05-13",
+          "resigned_on": null,
+          "sic_codes": [
+            "45200"
+          ]
+        },
+        {
+          "company_name": "TOP GEAR DEVON LTD",
+          "company_number": "08766553",
+          "company_status": "dissolved",
+          "appointed_on": "2015-03-20",
+          "resigned_on": null,
+          "sic_codes": [
+            "45200"
+          ]
+        },
+        {
+          "company_name": "JDM CUSTOMS LTD",
+          "company_number": "15887934",
+          "company_status": "dissolved",
+          "appointed_on": "2024-08-09",
+          "resigned_on": "2024-09-07",
+          "sic_codes": [
+            "29320"
+          ]
+        },
+        {
+          "company_name": "FUSION BLU LIMITED",
+          "company_number": "13027527",
+          "company_status": "active",
+          "appointed_on": "2023-08-20",
+          "resigned_on": "2025-08-06",
+          "sic_codes": [
+            "29310",
+            "29320",
+            "71122"
+          ]
+        },
+        {
+          "company_name": "FUSION BLU LIMITED",
+          "company_number": "13027527",
+          "company_status": "active",
+          "appointed_on": "2021-06-14",
+          "resigned_on": "2021-08-27",
+          "sic_codes": [
+            "29310",
+            "29320",
+            "71122"
+          ]
+        },
+        {
+          "company_name": "ATMOS-CLEAR LIMITED",
+          "company_number": "11385764",
+          "company_status": "dissolved",
+          "appointed_on": "2018-05-29",
+          "resigned_on": "2024-10-12",
+          "sic_codes": [
+            "29310",
+            "29320"
+          ]
+        },
+        {
+          "company_name": "TOP CAT SW (HOLDINGS) LIMITED",
+          "company_number": "09094954",
+          "company_status": "dissolved",
+          "appointed_on": "2014-06-20",
+          "resigned_on": "2014-06-20",
+          "sic_codes": null
+        }
+      ],
+      "same_sector_matches": [
+        {
+          "company_name": "ATMOS-CLEAR GLOBAL HOLDINGS LTD",
+          "company_number": "12036820",
+          "company_status": "dissolved",
+          "appointed_on": "2020-02-05",
+          "resigned_on": null,
+          "sic_codes": [
+            "46180",
+            "72190"
+          ]
+        }
+      ],
+      "sic_lookup_capped": true,
+      "sic_lookups_performed": 10
+    },
+    "advisor_pattern": true,
+    "search_enriched": false,
+    "search_sources": []
+  }
+]

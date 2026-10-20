@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biotech Scanner Digest — 2026-10-20</title>
+<style>
+  body { font-family:"Times New Roman",Times,serif; color:#1a1a1a; background:#fff;
+         margin:0; padding:48px 20px 80px; line-height:1.55; font-size:18px; }
+  .page { max-width:740px; margin:0 auto; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  .meta { color:#555; font-size:15px; margin:0 0 22px; }
+  hr { border:none; border-top:1px solid #ddd; margin:34px 0; }
+  h2 { font-size:23px; margin:0 0 4px; padding-bottom:6px; border-bottom:2px solid #222;
+        display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .badge { font-size:15px; font-weight:normal; white-space:nowrap; color:#333; }
+  .pill { font-size:13px; font-weight:600; padding:2px 9px; border-radius:10px;
+           margin-left:5px; white-space:nowrap; cursor:default; }
+  .pill-confirmed { background:#d7f0d9; color:#1a5c22; }
+  .pill-ambiguous { background:#fff2cc; color:#7a5c00; }
+  .pill-search { background:#dce7f7; color:#1a3e6e; }
+  .sources { color:#777; font-size:14px; margin:10px 0 0; }
+  .sources a { color:#555; }
+  .legend { color:#777; font-size:13px; margin:0 0 22px; }
+  .legend summary { cursor:pointer; font-weight:bold; }
+  .legend p { margin:8px 0 0; }
+  .oneliner { font-style:italic; font-size:18px; margin:12px 0 16px; color:#222; }
+  .field { margin:9px 0; } .field .label { font-weight:bold; }
+  .flags-title { font-weight:bold; margin:16px 0 4px; }
+  ul { margin:4px 0 10px; padding-left:24px; } li { margin:3px 0; }
+  a { color:#1a3e6e; }
+  .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:14px; font-size:15px;
+              font-family:Arial,Helvetica,sans-serif; margin:0 0 22px; padding:12px 14px;
+              background:#f6f6f4; border:1px solid #e2e2df; border-radius:6px; }
+  .toolbar label { display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .toolbar select { font-size:15px; padding:2px 4px; }
+  .result-count { margin-left:auto; color:#777; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+  .company { border-top:1px solid #ddd; padding-top:28px; margin-top:28px; }
+  .week-header { font-size:17px; font-weight:bold; margin:0 0 6px; color:#333;
+                   border-bottom:1px solid #ccc; padding-bottom:6px;
+                   font-family:Arial,Helvetica,sans-serif; }
+  .archive-summary { color:#777; font-size:15px; }
+</style></head><body><div class="page">
+<h1>Biotech Scanner Digest — 2026-10-20</h1><p class="meta">Generated 2026-10-20 · 10 companies · Source: Companies House new incorporations (SIC 72110, 72190)</p><details class="legend"><summary>Badge legend</summary><p>ORCID ✓ / GtR ✓ = confirmed unique match (hover for detail) · ORCID? / GtR? = possible match, unverified — common name, worth a manual check · Repeat Founder ✓ = confirmed prior/current directorship at another company in this sector (hover for detail) · Advisor Pattern = director holds several other active directorships — well-connected, but likely not day-to-day operational here · 🔍 Web-verified = re-checked with a live web search (see Sources on that brief)</p></details><hr><div class="toolbar">
+  <label>Minimum score:
+    <select id="scoreFilter">
+      <option value="0">All</option>
+      <option value="2">2+</option>
+      <option value="3">3+</option>
+      <option value="4">4+</option>
+      <option value="5">5 only</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="groupByWeek"> Group by incorporation week</label>
+  <span class="result-count" id="resultCount"></span>
+</div>
+<script>
+(function () {
+  var page = document.querySelector('.page');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.company'));
+  var originalOrder = cards.slice();
+  var scoreFilter = document.getElementById('scoreFilter');
+  var groupByWeek = document.getElementById('groupByWeek');
+  var resultCount = document.getElementById('resultCount');
+  if (!cards.length) { return; }
+
+  function isoWeekLabel(dateStr) {
+    if (!dateStr) { return 'Unknown incorporation date'; }
+    var d = new Date(dateStr + 'T00:00:00Z');
+    if (isNaN(d.getTime())) { return 'Unknown incorporation date'; }
+    var dayIndex = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    var monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() - dayIndex);
+    var sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    var fmt = function (x) { return x.toISOString().slice(0, 10); };
+    return 'Week of ' + fmt(monday) + ' to ' + fmt(sunday);
+  }
+
+  function clearWeekHeaders() {
+    Array.prototype.slice.call(document.querySelectorAll('.week-header'))
+      .forEach(function (h) { h.remove(); });
+  }
+
+  function render() {
+    var minScore = parseInt(scoreFilter.value, 10) || 0;
+    clearWeekHeaders();
+
+    var order;
+    if (groupByWeek.checked) {
+      order = originalOrder.slice().sort(function (a, b) {
+        return (a.dataset.incorporated || '').localeCompare(b.dataset.incorporated || '');
+      });
+    } else {
+      order = originalOrder;
+    }
+    order.forEach(function (card) { page.appendChild(card); });
+
+    if (groupByWeek.checked) {
+      var lastWeek = null;
+      order.forEach(function (card) {
+        var week = isoWeekLabel(card.dataset.incorporated);
+        if (week !== lastWeek) {
+          var header = document.createElement('div');
+          header.className = 'week-header';
+          header.textContent = week;
+          page.insertBefore(header, card);
+          lastWeek = week;
+        }
+      });
+    }
+
+    var visible = 0;
+    cards.forEach(function (card) {
+      var score = parseInt(card.dataset.score, 10) || 0;
+      var show = score >= minScore;
+      card.style.display = show ? '' : 'none';
+      if (show) { visible++; }
+    });
+    resultCount.textContent = visible + ' of ' + cards.length + ' shown';
+  }
+
+  scoreFilter.addEventListener('change', render);
+  groupByWeek.addEventListener('change', render);
+  render();
+})();
+</script>
+<div class="company" id="company-17530352" data-score="4" data-incorporated="2026-10-20">
+<h2>HDL GLOBAL LIMITED <span class="badge">Interest 4 / 5</span><span class="pill pill-confirmed" title="ORCID confirmed">ORCID &#10003;</span><span class="pill pill-confirmed" title="Repeat founder (same sector) — ATMOS-CLEAR GLOBAL HOLDINGS LTD">Repeat Founder &#10003;</span><span class="pill pill-ambiguous" title="Director(s) hold several other active directorships">Advisor Pattern</span></h2>
+<p class="oneliner">Unclear — SIC mix suggests manufacturing of equipment, installation/repair, and R&amp;D activity, but no descriptive data provided</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-20 &middot; <span class="label">SIC:</span> 29320, 33200, 71121, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no grant or product data yet</p>
+<p class="field"><span class="label">Team provenance.</span> Five-director board. Mark Richard Brown and Dr Jihan Shanabli are both REPEAT FOUNDER CONFIRMED in-sector (prior directorships at companies with 72190/72110 SIC codes). Brown also shows an ADVISOR PATTERN (6 other active directorships) — signals strong network ties but likely limited day-to-day involvement. Timothy Hartley has ORCID CONFIRMED, though no institutional affiliation listed. Ellacott and Harrison show no other appointments found, which is uninformative either way.</p>
+<p class="field"><span class="label">Location signal.</span> Residential address in Coalville, Leicestershire — generic, not a known cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>Mark Richard Brown — REPEAT FOUNDER CONFIRMED (same sector)</li><li>Dr Jihan Shanabli — REPEAT FOUNDER CONFIRMED (same sector)</li><li>Timothy Hartley — ORCID CONFIRMED</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No description of actual product, technology, or market</li><li>Broad, mixed SIC codes (manufacturing, repair, R&amp;D) suggest an unfocused or placeholder registration</li><li>Residential registered address, no cluster/incubator signal</li><li>No funding or grant data provided</li><li>Brown&#x27;s heavy advisor-pattern portfolio raises doubts about operational bandwidth</li></ul>
+<p class="field"><span class="label">Interest score: 4</span> — Two independently confirmed in-sector repeat founders plus an ORCID-confirmed academic director is a real credibility signal, but complete absence of a stated business purpose or funding keeps this at a &#x27;worth a call, not yet a thesis&#x27; level</p>
+<p class="flags-title">Open questions for a first call</p><ul><li>What does HDL Global actually build or sell — the SIC mix spans hardware manufacturing, installation, and R&amp;D</li><li>What is the relationship between this entity and Brown&#x27;s and Shanabli&#x27;s other active companies (Atmos-Clear, Sarborg) — spin-out, related venture, or shared resourcing?</li><li>Is Brown expected to be an active operator here or primarily a name/advisor given his 6 other directorships?</li><li>Is there any funding, IP, or product roadmap in place pre-incorporation?</li></ul>
+
+</div><div class="company" id="company-17529303" data-score="2" data-incorporated="2026-10-19">
+<h2>BENCHEVAL LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-ambiguous" title="ORCID: 2 possible matches, unverified">ORCID?</span></h2>
+<p class="oneliner">Physician-led evaluation and red-teaming of healthcare AI systems, selling benchmarking/audit services to AI labs and healthcare AI teams.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-19 &middot; <span class="label">SIC:</span> 62012, 62020, 62090, 72190</p>
+<p class="field"><span class="label">Science.</span> Not a drug/device platform — service model built on physician-authored adversarial evaluations and benchmarks of clinical AI outputs (e.g. triage scenarios run through ChatGPT, Claude, Gemini), plus post-training data generation for AI labs.</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation (Oct 2026) with a live, already-published website and a public audit (ED Triage Audit) — unusually fast for a brand-new entity, suggesting pre-incorporation work or a fast-moving founder team.</p>
+<p class="field"><span class="label">Team provenance.</span> Two directors, both Dr title, same surname (likely related), Turkish nationality. ORCID checks inconclusive (possible matches unverified; one no match). No prior directorships found under either officer record.</p>
+<p class="field"><span class="label">Location signal.</span> 71 Windsor Court, London N14 5HT — residential-looking address, not a known incubator or biotech cluster. Generic signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul><li>Live, professionally presented website with a specific published product (ED Triage Audit)</li><li>Physician-led positioning (both directors hold Dr title) relevant to clinical AI evaluation niche</li><li>Clear, differentiated service niche (AI red-teaming for medicine) rather than vague healthtech positioning</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Service/consulting business model (benchmarking, audits, data) rather than a defensible technology or IP platform</li><li>No funding, grant, or investment data provided</li><li>Generic residential registered address</li><li>SIC codes are broad software/IT consultancy codes, not a specialist biotech code</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — early-stage services business with a credible niche but no IP moat, funding, or verified team credentials visible yet</p>
+
+</div><div class="company" id="company-17529569" data-score="2" data-incorporated="2026-10-19">
+<h2>THYEN DYNAMICS &amp; ROBOTICS LTD <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="Repeat founder (same sector) — HYPERCELL ENERGY LTD">Repeat Founder &#10003;</span></h2>
+<p class="oneliner">Early-stage company positioned at the intersection of software/computer services and R&amp;D, likely robotics or dynamics-related given the name — specifics not stated.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-19 &middot; <span class="label">SIC:</span> 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation, no grants or further activity on record yet</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Andras Bela Biro (Hungarian) is a confirmed repeat founder in the same sector, currently also a director at Hypercell Energy Ltd (energy/power generation plus R&amp;D SIC codes, active). No ORCID record found — not meaningful either way.</p>
+<p class="field"><span class="label">Location signal.</span> Burnham-On-Crouch business park address — generic small business park, not a known biotech/tech cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>REPEAT FOUNDER CONFIRMED (same sector) — director has prior/current directorship at another SIC 72190 company</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No trading history, grants, or science detail available</li><li>SIC codes (software + R&amp;D) are broad and don&#x27;t confirm a life-sciences angle</li><li>Generic business park address, not a specialist cluster</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — Too early to assess; only signal is a repeat director, no science or funding evidence</p>
+
+</div><div class="company" id="company-17528414" data-score="2" data-incorporated="2026-10-19">
+<h2>PROJECT TYPHOON LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-ambiguous" title="ORCID: 3 possible matches, unverified">ORCID?</span><span class="pill pill-ambiguous" title="GtR: 2 possible matches, unverified">GtR?</span><span class="pill pill-confirmed" title="Repeat founder (same sector) — ARMG GROUP LIMITED">Repeat Founder &#10003;</span></h2>
+<p class="oneliner">Not observable at this stage — no business description beyond a generic R&amp;D SIC code.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-19 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation; no grant or product data yet</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Guy Davies — REPEAT FOUNDER CONFIRMED (same sector), currently also director at ARMG Group Limited (active, SIC includes 72190 plus construction/property/management activities). ORCID and GtR matches unverified (common name, not confirmed).</p>
+<p class="field"><span class="label">Location signal.</span> Spalding, Lincolnshire — generic registered address, not a known biotech cluster or incubator</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>REPEAT FOUNDER CONFIRMED (same sector) — director has prior/current appointment at another SIC 72190 company</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>No business description, science, or funding data available</li><li>Generic non-cluster registered address</li><li>Very recent incorporation with no track record</li><li>ARMG Group&#x27;s SIC mix (construction/property) suggests a diversified holding vehicle rather than a focused biotech operator</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — repeat-founder signal noted, but no science, no funding, and no evidence this is a genuine life-sciences R&amp;D venture</p>
+
+</div><div class="company" id="company-17528470" data-score="2" data-incorporated="2026-10-19">
+<h2>LFO-2A LIMITED <span class="badge">Interest 2 / 5</span><span class="pill pill-confirmed" title="Repeat founder (same sector) — LFO-5A LIMITED, LFO-3A LIMITED, LFO-4A LIMITED, SYNCNOVA LIMITED">Repeat Founder &#10003;</span><span class="pill pill-ambiguous" title="Director(s) hold several other active directorships">Advisor Pattern</span></h2>
+<p class="oneliner">Not observable at this stage — no business description beyond SIC classification available.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-19 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation; shell/newco with no trading or product evidence yet</p>
+<p class="field"><span class="label">Team provenance.</span> Two British directors, both confirmed via Companies House records to hold other directorships in the same sector (SIC 72110), including a shared prior/current role at LFO-5A LIMITED. Both show extreme advisor patterns (8 and 34 other active directorships respectively), suggesting serial company-formation or portfolio/incubator roles rather than hands-on operational founders. No ORCID matches for either.</p>
+<p class="field"><span class="label">Location signal.</span> Quadrant House, Thomas More Square, London — generic serviced-office address, no evident biotech cluster or incubator affiliation</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul><li>REPEAT FOUNDER CONFIRMED (same sector) for both directors</li><li>Shared prior directorship (LFO-5A LIMITED) suggesting an established pattern of company formation in this sector</li></ul>
+<p class="flags-title">Negative flags</p><ul><li>Extremely high directorship counts (8 and 34) imply minimal day-to-day involvement</li><li>No business description, product, or science disclosed</li><li>Generic office address with no sector signal</li><li>Naming pattern (LFO-2A, LFO-5A) suggests a templated/serial shell-company structure rather than a distinct operating business</li></ul>
+<p class="field"><span class="label">Interest score: 2</span> — Likely a shell or vehicle within a serial company-formation structure; repeat-founder signal is real but context (naming pattern, extreme advisor counts) undercuts credibility as a standalone operating biotech</p>
+
+</div><div class="company" id="company-17529938" data-score="1" data-incorporated="2026-10-20">
+<h2>ALBION PEPTIDES LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — registration gives no description of product or service.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-20 &middot; <span class="label">SIC:</span> 47910, 72110</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation — no trading history or evidence of a developed product.</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Aaron Alexander Hall, British. No ORCID match found (no academic record identified). No other directorships found under this officer record — no evidence of prior company-building experience.</p>
+<p class="field"><span class="label">Location signal.</span> Registered address in Thurcroft, Rotherham — a generic residential/commercial address, no evidence of incubator or life-sciences cluster affiliation.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Mixed SIC codes (47910 retail via mail order/internet, alongside 72110 R&amp;D) — unclear whether this is genuinely a life-sciences R&amp;D company or a retail operation</li><li>No evidence of scientific platform, mechanism, or product</li><li>No funding data, academic links, or prior track record</li><li>Generic registered address with no cluster/incubator signal</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility, funding, or location signal; SIC mix suggests possible non-R&amp;D retail business</p>
+
+</div><div class="company" id="company-17529206" data-score="1" data-incorporated="2026-10-19">
+<h2>YARELY LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no website or descriptive data provided beyond SIC codes suggesting electronic component manufacturing and R&amp;D in other natural sciences/engineering.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-19 &middot; <span class="label">SIC:</span> 26120, 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one shell incorporation; no grant, product, or trading evidence yet</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, Michael David Yare, British national; no ORCID match found (not a negative — most founders have none); no other appointments found under this officer record (not evidence of first-time-founder status, only that none were found)</p>
+<p class="field"><span class="label">Location signal.</span> Residential-looking address in Washington, Tyne and Wear — no sign of incubator or cluster affiliation</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>No evidence of product, science, or funding at this stage</li><li>Single-director shell with no trading history</li><li>Generic residential registered address</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — pre-formation shell company with no verifiable science, team depth, or funding signal</p>
+
+</div><div class="company" id="company-17530140" data-score="1" data-incorporated="2026-10-20">
+<h2>JOYCE PARRY CARE CIC <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">A Community Interest Company likely offering social care and/or education-related support services, based on registered activity codes.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-20 &middot; <span class="label">SIC:</span> 58110, 72190, 85590, 88100</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation — no trading history or activity evident</p>
+<p class="field"><span class="label">Team provenance.</span> Three directors (Maycox, McGrath, Roberts), no ORCID matches, no other directorships found under these officer records — appears to be first-time founders</p>
+<p class="field"><span class="label">Location signal.</span> Residential address in Rugby — generic, no incubator or cluster signal</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>CIC structure (non-profit, asset-locked) is not a venture-investable vehicle — no equity upside for shareholders</li><li>Mixed SIC codes (publishing, IT consultancy, social work, residential care) suggest unclear or unfocused business activity</li><li>No funding, grant, or trading evidence</li><li>No life-sciences, biotech, or R&amp;D signal of any kind in SIC codes or available data</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — not a biotech/life-sciences company and not an equity-investable structure; outside fund mandate</p>
+
+</div><div class="company" id="company-17530489" data-score="1" data-incorporated="2026-10-20">
+<h2>ERIVAA LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">A consumer hardware startup developing a &#x27;smart bag&#x27; that senses and alerts the user if usual items are missing before they leave home.</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-20 &middot; <span class="label">SIC:</span> 26400, 47722, 62012, 72190</p>
+<p class="field"><span class="label">Science.</span> Not a life-sciences platform — appears to be IoT/sensor-based consumer hardware (possibly RFID or weight-sensing) embedded in a bag; no technical mechanism disclosed.</p>
+<p class="field"><span class="label">Stage.</span> Pre-launch concept stage — website describes product as &#x27;in development&#x27; with an unreleased &#x27;Alpha&#x27; and an early-access waitlist; no product shipped.</p>
+<p class="field"><span class="label">Team provenance.</span> Single director, no other appointments found under this officer record, no ORCID match — no academic or prior-founder track record evident.</p>
+<p class="field"><span class="label">Location signal.</span> Registered address is a residential-looking street address in Reading — no incubator or cluster signal.</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage — no grant or investment data provided.</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Not a life-sciences or biotech company — out of fund thesis entirely</li><li>SIC codes (consumer electronics, retail, software) confirm non-bio focus</li><li>Pre-product, waitlist-stage consumer gadget with no technical or IP detail</li><li>Single first-time director with no verifiable track record</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — Out of sector; consumer hardware/IoT concept, not a biotech or life-sciences opportunity</p>
+
+</div><div class="company" id="company-17530606" data-score="1" data-incorporated="2026-10-20">
+<h2>MOXION TECH LTD <span class="badge">Interest 1 / 5</span></h2>
+<p class="oneliner">Not observable at this stage — no business description provided beyond SIC code</p>
+<p class="field"><span class="label">Incorporated:</span> 2026-10-20 &middot; <span class="label">SIC:</span> 72190</p>
+<p class="field"><span class="label">Science.</span> Not observable at this stage</p>
+<p class="field"><span class="label">Stage.</span> Day-one incorporation — no trading history, no grant data, no website provided</p>
+<p class="field"><span class="label">Team provenance.</span> Sole director Dr Benjamin Michael Dyer, British. No ORCID match found. No other appointments found under this officer record — not evidence of first-time-founder status, just nothing matched.</p>
+<p class="field"><span class="label">Location signal.</span> Marlow residential/generic address — no incubator or cluster signal evident</p>
+<p class="field"><span class="label">Funding.</span> Not observable at this stage</p>
+<p class="flags-title">Positive flags</p><ul></ul>
+<p class="flags-title">Negative flags</p><ul><li>Incorporated too recently to show any trading or product signal</li><li>No science, product, or market description available</li><li>No funding (grant or equity) data available</li></ul>
+<p class="field"><span class="label">Interest score: 1</span> — no verifiable science, team credibility, or funding signal; pure shell at this point</p>
+
+</div></div></body></html>
